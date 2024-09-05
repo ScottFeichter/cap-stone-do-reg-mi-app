@@ -21,8 +21,7 @@ function CatchAll(){
         <main className={`${BASE_CLASS_NAME}Main`}>
             <div className={`${BASE_CLASS_NAME}Div`}>
                 <h1 className={`${BASE_CLASS_NAME}H1`}>404 Page not found</h1>
-                    <p className={`${BASE_CLASS_NAME}P`}>
-                        Not all those who wander are lost, but it seems you may have taken a wrong turn.</p>
+                    <h3 className={`${BASE_CLASS_NAME}H3`}>Not all those who wander are lost, but it seems you may have taken a wrong turn.</h3>
             </div>
         </main>
     </>)
