@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client'
 import { Provider as ReduxProvider } from 'react-redux';
 import { RouterProvider } from 'react-router-dom';
 
-import configureStore from './redux/zStore.js';
+import configureStore from './redux/store.js';
 import { restoreCSRF, csrfFetch } from './redux/xCsrf.js';
 import * as sessionActions from './redux/sessionReducer.js';
-import * as userTypesActions from './redux/userTypesReducer.js';
+// import * as userTypesActions from './redux/userTypesReducer.js';
 import * as academicDepartmentsActions from './redux/academicDepartmentsReducer.js';
 import * as employeeDepartmentsActions from './redux/employeeDepartmentsReducer.js';
 import * as employeesActions from './redux/employeesReducer.js';
@@ -35,7 +35,7 @@ if (process.env.NODE_ENV !== 'production') {
   window.sessionActions = sessionActions;
   window.academicDepartmentsActions = academicDepartmentsActions;
   window.employeeDepartmentsActions = employeeDepartmentsActions;
-  window.userTypesActions = userTypesActions;
+  // window.userTypesActions = userTypesActions;
   window.employeesActions = employeesActions;
   window.branchesActions = branchesActions;
   window.facilitiesActions = facilitiesActions;
