@@ -27,16 +27,16 @@ function EmployeesList(){
     // let currentPost;
     // const currentPost = currentPost = employeesList.slice(firstPostIndex, lastPostIndex);
 
-    if(employeesList !== undefined && employeesList.length !== 0) {
+    // if(employeesList !== undefined && employeesList.length !== 0) {
       // console.log("line 29");
       // currentPost = employeesList.slice(firstPostIndex, lastPostIndex);
-    } else {
+    // } else {
       // console.log("line 32")
-      employeesList = [{test1: "test1"},{test2: "test"}];
+      // employeesList = [{test1: "test1"},{test2: "test"}];
       // currentPost = employeesList.slice(firstPostIndex, lastPostIndex);
       // dispatch(thunkGetEmployeesAll());
       // navigate('/employees');
-    }
+    // }
 
 
     // const paginate = (pageNumber) => setCurrentPage(pageNumber);
