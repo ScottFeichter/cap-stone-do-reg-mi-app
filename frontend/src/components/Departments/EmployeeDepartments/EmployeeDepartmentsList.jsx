@@ -35,8 +35,8 @@ function EmployeeDepartmentsList(){
       // console.log("line 32")
       employeeDepartmentsList = [{test1: "test1"},{test2: "test"}];
       currentPost = employeeDepartmentsList.slice(firstPostIndex, lastPostIndex);
-      dispatch(thunkGetEmployeeDepartmentsAll());
-      navigate('/departments');
+      // dispatch(thunkGetEmployeeDepartmentsAll());
+      // navigate('/departments');
     }
 
 
