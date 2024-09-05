@@ -10,7 +10,7 @@ import { thunk } from "redux-thunk";
 import sessionReducer from "./sessionReducer.js";
 import employeeDepartmentsReducer from "./employeeDepartmentsReducer.js";
 import academicDepartmentsReducer from "./academicDepartmentsReducer.js";
-import userTypesReducer from "./userTypesReducer.js";
+// import userTypesReducer from "./userTypesReducer.js";
 import employeesReducer from "./employeesReducer.js";
 import branchesReducer from "./branchesReducer.js";
 import facilitiesReducer from "./facilitiesReducer.js";
@@ -21,7 +21,7 @@ const rootReducer = combineReducers({
   session: sessionReducer,
   employeeDepartments: employeeDepartmentsReducer,
   academicDepartments: academicDepartmentsReducer,
-  userTypes: userTypesReducer,
+  // userTypes: userTypesReducer,
   employees: employeesReducer,
   branches: branchesReducer,
   facilities: facilitiesReducer,
@@ -37,7 +37,7 @@ let enhancer;
 if (process.env.NODE_ENV === "production") {
   // const logger = createLogger({
     // collapsed: true,
-    // collapsed: (getState, action, logEntry) => !logEntry.error
+  //   collapsed: (getState, action, logEntry) => !logEntry.error
   // });
   enhancer = applyMiddleware(thunk);
 } else {
