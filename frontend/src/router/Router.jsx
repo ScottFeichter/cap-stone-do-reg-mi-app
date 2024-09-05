@@ -1,15 +1,42 @@
+//==================PROGRAM IMPORTS=====================//
+
 import { createBrowserRouter } from "react-router-dom";
+
+
+//================COMPONENT IMPORTS=====================//
+
+
+
+  // -----------LAYOUT----------------
 import Layout from "./Layout";
+
+
+  // -----------SIGNUP----------------
+import SignupFormModal from "../components/Session/SignupForm/SignupFormModal/SignupFormModal.jsx";
+
+
+  // -----------HOME------------------
 import Home from "../components/Home/Home.jsx";
+
+
+  // -----------PROFILE---------------
 import ProfilePage from "../components/Profile/ProfilePage.jsx";
 
+
+  // -----------RESOURCES-------------
 import Resources from "../components/Resources/Resources.jsx";
 
+
+  // -----------TEACHERS--------------
+  import Teachers from "../components/Teachers/Teachers.jsx";
+
+
+  // -----------STUDENTS--------------
 import Students from "../components/Students/Students.jsx";
 
-import Teachers from "../components/Teachers/Teachers.jsx";
 
 
+  // -----------EMPLOYEES-------------
 import Employees from "../components/Employees/Employees.jsx";
 import CreateNewEmployeeForm from "../components/Employees/createNewEmployeeForm/createNewEmployeeForm.jsx";
 import EditEmployeeForm from "../components/Employees/EditEmployeeForm/EditEmployeeForm.jsx";
@@ -17,20 +44,20 @@ import EmployeeDetailPage from "../components/Employees/EmployeeDetailsPage/Empl
 // import EmployeeDetails from "../components/Employees/EmployeeDetailsPage/EmployeeDetails.jsx";
 
 
-
-// import SignupFormDetailsPage from "../components/Session/SignupForm/SignupFormDetailsPage/SignupFormDetailsPage.jsx";
-import SignupFormModal from "../components/Session/SignupForm/SignupFormModal/SignupFormModal.jsx";
-
-
+  // -----------DEPARTMENTS-----------
 import Departments from "../components/Departments/Departments.jsx";
 
 import EmployeeDepartmentDetailsPage from "../components/Departments/EmployeeDepartments/EmployeeDepartmentDetailsPage/EmployeeDepartmentDetailsPage.jsx";
 import CreateNewEmployeeDepartmentsForm from "../components/Departments/EmployeeDepartments/CreateNewEmployeeDepartmentForm/CreateNewEmployeeDepartmentForm.jsx";
 import EditEmployeeDepartmentForm from "../components/Departments/EmployeeDepartments/EditEmployeeDepartmentForm/EditEmployeeDepartmentForm.jsx";
 
+
+ // -----------CATCH ALL--------------
 import CatchAll from "../components/xCatchAll/CatchAll.jsx";
 
 
+
+//===============FUNCTION DECLARATION===================//
 export const router = createBrowserRouter([
   {  path: "/signupform",
     element: <SignupFormModal />
@@ -38,22 +65,35 @@ export const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
+      // -------------HOME-------------
         {
           path: "/",
           element: <Home />,
         },
+
+
+      // -------------PROFILE------------
         {
           path: "/profile",
           element: <ProfilePage />,
         },
+
+
+      // -----------RESOURCES-------------
         {
           path: "/resources",
           element: <Resources />,
         },
+
+
+      // -----------DEPARTMENTS------------
         {
           path: "/departments",
           element: <Departments />
         },
+
+
+      // -------EMPLOYEE DEPARTMENTS-------
         {
           path: "/employeeDepartments/:employeeDepartmentId",
           element: <EmployeeDepartmentDetailsPage />
@@ -66,16 +106,26 @@ export const router = createBrowserRouter([
           path: "/editEmployeeDepartmentForm/",
           element: <EditEmployeeDepartmentForm />,
         },
-        {
-          path: "/students",
-          element: <Students />
-        },
+
+
+
+      // -------------TEACHERS-------------
         {
           path: "/teachers",
           element: <Teachers />
         },
 
 
+
+      // -------------STUDENTS-------------
+        {
+          path: "/students",
+          element: <Students />
+        },
+
+
+
+      // -------------EMPLOYEES-------------
 
         {
           path: "/employees",
@@ -95,7 +145,7 @@ export const router = createBrowserRouter([
         },
 
 
-      // =============CATCH ALL=============
+      // -------------CATCH ALL---------------
 
       {
         path: "*",
