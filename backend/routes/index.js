@@ -55,19 +55,5 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 
-// // Add a XSRF-TOKEN cookie if in production?
-// router.get("/api/csrf/restore", (req, res) => {
-
-//   // console.log("!!!!!!!!!!! the second /api/csrf/restore from routes/index.js !!!!!!!!!!!!")
-
-//   const csrfToken = req.csrfToken();
-
-//   // console.log("req.csrfToken() : ", req.csrfToken());
-
-//   res.cookie("XSRF-TOKEN", csrfToken);
-//   res.status(200).json({
-//     'XSRF-Token': csrfToken
-//   });
-// });
 
 module.exports = router;
