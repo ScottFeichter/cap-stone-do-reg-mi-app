@@ -1,0 +1,136 @@
+#ProfilePageMain{
+    text-align: center;
+    overflow: hidden;
+    /* width: 1000px; */
+    margin: 0 1rem 0 1rem;
+    padding: .5rem .5rem .5rem .5rem;
+    /* border: grey 1px solid;
+    border-radius: 25px; */
+}
+
+#ProfilePageNav{
+    text-align: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-evenly; */
+}
+
+#ProfilePageH1{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 1rem 0 0 0;
+}
+
+
+
+/*================= EDIT BUTTON =================*/
+
+#ProfilePageEditButton {
+    margin: 1rem .5rem 1rem .5rem;
+    width: 12rem;
+    height: 1.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+
+}
+
+#ProfilePageEditButton:enabled {
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: border, background-color;
+
+    /* animation-name: none;
+    animation-delay: none;
+    animation-duration: .3s;
+    animation-timing-function: calc();
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: initial; */
+
+
+}
+
+#ProfilePageEditButton:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#ProfilePageEditButton:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#ProfilePageEditButton:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}
+
+/*================= DELETE BUTTON =================*/
+
+#ProfilePageDeleteButton {
+    margin: 1rem .5rem 1rem .5rem;
+    width: 12rem;
+    height: 1.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+
+}
+
+#ProfilePageDeleteButton:enabled {
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: border, background-color;
+
+    /* animation-name: none;
+    animation-delay: none;
+    animation-duration: .3s;
+    animation-timing-function: calc();
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: initial; */
+
+
+}
+
+#ProfilePageDeleteButton:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#ProfilePageDeleteButton:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#ProfilePageDeleteButton:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}

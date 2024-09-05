@@ -1,0 +1,152 @@
+#EditEmployeeMain {
+
+}
+
+#EditEmployeeH1 {
+    text-align: center;
+}
+
+.EditEmployeeErrors {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin: -1rem 0 1.5rem 0;
+}
+
+.EditEmployeeRequiredErrors {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin: 1rem 0 1.5rem 0;
+}
+
+
+#EditEmployeeForm{
+    margin: 2rem 4rem 4rem 4rem;
+    padding: 0rem 0rem 0rem 0rem;
+    border: var(--border);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.EditEmployeeFormLabelInputContainer {
+    display: flex;
+    justify-content: center;
+    /* border: 2px grey solid; */
+}
+
+.EditEmployeeFormLabel {
+    color: black;
+    font-size: medium;
+    font-weight: 600;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+
+
+.EditEmployeeFormInput {
+    font-size: small;
+    height: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 442px;
+}
+
+
+
+
+.EditEmployeeFormRequired{
+    position:sticky;
+
+    margin: 1.25rem 0 0 -1rem;
+    padding: .5rem .5rem 0 0;
+    color: red;
+    font-size: medium;
+}
+
+
+
+
+
+.EditEmployeeHr {
+    border: 1px grey solid;
+    width: 80%;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#EditEmployeeFormSection1, #EditEmployeeFormSection2, #EditEmployeeFormSection3, #EditEmployeeFormSection4, #EditEmployeeFormSection5     {
+    width: 450px;
+}
+
+#EditEmployeeFormSection1H4, #EditEmployeeFormSection2H4, #EditEmployeeFormSection3H4, #EditEmployeeFormSection4H4, #EditEmployeeFormSection5H4 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+    /* border: 2px solid grey; */
+}
+
+#EditEmployeeFormSection1P, #EditEmployeeFormSection2P, #EditEmployeeFormSection3P, #EditEmployeeFormSection4P, #EditEmployeeFormSection5P {
+    text-align: center;
+    margin: -1rem 0 .5rem 0;
+    font-size: medium;
+    font-weight: 400;
+    color: black;
+}
+
+.EditEmployeeH5 {
+    margin: 0rem 0 3rem 0;
+    color: red;
+    text-align: center;
+}
+
+
+
+#EditEmployeeButton {
+    margin: 2rem 0 4rem 0;
+    width: 16rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 25px;
+}
+
+#EditEmployeeButton:enabled {
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+}
+
+#EditEmployeeButton:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#EditEmployeeButton:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#EditEmployeeButton:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}

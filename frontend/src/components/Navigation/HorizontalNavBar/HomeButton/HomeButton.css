@@ -1,0 +1,19 @@
+/* .HomeButtonMain{
+    background-color: var(--backgroundColor);
+    border: var(--border);
+    resize: both;
+    overflow: auto;
+} */
+
+.HomeButtonNavLink{}
+
+#HomeButtonIoHome {
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--green1);
+}
+
+#HomeButtonIoHome:hover {
+    color: black;
+    cursor: pointer;
+}

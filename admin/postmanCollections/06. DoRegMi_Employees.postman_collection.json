@@ -1,0 +1,413 @@
+{
+	"info": {
+		"_postman_id": "8f690f1c-654b-43d8-8708-9122e57745f6",
+		"name": "06. DoRegMi_Employees",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33219744"
+	},
+	"item": [
+		{
+			"name": "Get Hello World Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/employees/hello/world",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"employees",
+						"hello",
+						"world"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get CSRF Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var xsrfCookie = postman.getResponseCookie(\"XSRF-TOKEN\"); ",
+							"postman.setEnvironmentVariable('xsrftoken', xsrfCookie.value);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/csrf/restore",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"csrf",
+						"restore"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Current User - Not Logged In Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "XSRF-TOKEN",
+						"value": "{{xsrftoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/session",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"session"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log In - Username Demo-lition",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "XSRF-TOKEN",
+						"value": "{{xsrftoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"credential\": \"Demo-lition\",\n  \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/session",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"session"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Current User",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "XSRF-TOKEN",
+						"value": "{{xsrftoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/session",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"session"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Employees",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "XSRF-TOKEN",
+						"value": "{{xsrftoken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/employees/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "XSRF-TOKEN",
+						"value": "{{xsrftoken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/employees/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "XSRF-TOKEN",
+						"value": "{{xsrftoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"employeeDepartment_Id\": 3,\n  \"academicDepartment_Id\": 1,\n  \"userType_Id\": 3,\n  \"firstName1\": \"Martha\",\n  \"firstName2\": null,\n  \"middleName\": null,\n  \"lastName1\": \"Salazar\",\n  \"lastName2\": \"Rodriguez\",\n  \"personalEmail\": \"mrs@aa.io\",\n  \"personalPhone\": \"555-555-5555\",\n  \"street\": \"543 Gato St\",\n  \"city\": \"San Francisco\",\n  \"state\": \"CA\",\n  \"zip\": \"94122\",\n  \"dob\": \"01/01/1970\",\n  \"age\": \"54\",\n  \"ssn\": \"123-45-6789\",\n  \"firstLang\": \"spanish\",\n  \"secondLang\": \"english\",\n  \"thirdLang\": null,\n  \"firstInst\": \"voice\",\n  \"secondInst\": \"flute\",\n  \"thirdInst\": \"piano\",\n  \"primaryTitle\": \"teacher\",\n  \"primaryStartDate\": \"01/01/2010\",\n  \"primaryEndDate\": null,\n  \"primaryPayRate\": 500,\n  \"secondaryTitle\": null,\n  \"secondaryStartDate\": null,\n  \"secondaryEndDate\": null,\n  \"secondaryPayRate\": null,\n  \"tertiaryTitle\": null,\n  \"tertiaryStartDate\": null,\n  \"tertiaryEndDate\": null,\n  \"tertiaryPayRate\": null,\n  \"quarternaryTitle\": null,\n  \"quarternaryStartDate\": null,\n  \"quarternaryEndDate\": null,\n  \"quarternaryPayRate\": null,\n  \"biography\": \"Originally from Cuidad de Mexico\",\n  \"notes\": \"Martha is married to Jennifer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/employees/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Employee",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "XSRF-TOKEN",
+						"value": "{{xsrftoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"employeeDepartment_Id\": 3,\n  \"academicDepartment_Id\": 1,\n  \"userType_Id\": 3,\n  \"firstName1\": \"Jennifer\",\n  \"firstName2\": null,\n  \"middleName\": null,\n  \"lastName1\": \"Perringer\",\n  \"lastName2\": null,\n  \"personalEmail\": \"jp@aa.io\",\n  \"personalPhone\": \"555-555-5555\",\n  \"street\": \"543 Gato St\",\n  \"city\": \"San Francisco\",\n  \"state\": \"CA\",\n  \"zip\": \"94122\",\n  \"dob\": \"01/01/1970\",\n  \"age\": \"54\",\n  \"ssn\": \"123-45-6789\",\n  \"firstLang\": \"enlgish\",\n  \"secondLang\": \"spanish\",\n  \"thirdLang\": null,\n  \"firstInst\": \"piano\",\n  \"secondInst\": \"percussion\",\n  \"thirdInst\": \"voice\",\n  \"primaryTitle\": \"teacher\",\n  \"primaryStartDate\": \"01/01/2010\",\n  \"primaryEndDate\": null,\n  \"primaryPayRate\": 500,\n  \"secondaryTitle\": null,\n  \"secondaryStartDate\": null,\n  \"secondaryEndDate\": null,\n  \"secondaryPayRate\": null,\n  \"tertiaryTitle\": null,\n  \"tertiaryStartDate\": null,\n  \"tertiaryEndDate\": null,\n  \"tertiaryPayRate\": null,\n  \"quarternaryTitle\": null,\n  \"quarternaryStartDate\": null,\n  \"quarternaryEndDate\": null,\n  \"quarternaryPayRate\": null,\n  \"biography\": \"Very knowledgeable of Latin music and culture\",\n  \"notes\": \"Jennifer is married to Martha\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/employees/4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"employees",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an Employee by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "XSRF-TOKEN",
+						"value": "{{xsrftoken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/employees/4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"employees",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log Out Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "XSRF-TOKEN",
+						"value": "{{xsrftoken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/session",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"session"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

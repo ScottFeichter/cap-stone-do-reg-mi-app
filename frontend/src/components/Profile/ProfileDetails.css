@@ -1,0 +1,33 @@
+
+#ProfileDetailsForm{
+    margin: 2rem 4rem 4rem 4rem;
+    padding: 0rem 0rem 4rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: var(--border);
+    border-radius: 25px;
+}
+
+
+.ProfileDetailsHr {
+    width: 80%;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border: 1px grey solid;
+}
+
+#ProfileDetailsFormSection1, #ProfileDetailsFormSection2, #ProfileDetailsFormSection3, #ProfileDetailsFormSection4, #ProfileDetailsFormSection5     {
+    width: 80%;
+    /* border: brown 2px solid; */
+}
+
+#ProfileDetailsFormSection1H4, #ProfileDetailsFormSection2H4, #ProfileDetailsFormSection3H4, #ProfileDetailsFormSection4H4, #ProfileDetailsFormSection5H4 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+    /* border: 2px solid grey; */
+}

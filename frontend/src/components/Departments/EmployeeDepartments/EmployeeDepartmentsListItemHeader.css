@@ -1,0 +1,64 @@
+
+.EmployeeDepartmentsListItemHeaderContainer {
+    display: flex;
+    margin: 0 1rem 1rem 1rem;
+    text-wrap: nowrap;
+    width: fit-content;
+    /* border: blue 2px solid; */
+  }
+
+   /* ---------ITEM SPECIFIC----------- */
+   /* ----Should match the item css---- */
+
+.EmployeeDepartmentsListItemHeaderItemContainerID {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+
+  .EmployeeDepartmentsListItemHeaderItemContainerName {
+    width: 10rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .EmployeeDepartmentsListItemHeaderItemContainerImageURL {
+    width: 8rem;
+  /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+
+    /* ---------???----------- */
+.EmployeeDepartmentsListItemHeaderItemH4{
+    margin: 0;
+    text-wrap: nowrap;
+    width: fit-content;
+    /* border: 1px darkgrey solid; */
+}

@@ -1,0 +1,29 @@
+#ModeButtonButton {
+    /* visibility: hidden; */
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    margin: 0;
+    padding: 0;
+    color: none;
+    background-color: white;
+    border: none;
+}
+
+#ModeButtonButton:hover {
+    cursor: pointer;
+}
+
+#ModeButtonIoInvertMode{
+    width: 3rem;
+    height: 3rem;
+    margin: 0 0 0 0;
+    padding: 0;
+    color: var(--green1);
+}
+
+
+#ModeButtonIoInvertMode:hover {
+    color: black;
+    cursor: pointer;
+}

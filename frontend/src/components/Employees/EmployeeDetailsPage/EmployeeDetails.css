@@ -1,0 +1,121 @@
+#EmployeeDetailsMain {
+
+}
+
+
+#EmployeeDetailsForm{
+    margin: 2rem 4rem 4rem 4rem;
+    padding: 0rem 0rem 0rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: var(--border);
+    border-radius: 25px;
+
+}
+
+
+.EmployeeDetailsFormLabelInputContainer {
+    margin: 0 0 0 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px lightgrey solid;
+}
+
+.EmployeeDetailsFormLabel {
+    text-align: right;
+    color: black;
+    font-size: medium;
+    font-weight: 600;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    width: 43%;
+    height: fit-content;
+    /* border: 2px blue solid; */
+}
+
+.EmployeeDetailsFormInfoDivider{
+    color: black;
+    font-size: x-large;
+    font-weight: 900;
+    margin: 0 0 .15rem 0;
+    padding: 0 0 0 0;
+    width: 4%;
+    height: fit-content;
+    /* border: 2px orange solid; */
+
+}
+
+.EmployeeDetailsFormInput {
+    text-align: left;
+    font-size: medium;
+    margin: 0;
+    padding: 0 0 0 0;
+    width: 43%;
+    height: fit-content;
+    /* border: 2px red solid; */
+}
+
+
+.EmployeeDetailsHr {
+    width: 80%;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border: 1px grey solid;
+}
+
+#EmployeeDetailsFormSection1, #EmployeeDetailsFormSection2, #EmployeeDetailsFormSection3, #EmployeeDetailsFormSection4, #EmployeeDetailsFormSection5     {
+    width: 80%;
+    /* border: brown 2px solid; */
+}
+
+#EmployeeDetailsFormSection1H4, #EmployeeDetailsFormSection2H4, #EmployeeDetailsFormSection3H4, #EmployeeDetailsFormSection4H4, #EmployeeDetailsFormSection5H4 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+    /* border: 2px solid grey; */
+}
+
+
+
+#EmployeeDetailsButton {
+    margin: 2rem 0 4rem 0;
+    width: 16rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 25px;
+}
+
+#EmployeeDetailsButton:enabled {
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+}
+
+#EmployeeDetailsButton:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#EmployeeDetailsButton:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#EmployeeDetailsButton:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}

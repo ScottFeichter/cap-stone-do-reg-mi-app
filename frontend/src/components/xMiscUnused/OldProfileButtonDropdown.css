@@ -1,0 +1,24 @@
+.OldProfileButtonDropdownUl{
+    z-index: 3;
+    position: absolute;
+    list-style-type: none;
+    right: 2.5rem;
+    margin: 0;
+    padding: .5rem;
+    border: var(--border);
+    background-color: white;
+    /* background-color: rgba(255, 255, 255, 0.4); */
+
+
+    /* filter: drop-shadow(0 0 0.75rem crimson); */
+    /* filter: blur(8px); */
+    /* filter: drop-shadow(3px 3px red) sepia(100%) drop-shadow(-3px -3px blue) blur(8px); */
+}
+
+.OldProfileButtonDropdownUlHidden{
+    display: none;
+}
+
+.OldProfileButtonDropdownUlLi{
+
+}

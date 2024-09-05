@@ -1,0 +1,44 @@
+#HomeMain{
+    text-align: center;
+}
+
+#HomeH1{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 1rem 0 0 0;
+}
+
+#HomeDiv{
+    margin: 1rem 4rem 1rem 4rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: var(--border);
+    border-radius: 25px;
+}
+
+#HomeH2{
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem 0 1.5rem 0;
+}
+
+#HomeH3{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem 0 1rem 0;
+    color: var(--green1)
+}
+
+
+
+#HomeDivClock{
+    color: var(--green1);
+    font-size: 4rem;
+}
+
+#HomeClock{
+
+}

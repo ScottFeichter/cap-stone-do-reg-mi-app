@@ -1,0 +1,36 @@
+#OldProfileButtonMain{
+    margin: 0 1rem 0 0;
+    /* border: 2px purple solid; */
+}
+
+
+#OldProfileButtonButton {
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    margin: 0;
+    padding: 0;
+    color: none;
+    background-color: white;
+    border: none;
+
+}
+
+#OldProfileButtonButton:hover {
+    cursor: pointer;
+}
+
+
+#OldProfileButtonLuUserCircle2{
+    width: 3rem;
+    height: 3rem;
+    margin: 0 0 0 0;
+    padding: 0;
+    color: var(--green1);
+}
+
+
+#OldProfileButtonLuUserCircle2:hover {
+    color: var(--green2);
+    cursor: pointer;
+}

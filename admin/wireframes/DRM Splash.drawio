@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" version="24.7.7">
+  <diagram name="Page-1" id="9ylrQpaLR2zZn0Y1naeg">
+    <mxGraphModel dx="863" dy="1121" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tQMuXIStEdkvnsYo-aWA-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="29" y="149" width="816" height="816" as="geometry" />
+        </mxCell>
+        <mxCell id="PmfufLTCeohsXD9K9Z-r-17" value="Departments" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="71" y="279" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PmfufLTCeohsXD9K9Z-r-18" value="Employees" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="71" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PmfufLTCeohsXD9K9Z-r-19" value="Resources" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="71" y="478" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PmfufLTCeohsXD9K9Z-r-20" value="Classes" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="71" y="579" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PmfufLTCeohsXD9K9Z-r-21" value="Students" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="71" y="683" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PmfufLTCeohsXD9K9Z-r-22" value="&amp;nbsp;&lt;font color=&quot;#b3b3b3&quot;&gt;Search&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="189" y="184" width="468" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="PmfufLTCeohsXD9K9Z-r-36" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.containers.userFemale;strokeColor=#666666;strokeColor2=#008cff;" vertex="1" parent="1">
+          <mxGeometry x="46" y="171.5" width="64" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="PmfufLTCeohsXD9K9Z-r-38" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#B3B3B3;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.ecs_task;" vertex="1" parent="1">
+          <mxGeometry x="376" y="391" width="177.29" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="PmfufLTCeohsXD9K9Z-r-39" value="To Do&#39;s" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="429" y="345" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

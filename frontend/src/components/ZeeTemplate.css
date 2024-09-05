@@ -1,0 +1,10 @@
+.ZeeTemplateMain{
+    background-color: var(--backgroundColor);
+    border: var(--border);
+    resize: both;
+    overflow: auto;
+}
+
+.ZeeTemplateDiv{}
+
+.ZeeTemplateP{}

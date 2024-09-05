@@ -1,0 +1,81 @@
+/* ======================MAIN========================== */
+
+#SignupFormModalMain {
+    width: 20rem;
+    height: 40rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+#SignupForm{
+    margin: 3rem 4rem 4rem 4rem;
+    padding: 2rem 0rem 0rem 0rem;
+    border: 1px #FF5A5F solid;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.SignupFormLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.SignUpFormErrors {
+    position: absolute;
+    color: red;
+    top: 4rem;
+    right: 0rem;
+    width: 20rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.SignupFormInput {
+    margin: 0 1rem 1.5rem 1rem;
+}
+
+
+
+#SignupFormModalButton {
+    margin: 1rem 0 3rem 0;
+    width: 8rem;
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 25px;
+    width: 100px;
+}
+
+#SignupFormModalButton:enabled {
+    border: 1px solid #FE595D;
+    color: white;
+    background-color: #FE595D;
+
+}
+
+#SignupFormModalButton:disabled {
+    border: 1px solid grey;
+    color: grey;
+    background-color: whitesmoke;
+
+}
+
+#SignupFormModalButton:enabled:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+#SignupFormModalButton:enabled:active{
+    color: #FE595D;
+    background-color: rgba(255, 255, 255, .5);
+}

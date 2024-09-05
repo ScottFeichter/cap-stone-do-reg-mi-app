@@ -1,0 +1,133 @@
+#OldEmployeeDetailsPageMain{
+    text-align: center;
+    overflow: hidden;
+    /* width: 1000px; */
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 0rem 0 1rem 0;
+    border: grey 1px solid;
+    border-radius: 25px;
+}
+
+#OldEmployeeDetailsPageNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#OldEmployeeDetailsPageH1{
+    font-size: 2.5rem;
+}
+
+
+
+/*================= EDIT BUTTON =================*/
+
+#OldEmployeeDetailsPageEditButton {
+    margin: 1rem .5rem 1rem .5rem;
+    width: 12rem;
+    height: 1.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+
+}
+
+#OldEmployeeDetailsPageEditButton:enabled {
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: border, background-color;
+
+    /* animation-name: none;
+    animation-delay: none;
+    animation-duration: .3s;
+    animation-timing-function: calc();
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: initial; */
+
+
+}
+
+#OldEmployeeDetailsPageEditButton:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#OldEmployeeDetailsPageEditButton:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#OldEmployeeDetailsPageEditButton:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}
+
+/*================= DELETE BUTTON =================*/
+
+#OldEmployeeDetailsPageDeleteButton {
+    margin: 1rem .5rem 1rem .5rem;
+    width: 12rem;
+    height: 1.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+
+}
+
+#OldEmployeeDetailsPageDeleteButton:enabled {
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: border, background-color;
+
+    /* animation-name: none;
+    animation-delay: none;
+    animation-duration: .3s;
+    animation-timing-function: calc();
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: initial; */
+
+
+}
+
+#OldEmployeeDetailsPageDeleteButton:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#OldEmployeeDetailsPageDeleteButton:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#OldEmployeeDetailsPageDeleteButton:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}

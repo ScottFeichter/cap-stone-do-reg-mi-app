@@ -1,0 +1,79 @@
+#EmployeeDeleteModalMain {
+    width: 30rem;
+    height: 22rem;
+}
+
+#EmployeeDeleteModalH1 {
+    text-align: center;
+}
+
+#EmployeeDeleteModalP {
+    text-align: center;
+}
+
+
+#EmployeeDeleteModalButtonContainer{
+    margin: 2rem 4rem 4rem 4rem;
+    padding: 2rem 0rem 1rem 0rem;
+    border: var(--border);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* delete spot button------------------------------------- */
+#YesEmployeeDeleteButton {
+    margin: 1rem 0 2rem 0;
+    width: 16rem;
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 25px;
+    border: 1px solid rgb(189, 1, 1);
+    color: white;
+    background-color: rgb(189, 1, 1);
+}
+
+#YesEmployeeDeleteButton:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid red;
+    background-color: red;
+}
+
+#YesEmployeeDeleteButton:active{
+    cursor: pointer;
+    color: red;
+    border: 1px solid red;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+
+/* keep spot button------------------------------------- */
+
+#NoKeepEmployeeButton {
+    margin: 1rem 0 2rem 0;
+    width: 16rem;
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 25px;
+    border: 1px solid var(--green1);
+    color: white;
+    background-color: var(--green1);
+}
+
+#NoKeepEmployeeButton:hover {
+    cursor: pointer;
+    color: black;
+    border: 1px solid var(--green2);
+    background-color: var(--green2);
+}
+
+#NoKeepEmployeeButton:active{
+    cursor: pointer;
+    color: var(--green1);
+    background-color: rgba(255, 255, 255, .5);
+}

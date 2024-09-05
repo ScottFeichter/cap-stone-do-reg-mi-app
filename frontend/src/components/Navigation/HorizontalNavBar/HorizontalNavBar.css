@@ -1,0 +1,8 @@
+#HorizontalNavBarMain{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0rem 1rem 0rem 1rem;
+    padding: .5rem .5rem .5rem .5rem;
+    border: var(--border);
+}

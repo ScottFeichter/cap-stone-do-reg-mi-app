@@ -1,0 +1,64 @@
+:root{
+
+/* ===================== FONTS ======================== */
+
+ font-family:Arial, Helvetica, sans-serif;
+
+/* ==================== GENERAL ======================= */
+
+    --green1: rgb(7, 181, 4);
+    --green2: rgb(0, 254, 80);
+
+/* ==================== NOT SURE YET ======================= */
+
+    /* --backgroundColor: #1e90ff; */
+    --border: 1px solid var(--green1);
+
+/* ==================== BUTTONS ======================= */
+
+    --buttonColor: white;
+    --buttonBackgroundColor: var(--green1);
+    --buttonBorder: 1px solid var(--green1);
+
+    --buttonDisabledColor: grey;
+    --buttonDisabledBackgroundColor:  whitesmoke;
+    --buttonDisabledBorder: 1px solid grey;
+
+    --buttonHoverColor: black;
+    --buttonHoverBackgroundColor: var(--green2);
+    --buttonHoverBorder: 1px solid var(--green2);
+
+    --buttonActiveColor: var(--green1);
+    --buttonActiveBackgroundColor: rgba(255, 255, 255, .5);
+    --buttonActiveBorder: 1px solid var(--green1);
+
+/* =================== SEARCH BARS ====================== */
+
+    --searchBarPlaceHolderColor: white;
+    --searchBarPlaceHolderBackgroundColor: var(--green1);
+    --searchBarPlaceHolderBorder: 1px solid var(--green1);
+
+    --searchBarPlaceHolderHoverColor: black;
+
+
+
+
+
+
+    --searchBarColor: white;
+    --searchBarBackgroundColor: var(--green1);
+    --searchBarBorder: 1px solid var(--green1);
+
+    --searchBarDisabledColor: grey;
+    --searchBarDisabledBackgroundColor:  whitesmoke;
+    --searchBarDisabledBorder: 1px solid grey;
+
+    --searchBarHoverColor: black;
+    --searchBarHoverBackgroundColor: var(--green2);
+    --searchBarHoverBorder: 1px solid var(--green2);
+
+    --searchBarActiveColor: var(--green1);
+    --searchBarActiveBackgroundColor: rgba(255, 255, 255, .5);
+    --searchBarActiveBorder: 1px solid var(--green1);
+
+}

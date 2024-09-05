@@ -1,0 +1,112 @@
+/* ======================MAIN========================== */
+
+ #SignupFormModalMain {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    /* border: purple 2px solid; */
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* #SignupFormDivBanner{
+    margin: -1;
+    padding: 1rem 0 0 0;
+    height: 5rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: var(--green1);
+    border: var(--border);
+}
+
+#SignupFormH1{
+    padding: 0 0 2rem 0;
+} */
+
+#SignupFormH2{
+    text-align: center;
+    font-size: xx-large;
+}
+
+
+#SignupForm{
+    text-align: center;
+    margin: 2rem 4rem 4rem 4rem;
+    /* padding: 2rem 0rem 0rem 0rem; */
+    width: 20rem;
+    border: var(--border);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#firstNameContainer{
+    margin: 2rem 0 0 0;
+}
+
+.SignupFormLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.SignUpFormErrors {
+    position: absolute;
+    color: red;
+    top: 4rem;
+    right: 0rem;
+    width: 20rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.SignupFormInput {
+    margin: 0 1rem 1.5rem 1rem;
+}
+
+
+
+#SignupFormModalButton {
+    margin: 2rem 0 3rem 0;
+    width: 8rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 25px;
+    width: 10rem;
+    height: 2.5rem;
+}
+
+#SignupFormModalButton:enabled {
+    border: var(--border);
+    color: white;
+    background-color: var(--green1);
+
+}
+
+#SignupFormModalButton:disabled {
+    border: 1px solid grey;
+    color: grey;
+    background-color: whitesmoke;
+
+}
+
+#SignupFormModalButton:enabled:hover {
+    color: black;
+    border-color: var(--green2);
+    background-color: var(--green2);
+    cursor: pointer;
+}
+
+#SignupFormModalButton:enabled:active{
+    color: var(--green1);
+    background-color: rgba(255, 255, 255, .5);
+}

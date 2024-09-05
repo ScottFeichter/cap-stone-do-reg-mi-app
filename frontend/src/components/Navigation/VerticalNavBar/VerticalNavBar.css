@@ -1,0 +1,62 @@
+#VerticalNavBarDivContainer{
+    display: inline-flex;
+    margin: 0rem 0rem 0rem 0rem;
+    padding: 0rem 0 0rem 0;
+    /* border: green solid 2px; */
+}
+
+
+.VerticalNavBarButton {
+    margin: 1rem .5rem 1rem .5rem;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 15px;
+
+
+}
+
+.VerticalNavBarButton:enabled {
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: border, background-color;
+
+    /* animation-name: none;
+    animation-delay: none;
+    animation-duration: .3s;
+    animation-timing-function: calc();
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: initial; */
+
+
+}
+
+.VerticalNavBarButton:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+.VerticalNavBarButton:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+.VerticalNavBarButton:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}

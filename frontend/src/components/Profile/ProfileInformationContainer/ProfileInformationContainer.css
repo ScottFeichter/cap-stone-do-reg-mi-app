@@ -1,0 +1,42 @@
+.ProfileDetailsFormLabelInputContainer {
+    margin: 0 0 0 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px lightgrey solid;
+}
+
+.ProfileDetailsFormLabel {
+    text-align: right;
+    color: black;
+    font-size: medium;
+    font-weight: 600;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    width: 43%;
+    height: fit-content;
+    /* border: 2px blue solid; */
+}
+
+.ProfileDetailsFormInfoDivider{
+    color: black;
+    font-size: x-large;
+    font-weight: 900;
+    margin: 0 0 .15rem 0;
+    padding: 0 0 0 0;
+    width: 4%;
+    height: fit-content;
+    /* border: 2px orange solid; */
+
+}
+
+.ProfileDetailsFormInput {
+    text-align: left;
+    font-size: medium;
+    margin: 0;
+    padding: 0 0 0 0;
+    width: 43%;
+    height: fit-content;
+    /* border: 2px red solid; */
+}

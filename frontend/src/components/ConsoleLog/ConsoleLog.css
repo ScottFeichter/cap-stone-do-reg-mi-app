@@ -1,0 +1,10 @@
+.ConsoleLogMain{
+    background-color: var(--backgroundColor);
+    border: var(--border);
+    resize: both;
+    overflow: auto;
+}
+
+.ConsoleLogDiv{}
+
+.ConsoleLogP{}

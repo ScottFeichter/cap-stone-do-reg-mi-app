@@ -1,0 +1,16 @@
+.EmployeeDetailsKeyValueMain{
+    border: 2px black solid;
+
+}
+
+.EmployeeDetailsKeyValueDiv{
+    display: inline-flex;
+    margin: 1rem 1rem 1rem 1rem;
+    border: 2px red solid;
+
+}
+
+.EmployeeDetailsKeyValueP{
+    border: 2px solid grey;
+    margin: 0 .5rem 0 0;
+}

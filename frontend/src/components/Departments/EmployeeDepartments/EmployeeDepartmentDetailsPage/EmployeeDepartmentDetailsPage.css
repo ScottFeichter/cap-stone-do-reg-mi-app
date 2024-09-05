@@ -1,0 +1,152 @@
+#EmployeeDepartmentDetailsPageMain{
+    text-align: center;
+    overflow: hidden;
+    /* width: 1000px; */
+    margin: 0 1rem 0 1rem;
+    padding: .5rem .5rem .5rem .5rem;
+    /* border: grey 1px solid;
+    border-radius: 25px; */
+}
+
+#EmployeeDepartmentDetailsPageNav{
+    text-align: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-evenly; */
+}
+
+#EmployeeDepartmentDetailsPageH1{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 1rem 0 0 0;
+}
+
+
+
+/*================= EDIT BUTTON =================*/
+
+#EmployeeDepartmentDetailsPageEditButton {
+    margin: 1rem .5rem 1rem .5rem;
+    width: 18rem;
+    height: 1.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+
+}
+
+#EmployeeDepartmentDetailsPageEditButton:enabled {
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: border, background-color;
+
+    /* animation-name: none;
+    animation-delay: none;
+    animation-duration: .3s;
+    animation-timing-function: calc();
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: initial; */
+
+
+}
+
+#EmployeeDepartmentDetailsPageEditButton:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#EmployeeDepartmentDetailsPageEditButton:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#EmployeeDepartmentDetailsPageEditButton:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}
+
+
+
+/*================= DELETE BUTTON =================*/
+
+#EmployeeDepartmentDetailsPageDeleteButton {
+    margin: 1rem .5rem 1rem .5rem;
+    width: 12rem;
+    height: 1.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+
+}
+
+#EmployeeDepartmentDetailsPageDeleteButton:enabled {
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: border, background-color;
+
+    /* animation-name: none;
+    animation-delay: none;
+    animation-duration: .3s;
+    animation-timing-function: calc();
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: initial; */
+
+
+}
+
+#EmployeeDepartmentDetailsPageDeleteButton:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#EmployeeDepartmentDetailsPageDeleteButton:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#EmployeeDepartmentDetailsPageDeleteButton:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}
+
+
+    /* spotDeleteButton-------------------------- */
+
+    #spotToManageUpdateHiddenButton {
+
+        color: none;
+        background-color: white;
+        border: none;
+        margin: 0;
+        padding: 0;
+}
+
+#deleteSpotModalButton{}

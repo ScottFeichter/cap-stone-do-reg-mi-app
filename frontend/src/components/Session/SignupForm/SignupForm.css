@@ -1,0 +1,79 @@
+#SignupFormMain{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: var(--border);
+    border-radius: 25px;
+}
+
+#SignupFormH1{
+
+    padding: 3rem 0 1rem 0;
+}
+
+#SignupFormForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.SignupFormLabel{
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem 0 2rem;
+    /* border: 2px purple solid; */
+}
+
+.SignupFormInput{
+    height: 1.25rem;
+    width: 14rem;
+    border: var(--border);
+}
+
+#SignupFormButton {
+    margin: 1rem .5rem 4rem .5rem;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 15px;
+
+
+}
+
+#SignupFormButton:enabled {
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: border, background-color;
+}
+
+#SignupFormButton:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#SignupFormButton:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#SignupFormButton:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}

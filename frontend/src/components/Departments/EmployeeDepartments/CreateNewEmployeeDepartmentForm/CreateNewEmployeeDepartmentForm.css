@@ -1,0 +1,152 @@
+#CreateNewEmployeeDepartmentMain {
+
+}
+
+#CreateNewEmployeeDepartmentH1 {
+    text-align: center;
+}
+
+.CreateNewEmployeeDepartmentErrors {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin: -1rem 0 1.5rem 0;
+}
+
+.CreateNewEmployeeDepartmentRequiredErrors {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin: 1rem 0 1.5rem 0;
+}
+
+
+#CreateNewEmployeeDepartmentForm{
+    margin: 2rem 4rem 4rem 4rem;
+    padding: 0rem 0rem 0rem 0rem;
+    border: var(--border);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.CreateNewEmployeeDepartmentFormLabelInputContainer {
+    display: flex;
+    justify-content: center;
+    /* border: 2px grey solid; */
+}
+
+.CreateNewEmployeeDepartmentFormLabel {
+    color: black;
+    font-size: medium;
+    font-weight: 600;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+
+
+.CreateNewEmployeeDepartmentFormInput {
+    font-size: small;
+    height: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 442px;
+}
+
+
+
+
+.CreateNewEmployeeDepartmentFormRequired{
+    position:sticky;
+
+    margin: 1.25rem 0 0 -1rem;
+    padding: .5rem .5rem 0 0;
+    color: red;
+    font-size: medium;
+}
+
+
+
+
+
+.CreateNewEmployeeDepartmentHr {
+    border: 1px grey solid;
+    width: 80%;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#CreateNewEmployeeDepartmentFormSection1, #CreateNewEmployeeDepartmentFormSection2, #CreateNewEmployeeDepartmentFormSection3, #CreateNewEmployeeDepartmentFormSection4, #CreateNewEmployeeDepartmentFormSection5     {
+    width: 450px;
+}
+
+#CreateNewEmployeeDepartmentFormSection1H4, #CreateNewEmployeeDepartmentFormSection2H4, #CreateNewEmployeeDepartmentFormSection3H4, #CreateNewEmployeeDepartmentFormSection4H4, #CreateNewEmployeeDepartmentFormSection5H4 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+    /* border: 2px solid grey; */
+}
+
+#CreateNewEmployeeDepartmentFormSection1P, #CreateNewEmployeeDepartmentFormSection2P, #CreateNewEmployeeDepartmentFormSection3P, #CreateNewEmployeeDepartmentFormSection4P, #CreateNewEmployeeDepartmentFormSection5P {
+    text-align: center;
+    margin: -1rem 0 .5rem 0;
+    font-size: medium;
+    font-weight: 400;
+    color: black;
+}
+
+.CreateNewEmployeeDepartmentH5 {
+    margin: 0rem 0 3rem 0;
+    color: red;
+    text-align: center;
+}
+
+
+
+#CreateNewEmployeeDepartmentButton {
+    margin: 2rem 0 4rem 0;
+    width: 20rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 25px;
+}
+
+#CreateNewEmployeeDepartmentButton:enabled {
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+}
+
+#CreateNewEmployeeDepartmentButton:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#CreateNewEmployeeDepartmentButton:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#CreateNewEmployeeDepartmentButton:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}
