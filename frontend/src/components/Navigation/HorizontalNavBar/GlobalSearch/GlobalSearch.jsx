@@ -20,8 +20,8 @@ function GlobalSearch(){
 
 
     const navigate = useNavigate();
-    // const stocks = useSelector((state) => state?.navStocks?.navStocks);
-    const globalState = [window.store.getState()]
+
+    // const globalState = [window.store.getState()]
     // console.log("globalState", globalState);
     // const dispatch = useDispatch();
 
@@ -209,7 +209,7 @@ if(displayedSuggestions);
     // =======================GRABING STOCK DATA FROM STORE=======================
     // const navStocks = useSelector((store) => store.navStocks.navStocks);
     // console.log("navStocks from searchBar = ", navStocks)
-    if (globalState === null) return null;
+    // if (globalState === null) return null;
 
     // const searchables = globalState.filter((stock) => stock.firstName1 !== null);
 
