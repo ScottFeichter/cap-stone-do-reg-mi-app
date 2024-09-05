@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import EmployeesListIndex from './EmployeesListIndex';
+import EmployeesListItem from './EmployeesListItem';
 import Pagination from "./Pagination";
 import EmployeesListItemHeader from './EmployeesListItemHeader';
 import { thunkGetEmployeesAll } from '../../redux/employeesReducer';
@@ -52,7 +52,7 @@ function EmployeesList(){
       <div className="EmployeeListContainer">
         {currentPost.map((employee, id) => {
           return (
-            <EmployeesListIndex
+            <EmployeesListItem
               employee={employee}
               key={id}
               totalPages={employeesList.length}
