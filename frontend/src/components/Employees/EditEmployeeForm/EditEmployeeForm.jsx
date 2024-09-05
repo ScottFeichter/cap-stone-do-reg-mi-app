@@ -26,8 +26,8 @@ function EditEmployeeForm() {
         const [errors, setErrors] = useState({});
 
         //-----required
-        const [errorsFirstName1, setErrorsFirstName1] = useState({});
-        const [errorsLastName1, setErrorsLastName1] = useState({});
+        const [errorsFirstName, setErrorsFirstName] = useState({});
+        const [errorsLastName, setErrorsLastName] = useState({});
         const [errorsPersonalPhone, setErrorsPersonalPhone] = useState({});
         const [errorsFirstLang, setErrorsFirstLang] = useState({});
         const [errorsSsn, setErrorsSsn] = useState({});
@@ -53,13 +53,13 @@ function EditEmployeeForm() {
         let editedEmployee = {
 
 // personal information form section 1----------------------------------------------------------
-            firstName1	            :	null	,
-            firstName2	            :	null	,
+            firstName	            :	null	,
+            nickName	            :	null	,
             middleName	            :	null	,
-            lastName1	            :	null	,
-            lastName2	            :	null	,
-            personalEmail	        :	null	,
-            personalPhone	        :	null	,
+            lastName	            :	null	,
+            familyName	            :	null	,
+            email	        :	null	,
+            phone	        :	null	,
             street	                :	null	,
             city	                :	null	,
             state	                :	null	,
@@ -108,13 +108,13 @@ function EditEmployeeForm() {
     const [employeeDepartment_Id,setEmployeeDepartment_Id] = useState(employeeToEdit.employeeDepartment_Id||"")
     const [academicDepartment_Id,setAcademicDepartment_Id] = useState(employeeToEdit.academicDepartment_Id||"")
     const [userType_Id,setUserType_Id] = useState(employeeToEdit.userType_Id||"")
-    const [firstName1,setFirstName1] = useState(employeeToEdit.firstName1||"")
-    const [firstName2,setFirstName2] = useState(employeeToEdit.firstName2||"")
+    const [firstName,setFirstName] = useState(employeeToEdit.firstName||"")
+    const [nickName,setNickName] = useState(employeeToEdit.nickName||"")
     const [middleName,setMiddleName] = useState(employeeToEdit.middleName||"")
-    const [lastName1,setLastName1] = useState(employeeToEdit.lastName1||"")
-    const [lastName2,setLastName2] = useState(employeeToEdit.lastName2||"")
-    const [personalEmail,setPersonalEmail] = useState(employeeToEdit.personalEmail||"")
-    const [personalPhone,setPersonalPhone] = useState(employeeToEdit.personalPhone||"")
+    const [lastName,setLastName] = useState(employeeToEdit.lastName||"")
+    const [familyName,setFamilyName] = useState(employeeToEdit.familyName||"")
+    const [email,setPersonalEmail] = useState(employeeToEdit.email||"")
+    const [phone,setPersonalPhone] = useState(employeeToEdit.phone||"")
     const [street,setStreet] = useState(employeeToEdit.street||"")
     const [city,setCity] = useState(employeeToEdit.city||"")
     const [state,setState] = useState(employeeToEdit.state||"")
@@ -159,34 +159,34 @@ function EditEmployeeForm() {
 // helper for handleSubmit check required fields
 const checkRequired = () => {
 
-    let firstName1Bool = false;
-    let lastName1Bool = false;
-    let personalPhoneBool = false;
+    let firstNameBool = false;
+    let lastNameBool = false;
+    let phoneBool = false;
     let firstLangBool = false;
     let ssnBool = false;
 
 
-    if(!firstName1) {
-        firstName1Bool = true;
-        setErrorsFirstName1({firstName1: "First Name 1 is required"});
+    if(!firstName) {
+        firstNameBool = true;
+        setErrorsFirstName({firstName: "First Name 1 is required"});
     } else {
-        firstName1Bool = false;
-        setErrorsFirstName1({});
+        firstNameBool = false;
+        setErrorsFirstName({});
     }
 
-    if(!lastName1) {
-        lastName1Bool = true;
-        setErrorsLastName1({lastName1: "Last Name 1 is required"});
+    if(!lastName) {
+        lastNameBool = true;
+        setErrorsLastName({lastName: "Last Name 1 is required"});
     } else {
-        lastName1Bool = false;
-        setErrorsLastName1({});
+        lastNameBool = false;
+        setErrorsLastName({});
     }
 
-    if(!personalPhone) {
-        personalPhoneBool = true;
-        setErrorsPersonalPhone({personalPhone: "Personal Phone is required"});
+    if(!phone) {
+        phoneBool = true;
+        setErrorsPersonalPhone({phone: "Personal Phone is required"});
     } else {
-        personalPhoneBool = false;
+        phoneBool = false;
         setErrorsPersonalPhone({});
     }
 
@@ -209,9 +209,9 @@ const checkRequired = () => {
     }
 
     if (
-        (firstName1Bool) ||
-        (lastName1Bool) ||
-        (personalPhoneBool) ||
+        (firstNameBool) ||
+        (lastNameBool) ||
+        (phoneBool) ||
         (firstLangBool) ||
         (ssnBool)
     ) {
@@ -381,13 +381,13 @@ const checkInteger = () => {
          if(	employeeDepartment_Id	)	editedEmployee	.	employeeDepartment_Id	=	employeeDepartment_Id	;
          if(	academicDepartment_Id	)	editedEmployee	.	academicDepartment_Id	=	academicDepartment_Id	;
          if(	userType_Id	)	editedEmployee	.	userType_Id	=	userType_Id	;
-         if(	firstName1	)	editedEmployee	.	firstName1	=	firstName1	;
-         if(	firstName2	)	editedEmployee	.	firstName2	=	firstName2	;
+         if(	firstName	)	editedEmployee	.	firstName	=	firstName	;
+         if(	nickName	)	editedEmployee	.	nickName	=	nickName	;
          if(	middleName	)	editedEmployee	.	middleName	=	middleName	;
-         if(	lastName1	)	editedEmployee	.	lastName1	=	lastName1	;
-         if(	lastName2	)	editedEmployee	.	lastName2	=	lastName2	;
-         if(	personalEmail	)	editedEmployee	.	personalEmail	=	personalEmail	;
-         if(	personalPhone	)	editedEmployee	.	personalPhone	=	personalPhone	;
+         if(	lastName	)	editedEmployee	.	lastName	=	lastName	;
+         if(	familyName	)	editedEmployee	.	familyName	=	familyName	;
+         if(	email	)	editedEmployee	.	email	=	email	;
+         if(	phone	)	editedEmployee	.	phone	=	phone	;
          if(	street	)	editedEmployee	.	street	=	street	;
          if(	city	)	editedEmployee	.	city	=	city	;
          if(	state	)	editedEmployee	.	state	=	state	;
@@ -477,7 +477,7 @@ const checkInteger = () => {
 
 
 
-                            <div id='firstName1Container' className='EditEmployeeFormLabelInputContainer'>
+                            <div id='firstNameContainer' className='EditEmployeeFormLabelInputContainer'>
 
                                         <p className='EditEmployeeFormRequired'>{required}</p>
                                         <label className='EditEmployeeFormLabel'>
@@ -485,38 +485,38 @@ const checkInteger = () => {
 
                                             <input
                                             className='EditEmployeeFormInput'
-                                            id="firstName1"
-                                            name="firstName1"
+                                            id="firstName"
+                                            name="firstName"
                                             type="text"
                                             placeholder='First Name 1'
-                                            value={firstName1}
-                                            onChange={(e) => setFirstName1(e.target.value)}
+                                            value={firstName}
+                                            onChange={(e) => setFirstName(e.target.value)}
                                             required
                                             />
                                         </label>
 
                             </div>
-                            {errorsFirstName1.firstName1 && <p className='EditEmployeeErrors'>{errorsFirstName1.firstName1}</p>}
+                            {errorsFirstName.firstName && <p className='EditEmployeeErrors'>{errorsFirstName.firstName}</p>}
 
 
-                            <div id='firstName2Container' className='EditEmployeeFormLabelInputContainer'>
+                            <div id='nickNameContainer' className='EditEmployeeFormLabelInputContainer'>
 
                                         <label className='EditEmployeeFormLabel'>
                                             First Name 2:
                                             <input
                                             className='EditEmployeeFormInput'
-                                            id="firstName2"
-                                            name="firstName2"
+                                            id="nickName"
+                                            name="nickName"
                                             type="text"
                                             placeholder='First Name 2'
-                                            value={firstName2}
-                                            onChange={(e) => setFirstName2(e.target.value)}
+                                            value={nickName}
+                                            onChange={(e) => setNickName(e.target.value)}
 
                                             />
                                         </label>
 
                             </div>
-                            {errors.firstName2 && <p className='EditEmployeeErrors'>{errors.firstName2}</p>}
+                            {errors.nickName && <p className='EditEmployeeErrors'>{errors.nickName}</p>}
 
 
                             <div id='middleNameContainer' className='EditEmployeeFormLabelInputContainer'>
@@ -541,85 +541,85 @@ const checkInteger = () => {
 
 
 
-                            <div id='lastName1Container' className='EditEmployeeFormLabelInputContainer'>
+                            <div id='lastNameContainer' className='EditEmployeeFormLabelInputContainer'>
 
                                         <p className='EditEmployeeFormRequired'>{required}</p>
                                         <label className='EditEmployeeFormLabel'>
                                             Last Name 1:
                                             <input
                                             className='EditEmployeeFormInput'
-                                            id="lastName1"
-                                            name="lastName1"
+                                            id="lastName"
+                                            name="lastName"
                                             type="text"
                                             placeholder='Last Name 1'
-                                            value={lastName1}
-                                            onChange={(e) => setLastName1(e.target.value)}
+                                            value={lastName}
+                                            onChange={(e) => setLastName(e.target.value)}
                                             required
                                             />
                                         </label>
 
 
                             </div>
-                            {errorsLastName1.lastName1 && <p className='EditEmployeeErrors'>{errorsLastName1.lastName1}</p>}
+                            {errorsLastName.lastName && <p className='EditEmployeeErrors'>{errorsLastName.lastName}</p>}
 
 
 
-                            <div id='lastName2Container' className='EditEmployeeFormLabelInputContainer'>
+                            <div id='familyNameContainer' className='EditEmployeeFormLabelInputContainer'>
 
                                         <label className='EditEmployeeFormLabel'>
                                             Last Name 2:
                                             <input
                                             className='EditEmployeeFormInput'
-                                            id="lastName2"
-                                            name="lastName2"
+                                            id="familyName"
+                                            name="familyName"
                                             type="text"
                                             placeholder='Last Name 2'
-                                            value={lastName2}
-                                            onChange={(e) => setLastName2(e.target.value)}
+                                            value={familyName}
+                                            onChange={(e) => setFamilyName(e.target.value)}
 
                                             />
                                         </label>
 
 
                             </div>
-                            {errors.lastName2 && <p className='EditEmployeeErrors'>{errors.lastName2}</p>}
+                            {errors.familyName && <p className='EditEmployeeErrors'>{errors.familyName}</p>}
 
 
 
 
-                            <div id='personalEmailContainer' className='EditEmployeeFormLabelInputContainer'>
+                            <div id='emailContainer' className='EditEmployeeFormLabelInputContainer'>
 
                                         <label className='EditEmployeeFormLabel'>
                                             Personal Email:
                                             <input
                                             className='EditEmployeeFormInput'
-                                            id="personalEmail"
-                                            name="personalEmail"
+                                            id="email"
+                                            name="email"
                                             type="text"
                                             placeholder='Personal Email'
-                                            value={personalEmail}
+                                            value={email}
                                             onChange={(e) => setPersonalEmail(e.target.value)}
 
                                             />
                                         </label>
 
                             </div>
-                            {errors.personalEmail && <p className='EditEmployeeErrors'>{errors.personalEmail}</p>}
+                            {errors.email && <p className='EditEmployeeErrors'>{errors.email}</p>}
 
 
 
-                            <div id='personalPhoneContainer' className='EditEmployeeFormLabelInputContainer'>
+                            <div id='phoneContainer' className='EditEmployeeFormLabelInputContainer'>
 
                                         <p className='EditEmployeeFormRequired'>{required}</p>
                                         <label className='EditEmployeeFormLabel'>
                                             Personal Phone:
                                             <input
                                             className='EditEmployeeFormInput'
-                                            id="personalPhone"
-                                            name="personalPhone"
+                                            id="phone"
+                                            name="phone"
                                             type="text"
                                             placeholder='Personal Phone'
-                                            value={personalPhone}
+                                            value={phone}
                                             onChange={(e) => setPersonalPhone(e.target.value)}
                                             required
                                             />
@@ -627,7 +627,7 @@ const checkInteger = () => {
 
 
                             </div>
-                            {errorsPersonalPhone.personalPhone && <p className='EditEmployeeErrors'>{errorsPersonalPhone.personalPhone}</p>}
+                            {errorsPersonalPhone.phone && <p className='EditEmployeeErrors'>{errorsPersonalPhone.phone}</p>}
 
 
 

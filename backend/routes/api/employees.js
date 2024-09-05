@@ -47,13 +47,13 @@ router.get("/", requireAuth, async (req, res, next) => {
       "employeeDepartment_Id",
       "academicDepartment_Id",
       "userType_Id",
-      "firstName1",
-      "firstName2",
+      "firstName",
+      "nickName",
       "middleName",
-      "lastName1",
-      "lastName2",
-      "personalEmail",
-      "personalPhone",
+      "lastName",
+      "familyName",
+      "email",
+      "phone",
       "street",
       "city",
       "state",
@@ -102,13 +102,13 @@ router.get("/:employeeId", async (req, res, next) => {
       "employeeDepartment_Id",
       "academicDepartment_Id",
       "userType_Id",
-      "firstName1",
-      "firstName2",
+      "firstName",
+      "nickName",
       "middleName",
-      "lastName1",
-      "lastName2",
-      "personalEmail",
-      "personalPhone",
+      "lastName",
+      "familyName",
+      "email",
+      "phone",
       "street",
       "city",
       "state",
@@ -154,7 +154,7 @@ router.get("/:employeeId", async (req, res, next) => {
   }
 
   res.json(employee);
-  return
+  return;
 });
 
 // ==================CREATE A EMPLOYEE=============================
@@ -164,13 +164,13 @@ router.post("/", requireAuth, async (req, res, next) => {
     employeeDepartment_Id,
     academicDepartment_Id,
     userType_Id,
-    firstName1,
-    firstName2,
+    firstName,
+    nickName,
     middleName,
-    lastName1,
-    lastName2,
-    personalEmail,
-    personalPhone,
+    lastName,
+    familyName,
+    email,
+    phone,
     street,
     city,
     state,
@@ -219,13 +219,13 @@ router.post("/", requireAuth, async (req, res, next) => {
       employeeDepartment_Id: employeeDepartment_Id,
       academicDepartment_Id: academicDepartment_Id,
       userType_Id: userType_Id,
-      firstName1: firstName1,
-      firstName2: firstName2,
+      firstName: firstName,
+      nickName: nickName,
       middleName: middleName,
-      lastName1: lastName1,
-      lastName2: lastName2,
-      personalEmail: personalEmail,
-      personalPhone: personalPhone,
+      lastName: lastName,
+      familyName: familyName,
+      email: email,
+      phone: phone,
       street: street,
       city: city,
       state: state,
@@ -279,13 +279,13 @@ router.put("/:employeeId", requireAuth, async (req, res, next) => {
     employeeDepartment_Id,
     academicDepartment_Id,
     userType_Id,
-    firstName1,
-    firstName2,
+    firstName,
+    nickName,
     middleName,
-    lastName1,
-    lastName2,
-    personalEmail,
-    personalPhone,
+    lastName,
+    familyName,
+    email,
+    phone,
     street,
     city,
     state,
@@ -337,16 +337,24 @@ router.put("/:employeeId", requireAuth, async (req, res, next) => {
   //   return next(err);
   // }
 
-  if (employeeDepartment_Id !== undefined || employeeDepartment_Id !== null) employeeToUpdate.employeeDepartment_Id = employeeDepartment_Id;
-  if (academicDepartment_Id !== undefined || academicDepartment_Id !== null) employeeToUpdate.academicDepartment_Id = academicDepartment_Id;
-  if (userType_Id !== undefined || userType_Id !== null) employeeToUpdate.userType_Id = userType_Id;
-  if (firstName1 !== undefined || firstName1 !== null) employeeToUpdate.firstName1 = firstName1;
-  if (firstName2 !== undefined || firstName2 !== null) employeeToUpdate.firstName2 = firstName2;
-  if (middleName !== undefined || middleName !== null) employeeToUpdate.middleName = middleName;
-  if (lastName1 !== undefined || lastName1 !== null) employeeToUpdate.lastName1 = lastName1;
-  if (lastName2 !== undefined || lastName2 !== null) employeeToUpdate.lastName2 = lastName2;
-  if (personalEmail !== undefined || personalEmail !== null) employeeToUpdate.personalEmail = personalEmail;
-  if (personalPhone !== undefined || personalPhone !== null) employeeToUpdate.personalPhone = personalPhone;
+  if (employeeDepartment_Id !== undefined || employeeDepartment_Id !== null)
+    employeeToUpdate.employeeDepartment_Id = employeeDepartment_Id;
+  if (academicDepartment_Id !== undefined || academicDepartment_Id !== null)
+    employeeToUpdate.academicDepartment_Id = academicDepartment_Id;
+  if (userType_Id !== undefined || userType_Id !== null)
+    employeeToUpdate.userType_Id = userType_Id;
+  if (firstName !== undefined || firstName !== null)
+    employeeToUpdate.firstName = firstName;
+  if (nickName !== undefined || nickName !== null)
+    employeeToUpdate.nickName = nickName;
+  if (middleName !== undefined || middleName !== null)
+    employeeToUpdate.middleName = middleName;
+  if (lastName !== undefined || lastName !== null)
+    employeeToUpdate.lastName = lastName;
+  if (familyName !== undefined || familyName !== null)
+    employeeToUpdate.familyName = familyName;
+  if (email !== undefined || email !== null) employeeToUpdate.email = email;
+  if (phone !== undefined || phone !== null) employeeToUpdate.phone = phone;
   if (street !== undefined || street !== null) employeeToUpdate.street = street;
   if (city !== undefined || city !== null) employeeToUpdate.city = city;
   if (state !== undefined || state !== null) employeeToUpdate.state = state;
@@ -356,31 +364,53 @@ router.put("/:employeeId", requireAuth, async (req, res, next) => {
   if (dob !== undefined || dob !== null) employeeToUpdate.dob = dob;
   if (age !== undefined || age !== null) employeeToUpdate.age = age;
   if (ssn !== undefined || ssn !== null) employeeToUpdate.ssn = ssn;
-  if (firstLang !== undefined || firstLang !== null) employeeToUpdate.firstLang = firstLang;
-  if (secondLang !== undefined || secondLang !== null) employeeToUpdate.secondLang = secondLang;
-  if (thirdLang !== undefined || thirdLang !== null) employeeToUpdate.thirdLang = thirdLang;
-  if (firstInst !== undefined || firstInst !== null) employeeToUpdate.firstInst = firstInst;
-  if (secondInst !== undefined || secondInst !== null) employeeToUpdate.secondInst = secondInst;
-  if (thirdInst !== undefined || thirdInst !== null) employeeToUpdate.thirdInst = thirdInst;
-  if (primaryTitle !== undefined || primaryTitle !== null) employeeToUpdate.primaryTitle = primaryTitle;
-  if (primaryStartDate !== undefined || primaryStartDate !== null) employeeToUpdate.primaryStartDate = primaryStartDate;
-  if (primaryEndDate !== undefined || primaryEndDate !== null) employeeToUpdate.primaryEndDate = primaryEndDate;
-  if (primaryPayRate !== undefined || primaryPayRate !== null) employeeToUpdate.primaryPayRate = primaryPayRate;
-  if (secondaryTitle !== undefined || secondaryTitle !== null) employeeToUpdate.secondaryTitle = secondaryTitle;
-  if (secondaryStartDate !== undefined || secondaryStartDate !== null) employeeToUpdate.secondaryStartDate = secondaryStartDate;
-  if (secondaryEndDate !== undefined || secondaryEndDate !== null) employeeToUpdate.secondaryEndDate = secondaryEndDate;
-  if (secondaryPayRate !== undefined || secondaryPayRate !== null) employeeToUpdate.secondaryPayRate = secondaryPayRate;
-  if (tertiaryTitle !== undefined || tertiaryTitle !== null) employeeToUpdate.tertiaryTitle = tertiaryTitle;
-  if (tertiaryStartDate !== undefined || tertiaryStartDate !== null) employeeToUpdate.tertiaryStartDate = tertiaryStartDate;
-  if (tertiaryEndDate !== undefined || tertiaryEndDate !== null) employeeToUpdate.tertiaryEndDate = tertiaryEndDate;
-  if (tertiaryPayRate !== undefined || tertiaryPayRate !== null) employeeToUpdate.tertiaryPayRate = tertiaryPayRate;
-  if (quarternaryTitle !== undefined || quarternaryTitle !== null) employeeToUpdate.quarternaryTitle = quarternaryTitle;
-  if (quarternaryStartDate !== undefined || quarternaryStartDate !== null) employeeToUpdate.quarternaryStartDate = quarternaryStartDate;
-  if (quarternaryEndDate !== undefined || quarternaryEndDate !== null) employeeToUpdate.quarternaryEndDate = quarternaryEndDate;
-  if (quarternaryPayRate !== undefined || quarternaryPayRate !== null) employeeToUpdate.quarternaryPayRate = quarternaryPayRate;
-  if (biography !== undefined || biography !== null) employeeToUpdate.biography = biography;
+  if (firstLang !== undefined || firstLang !== null)
+    employeeToUpdate.firstLang = firstLang;
+  if (secondLang !== undefined || secondLang !== null)
+    employeeToUpdate.secondLang = secondLang;
+  if (thirdLang !== undefined || thirdLang !== null)
+    employeeToUpdate.thirdLang = thirdLang;
+  if (firstInst !== undefined || firstInst !== null)
+    employeeToUpdate.firstInst = firstInst;
+  if (secondInst !== undefined || secondInst !== null)
+    employeeToUpdate.secondInst = secondInst;
+  if (thirdInst !== undefined || thirdInst !== null)
+    employeeToUpdate.thirdInst = thirdInst;
+  if (primaryTitle !== undefined || primaryTitle !== null)
+    employeeToUpdate.primaryTitle = primaryTitle;
+  if (primaryStartDate !== undefined || primaryStartDate !== null)
+    employeeToUpdate.primaryStartDate = primaryStartDate;
+  if (primaryEndDate !== undefined || primaryEndDate !== null)
+    employeeToUpdate.primaryEndDate = primaryEndDate;
+  if (primaryPayRate !== undefined || primaryPayRate !== null)
+    employeeToUpdate.primaryPayRate = primaryPayRate;
+  if (secondaryTitle !== undefined || secondaryTitle !== null)
+    employeeToUpdate.secondaryTitle = secondaryTitle;
+  if (secondaryStartDate !== undefined || secondaryStartDate !== null)
+    employeeToUpdate.secondaryStartDate = secondaryStartDate;
+  if (secondaryEndDate !== undefined || secondaryEndDate !== null)
+    employeeToUpdate.secondaryEndDate = secondaryEndDate;
+  if (secondaryPayRate !== undefined || secondaryPayRate !== null)
+    employeeToUpdate.secondaryPayRate = secondaryPayRate;
+  if (tertiaryTitle !== undefined || tertiaryTitle !== null)
+    employeeToUpdate.tertiaryTitle = tertiaryTitle;
+  if (tertiaryStartDate !== undefined || tertiaryStartDate !== null)
+    employeeToUpdate.tertiaryStartDate = tertiaryStartDate;
+  if (tertiaryEndDate !== undefined || tertiaryEndDate !== null)
+    employeeToUpdate.tertiaryEndDate = tertiaryEndDate;
+  if (tertiaryPayRate !== undefined || tertiaryPayRate !== null)
+    employeeToUpdate.tertiaryPayRate = tertiaryPayRate;
+  if (quarternaryTitle !== undefined || quarternaryTitle !== null)
+    employeeToUpdate.quarternaryTitle = quarternaryTitle;
+  if (quarternaryStartDate !== undefined || quarternaryStartDate !== null)
+    employeeToUpdate.quarternaryStartDate = quarternaryStartDate;
+  if (quarternaryEndDate !== undefined || quarternaryEndDate !== null)
+    employeeToUpdate.quarternaryEndDate = quarternaryEndDate;
+  if (quarternaryPayRate !== undefined || quarternaryPayRate !== null)
+    employeeToUpdate.quarternaryPayRate = quarternaryPayRate;
+  if (biography !== undefined || biography !== null)
+    employeeToUpdate.biography = biography;
   if (notes !== undefined || notes !== null) employeeToUpdate.notes = notes;
-
 
   await employeeToUpdate.save();
 

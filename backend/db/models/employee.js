@@ -41,12 +41,12 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: true,
       },
-      firstName1: {
+      firstName: {
         allowNull: false,
         unique: false,
         type: DataTypes.STRING,
       },
-      firstName2: {
+      nickName: {
         allowNull: true,
         unique: false,
         type: DataTypes.STRING,
@@ -56,17 +56,17 @@ module.exports = (sequelize, DataTypes) => {
         unique: false,
         type: DataTypes.STRING,
       },
-      lastName1: {
+      lastName: {
         allowNull: false,
         unique: false,
         type: DataTypes.STRING,
       },
-      lastName2: {
+      familyName: {
         allowNull: true,
         unique: false,
         type: DataTypes.STRING,
       },
-      personalEmail: {
+      email: {
         type: DataTypes.STRING,
         allowNull: true,
         validate: {
@@ -74,7 +74,7 @@ module.exports = (sequelize, DataTypes) => {
           isEmail: true,
         },
       },
-      personalPhone: {
+      phone: {
         type: DataTypes.STRING,
         allowNull: false,
         // validate: {
@@ -100,17 +100,12 @@ module.exports = (sequelize, DataTypes) => {
       zip: {
         allowNull: true,
         unique: false,
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
       },
       dob: {
         allowNull: true,
         unique: false,
         type: DataTypes.STRING,
-      },
-      age: {
-        allowNull: true,
-        unique: false,
-        type: DataTypes.INTEGER,
       },
       ssn: {
         allowNull: true,

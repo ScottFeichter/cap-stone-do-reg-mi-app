@@ -59,7 +59,7 @@ function GlobalSearch(){
      * It captures the search value and filters it through the stocks (aka searchables)
      * The result is the array of stock objects named suggestions
      * Then it creates an array called displaySuggestions which mirrors suggestions...
-     * But it only contains a string of name, firstName1, and ceo...
+     * But it only contains a string of name, firstName, and ceo...
      * This is so the suggestion list is readable and helpful to the user
      */
     useEffect(() => {
@@ -70,14 +70,14 @@ function GlobalSearch(){
       //   (searchable) =>
       //     searchable.name.toLowerCase().includes(search) ||
       //     searchable.name.toUpperCase().includes(search) ||
-      //     searchable.firstName1.toUpperCase().includes(search.toUpperCase()) ||
-      //     searchable.firstName1.toLowerCase().includes(search.toLowerCase())
+      //     searchable.firstName.toUpperCase().includes(search.toUpperCase()) ||
+      //     searchable.firstName.toLowerCase().includes(search.toLowerCase())
       // );
       // displayedSuggestions = suggestions;
       // .map(
       //   (suggestion) =>
       //     `${suggestion.name} ${" - "} ${
-      //       suggestion.firstName1
+      //       suggestion.firstName
       //     } ${" - "} ${suggestion.ceo}`
       // );
 
@@ -211,7 +211,7 @@ if(displayedSuggestions);
     // console.log("navStocks from searchBar = ", navStocks)
     // if (globalState === null) return null;
 
-    // const searchables = globalState.filter((stock) => stock.firstName1 !== null);
+    // const searchables = globalState.filter((stock) => stock.firstName !== null);
 
     // const searchables = ["AAPL", "AMZN", "BUTT"]
     // console.log("searchables from searchbar ============= ", searchables)

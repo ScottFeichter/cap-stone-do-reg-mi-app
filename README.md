@@ -14,12 +14,13 @@
 
 All endpoints that require a current user to be logged in.
 
-* Request: endpoints that require authentication
-* Error Response: Require authentication
-  * Status Code: 401
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Request: endpoints that require authentication
+- Error Response: Require authentication
+
+  - Status Code: 401
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -32,12 +33,13 @@ All endpoints that require a current user to be logged in.
 All endpoints that require authentication and the current user does not have the
 correct role(s) or permission(s).
 
-* Request: endpoints that require proper authorization
-* Error Response: Require proper authorization
-  * Status Code: 403
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Request: endpoints that require proper authorization
+- Error Response: Require proper authorization
+
+  - Status Code: 403
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -49,17 +51,19 @@ correct role(s) or permission(s).
 
 Returns the information about the current user that is logged in.
 
-* Require Authentication: false
-* Request
-  * Method: GET
-  * URL: /api/session
-  * Body: none
+- Require Authentication: false
+- Request
 
-* Successful Response when there is a logged in user
-  * Status Code: 200
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+  - Method: GET
+  - URL: /api/session
+  - Body: none
+
+- Successful Response when there is a logged in user
+
+  - Status Code: 200
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -73,11 +77,12 @@ Returns the information about the current user that is logged in.
     }
     ```
 
-* Successful Response when there is no logged in user
-  * Status Code: 200
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Successful Response when there is no logged in user
+
+  - Status Code: 200
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -90,13 +95,14 @@ Returns the information about the current user that is logged in.
 Logs in a current user with valid credentials and returns the current user's
 information.
 
-* Require Authentication: false
-* Request
-  * Method: POST
-  * URL: /api/session
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Require Authentication: false
+- Request
+
+  - Method: POST
+  - URL: /api/session
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -105,11 +111,12 @@ information.
     }
     ```
 
-* Successful Response
-  * Status Code: 200
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Successful Response
+
+  - Status Code: 200
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -123,11 +130,12 @@ information.
     }
     ```
 
-* Error Response: Invalid credentials
-  * Status Code: 401
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error Response: Invalid credentials
+
+  - Status Code: 401
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -135,11 +143,12 @@ information.
     }
     ```
 
-* Error response: Body validation errors
-  * Status Code: 400
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error response: Body validation errors
+
+  - Status Code: 400
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -156,13 +165,14 @@ information.
 Creates a new user, logs them in as the current user, and returns the current
 user's information.
 
-* Require Authentication: false
-* Request
-  * Method: POST
-  * URL: /api/users
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Require Authentication: false
+- Request
+
+  - Method: POST
+  - URL: /api/users
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -174,11 +184,12 @@ user's information.
     }
     ```
 
-* Successful Response
-  * Status Code: 200
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Successful Response
+
+  - Status Code: 200
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -192,11 +203,12 @@ user's information.
     }
     ```
 
-* Error response: User already exists with the specified email
-  * Status Code: 500
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error response: User already exists with the specified email
+
+  - Status Code: 500
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -207,11 +219,12 @@ user's information.
     }
     ```
 
-* Error response: User already exists with the specified username
-  * Status Code: 500
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error response: User already exists with the specified username
+
+  - Status Code: 500
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -222,11 +235,12 @@ user's information.
     }
     ```
 
-* Error response: Body validation errors
-  * Status Code: 400
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error response: Body validation errors
+
+  - Status Code: 400
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -248,17 +262,19 @@ user's information.
 
 Returns all Employee Departments.
 
-* Require Authentication: true
-* Request
-  * Method: GET
-  * URL: /api/employeeDepartments
-  * Body: none
+- Require Authentication: true
+- Request
 
-* Successful Response
-  * Status Code: 200
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+  - Method: GET
+  - URL: /api/employeeDepartments
+  - Body: none
+
+- Successful Response
+
+  - Status Code: 200
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -268,7 +284,7 @@ Returns all Employee Departments.
           "name": "Teachers",
           "url": null,
           "createdAt": "2021-11-19 20:39:36",
-          "updatedAt": "2021-11-19 20:39:36",
+          "updatedAt": "2021-11-19 20:39:36"
         }
       ]
     }
@@ -278,17 +294,19 @@ Returns all Employee Departments.
 
 Returns the details of a spot specified by its id.
 
-* Require Authentication: true
-* Request
-  * Method: GET
-  * URL: /api/employeeDepartments/:employeeDepartmentId
-  * Body: none
+- Require Authentication: true
+- Request
 
-* Successful Response
-  * Status Code: 200
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+  - Method: GET
+  - URL: /api/employeeDepartments/:employeeDepartmentId
+  - Body: none
+
+- Successful Response
+
+  - Status Code: 200
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -296,15 +314,16 @@ Returns the details of a spot specified by its id.
       "name": "principles",
       "url": null,
       "createdAt": "2021-11-19 20:39:36",
-      "updatedAt": "2021-11-19 20:39:36",
+      "updatedAt": "2021-11-19 20:39:36"
     }
     ```
 
-* Error response: Couldn't find an Employee Department with the specified id
-  * Status Code: 404
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error response: Couldn't find an Employee Department with the specified id
+
+  - Status Code: 404
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -316,27 +335,28 @@ Returns the details of a spot specified by its id.
 
 Creates and returns a new Employee Department.
 
-* Require Authentication: true
-* Request
-  * Method: POST
-  * URL: /api/employeeDepartments
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Require Authentication: true
+- Request
+
+  - Method: POST
+  - URL: /api/employeeDepartments
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
       "name": "principles",
-      "url": "image url",
+      "url": "image url"
     }
-
     ```
 
-* Successful Response
-  * Status Code: 201
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Successful Response
+
+  - Status Code: 201
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -344,39 +364,40 @@ Creates and returns a new Employee Department.
       "name": "Principles",
       "url": "image url",
       "createdAt": "2021-11-19 20:39:36",
-      "updatedAt": "2021-11-19 20:39:36",
+      "updatedAt": "2021-11-19 20:39:36"
     }
-
     ```
 
-* Error Response: Body validation errors
-  * Status Code: 400
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error Response: Body validation errors
+
+  - Status Code: 400
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
       "message": "Bad Request", // (or "Validation error" if generated by Sequelize),
       "errors": {
         "name": "Employee Department name must be unique. Please try a different name.",
-        "url": "URL must unique. Please try a different URL or leave blank.",
+        "url": "URL must unique. Please try a different URL or leave blank."
       }
     }
     ```
 
-* Error Response: Body validation errors
-  * Status Code: 400
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error Response: Body validation errors
+
+  - Status Code: 400
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
       "message": "Invalid Data", // (or "Validation error" if generated by Sequelize),
       "errors": {
         "name": "Employee Department name must be alpha-numeric only. Please remove special characters.",
-        "url": "URL must be a valid URL or blank.",
+        "url": "URL must be a valid URL or blank."
       }
     }
     ```
@@ -385,27 +406,29 @@ Creates and returns a new Employee Department.
 
 Create and return a new image for an Employee Department specified by id.
 
-* Require Authentication: true
-* Require proper authorization: User must be admin or super
-* Request
-  * Method: POST
-  * URL: /api/employeeDepartments/:employeeDepartmentId/images
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Require Authentication: true
+- Require proper authorization: User must be admin or super
+- Request
+
+  - Method: POST
+  - URL: /api/employeeDepartments/:employeeDepartmentId/images
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
       "id": 1,
-      "url": "image url",
+      "url": "image url"
     }
     ```
 
-* Successful Response
-  * Status Code: 200
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Successful Response
+
+  - Status Code: 200
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -413,15 +436,16 @@ Create and return a new image for an Employee Department specified by id.
       "name": "Principles",
       "url": "image url",
       "createdAt": "2021-11-19 20:39:36",
-      "updatedAt": "2021-11-19 20:39:36",
+      "updatedAt": "2021-11-19 20:39:36"
     }
     ```
 
-* Error response: Couldn't find an Employee Department with the specified id
-  * Status Code: 404
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error response: Couldn't find an Employee Department with the specified id
+
+  - Status Code: 404
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -433,28 +457,30 @@ Create and return a new image for an Employee Department specified by id.
 
 Updates and returns an existing Employee Department.
 
-* Require Authentication: true
-* Require proper authorization: User must be admin or super
-* Request
-  * Method: PUT
-  * URL: /api/employeeDepartments/:employeeDepartmentId
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Require Authentication: true
+- Require proper authorization: User must be admin or super
+- Request
+
+  - Method: PUT
+  - URL: /api/employeeDepartments/:employeeDepartmentId
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
       "id": 1,
       "name": "Principles",
-      "url": "image url",
+      "url": "image url"
     }
     ```
 
-* Successful Response
-  * Status Code: 200
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Successful Response
+
+  - Status Code: 200
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -462,15 +488,16 @@ Updates and returns an existing Employee Department.
       "name": "Principles",
       "url": "image url",
       "createdAt": "2021-11-19 20:39:36",
-      "updatedAt": "2021-11-19 20:39:36",
+      "updatedAt": "2021-11-19 20:39:36"
     }
     ```
 
-* Error Response: Body validation errors
-  * Status Code: 400
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error Response: Body validation errors
+
+  - Status Code: 400
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -486,11 +513,12 @@ Updates and returns an existing Employee Department.
     }
     ```
 
-* Error response: Couldn't find an Employee Department with the specified id
-  * Status Code: 404
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error response: Couldn't find an Employee Department with the specified id
+
+  - Status Code: 404
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -502,18 +530,20 @@ Updates and returns an existing Employee Department.
 
 Deletes an existing Employee Department.
 
-* Require Authentication: true
-* Require proper authorization: Employee Department must belong to the current user
-* Request
-  * Method: DELETE
-  * URL: /api/employeeDepartments/:employeeDepartmentId
-  * Body: none
+- Require Authentication: true
+- Require proper authorization: Employee Department must belong to the current user
+- Request
 
-* Successful Response
-  * Status Code: 200
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+  - Method: DELETE
+  - URL: /api/employeeDepartments/:employeeDepartmentId
+  - Body: none
+
+- Successful Response
+
+  - Status Code: 200
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -521,11 +551,12 @@ Deletes an existing Employee Department.
     }
     ```
 
-* Error response: Couldn't find an Employee Department with the specified id
-  * Status Code: 404
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error response: Couldn't find an Employee Department with the specified id
+
+  - Status Code: 404
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -533,9 +564,7 @@ Deletes an existing Employee Department.
     }
     ```
 
-
-___
-
+---
 
 ## ACADEMIC DEPARTMENTS
 
@@ -543,17 +572,19 @@ ___
 
 Returns all the Academic Departments.
 
-* Require Authentication: true
-* Request
-  * Method: GET
-  * URL: /api/academicDepartments
-  * Body: none
+- Require Authentication: true
+- Request
 
-* Successful Response
-  * Status Code: 200
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+  - Method: GET
+  - URL: /api/academicDepartments
+  - Body: none
+
+- Successful Response
+
+  - Status Code: 200
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -564,7 +595,7 @@ Returns all the Academic Departments.
           "chair": null,
           "imageURL": null,
           "createdAt": "2021-11-19 20:39:36",
-          "updatedAt": "2021-11-19 20:39:36",
+          "updatedAt": "2021-11-19 20:39:36"
         }
       ]
     }
@@ -574,17 +605,19 @@ Returns all the Academic Departments.
 
 Returns the details of an Academic Deparment specified by its id.
 
-* Require Authentication: true
-* Request
-  * Method: GET
-  * URL: /api/academicDepartments/:academicDepartmentsId
-  * Body: none
+- Require Authentication: true
+- Request
 
-* Successful Response
-  * Status Code: 200
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+  - Method: GET
+  - URL: /api/academicDepartments/:academicDepartmentsId
+  - Body: none
+
+- Successful Response
+
+  - Status Code: 200
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -593,15 +626,16 @@ Returns the details of an Academic Deparment specified by its id.
       "chair": null,
       "imageURL": null,
       "createdAt": "2021-11-19 20:39:36",
-      "updatedAt": "2021-11-19 20:39:36",
+      "updatedAt": "2021-11-19 20:39:36"
     }
     ```
 
-* Error response: Couldn't find an Academic Department with the specified id
-  * Status Code: 404
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error response: Couldn't find an Academic Department with the specified id
+
+  - Status Code: 404
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -613,28 +647,29 @@ Returns the details of an Academic Deparment specified by its id.
 
 Creates and returns an new Academic Department.
 
-* Require Authentication: true
-* Request
-  * Method: POST
-  * URL: /api/academicDepartments
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Require Authentication: true
+- Request
+
+  - Method: POST
+  - URL: /api/academicDepartments
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
       "name": "Voice",
       "chair": "Mariah Carey",
-      "imageURL": "imageURL url",
+      "imageURL": "imageURL url"
     }
-
     ```
 
-* Successful Response
-  * Status Code: 201
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Successful Response
+
+  - Status Code: 201
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -643,16 +678,16 @@ Creates and returns an new Academic Department.
       "chair": "Mariah Carey",
       "imageURL": "imageURL url",
       "createdAt": "2021-11-19 20:39:36",
-      "updatedAt": "2021-11-19 20:39:36",
+      "updatedAt": "2021-11-19 20:39:36"
     }
-
     ```
 
-* Error Response: Body validation errors
-  * Status Code: 400
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error Response: Body validation errors
+
+  - Status Code: 400
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -660,16 +695,17 @@ Creates and returns an new Academic Department.
       "errors": {
         "name": "Academic Department name must be unique. Please try a different name.",
         "chair": "Academic Department chair must be alphabetic only. Please remove numbers or special characters.",
-        "imageURL": "Academic Deparment image URL must unique. Please try a different URL or leave blank.",
+        "imageURL": "Academic Deparment image URL must unique. Please try a different URL or leave blank."
       }
     }
     ```
 
-* Error Response: Body validation errors
-  * Status Code: 400
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error Response: Body validation errors
+
+  - Status Code: 400
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -677,7 +713,7 @@ Creates and returns an new Academic Department.
       "errors": {
         "name": "Academic Department name must be alpha-numeric only. Please remove special characters.",
         "chair": "Academic Department chair must be alphabetic only. Please remove numbers or special characters.",
-        "imageURL": "Image URL must be a valid URL or blank.",
+        "imageURL": "Image URL must be a valid URL or blank."
       }
     }
     ```
@@ -686,27 +722,29 @@ Creates and returns an new Academic Department.
 
 Create and return a new imageURL for an Academic Department specified by id.
 
-* Require Authentication: true
-* Require proper authorization: User must be admin or super
-* Request
-  * Method: POST
-  * URL: /api/academicDepartments/:academicDepartmentsId/images
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Require Authentication: true
+- Require proper authorization: User must be admin or super
+- Request
+
+  - Method: POST
+  - URL: /api/academicDepartments/:academicDepartmentsId/images
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
       "id": 1,
-      "imageURL": "imageURL url",
+      "imageURL": "imageURL url"
     }
     ```
 
-* Successful Response
-  * Status Code: 200
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Successful Response
+
+  - Status Code: 200
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -715,15 +753,16 @@ Create and return a new imageURL for an Academic Department specified by id.
       "chair": null,
       "imageURL": "imageURL url",
       "createdAt": "2021-11-19 20:39:36",
-      "updatedAt": "2021-11-19 20:39:36",
+      "updatedAt": "2021-11-19 20:39:36"
     }
     ```
 
-* Error response: Couldn't find an Academic Department with the specified id
-  * Status Code: 404
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error response: Couldn't find an Academic Department with the specified id
+
+  - Status Code: 404
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -735,29 +774,31 @@ Create and return a new imageURL for an Academic Department specified by id.
 
 Updates and returns an existing Academic Department.
 
-* Require Authentication: true
-* Require proper authorization: User must be admin or super
-* Request
-  * Method: PUT
-  * URL: /api/academicDepartments/:academicDepartmentsId
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Require Authentication: true
+- Require proper authorization: User must be admin or super
+- Request
+
+  - Method: PUT
+  - URL: /api/academicDepartments/:academicDepartmentsId
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
       "id": 1,
       "name": "Voice",
       "chair": "Luciano Pavoratti",
-      "imageURL": "imageURL url",
+      "imageURL": "imageURL url"
     }
     ```
 
-* Successful Response
-  * Status Code: 200
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Successful Response
+
+  - Status Code: 200
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -766,15 +807,16 @@ Updates and returns an existing Academic Department.
       "chair": "Luciano Pavoratti",
       "imageURL": "imageURL url",
       "createdAt": "2021-11-19 20:39:36",
-      "updatedAt": "2021-11-19 20:39:36",
+      "updatedAt": "2021-11-19 20:39:36"
     }
     ```
 
-* Error Response: Body validation errors
-  * Status Code: 400
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error Response: Body validation errors
+
+  - Status Code: 400
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -791,11 +833,12 @@ Updates and returns an existing Academic Department.
     }
     ```
 
-* Error response: Couldn't find an Academic Department with the specified id
-  * Status Code: 404
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error response: Couldn't find an Academic Department with the specified id
+
+  - Status Code: 404
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -807,18 +850,20 @@ Updates and returns an existing Academic Department.
 
 Deletes an existing Academic Department.
 
-* Require Authentication: true
-* Require proper authorization: Academic Department must belong to the current user
-* Request
-  * Method: DELETE
-  * URL: /api/academicDepartments/:academicDepartmentsId
-  * Body: none
+- Require Authentication: true
+- Require proper authorization: Academic Department must belong to the current user
+- Request
 
-* Successful Response
-  * Status Code: 200
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+  - Method: DELETE
+  - URL: /api/academicDepartments/:academicDepartmentsId
+  - Body: none
+
+- Successful Response
+
+  - Status Code: 200
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -826,11 +871,12 @@ Deletes an existing Academic Department.
     }
     ```
 
-* Error response: Couldn't find a Academic Department with the specified id
-  * Status Code: 404
-  * Headers:
-    * Content-Type: application/json
-  * Body:
+- Error response: Couldn't find a Academic Department with the specified id
+
+  - Status Code: 404
+  - Headers:
+    - Content-Type: application/json
+  - Body:
 
     ```json
     {
@@ -838,13 +884,6 @@ Deletes an existing Academic Department.
     }
     ```
 
-
-
-___
-
-
-
-
-
+---
 
 ---

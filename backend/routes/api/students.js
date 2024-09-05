@@ -47,13 +47,13 @@ router.get("/", requireAuth, async (req, res, next) => {
       "household_Id",
       "headOfHousehold",
       "userType_Id",
-      "firstName1",
-      "firstName2",
+      "firstName",
+      "nickName",
       "middleName",
-      "lastName1",
-      "lastName2",
-      "personalEmail",
-      "personalPhone",
+      "lastName",
+      "familyName",
+      "email",
+      "phone",
       "street",
       "city",
       "state",
@@ -86,13 +86,13 @@ router.get("/:studentId", async (req, res, next) => {
       "household_Id",
       "headOfHousehold",
       "userType_Id",
-      "firstName1",
-      "firstName2",
+      "firstName",
+      "nickName",
       "middleName",
-      "lastName1",
-      "lastName2",
-      "personalEmail",
-      "personalPhone",
+      "lastName",
+      "familyName",
+      "email",
+      "phone",
       "street",
       "city",
       "state",
@@ -129,13 +129,13 @@ router.post("/", requireAuth, async (req, res, next) => {
     household_Id,
     headOfHousehold,
     userType_Id,
-    firstName1,
-    firstName2,
+    firstName,
+    nickName,
     middleName,
-    lastName1,
-    lastName2,
-    personalEmail,
-    personalPhone,
+    lastName,
+    familyName,
+    email,
+    phone,
     street,
     city,
     state,
@@ -154,7 +154,7 @@ router.post("/", requireAuth, async (req, res, next) => {
   } = req.body;
 
   const exists = await Student.findAll({
-    where: [{ dob: dob }, { lastName1: lastName1 }, { lastName2: lastName2 }],
+    where: [{ dob: dob }, { lastName: lastName }, { familyName: familyName }],
   });
 
   // console.log(
@@ -171,13 +171,13 @@ router.post("/", requireAuth, async (req, res, next) => {
       household_Id: household_Id,
       headOfHousehold: headOfHousehold,
       userType_Id: userType_Id,
-      firstName1: firstName1,
-      firstName2: firstName2,
+      firstName: firstName,
+      nickName: nickName,
       middleName: middleName,
-      lastName1: lastName1,
-      lastName2: lastName2,
-      personalEmail: personalEmail,
-      personalPhone: personalPhone,
+      lastName: lastName,
+      familyName: familyName,
+      email: email,
+      phone: phone,
       street: street,
       city: city,
       state: state,
@@ -200,7 +200,7 @@ router.post("/", requireAuth, async (req, res, next) => {
   }
 
   const nuStudentFromDB = await Student.findAll({
-    where: [{ firstName1: firstName1 }, { lastName1: lastName1 }, { personalEmail: personalEmail }],
+    where: [{ firstName: firstName }, { lastName: lastName }, { email: email }],
   });
 
   return res.status(201).json(nuStudentFromDB);
@@ -215,13 +215,13 @@ router.put("/:studentId", requireAuth, async (req, res, next) => {
     household_Id,
     headOfHousehold,
     userType_Id,
-    firstName1,
-    firstName2,
+    firstName,
+    nickName,
     middleName,
-    lastName1,
-    lastName2,
-    personalEmail,
-    personalPhone,
+    lastName,
+    familyName,
+    email,
+    phone,
     street,
     city,
     state,
@@ -263,20 +263,18 @@ router.put("/:studentId", requireAuth, async (req, res, next) => {
     studentToUpdate.headOfHousehold = headOfHousehold;
   if (userType_Id !== undefined || userType_Id !== null)
     studentToUpdate.userType_Id = userType_Id;
-  if (firstName1 !== undefined || firstName1 !== null)
-    studentToUpdate.firstName1 = firstName1;
-  if (firstName2 !== undefined || firstName2 !== null)
-    studentToUpdate.firstName2 = firstName2;
+  if (firstName !== undefined || firstName !== null)
+    studentToUpdate.firstName = firstName;
+  if (nickName !== undefined || nickName !== null)
+    studentToUpdate.nickName = nickName;
   if (middleName !== undefined || middleName !== null)
     studentToUpdate.middleName = middleName;
-  if (lastName1 !== undefined || lastName1 !== null)
-    studentToUpdate.lastName1 = lastName1;
-  if (lastName2 !== undefined || lastName2 !== null)
-    studentToUpdate.lastName2 = lastName2;
-  if (personalEmail !== undefined || personalEmail !== null)
-    studentToUpdate.personalEmail = personalEmail;
-  if (personalPhone !== undefined || personalPhone !== null)
-    studentToUpdate.personalPhone = personalPhone;
+  if (lastName !== undefined || lastName !== null)
+    studentToUpdate.lastName = lastName;
+  if (familyName !== undefined || familyName !== null)
+    studentToUpdate.familyName = familyName;
+  if (email !== undefined || email !== null) studentToUpdate.email = email;
+  if (phone !== undefined || phone !== null) studentToUpdate.phone = phone;
   if (street !== undefined || street !== null) studentToUpdate.street = street;
   if (city !== undefined || city !== null) studentToUpdate.city = city;
   if (state !== undefined || state !== null) studentToUpdate.state = state;

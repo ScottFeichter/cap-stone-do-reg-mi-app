@@ -1,14 +1,14 @@
-"use strict";
+'use strict';
 
 let options = {};
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === 'production') {
   options.schema = process.env.SCHEMA; // define your schema in options object
 }
 
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable(
-      "Students",
+      'Students',
       {
         id: {
           primaryKey: true,
@@ -22,8 +22,8 @@ module.exports = {
           unique: false,
           type: Sequelize.INTEGER,
           references: {
-            model: "Households",
-            key: "id",
+            model: 'Households',
+            key: 'id',
           },
           // onDelete: 'CASCADE'
         },
@@ -36,17 +36,17 @@ module.exports = {
           allowNull: true,
           type: Sequelize.INTEGER,
           references: {
-            model: "Levels",
-            key: "id",
+            model: 'Levels',
+            key: 'id',
           },
           // onDelete: 'CASCADE'
         },
-        firstName1: {
+        firstName: {
           allowNull: false,
           unique: false,
           type: Sequelize.STRING,
         },
-        firstName2: {
+        nickName: {
           allowNull: true,
           unique: false,
           type: Sequelize.STRING,
@@ -56,22 +56,22 @@ module.exports = {
           unique: false,
           type: Sequelize.STRING,
         },
-        lastName1: {
+        lastName: {
           allowNull: true,
           unique: false,
           type: Sequelize.STRING,
         },
-        lastName2: {
+        familyName: {
           allowNull: true,
           unique: false,
           type: Sequelize.STRING,
         },
-        personalEmail: {
+        email: {
           allowNull: true,
           unique: false,
           type: Sequelize.STRING,
         },
-        personalPhone: {
+        phone: {
           allowNull: true,
           unique: false,
           type: Sequelize.STRING,
@@ -94,17 +94,12 @@ module.exports = {
         zip: {
           allowNull: true,
           unique: false,
-          type: Sequelize.INTEGER,
+          type: Sequelize.STRING,
         },
         dob: {
           allowNull: true,
           unique: false,
           type: Sequelize.STRING,
-        },
-        age: {
-          allowNull: true,
-          unique: false,
-          type: Sequelize.INTEGER,
         },
         firstLang: {
           allowNull: false,
@@ -154,19 +149,19 @@ module.exports = {
         createdAt: {
           allowNull: false,
           type: Sequelize.DATE,
-          defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
+          defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
         updatedAt: {
           allowNull: false,
           type: Sequelize.DATE,
-          defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
+          defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
       },
       options
     );
   },
   async down(queryInterface, Sequelize) {
-    options.tableName = "Students";
+    options.tableName = 'Students';
     await queryInterface.dropTable(options);
   },
 };

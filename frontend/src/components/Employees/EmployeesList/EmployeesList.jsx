@@ -1,17 +1,17 @@
 import './EmployeesList.css';
 import { useState } from 'react';
 import { useSelector } from 'react-redux'
-import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+// import { useDispatch } from 'react-redux';
+// import { useNavigate } from 'react-router-dom';
 import EmployeesListItem from './EmployeesListItem';
-import Pagination from "./Pagination";
+import EmployeeListPagination from "./EmployeeListPagination/EmployeeListPagination.jsx";
 import EmployeesListItemHeader from './EmployeesListItemHeader';
-import { thunkGetEmployeesAll } from '../../redux/employeesReducer';
+// import { thunkGetEmployeesAll } from '../../redux/employeesReducer';
 
 function EmployeesList(){
 
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
+    // const dispatch = useDispatch();
+    // const navigate = useNavigate();
     let employeesList = useSelector(state => state?.employees?.employees);
     // console.log("employeesList 16: ", employeesList);
 
@@ -60,7 +60,7 @@ function EmployeesList(){
             />
           );
         })}
-        <Pagination
+        <EmployeeListPagination
           employeesPerPage={employeesPerPage}
           totalPages={employeesList.length}
           paginate={paginate}

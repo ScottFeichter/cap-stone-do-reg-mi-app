@@ -38,15 +38,15 @@ function EmployeesListItem({ employee }) {
         </div>
 
         <div className="EmployeesListItemContainerPhone">
-              {employee.personalPhone ?
-              <Link to={`tel:${employee.personalPhone}`} className="EmployeesListItemP">{employee.personalPhone}</Link>
+              {employee.phone ?
+              <Link to={`tel:${employee.phone}`} className="EmployeesListItemP">{employee.phone}</Link>
               : <p className="EmployeesListItemP">-</p>}
         </div>
 
         <div className="EmployeesListItemContainerEmail">
 
-              {employee.personalEmail ?
-              <Link to={`mailto:${employee.personalEmail}`}className="EmployeesListItemP">{employee.personalEmail}</Link>
+              {employee.email ?
+              <Link to={`mailto:${employee.email}`}className="EmployeesListItemP">{employee.email}</Link>
                 : <p className="EmployeesListItemP">-</p>}
 
         </div>

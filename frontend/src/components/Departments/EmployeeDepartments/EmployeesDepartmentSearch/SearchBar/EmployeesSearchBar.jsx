@@ -57,20 +57,20 @@
 
 //     const suggestions = searchables.filter(
 //       (searchable) =>
-//         searchable.firstName1.toLowerCase().includes(search) ||
-//         searchable.firstName1.toUpperCase().includes(search) ||
-//         // searchable.firstName2.toLowerCase().includes(search) ||
-//         // searchable.firstName2.toUpperCase().includes(search) ||
+//         searchable.firstName.toLowerCase().includes(search) ||
+//         searchable.firstName.toUpperCase().includes(search) ||
+//         // searchable.nickName.toLowerCase().includes(search) ||
+//         // searchable.nickName.toUpperCase().includes(search) ||
 //         // searchable.middleName.toLowerCase().includes(search) ||
 //         // searchable.middleName.toUpperCase().includes(search) ||
-//         searchable.lastName1.toUpperCase().includes(search.toUpperCase()) ||
-//         searchable.lastName1.toLowerCase().includes(search.toLowerCase())
-//         // searchable.lastName2.toUpperCase().includes(search.toUpperCase()) ||
-//         // searchable.lastName2.toLowerCase().includes(search.toLowerCase())
+//         searchable.lastName.toUpperCase().includes(search.toUpperCase()) ||
+//         searchable.lastName.toLowerCase().includes(search.toLowerCase())
+//         // searchable.familyName.toUpperCase().includes(search.toUpperCase()) ||
+//         // searchable.familyName.toLowerCase().includes(search.toLowerCase())
 //     );
 //     displayedSuggestions = suggestions.map(
 //       (suggestion) =>
-//         `${suggestion.firstName1} ${suggestion.lastName1} `
+//         `${suggestion.firstName} ${suggestion.lastName} `
 //     );
 
 //     setSearchSuggestions(displayedSuggestions);
@@ -134,16 +134,16 @@
 //     // setSelectedSuggestion(e.target.value);
 //     // console.log("selectedSelection", selectedSuggestion)
 
-//     let firstName1 = e.target.value;
+//     let firstName = e.target.value;
 
-//     // console.log("firstName1 line 152", firstName1, employees);
+//     // console.log("firstName line 152", firstName, employees);
 //     for (let i = 0; i < employees.length; i++) {
-//       if (employees[i].firstName1 === firstName1) {
+//       if (employees[i].firstName === firstName) {
 //         displayedSuggestions = [{ test: "test" }];
 //         // console.log(displayedSuggestions);
 
 //         document.getElementById("EmployeesSearchBarInput").focus();
-//         setSearch(firstName1);
+//         setSearch(firstName);
 //         // console.log(search);
 //         setSearch("");
 //         return navigate(`/employees/${employees[i].id}`, {
@@ -195,7 +195,7 @@
 //   const searchables = navEmployees;
 
 //   // const searchables = navEmployees.filter((navEmployee) => {
-//   //   navEmployee.firstName1 !== null
+//   //   navEmployee.firstName !== null
 //   // });
 
 //   // const searchables = ["AAPL", "AMZN", "BUTT"]

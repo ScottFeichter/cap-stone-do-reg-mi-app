@@ -1,4 +1,4 @@
-import './Pagination.css'
+import './EmployeeListPagination.css'
 
 function Pagination({ employeesPerPage, totalPages, paginate }) {
     let pages = [];

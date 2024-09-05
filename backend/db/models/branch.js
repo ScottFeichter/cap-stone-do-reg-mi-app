@@ -43,7 +43,7 @@ module.exports = (sequelize, DataTypes) => {
       zip: {
         allowNull: false,
         unique: false,
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
       },
       createdAt: DataTypes.DATE,
       updatedAt: DataTypes.DATE,

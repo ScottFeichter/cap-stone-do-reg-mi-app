@@ -1,7 +1,7 @@
 import './Employees.css';
 // import { useSelector } from 'react-redux';
 import {useNavigate} from 'react-router-dom'
-import EmployeesList from './EmployeesList/EmployeeList.jsx';
+import EmployeesList from './EmployeesList/EmployeesList.jsx';
 // import EmployeesSearchBar from './EmployeesSearch/SearchBar/EmployeesSearchBar';
 
 function Employees() {

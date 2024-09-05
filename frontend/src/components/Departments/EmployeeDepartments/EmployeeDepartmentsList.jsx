@@ -1,17 +1,17 @@
 import './EmployeeDepartmentsList.css';
 import { useState } from 'react';
 import { useSelector } from 'react-redux'
-import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+// import { useDispatch } from 'react-redux';
+// import { useNavigate } from 'react-router-dom';
 import EmployeeDepartmentsListIndex from './EmployeeDepartmentsListIndex';
 import Pagination from "./Pagination";
 import EmployeeDepartmentsListItemHeader from './EmployeeDepartmentsListItemHeader';
-import { thunkGetEmployeeDepartmentsAll } from '../../../redux/employeeDepartmentsReducer.js';
+// import { thunkGetEmployeeDepartmentsAll } from '../../../redux/employeeDepartmentsReducer.js';
 
 function EmployeeDepartmentsList(){
 
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
+    // const dispatch = useDispatch();
+    // const navigate = useNavigate();
     let employeeDepartmentsList = useSelector(state => state?.employeeDepartments?.employeeDepartments);
     // console.log("employeeDepartmentsList 16: ", employeeDepartmentsList);
 

@@ -2,7 +2,7 @@ import { thunkGetBranchesAll, thunkRemoveBranchDataFromStore } from "./branchesR
 import { thunkGetFacilitiesAll, thunkRemoveFacilitiesDataFromStore } from "./facilitiesReducer";
 import { thunkGetAcademicDepartmentsAll, thunkRemoveAcademicDepartmentsDataFromStore } from "./academicDepartmentsReducer";
 import { thunkGetEmployeeDepartmentsAll, thunkRemoveEmployeeDepartmentsDataFromStore } from "./employeeDepartmentsReducer";
-import { thunkGetUserTypesAll, thunkRemoveUserTypeDataFromStore } from "./userTypesReducer";
+import { thunkGetLevelsAll, thunkRemoveLevelDataFromStore } from "./levelsReducer";
 import { thunkGetHouseholdsAll, thunkRemoveHouseholdDataFromStore } from "./householdsReducer";
 import { thunkGetEmployeesAll, thunkRemoveEmployeeDataFromStore } from "./employeesReducer";
 import { thunkGetStudentsAll, thunkRemoveStudentDataFromStore } from "./studentsReducer";
@@ -47,7 +47,7 @@ export const thunkLogin = (user) => async (dispatch) => {
     dispatch(thunkGetFacilitiesAll());
     dispatch(thunkGetAcademicDepartmentsAll());
     dispatch(thunkGetEmployeeDepartmentsAll());
-    dispatch(thunkGetUserTypesAll());
+    dispatch(thunkGetLevelsAll());
     dispatch(thunkGetHouseholdsAll());
     dispatch(thunkGetEmployeesAll());
     dispatch(thunkGetStudentsAll());
@@ -90,7 +90,7 @@ export const thunkRestoreUser = () => async (dispatch) => {
       dispatch(thunkGetFacilitiesAll());
       dispatch(thunkGetAcademicDepartmentsAll());
       dispatch(thunkGetEmployeeDepartmentsAll());
-      dispatch(thunkGetUserTypesAll());
+      dispatch(thunkGetLevelsAll());
       dispatch(thunkGetHouseholdsAll());
       dispatch(thunkGetEmployeesAll());
       dispatch(thunkGetStudentsAll());
@@ -110,7 +110,7 @@ export const thunkLogout = () => async (dispatch) => {
   dispatch(thunkRemoveFacilitiesDataFromStore());
   dispatch(thunkRemoveAcademicDepartmentsDataFromStore());
   dispatch(thunkRemoveEmployeeDepartmentsDataFromStore());
-  dispatch(thunkRemoveUserTypeDataFromStore());
+  dispatch(thunkRemoveLevelDataFromStore());
   dispatch(thunkRemoveHouseholdDataFromStore());
   dispatch(thunkRemoveEmployeeDataFromStore());
   dispatch(thunkRemoveStudentDataFromStore());
