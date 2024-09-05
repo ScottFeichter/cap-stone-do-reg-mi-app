@@ -1,0 +1,61 @@
+import './EmployeesListItem.css';
+import { Link } from "react-router-dom";
+
+function EmployeesListItem({ employee }) {
+  return (
+    <>
+
+
+      <div className="EmployeeListIndexContainer">
+
+        <div className="EmployeesListItemContainerID">
+            <p className="EmployeesListItemP"> {employee.id ? employee.id : "-"}</p>
+        </div>
+
+        <div className="EmployeesListItemContainerName">
+          <Link
+            to={`/employees/${employee.id}`}
+            state={{employee: employee}}
+            className="EmployeesListItemP">
+              {employee.firstName + " " + employee.lastName}
+          </Link>
+        </div>
+
+        <div className="EmployeesListItemContainerStreet">
+          <p className="EmployeesListItemP">{employee.street ? employee.street: "-"}</p>
+        </div>
+
+        <div className="EmployeesListItemContainerCity">
+          <p className="EmployeesListItemP">{employee.city ? employee.city: "-"}</p>
+        </div>
+
+        <div className="EmployeesListItemContainerState">
+          <p className="EmployeesListItemP">{employee.state ? employee.state: "-"}</p>
+        </div>
+
+        <div className="EmployeesListItemContainerZip">
+          <p className="EmployeesListItemP">{employee.zip ? employee.zip: "-"}</p>
+        </div>
+
+        <div className="EmployeesListItemContainerPhone">
+              {employee.personalPhone ?
+              <Link to={`tel:${employee.personalPhone}`} className="EmployeesListItemP">{employee.personalPhone}</Link>
+              : <p className="EmployeesListItemP">-</p>}
+        </div>
+
+        <div className="EmployeesListItemContainerEmail">
+
+              {employee.personalEmail ?
+              <Link to={`mailto:${employee.personalEmail}`}className="EmployeesListItemP">{employee.personalEmail}</Link>
+                : <p className="EmployeesListItemP">-</p>}
+
+        </div>
+
+
+      </div>
+      <div className="EmployeeListIndexBorder"></div>
+    </>
+  );
+}
+
+export default EmployeesListItem;
