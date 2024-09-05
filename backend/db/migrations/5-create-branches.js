@@ -39,7 +39,7 @@ module.exports = {
         zip: {
           allowNull: false,
           unique: false,
-          type: Sequelize.INTEGER,
+          type: Sequelize.STRING,
         },
         createdAt: {
           allowNull: false,

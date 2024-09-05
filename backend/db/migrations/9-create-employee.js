@@ -44,12 +44,12 @@ module.exports = {
           // },
           // onDelete: 'CASCADE'
         },
-        firstName1: {
+        firstName: {
           allowNull: false,
           unique: false,
           type: Sequelize.STRING,
         },
-        firstName2: {
+        nickName: {
           allowNull: true,
           unique: false,
           type: Sequelize.STRING,
@@ -59,17 +59,17 @@ module.exports = {
           unique: false,
           type: Sequelize.STRING,
         },
-        lastName1: {
+        lastName: {
           allowNull: false,
           unique: false,
           type: Sequelize.STRING,
         },
-        lastName2: {
+        familyName: {
           allowNull: true,
           unique: false,
           type: Sequelize.STRING,
         },
-        personalEmail: {
+        email: {
           type: Sequelize.STRING,
           allowNull: true,
           // validate: {
@@ -77,7 +77,7 @@ module.exports = {
           //   isEmail: true
           // }
         },
-        personalPhone: {
+        phone: {
           type: Sequelize.STRING,
           allowNull: false,
           // validate: {
@@ -103,17 +103,12 @@ module.exports = {
         zip: {
           allowNull: true,
           unique: false,
-          type: Sequelize.INTEGER,
+          type: Sequelize.STRING,
         },
         dob: {
           allowNull: true,
           unique: false,
           type: Sequelize.STRING,
-        },
-        age: {
-          allowNull: true,
-          unique: false,
-          type: Sequelize.INTEGER,
         },
         ssn: {
           allowNull: true,
