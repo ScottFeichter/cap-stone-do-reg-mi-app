@@ -13,7 +13,7 @@ router.get('/hello/world', function(req, res) {
 
 
 // Static routes
-// Serve React build files in production
+// Serve React dist files in production
 if (process.env.NODE_ENV === 'production') {
   // console.log('line 18 from backend routes/index.js')
   const path = require('path');
@@ -21,18 +21,18 @@ if (process.env.NODE_ENV === 'production') {
   router.get('/', (req, res) => {
     res.cookie('XSRF-TOKEN', req.csrfToken());
     return res.sendFile(
-      path.resolve(__dirname, '../../frontend', 'build', 'index.html')
+      path.resolve(__dirname, '../../frontend', 'dist', 'index.html')
     );
   });
 
-  // Serve the static assets in the frontend's build folder
-  router.use(express.static(path.resolve("../frontend/build")));
+  // Serve the static assets in the frontend's dist folder
+  router.use(express.static(path.resolve("../frontend/dist")));
 
   // Serve the frontend's index.html file at all other routes NOT starting with /api
   router.get(/^(?!\/?api).*/, (req, res) => {
     res.cookie('XSRF-TOKEN', req.csrfToken());
     return res.sendFile(
-      path.resolve(__dirname, '../../frontend', 'build', 'index.html')
+      path.resolve(__dirname, '../../frontend', 'dist', 'index.html')
     );
   });
 }
