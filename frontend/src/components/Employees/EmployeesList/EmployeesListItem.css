@@ -1,5 +1,5 @@
 
-.EmployeeListItemContainer {
+.EmployeesListItemContainer {
     display: flex;
     margin: 0;
     text-wrap: nowrap;
@@ -9,7 +9,7 @@
 
    /* ---------ITEM GENERIC----------- */
 
-  .EmployeeListItemItemContainerGeneric {
+  .EmployeesListItemContainerGeneric {
     font-size: .8rem;
     width: 8rem;
     /* customized on top */
@@ -27,7 +27,7 @@
      /* ---------ITEM SPECIFIC----------- */
      /* ---Should match the header css--- */
 
-.EmployeeListItemItemContainerID {
+.EmployeesListItemContainerID {
     font-size: .8rem;
     width: 2rem;
    /* customized on top */
@@ -42,7 +42,7 @@
     /* border: green 2px solid; */
   }
 
-  .EmployeeListItemItemContainerED {
+  .EmployeesListItemContainerED {
     font-size: .8rem;
     width: 2rem;
    /* customized on top */
@@ -57,7 +57,7 @@
     /* border: green 2px solid; */
   }
 
-  .EmployeeListItemItemContainerAD {
+  .EmployeesListItemContainerAD {
     font-size: .8rem;
     width: 2rem;
    /* customized on top */
@@ -72,7 +72,7 @@
     /* border: green 2px solid; */
   }
 
-  .EmployeeListItemItemContainerName {
+  .EmployeesListItemContainerName {
     font-size: .9rem;
     width: 10rem;
    /* customized on top */
@@ -87,7 +87,7 @@
     /* border: green 2px solid; */
   }
 
-  .EmployeeListItemItemContainerStreet {
+  .EmployeesListItemContainerStreet {
     font-size: .8rem;
     width: 8rem;
    /* customized on top */
@@ -102,7 +102,7 @@
     /* border: green 2px solid; */
   }
 
-  .EmployeeListItemItemContainerCity {
+  .EmployeesListItemContainerCity {
     font-size: .8rem;
     width: 8rem;
    /* customized on top */
@@ -117,7 +117,7 @@
     /* border: green 2px solid; */
   }
 
-  .EmployeeListItemItemContainerState {
+  .EmployeesListItemContainerState {
     font-size: .8rem;
     width: 4rem;
    /* customized on top */
@@ -132,7 +132,7 @@
     /* border: green 2px solid; */
   }
 
-  .EmployeeListItemItemContainerZip {
+  .EmployeesListItemContainerZip {
     font-size: .8rem;
     width: 6rem;
    /* customized on top */
@@ -147,7 +147,7 @@
     /* border: green 2px solid; */
   }
 
-  .EmployeeListItemItemContainerPhone {
+  .EmployeesListItemContainerPhone {
     font-size: .8rem;
     width: 6rem;
    /* customized on top */
@@ -164,7 +164,7 @@
 
 
 
-  .EmployeeListItemItemContainerEmail {
+  .EmployeesListItemContainerEmail {
     font-size: .8rem;
     width: 10rem;
    /* customized on top */
@@ -180,7 +180,7 @@
   }
 
 
-  .EmployeeListItemItemContainerLang {
+  .EmployeesListItemContainerLang {
     font-size: .8rem;
     width: 5rem;
    /* customized on top */
@@ -195,7 +195,7 @@
     /* border: green 2px solid; */
   }
 
-  .EmployeeListItemItemContainerInst {
+  .EmployeesListItemContainerInst {
     font-size: .8rem;
     width: 5rem;
    /* customized on top */
@@ -213,21 +213,21 @@
 
 
     /* ---------???----------- */
-    .EmployeeListItemItemH4{
+    .EmployeesListItemH4{
         margin: 0;
         text-wrap: nowrap;
         width: fit-content;
         /* border: 1px darkgrey solid; */
     }
 
-    .EmployeeListItemItemP{
+    .EmployeesListItemP{
         margin: 0;
         text-wrap: nowrap;
         width: fit-content;
         /* border: 1px orange solid; */
     }
 
-    .EmployeeListItemBorder {
+    .EmployeesListItemBorder {
         border: 0.5px solid var(--time-line);
         margin-left: 90px;
       }

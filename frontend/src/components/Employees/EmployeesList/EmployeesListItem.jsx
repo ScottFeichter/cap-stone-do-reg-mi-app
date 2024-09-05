@@ -6,7 +6,7 @@ function EmployeesListItem({ employee }) {
     <>
 
 
-      <div className="EmployeeListIndexContainer">
+      <div className="EmployeesListItemContainer">
 
         <div className="EmployeesListItemContainerID">
             <p className="EmployeesListItemP"> {employee.id ? employee.id : "-"}</p>
@@ -53,7 +53,7 @@ function EmployeesListItem({ employee }) {
 
 
       </div>
-      <div className="EmployeeListIndexBorder"></div>
+      <div className="EmployeeListItemBorder"></div>
     </>
   );
 }
