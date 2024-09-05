@@ -1,12 +1,12 @@
-.ZeeTemplateMain{
+.CatchAllMain{
     background-color: var(--backgroundColor);
     border: var(--border);
     resize: both;
     overflow: auto;
 }
 
-.ZeeTemplateDiv{}
+.CatchAllDiv{}
 
-.ZeeTemplateH1{}
+.CatchAllH1{}
 
-.ZeeTemplateP{}
+.CatchAllP{}
