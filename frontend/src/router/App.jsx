@@ -173,3 +173,12 @@ export const router = createBrowserRouter([
     ],
   },
 ]);
+
+
+function App() {
+
+  // console.log("APP COMPONENT RAN");
+  return <RouterProvider router={router} />;
+}
+
+export default App;
