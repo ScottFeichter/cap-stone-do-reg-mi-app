@@ -28,7 +28,7 @@ import EmployeeDepartmentDetailsPage from "../components/Departments/EmployeeDep
 import CreateNewEmployeeDepartmentsForm from "../components/Departments/EmployeeDepartments/CreateNewEmployeeDepartmentForm/CreateNewEmployeeDepartmentForm.jsx";
 import EditEmployeeDepartmentForm from "../components/Departments/EmployeeDepartments/EditEmployeeDepartmentForm/EditEmployeeDepartmentForm.jsx";
 
-import CatchAll from "../components/wCatchAll/CatchAll.jsx";
+import CatchAll from "../components/xCatchAll/CatchAll.jsx";
 
 
 export const router = createBrowserRouter([
