@@ -53,7 +53,7 @@ function EmployeesListItem({ employee }) {
 
 
       </div>
-      <div className="EmployeeListItemBorder"></div>
+      <div className="EmployeesListItemBorder"></div>
     </>
   );
 }
