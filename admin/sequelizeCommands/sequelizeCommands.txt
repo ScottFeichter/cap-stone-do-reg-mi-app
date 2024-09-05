@@ -1,6 +1,3 @@
-COMMANDS BRIEF
-
-
 MIGRATIONS
 
 npx sequelize-cli migration:generate --name <name> 	// creates blank migration
@@ -8,8 +5,6 @@ npx dotenv sequelize-cli db:migrate                 // runs the up
 
 npx dotenv sequelize-cli db:migrate:undo 			// runs the down
 npx dotenv sequelize-cli db:migrate:undo:all 		// runs the down
-
-
 
 
 MODELS
@@ -21,8 +16,6 @@ note: this creates a migration file and a model file
 note: model name does not have to be same as the table it represents but it is helpful to name it a singular model name of the plural table name ie table Users model User.
 
 note: by default, when the table name is not given, Sequelize automatically pluralizes the model name and uses that as the table name.
-
-
 
 
 SEEDERS
