@@ -3,7 +3,7 @@ const express = require('express');
 const { Op } = require('sequelize');
 
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
-const { UserType } = require("../../db/models");
+const { Level } = require("../../db/models");
 
 
 // const { check } = require('express-validator');
@@ -15,7 +15,7 @@ const router = express.Router();
 
 router.get('/hello/world', function(req, res) {
   res.cookie('XSRF-TOKEN', req.csrfToken());
-  res.send('Hello world from route api/userTypes/hello/world!');
+  res.send('Hello world from route api/levels/hello/world!');
 });
 
 // ==================HELPER FUNCTIONS==========================================
@@ -44,11 +44,11 @@ const pagination = (reqQuery) => {
 }
 
 
-// ==================GET ALL USER TYPES==============================
+// ==================GET ALL LEVELS==============================
 router.get("/", requireAuth, async (req, res, next) => {
 
 
-  let userTypes = await UserType.findAll({
+  let levels = await Level.findAll({
     attributes: [
       "id",
       "type",
@@ -58,13 +58,13 @@ router.get("/", requireAuth, async (req, res, next) => {
     // ...pagination,
   });
 
-  return res.json({ userTypes, /* page, size */ });
+  return res.json({ levels, /* page, size */ });
 
 });
 
-// ==================GET A USER TYPE BY ID =========================
-router.get("/:userTypeId", async (req, res, next) => {
-  const userType = await UserType.findByPk(req.params.userTypeId, {
+// ==================GET A LEVEL BY ID =========================
+router.get("/:levelId", async (req, res, next) => {
+  const level = await Level.findByPk(req.params.levelId, {
     attributes: [
       "id",
       "type",
@@ -73,24 +73,24 @@ router.get("/:userTypeId", async (req, res, next) => {
     ],
   });
 
-  if (!userType) {
+  if (!level) {
     const err = new Error("User Type couldn't be found.");
     err.status = 404;
     return next(err);
   }
 
-  res.json(userType);
+  res.json(level);
 });
 
 
-// ==================CREATE A USER TYPE=============================
+// ==================CREATE A LEVEL=============================
 
 router.post("/", requireAuth, async (req, res, next) => {
 
   const { type } = req.body;
 
 
-  const exists = await UserType.findAll({
+  const exists = await Level.findAll({
     where: [
       { type: type },
     ],
@@ -101,38 +101,38 @@ router.post("/", requireAuth, async (req, res, next) => {
     err.status = 409;
     next(err);
   } else {
-    const nuUserType = await UserType.build({
+    const nuLevel = await Level.build({
       type: type,
     });
 
-    await nuUserType.validate();
-    await nuUserType.save();
+    await nuLevel.validate();
+    await nuLevel.save();
   }
 
-  const nuUserTypeFromDB = await UserType.findAll({
+  const nuLevelFromDB = await Level.findAll({
     where: [
       { type: type },
     ],
   });
 
 
-  return  res.status(201).json(nuUserTypeFromDB);
+  return  res.status(201).json(nuLevelFromDB);
 
 
 });
 
 
 
-// ==================EDIT A USER TYPE===============================
+// ==================EDIT A LEVEL===============================
 
 
-router.put("/:userTypeId", requireAuth, async (req, res, next) => {
+router.put("/:levelId", requireAuth, async (req, res, next) => {
   const { type } = req.body;
-  const userTypeId = req.params.userTypeId;
+  const levelId = req.params.levelId;
 
-  const userTypeToUpdate = await UserType.findByPk(req.params.userTypeId);
+  const levelToUpdate = await Level.findByPk(req.params.levelId);
 
-  if (!userTypeToUpdate) {
+  if (!levelToUpdate) {
     const err = new Error("User Type couldn't be found");
     err.status = 404;
     return next(err);
@@ -151,28 +151,28 @@ router.put("/:userTypeId", requireAuth, async (req, res, next) => {
   }
 
 
-  if (type !== undefined) userTypeToUpdate.type = type;
+  if (type !== undefined) levelToUpdate.type = type;
 
 
-  await userTypeToUpdate.save();
+  await levelToUpdate.save();
 
-  res.json(userTypeToUpdate);
+  res.json(levelToUpdate);
 });
 
 
-// ==================DELETE A USER TYPE=============================
+// ==================DELETE A LEVEL=============================
 
-router.delete("/:userTypeId", requireAuth, async (req, res, next) => {
-  const userTypeToDelete = await UserType.findByPk(req.params.userTypeId);
+router.delete("/:levelId", requireAuth, async (req, res, next) => {
+  const levelToDelete = await Level.findByPk(req.params.levelId);
 
 
-  if (!userTypeToDelete) {
+  if (!levelToDelete) {
     const err = new Error("User Type couldn't be found");
     err.status = 404;
     return next(err);
   }
 
-  await userTypeToDelete.destroy();
+  await levelToDelete.destroy();
   res.json({ message: "Successfully Deleted" });
 });
 

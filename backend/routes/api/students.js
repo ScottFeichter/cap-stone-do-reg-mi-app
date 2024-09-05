@@ -59,7 +59,6 @@ router.get("/", requireAuth, async (req, res, next) => {
       "state",
       "zip",
       "dob",
-      "age",
       "firstLang",
       "secondLang",
       "thirdLang",
@@ -98,7 +97,6 @@ router.get("/:studentId", async (req, res, next) => {
       "state",
       "zip",
       "dob",
-      "age",
       "firstLang",
       "secondLang",
       "thirdLang",
@@ -141,7 +139,6 @@ router.post("/", requireAuth, async (req, res, next) => {
     state,
     zip,
     dob,
-    age,
     firstLang,
     secondLang,
     thirdLang,
@@ -183,7 +180,6 @@ router.post("/", requireAuth, async (req, res, next) => {
       state: state,
       zip: zip,
       dob: dob,
-      age: age,
       firstLang: firstLang,
       secondLang: secondLang,
       thirdLang: thirdLang,
@@ -227,7 +223,6 @@ router.put("/:studentId", requireAuth, async (req, res, next) => {
     state,
     zip,
     dob,
-    age,
     firstLang,
     secondLang,
     thirdLang,
@@ -282,7 +277,6 @@ router.put("/:studentId", requireAuth, async (req, res, next) => {
   if (state !== undefined || state !== null) studentToUpdate.state = state;
   if (zip !== undefined || zip !== null) studentToUpdate.zip = zip;
   if (dob !== undefined || dob !== null) studentToUpdate.dob = dob;
-  if (age !== undefined || age !== null) studentToUpdate.age = age;
   if (firstLang !== undefined || firstLang !== null)
     studentToUpdate.firstLang = firstLang;
   if (secondLang !== undefined || secondLang !== null)

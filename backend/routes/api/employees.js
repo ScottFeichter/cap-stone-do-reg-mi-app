@@ -59,7 +59,6 @@ router.get("/", requireAuth, async (req, res, next) => {
       "state",
       "zip",
       "dob",
-      "age",
       "ssn",
       "firstLang",
       "secondLang",
@@ -114,7 +113,6 @@ router.get("/:employeeId", async (req, res, next) => {
       "state",
       "zip",
       "dob",
-      "age",
       "ssn",
       "firstLang",
       "secondLang",
@@ -176,7 +174,6 @@ router.post("/", requireAuth, async (req, res, next) => {
     state,
     zip,
     dob,
-    age,
     ssn,
     firstLang,
     secondLang,
@@ -231,7 +228,6 @@ router.post("/", requireAuth, async (req, res, next) => {
       state: state,
       zip: zip,
       dob: dob,
-      age: age,
       ssn: ssn,
       firstLang: firstLang,
       secondLang: secondLang,
@@ -291,7 +287,6 @@ router.put("/:employeeId", requireAuth, async (req, res, next) => {
     state,
     zip,
     dob,
-    age,
     ssn,
     firstLang,
     secondLang,
@@ -362,7 +357,6 @@ router.put("/:employeeId", requireAuth, async (req, res, next) => {
   if (state !== undefined || state !== null) employeeToUpdate.state = state;
   if (zip !== undefined || zip !== null) employeeToUpdate.zip = zip;
   if (dob !== undefined || dob !== null) employeeToUpdate.dob = dob;
-  if (age !== undefined || age !== null) employeeToUpdate.age = age;
   if (ssn !== undefined || ssn !== null) employeeToUpdate.ssn = ssn;
   if (firstLang !== undefined || firstLang !== null)
     employeeToUpdate.firstLang = firstLang;
