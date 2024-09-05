@@ -15,7 +15,7 @@ import * as facilitiesActions from './redux/facilitiesReducer.js';
 import * as householdsActions from './redux/householdsReducer.js';
 import * as studentsActions from './redux/studentsReducer.js';
 
-import { router } from "./router/App.jsx";
+import { router } from "./router/Router.jsx";
 import './index.css'
 
 

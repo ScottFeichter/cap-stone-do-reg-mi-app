@@ -94,67 +94,6 @@ export const router = createBrowserRouter([
         },
 
 
-
-
-
-    // =============FROM RAVENWOOD=============
-
-
-    //   {
-    //     path: "/",
-    //     loader: userPortfolios,
-    //     element: <HomePage />,
-    //   },
-    //   {
-    //     path: "profile/portfolios",
-    //     loader: userPortfolios,
-    //     element: <UserProfilePage />,
-    //     action: modifyPortfolio,
-    //     children: [
-    //       {
-    //         path: "edit",
-    //         element: <UpdateProfileModal />,
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     path: "portfolios/new",
-    //     loader: userPortfolios,
-    //     element: <CreatePortfolio />,
-    //     action: createPortfolioAction,
-    //   },
-    //   {
-    //     path: "portfolios/:userId",
-    //     loader: userPortfolios,
-    //     element: <PortfolioDetails />,
-    //     action: modifyPortfolio,
-    //   },
-    //   {
-    //     path: "portfolios/:userId/edit",
-    //     loader: userPortfolios,
-    //     element: <UpdatePortfolio />,
-    //     action: updatePortfolioAction,
-    //   },
-    //   {
-    //     path: "portfolios/:userId/edit/cash",
-    //     loader: userPortfolios,
-    //     element: <UpdatePortfolio />,
-    //     action: updatePortfolioAction,
-    //   },
-    //   {
-    //     path: "watchlist/:watchlist_num",
-    //     loader: watchlistLoader,
-    //     element: <Watchlist />,
-    //     action: deleteWatchlist,
-    //   },
-    //   {
-    //     path: "watchlist",
-    //     element: <WatchlistAll />,
-    //     loader: watchlistLoader,
-    //     action: deleteWatchlist,
-    //   },
-
-
       // =============CATCH ALL=============
 
       {
@@ -173,12 +112,3 @@ export const router = createBrowserRouter([
     ],
   },
 ]);
-
-
-function App() {
-
-  // console.log("APP COMPONENT RAN");
-  return <RouterProvider router={router} />;
-}
-
-export default App;
