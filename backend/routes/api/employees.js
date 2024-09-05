@@ -46,7 +46,7 @@ router.get("/", requireAuth, async (req, res, next) => {
       "id",
       "employeeDepartment_Id",
       "academicDepartment_Id",
-      "userType_Id",
+      "level_Id",
       "firstName",
       "nickName",
       "middleName",
@@ -100,7 +100,7 @@ router.get("/:employeeId", async (req, res, next) => {
       "id",
       "employeeDepartment_Id",
       "academicDepartment_Id",
-      "userType_Id",
+      "level_Id",
       "firstName",
       "nickName",
       "middleName",
@@ -161,7 +161,7 @@ router.post("/", requireAuth, async (req, res, next) => {
   const {
     employeeDepartment_Id,
     academicDepartment_Id,
-    userType_Id,
+    level_Id,
     firstName,
     nickName,
     middleName,
@@ -215,7 +215,7 @@ router.post("/", requireAuth, async (req, res, next) => {
     const nuEmployee = await Employee.build({
       employeeDepartment_Id: employeeDepartment_Id,
       academicDepartment_Id: academicDepartment_Id,
-      userType_Id: userType_Id,
+      level_Id: level_Id,
       firstName: firstName,
       nickName: nickName,
       middleName: middleName,
@@ -274,7 +274,7 @@ router.put("/:employeeId", requireAuth, async (req, res, next) => {
   const {
     employeeDepartment_Id,
     academicDepartment_Id,
-    userType_Id,
+    level_Id,
     firstName,
     nickName,
     middleName,
@@ -336,8 +336,8 @@ router.put("/:employeeId", requireAuth, async (req, res, next) => {
     employeeToUpdate.employeeDepartment_Id = employeeDepartment_Id;
   if (academicDepartment_Id !== undefined || academicDepartment_Id !== null)
     employeeToUpdate.academicDepartment_Id = academicDepartment_Id;
-  if (userType_Id !== undefined || userType_Id !== null)
-    employeeToUpdate.userType_Id = userType_Id;
+  if (level_Id !== undefined || level_Id !== null)
+    employeeToUpdate.level_Id = level_Id;
   if (firstName !== undefined || firstName !== null)
     employeeToUpdate.firstName = firstName;
   if (nickName !== undefined || nickName !== null)

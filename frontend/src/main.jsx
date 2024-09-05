@@ -6,7 +6,7 @@ import { RouterProvider } from 'react-router-dom';
 import configureStore from './redux/store.js';
 import { restoreCSRF, csrfFetch } from './redux/xCsrf.js';
 import * as sessionActions from './redux/sessionReducer.js';
-// import * as userTypesActions from './redux/userTypesReducer.js';
+// import * as levelsActions from './redux/levelsReducer.js';
 import * as academicDepartmentsActions from './redux/academicDepartmentsReducer.js';
 import * as employeeDepartmentsActions from './redux/employeeDepartmentsReducer.js';
 import * as employeesActions from './redux/employeesReducer.js';
@@ -35,7 +35,7 @@ if (process.env.NODE_ENV !== 'production') {
   window.sessionActions = sessionActions;
   window.academicDepartmentsActions = academicDepartmentsActions;
   window.employeeDepartmentsActions = employeeDepartmentsActions;
-  // window.userTypesActions = userTypesActions;
+  // window.levelsActions = levelsActions;
   window.employeesActions = employeesActions;
   window.branchesActions = branchesActions;
   window.facilitiesActions = facilitiesActions;

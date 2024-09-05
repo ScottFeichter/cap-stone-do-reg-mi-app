@@ -46,7 +46,7 @@ router.get("/", requireAuth, async (req, res, next) => {
       "id",
       "household_Id",
       "headOfHousehold",
-      "userType_Id",
+      "level_Id",
       "firstName",
       "nickName",
       "middleName",
@@ -84,7 +84,7 @@ router.get("/:studentId", async (req, res, next) => {
       "id",
       "household_Id",
       "headOfHousehold",
-      "userType_Id",
+      "level_Id",
       "firstName",
       "nickName",
       "middleName",
@@ -126,7 +126,7 @@ router.post("/", requireAuth, async (req, res, next) => {
   const {
     household_Id,
     headOfHousehold,
-    userType_Id,
+    level_Id,
     firstName,
     nickName,
     middleName,
@@ -167,7 +167,7 @@ router.post("/", requireAuth, async (req, res, next) => {
     const nuStudent = await Student.build({
       household_Id: household_Id,
       headOfHousehold: headOfHousehold,
-      userType_Id: userType_Id,
+      level_Id: level_Id,
       firstName: firstName,
       nickName: nickName,
       middleName: middleName,
@@ -210,7 +210,7 @@ router.put("/:studentId", requireAuth, async (req, res, next) => {
   const {
     household_Id,
     headOfHousehold,
-    userType_Id,
+    level_Id,
     firstName,
     nickName,
     middleName,
@@ -256,8 +256,8 @@ router.put("/:studentId", requireAuth, async (req, res, next) => {
     studentToUpdate.household_Id = household_Id;
   if (headOfHousehold !== undefined || headOfHousehold !== null)
     studentToUpdate.headOfHousehold = headOfHousehold;
-  if (userType_Id !== undefined || userType_Id !== null)
-    studentToUpdate.userType_Id = userType_Id;
+  if (level_Id !== undefined || level_Id !== null)
+    studentToUpdate.level_Id = level_Id;
   if (firstName !== undefined || firstName !== null)
     studentToUpdate.firstName = firstName;
   if (nickName !== undefined || nickName !== null)

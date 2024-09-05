@@ -11,24 +11,18 @@
 //     body: JSON.stringify({credential: "Demo-lition", password: "password"})
 //   }).then(res => res.json()).then(data => console.log(data));
 
-
 // // fetch from frontend to test - expect object requestBody:
 //  window.csrfFetch('/api/test', {
 //   method: 'POST',
 //   body: JSON.stringify({ credential: 'Demo-lition', password: 'password' })
 // }).then(res => res.json()).then(data => console.log(data));
 
-
-
 // // log out but not working may need xsrf
 // fetch('/api/session/', {
 //   method: 'DELETE',
 // });
 
-
-
 // // ==============================SESSION THUNKS===============================//
-
 
 // //  login thunk action test in the browser's dev tools console:
 // window.store.dispatch(
@@ -51,7 +45,6 @@
 //   })
 // );
 
-
 // // ==============================USER TYPES THUNKS===============================//
 
-// window.store.dispatch(window.userTypesActions.thunkGetUserTypesAll());
+// window.store.dispatch(window.levelsActions.thunkGetUserTypesAll());

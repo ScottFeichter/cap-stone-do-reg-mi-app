@@ -871,6 +871,6 @@ attributes: [
 },
 isNewRecord: false
 }
-Executing (default): SELECT `id`, `household_Id`, `headOfHousehold`, `userType_Id`, `firstName`, `nickName`, `middleName`, `lastName`, `familyName`, `email`, `phone`, `street`, `city`, `state`, `zip`, `dob`, `age`, `firstLang`, `secondLang`, `thirdLang`, `firstInst`, `secondInst`, `thirdInst`, `yearlyIncome`, `biography`, `notes`, `createdAt`, `updatedAt` FROM `Students` AS `Student`;
+Executing (default): SELECT `id`, `household_Id`, `headOfHousehold`, `level_Id`, `firstName`, `nickName`, `middleName`, `lastName`, `familyName`, `email`, `phone`, `street`, `city`, `state`, `zip`, `dob`, `age`, `firstLang`, `secondLang`, `thirdLang`, `firstInst`, `secondInst`, `thirdInst`, `yearlyIncome`, `biography`, `notes`, `createdAt`, `updatedAt` FROM `Students` AS `Student`;
 GET /api/households 304 8.573 ms - -
 GET /api/students 304 7.911 ms - -

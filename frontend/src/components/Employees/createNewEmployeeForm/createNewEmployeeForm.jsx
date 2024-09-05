@@ -65,7 +65,7 @@ function CreateNewEmployeeForm() {
 // employment information form section 2----------------------------------------------------------
             employeeDepartment_Id	:	null	,
             academicDepartment_Id	:	null	,
-            userType_Id	            :	null	,
+            level_Id	            :	null	,
             primaryTitle	        :	null	,
             primaryStartDate	    :	null	,
             primaryEndDate	        :	null	,
@@ -127,7 +127,7 @@ function CreateNewEmployeeForm() {
 
         const [employeeDepartment_Id, setEmployeeDepartment_Id] = useState("");
         const [academicDepartment_Id, setAcademicDepartment_Id] = useState("");
-        const [userType_Id, setUserType_Id] = useState("");
+        const [level_Id, setUserType_Id] = useState("");
         const [primaryTitle, setPrimaryTitle] = useState("");
         const [primaryStartDate, setPrimaryStartDate] = useState("");
         const [primaryEndDate, setPrimaryEndDate] = useState("");
@@ -271,7 +271,7 @@ const checkInteger = () => {
 
     let employeeDepartment_IdNum = parseInt(employeeDepartment_Id);
     let academicDepartment_IdNum = parseInt(academicDepartment_Id);
-    let userType_IdNum = parseInt(userType_Id);
+    let level_IdNum = parseInt(level_Id);
     let ageNum = parseInt(age);
     let zipNum = parseInt(zip);
     let primaryPayRateNum = parseInt(primaryPayRate);
@@ -282,7 +282,7 @@ const checkInteger = () => {
 
     let employeeDepartment_IdErrorBool = false;
     let academicDepartment_IdErrorBool = false;
-    let userType_IdErrorBool = false;
+    let level_IdErrorBool = false;
     let ageErrorBool = false;
     let zipErrorBool = false;
     let primaryPayRateErrorBool = false;
@@ -308,11 +308,11 @@ const checkInteger = () => {
     }
 
 
-    if(userType_Id !== "" && (typeof userType_IdNum !== "number" || isNaN(userType_IdNum))){
-        userType_IdErrorBool = true;
-        setErrorsUserType_Id({userType_Id: "User Type ID must be an integer"});
+    if(level_Id !== "" && (typeof level_IdNum !== "number" || isNaN(level_IdNum))){
+        level_IdErrorBool = true;
+        setErrorsUserType_Id({level_Id: "User Type ID must be an integer"});
     } else {
-        userType_IdErrorBool = false;
+        level_IdErrorBool = false;
         setErrorsUserType_Id({});
     }
 
@@ -373,7 +373,7 @@ const checkInteger = () => {
     if (
         (employeeDepartment_IdErrorBool) ||
         (academicDepartment_IdErrorBool) ||
-        (userType_IdErrorBool) ||
+        (level_IdErrorBool) ||
         (ageErrorBool) ||
         (zipErrorBool) ||
         (primaryPayRateErrorBool) ||
@@ -421,7 +421,7 @@ const checkInteger = () => {
 
          if(	employeeDepartment_Id	)	newEmployee	.	employeeDepartment_Id	=	employeeDepartment_Id	;
          if(	academicDepartment_Id	)	newEmployee	.	academicDepartment_Id	=	academicDepartment_Id	;
-         if(	userType_Id	)	newEmployee	.	userType_Id	=	userType_Id	;
+         if(	level_Id	)	newEmployee	.	level_Id	=	level_Id	;
          if(	firstName	)	newEmployee	.	firstName	=	firstName	;
          if(	nickName	)	newEmployee	.	nickName	=	nickName	;
          if(	middleName	)	newEmployee	.	middleName	=	middleName	;
@@ -880,24 +880,24 @@ const checkInteger = () => {
 
 
 
-                            <div id='userType_IdContainer' className='CreateNewEmployeeFormLabelInputContainer'>
+                            <div id='level_IdContainer' className='CreateNewEmployeeFormLabelInputContainer'>
 
                                         <label className='CreateNewEmployeeFormLabel'>
                                             User Type ID:
                                             <input
                                             className='CreateNewEmployeeFormInput'
-                                            id="userType_Id"
-                                            name="userType_Id"
+                                            id="level_Id"
+                                            name="level_Id"
                                             type="text"
                                             placeholder='User Type ID'
-                                            value={userType_Id}
+                                            value={level_Id}
                                             onChange={(e) => setUserType_Id(e.target.value)}
 
                                             />
                                         </label>
 
                             </div>
-                            {errorsUserType_Id.userType_Id && <p className='CreateNewEmployeeErrors'>{errorsUserType_Id.userType_Id}</p>}
+                            {errorsUserType_Id.level_Id && <p className='CreateNewEmployeeErrors'>{errorsUserType_Id.level_Id}</p>}
 
 
 

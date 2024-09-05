@@ -167,10 +167,10 @@ function EmployeeDetails(props){
                                 <div className='EmployeeDetailsFormInput'>{employee.academicDepartment_Id ? employee.academicDepartment_Id : nullReplacer}</div>
                         </div>
 
-                        <div id='userType_IdContainer' className='EmployeeDetailsFormLabelInputContainer'>
-                                <div className='EmployeeDetailsFormLabel'>{"userType_Id"}</div>
+                        <div id='level_IdContainer' className='EmployeeDetailsFormLabelInputContainer'>
+                                <div className='EmployeeDetailsFormLabel'>{"level_Id"}</div>
                                 <div className='EmployeeDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='EmployeeDetailsFormInput'>{employee.userType_Id ? employee.userType_Id : nullReplacer}</div>
+                                <div className='EmployeeDetailsFormInput'>{employee.level_Id ? employee.level_Id : nullReplacer}</div>
                         </div>
 
                         <div id='primaryTitleContainer' className='EmployeeDetailsFormLabelInputContainer'>

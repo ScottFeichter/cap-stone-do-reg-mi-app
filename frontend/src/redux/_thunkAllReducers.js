@@ -1,13 +1,36 @@
-import { useDispatch } from 'react-redux';
-import { thunkGetBranchesAll, thunkRemoveBranchDataFromStore } from "./branchesReducer";
-import { thunkGetFacilitiesAll, thunkRemoveFacilitiesDataFromStore } from "./facilitiesReducer";
-import { thunkGetAcademicDepartmentsAll, thunkRemoveAcademicDepartmentsDataFromStore } from "./academicDepartmentsReducer";
-import { thunkGetEmployeeDepartmentsAll, thunkRemoveEmployeeDepartmentsDataFromStore } from "./employeeDepartmentsReducer";
-import { thunkGetUserTypesAll, thunkRemoveUserTypeDataFromStore } from "./userTypesReducer";
-import { thunkGetHouseholdsAll, thunkRemoveHouseholdDataFromStore } from "./householdsReducer";
-import { thunkGetEmployeesAll, thunkRemoveEmployeeDataFromStore } from "./employeesReducer";
-import { thunkGetStudentsAll, thunkRemoveStudentDataFromStore } from "./studentsReducer";
-
+import { useDispatch } from "react-redux";
+import {
+  thunkGetBranchesAll,
+  thunkRemoveBranchDataFromStore,
+} from "./branchesReducer";
+import {
+  thunkGetFacilitiesAll,
+  thunkRemoveFacilitiesDataFromStore,
+} from "./facilitiesReducer";
+import {
+  thunkGetAcademicDepartmentsAll,
+  thunkRemoveAcademicDepartmentsDataFromStore,
+} from "./academicDepartmentsReducer";
+import {
+  thunkGetEmployeeDepartmentsAll,
+  thunkRemoveEmployeeDepartmentsDataFromStore,
+} from "./employeeDepartmentsReducer";
+import {
+  thunkGetUserTypesAll,
+  thunkRemoveUserTypeDataFromStore,
+} from "./levelsReducer";
+import {
+  thunkGetHouseholdsAll,
+  thunkRemoveHouseholdDataFromStore,
+} from "./householdsReducer";
+import {
+  thunkGetEmployeesAll,
+  thunkRemoveEmployeeDataFromStore,
+} from "./employeesReducer";
+import {
+  thunkGetStudentsAll,
+  thunkRemoveStudentDataFromStore,
+} from "./studentsReducer";
 
 export function ThunkGetAllReducer() {
   const dispatch = useDispatch();
@@ -19,10 +42,8 @@ export function ThunkGetAllReducer() {
   dispatch(thunkGetHouseholdsAll());
   dispatch(thunkGetEmployeesAll());
   dispatch(thunkGetStudentsAll());
-  return
+  return;
 }
-
-
 
 export function ThunkRemoveAllReducer() {
   const dispatch = useDispatch();
@@ -34,5 +55,5 @@ export function ThunkRemoveAllReducer() {
   dispatch(thunkRemoveHouseholdDataFromStore());
   dispatch(thunkRemoveEmployeeDataFromStore());
   dispatch(thunkRemoveStudentDataFromStore());
-  return 
+  return;
 }

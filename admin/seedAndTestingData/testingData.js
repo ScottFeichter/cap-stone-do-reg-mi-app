@@ -2,7 +2,7 @@
 // {
 //   employeeDepartment_Id: 3,
 //   academicDepartment_Id: 1,
-//   userType_Id: 3,
+//   level_Id: 3,
 //   firstName: "Juliette",
 //   nickName: "Nadia",
 //   middleName: null,
@@ -46,7 +46,7 @@
 // {
 //   employeeDepartment_Id: 1,
 //   academicDepartment_Id: null,
-//   userType_Id: null,
+//   level_Id: null,
 //   firstName: "Fred",
 //   nickName: null,
 //   middleName: null,
@@ -92,7 +92,7 @@
 // {
 //   employeeDepartment_Id: 2,
 //   academicDepartment_Id: null,
-//   userType_Id: 1,
+//   level_Id: 1,
 //   firstName: "Buffy",
 //   nickName: null,
 //   middleName: "Anne",
@@ -136,7 +136,7 @@
 const testMartha = {
   employeeDepartment_Id: 3,
   academicDepartment_Id: 1,
-  userType_Id: 3,
+  level_Id: 3,
   firstName: "Martha",
   nickName: null,
   middleName: null,
@@ -179,7 +179,7 @@ const testMartha = {
 
 //   employeeDepartment_Id
 // academicDepartment_Id
-// userType_Id
+// level_Id
 // firstName
 // nickName
 // middleName

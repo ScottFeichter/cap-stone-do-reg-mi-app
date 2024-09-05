@@ -92,7 +92,8 @@ export const thunkGetEmployeesAll = () => async (dispatch) => {
   const employees = data.employees;
   // console.log('THUNK GET EMPLOYEES ALL RAN DATA: ', employees);
 
-  return dispatch(employeesAll(employees))
+  dispatch(employeesAll(employees))
+  return
 };
 
 
