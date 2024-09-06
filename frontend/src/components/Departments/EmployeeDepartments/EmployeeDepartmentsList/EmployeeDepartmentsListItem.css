@@ -29,7 +29,7 @@
 
 .EmployeeDepartmentsListItemContainerID {
     font-size: .8rem;
-    width: 2rem;
+    width: 8rem;
    /* customized on top */
     text-align: center;
     display: flex;
@@ -42,53 +42,9 @@
     /* border: green 2px solid; */
   }
 
-  .EmployeeDepartmentsListItemContainerED {
-    font-size: .8rem;
-    width: 2rem;
-   /* customized on top */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
-
-  .EmployeeDepartmentsListItemContainerAD {
-    font-size: .8rem;
-    width: 2rem;
-   /* customized on top */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
 
   .EmployeeDepartmentsListItemContainerName {
     font-size: .9rem;
-    width: 10rem;
-   /* customized on top */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
-
-  .EmployeeDepartmentsListItemContainerStreet {
-    font-size: .8rem;
     width: 8rem;
    /* customized on top */
     text-align: center;
@@ -102,7 +58,7 @@
     /* border: green 2px solid; */
   }
 
-  .EmployeeDepartmentsListItemContainerCity {
+  .EmployeeDepartmentsListItemContainerImageURL {
     font-size: .8rem;
     width: 8rem;
    /* customized on top */
@@ -116,100 +72,6 @@
     text-wrap: nowrap;
     /* border: green 2px solid; */
   }
-
-  .EmployeeDepartmentsListItemContainerState {
-    font-size: .8rem;
-    width: 4rem;
-   /* customized on top */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
-
-  .EmployeeDepartmentsListItemContainerZip {
-    font-size: .8rem;
-    width: 6rem;
-   /* customized on top */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
-
-  .EmployeeDepartmentsListItemContainerPhone {
-    font-size: .8rem;
-    width: 6rem;
-   /* customized on top */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
-
-
-
-  .EmployeeDepartmentsListItemContainerEmail {
-    font-size: .8rem;
-    width: 10rem;
-   /* customized on top */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
-
-
-  .EmployeeDepartmentsListItemContainerLang {
-    font-size: .8rem;
-    width: 5rem;
-   /* customized on top */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
-
-  .EmployeeDepartmentsListItemContainerInst {
-    font-size: .8rem;
-    width: 5rem;
-   /* customized on top */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
-
 
 
     /* ---------???----------- */

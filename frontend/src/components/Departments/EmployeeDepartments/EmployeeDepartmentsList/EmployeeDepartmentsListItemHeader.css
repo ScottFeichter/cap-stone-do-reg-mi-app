@@ -7,91 +7,27 @@
     /* border: blue 2px solid; */
   }
 
-  /* ---------ITEM GENERIC----------- */
-
-  .EmployeeDepartmentsListItemHeaderItemContainerGeneric {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    width: 8rem;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
 
    /* ---------ITEM SPECIFIC----------- */
    /* ----Should match the item css---- */
 
 .EmployeeDepartmentsListItemHeaderItemContainerID {
+    width: 8rem;
+   /* customized on top */
     text-align: center;
     display: flex;
     flex-direction: column;
     margin: 0 .15rem 0 .15rem;
     align-items: center;
     justify-content: center;
-    width: 2rem;
+
     overflow: hidden;
     text-wrap: nowrap;
     /* border: green 2px solid; */
   }
 
-  .EmployeeDepartmentsListItemHeaderItemContainerED {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
-
-  .EmployeeDepartmentsListItemHeaderItemContainerAD {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
 
   .EmployeeDepartmentsListItemHeaderItemContainerName {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    width: 10rem;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
-
-  .EmployeeDepartmentsListItemHeaderItemContainerStreet {
-    width: 8rem;
-  /* customized on top */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
-
-  .EmployeeDepartmentsListItemHeaderItemContainerCity {
     width: 8rem;
     /* customized on top */
     text-align: center;
@@ -105,51 +41,8 @@
     /* border: green 2px solid; */
   }
 
-  .EmployeeDepartmentsListItemHeaderItemContainerState {
-    width: 4rem;
-    /* customized on top */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
-
-  .EmployeeDepartmentsListItemHeaderItemContainerZip {
-    width: 6rem;
-    /* customized on top */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
-
-  .EmployeeDepartmentsListItemHeaderItemContainerPhone {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    width: 6rem;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
-
-
-
-  .EmployeeDepartmentsListItemHeaderItemContainerEmail {
-    width: 10rem;
+  .EmployeeDepartmentsListItemHeaderItemContainerImageURL {
+    width: 8rem;
   /* customized on top */
     text-align: center;
     display: flex;
@@ -161,35 +54,6 @@
     text-wrap: nowrap;
     /* border: green 2px solid; */
   }
-
-
-  .EmployeeDepartmentsListItemHeaderItemContainerLang {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    width: 5rem;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
-
-  .EmployeeDepartmentsListItemHeaderItemContainerInst {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    width: 5rem;
-    overflow: hidden;
-    text-wrap: nowrap;
-    /* border: green 2px solid; */
-  }
-
-
 
 
 

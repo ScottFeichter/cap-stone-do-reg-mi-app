@@ -87,7 +87,7 @@ const handleClickEditEmployeeDepartment = () => {
 
               <EmployeeDepartmentDeleteModalButton
                 id={`${BASE_CLASS_NAME}DeleteButton`}
-                buttonText="Delete EmployeeDepartment"
+                buttonText="Delete Employee Department"
                 modalComponent={<EmployeeDepartmentDeleteModal employeeDepartment={employeeDepartment} />}
               />
 

@@ -2,6 +2,7 @@ import './EmployeeDepartmentsListItem.css';
 import { Link } from "react-router-dom";
 
 function EmployeeDepartmentsListItem({ employeeDepartment }) {
+  // console.log(employeeDepartment);
   return (
     <>
 
@@ -17,7 +18,7 @@ function EmployeeDepartmentsListItem({ employeeDepartment }) {
             to={`/employeeDepartments/${employeeDepartment.id}`}
             state={{employeeDepartment: employeeDepartment}}
             className="EmployeeDepartmentsListItemP">
-              {employeeDepartment.firstName + " " + employeeDepartment.lastName}
+              {employeeDepartment.name}
           </Link>
         </div>
 
@@ -26,7 +27,7 @@ function EmployeeDepartmentsListItem({ employeeDepartment }) {
         </div>
 
       </div>
-      <div className="EmployeeDepartmentsListItemBorder"></div>
+      {/* <div className="EmployeeDepartmentsListItemBorder"></div> */}
     </>
   );
 }
