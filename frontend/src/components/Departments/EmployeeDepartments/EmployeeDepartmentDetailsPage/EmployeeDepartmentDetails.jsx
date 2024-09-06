@@ -5,6 +5,7 @@
 import './EmployeeDepartmentDetails.css';
 
 //==================PROGRAM IMPORTS=====================//
+import {useNavigate} from 'react-router-dom';
 // import { useSelector } from 'react-redux';
 
 //================COMPONENT IMPORTS=====================//
@@ -12,6 +13,8 @@ import './EmployeeDepartmentDetails.css';
 
 //===============FUNCTION DECLARATION===================//
 function EmployeeDepartmentDetails(props){
+
+    const navigate = useNavigate()
 
     // const employeeDepartment = useSelector(state => state.employeeDepartments.employeeDepartments[1])
     const employeeDepartment = props.employeeDepartment;
@@ -32,8 +35,9 @@ function EmployeeDepartmentDetails(props){
 
     const handleScroll = (e) => {
         e.preventDefault();
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        // document.body.scrollTop = 0; // For Safari
+        // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        navigate('/departments')
     }
 
 
@@ -47,7 +51,7 @@ function EmployeeDepartmentDetails(props){
 
                     <section id="EmployeeDepartmentDetailsFormSection1">
 
-                        <h4 id="EmployeeDepartmentDetailsFormSection1H4">Personal Information</h4>
+                        <h4 id="EmployeeDepartmentDetailsFormSection1H4">Information</h4>
 
                         <div id='nameContainer' className='EmployeeDepartmentDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDepartmentDetailsFormLabel'>{"ID"}</div>
@@ -82,7 +86,7 @@ function EmployeeDepartmentDetails(props){
                                 id="EmployeeDepartmentDetailsButton"
                                 type="submit"
                                 onClick={handleScroll}
-                                >Back To Top
+                                >Back
                             </button>
                         </div>
 

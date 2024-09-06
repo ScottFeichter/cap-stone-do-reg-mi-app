@@ -34,6 +34,8 @@ function EmployeeDepartmentDetailsPage() {
   employeeDepartments = useSelector(state => state?.employeeDepartments?.employeeDepartments);
   employeeDepartment = employeeDepartments.find(employeeDepartment => employeeDepartment.id === +employeeDepartmentId)
 
+  console.log("details", employeeDepartmentParams, employeeDepartmentId, employeeDepartments, "ep!!!!!!!!!!!!!", employeeDepartment);
+
 
 
 

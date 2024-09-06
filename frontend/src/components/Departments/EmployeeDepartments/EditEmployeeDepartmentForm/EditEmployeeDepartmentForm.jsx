@@ -134,7 +134,7 @@ const checkRequired = () => {
             await dispatch(employeeDepartmentsActions.thunkGetEmployeeDepartmentById(employeeDepartmentId)).then(response => {
                 editedEmployeeDepartmentDetails = response;
 
-                navigate(`/employeeDepartments`)
+                navigate(`/departments`)
                 return response
             });
 

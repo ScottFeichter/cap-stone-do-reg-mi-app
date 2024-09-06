@@ -8,6 +8,8 @@ import "./EmployeeDepartmentDeleteModal.css"
 
 function EmployeeDepartmentDeleteModal({employeeDepartment}) {
 
+    console.log("employee Department: ", employeeDepartment);
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
 

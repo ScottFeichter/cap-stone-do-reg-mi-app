@@ -4,10 +4,9 @@ const BASE_CLASS_NAME = "CatchAll";
 import './CatchAll.css';
 
 //==================PROGRAM IMPORTS=====================//
-import { TbError404 } from "react-icons/tb";
-import { TbFaceIdError } from "react-icons/tb";
+
 import { FaHeartBroken } from "react-icons/fa";
-import { ImHeartBroken } from "react-icons/im";
+
 
 //================COMPONENT IMPORTS=====================//
 
