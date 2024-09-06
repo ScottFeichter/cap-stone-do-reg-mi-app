@@ -21,36 +21,9 @@ function EmployeeDepartmentsListItem({ employeeDepartment }) {
           </Link>
         </div>
 
-        <div className="EmployeeDepartmentsListItemContainerStreet">
-          <p className="EmployeeDepartmentsListItemP">{employeeDepartment.street ? employeeDepartment.street: "-"}</p>
+        <div className="EmployeeDepartmentsListItemContainerImageURL">
+          <p className="EmployeeDepartmentsListItemP">{employeeDepartment.imageURL ? employeeDepartment.imageURL: "-"}</p>
         </div>
-
-        <div className="EmployeeDepartmentsListItemContainerCity">
-          <p className="EmployeeDepartmentsListItemP">{employeeDepartment.city ? employeeDepartment.city: "-"}</p>
-        </div>
-
-        <div className="EmployeeDepartmentsListItemContainerState">
-          <p className="EmployeeDepartmentsListItemP">{employeeDepartment.state ? employeeDepartment.state: "-"}</p>
-        </div>
-
-        <div className="EmployeeDepartmentsListItemContainerZip">
-          <p className="EmployeeDepartmentsListItemP">{employeeDepartment.zip ? employeeDepartment.zip: "-"}</p>
-        </div>
-
-        <div className="EmployeeDepartmentsListItemContainerPhone">
-              {employeeDepartment.phone ?
-              <Link to={`tel:${employeeDepartment.phone}`} className="EmployeeDepartmentsListItemP">{employeeDepartment.phone}</Link>
-              : <p className="EmployeeDepartmentsListItemP">-</p>}
-        </div>
-
-        <div className="EmployeeDepartmentsListItemContainerEmail">
-
-              {employeeDepartment.email ?
-              <Link to={`mailto:${employeeDepartment.email}`}className="EmployeeDepartmentsListItemP">{employeeDepartment.email}</Link>
-                : <p className="EmployeeDepartmentsListItemP">-</p>}
-
-        </div>
-
 
       </div>
       <div className="EmployeeDepartmentsListItemBorder"></div>

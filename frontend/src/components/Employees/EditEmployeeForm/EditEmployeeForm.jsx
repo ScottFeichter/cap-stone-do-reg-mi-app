@@ -39,7 +39,6 @@ function EditEmployeeForm() {
         const [errorsEmployeeDepartment_Id, setErrorsEmployeeDepartment_Id] = useState({})
         const [errorsAcademicDepartment_Id, setErrorsAcademicDepartment_Id ] = useState({})
         const [errorsUserType_Id, setErrorsUserType_Id ] = useState({})
-        const [errorsAge, setErrorsAge ] = useState({})
         const [errorsZip, setErrorsZip ] = useState({})
         const [errorsPrimaryPayRate, setErrorsPrimaryPayRate ] = useState({})
         const [errorsSecondaryPayRate, setErrorsSecondaryPayRate ] = useState({})
@@ -58,14 +57,13 @@ function EditEmployeeForm() {
             middleName	            :	null	,
             lastName	            :	null	,
             familyName	            :	null	,
-            email	        :	null	,
-            phone	        :	null	,
+            email	                :	null	,
+            phone	                :	null	,
             street	                :	null	,
             city	                :	null	,
             state	                :	null	,
             zip	                    :	null	,
             dob	                    :	null	,
-            age	                    :	null	,
             ssn	                    :	null	,
 
 // employment information form section 2----------------------------------------------------------
@@ -120,7 +118,6 @@ function EditEmployeeForm() {
     const [state,setState] = useState(employeeToEdit.state||"")
     const [zip,setZip] = useState(employeeToEdit.zip||"")
     const [dob,setDob] = useState(employeeToEdit.dob||"")
-    const [age,setAge] = useState(employeeToEdit.age||"")
     const [ssn,setSsn] = useState(employeeToEdit.ssn||"")
     const [firstLang,setFirstLang] = useState(employeeToEdit.firstLang||"")
     const [secondLang,setSecondLang] = useState(employeeToEdit.secondLang||"")
@@ -168,7 +165,7 @@ const checkRequired = () => {
 
     if(!firstName) {
         firstNameBool = true;
-        setErrorsFirstName({firstName: "First Name 1 is required"});
+        setErrorsFirstName({firstName: "First name is required"});
     } else {
         firstNameBool = false;
         setErrorsFirstName({});
@@ -176,7 +173,7 @@ const checkRequired = () => {
 
     if(!lastName) {
         lastNameBool = true;
-        setErrorsLastName({lastName: "Last Name 1 is required"});
+        setErrorsLastName({lastName: "Last name  is required"});
     } else {
         lastNameBool = false;
         setErrorsLastName({});
@@ -184,7 +181,7 @@ const checkRequired = () => {
 
     if(!phone) {
         phoneBool = true;
-        setErrorsPersonalPhone({phone: "Personal Phone is required"});
+        setErrorsPersonalPhone({phone: "Phone is required"});
     } else {
         phoneBool = false;
         setErrorsPersonalPhone({});
@@ -231,7 +228,6 @@ const checkInteger = () => {
     let employeeDepartment_IdNum = parseInt(employeeDepartment_Id);
     let academicDepartment_IdNum = parseInt(academicDepartment_Id);
     let level_IdNum = parseInt(level_Id);
-    let ageNum = parseInt(age);
     let zipNum = parseInt(zip);
     let primaryPayRateNum = parseInt(primaryPayRate);
     let secondaryPayRateNum = parseInt(secondaryPayRate);
@@ -242,7 +238,6 @@ const checkInteger = () => {
     let employeeDepartment_IdErrorBool = false;
     let academicDepartment_IdErrorBool = false;
     let level_IdErrorBool = false;
-    let ageErrorBool = false;
     let zipErrorBool = false;
     let primaryPayRateErrorBool = false;
     let secondaryPayRateErrorBool = false;
@@ -275,13 +270,6 @@ const checkInteger = () => {
         setErrorsUserType_Id({});
     }
 
-    if(age !== "" && (typeof ageNum !== "number" || isNaN(ageNum))){
-        ageErrorBool = true;
-        setErrorsAge({age: "Age must be an integer"});
-    } else {
-        ageErrorBool = false;
-        setErrorsAge({});
-    }
 
 
     if(zip !== "" && (typeof zipNum !== "number" || isNaN(zipNum))){
@@ -333,7 +321,6 @@ const checkInteger = () => {
         (employeeDepartment_IdErrorBool) ||
         (academicDepartment_IdErrorBool) ||
         (level_IdErrorBool) ||
-        (ageErrorBool) ||
         (zipErrorBool) ||
         (primaryPayRateErrorBool) ||
         (secondaryPayRateErrorBool) ||
@@ -393,7 +380,6 @@ const checkInteger = () => {
          if(	state	)	editedEmployee	.	state	=	state	;
          if(	zip	)	editedEmployee	.	zip	=	zip	;
          if(	dob	)	editedEmployee	.	dob	=	dob	;
-         if(	age	)	editedEmployee	.	age	=	age	;
          if(	ssn	)	editedEmployee	.	ssn	=	ssn	;
          if(	firstLang	)	editedEmployee	.	firstLang	=	firstLang	;
          if(	secondLang	)	editedEmployee	.	secondLang	=	secondLang	;
@@ -481,14 +467,14 @@ const checkInteger = () => {
 
                                         <p className='EditEmployeeFormRequired'>{required}</p>
                                         <label className='EditEmployeeFormLabel'>
-                                            First Name 1:
+                                            First Name:
 
                                             <input
                                             className='EditEmployeeFormInput'
                                             id="firstName"
                                             name="firstName"
                                             type="text"
-                                            placeholder='First Name 1'
+                                            placeholder='First Name'
                                             value={firstName}
                                             onChange={(e) => setFirstName(e.target.value)}
                                             required
@@ -502,13 +488,13 @@ const checkInteger = () => {
                             <div id='nickNameContainer' className='EditEmployeeFormLabelInputContainer'>
 
                                         <label className='EditEmployeeFormLabel'>
-                                            First Name 2:
+                                            Nick Name:
                                             <input
                                             className='EditEmployeeFormInput'
                                             id="nickName"
                                             name="nickName"
                                             type="text"
-                                            placeholder='First Name 2'
+                                            placeholder='Nick Name'
                                             value={nickName}
                                             onChange={(e) => setNickName(e.target.value)}
 
@@ -545,13 +531,13 @@ const checkInteger = () => {
 
                                         <p className='EditEmployeeFormRequired'>{required}</p>
                                         <label className='EditEmployeeFormLabel'>
-                                            Last Name 1:
+                                            Last Name:
                                             <input
                                             className='EditEmployeeFormInput'
                                             id="lastName"
                                             name="lastName"
                                             type="text"
-                                            placeholder='Last Name 1'
+                                            placeholder='Last Name'
                                             value={lastName}
                                             onChange={(e) => setLastName(e.target.value)}
                                             required
@@ -564,16 +550,16 @@ const checkInteger = () => {
 
 
 
-                            <div id='familyNameContainer' className='EditEmployeeFormLabelInputContainer'>
+                            <div id='FamilyNameContainer' className='EditEmployeeFormLabelInputContainer'>
 
                                         <label className='EditEmployeeFormLabel'>
-                                            Last Name 2:
+                                            Family Name:
                                             <input
                                             className='EditEmployeeFormInput'
                                             id="familyName"
                                             name="familyName"
                                             type="text"
-                                            placeholder='Last Name 2'
+                                            placeholder='Family Name'
                                             value={familyName}
                                             onChange={(e) => setFamilyName(e.target.value)}
 
@@ -590,13 +576,13 @@ const checkInteger = () => {
                             <div id='emailContainer' className='EditEmployeeFormLabelInputContainer'>
 
                                         <label className='EditEmployeeFormLabel'>
-                                            Personal Email:
+                                            Email:
                                             <input
                                             className='EditEmployeeFormInput'
                                             id="email"
                                             name="email"
                                             type="text"
-                                            placeholder='Personal Email'
+                                            placeholder='Email'
                                             value={email}
                                             onChange={(e) => setPersonalEmail(e.target.value)}
 
@@ -612,13 +598,13 @@ const checkInteger = () => {
 
                                         <p className='EditEmployeeFormRequired'>{required}</p>
                                         <label className='EditEmployeeFormLabel'>
-                                            Personal Phone:
+                                            Phone:
                                             <input
                                             className='EditEmployeeFormInput'
                                             id="phone"
                                             name="phone"
                                             type="text"
-                                            placeholder='Personal Phone'
+                                            placeholder='Phone'
                                             value={phone}
                                             onChange={(e) => setPersonalPhone(e.target.value)}
                                             required
@@ -733,26 +719,6 @@ const checkInteger = () => {
 
                             </div>
                             {errors.dob && <p className='EditEmployeeErrors'>{errors.dob}</p>}
-
-
-                            <div id='ageContainer' className='EditEmployeeFormLabelInputContainer'>
-
-                                        <label className='EditEmployeeFormLabel'>
-                                            Age:
-                                            <input
-                                            className='EditEmployeeFormInput'
-                                            id="age"
-                                            name="age"
-                                            type="text"
-                                            placeholder='Age'
-                                            value={age}
-                                            onChange={(e) => setAge(e.target.value)}
-
-                                            />
-                                        </label>
-
-                            </div>
-                            {errorsAge.age && <p className='EditEmployeeErrors'>{errorsAge.age}</p>}
 
 
                             <div id='ssnContainer' className='EditEmployeeFormLabelInputContainer'>
@@ -937,14 +903,6 @@ const checkInteger = () => {
 
                             </div>
                             {errorsPrimaryPayRate.primaryPayRate && <p className='EditEmployeeErrors'>{errorsPrimaryPayRate.primaryPayRate}</p>}
-
-
-
-
-
-
-
-
 
 
 
@@ -1148,8 +1106,6 @@ const checkInteger = () => {
 
 
 {/* form section 4---------------------------------------------------------- */}
-
-
 
 
                         <section id="EditEmployeeFormSection4">

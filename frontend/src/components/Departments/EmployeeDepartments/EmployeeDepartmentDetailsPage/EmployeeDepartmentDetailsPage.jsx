@@ -61,13 +61,13 @@ const handleClickEditEmployeeDepartment = () => {
 
   return(
     <>
-        <h1 id={`${BASE_CLASS_NAME}H1`}>EmployeeDepartment Details</h1>
+        <h1 id={`${BASE_CLASS_NAME}H1`}>Employee Department Details</h1>
         <main id={`${BASE_CLASS_NAME}Main`}>
 
             <nav id={`${BASE_CLASS_NAME}Nav`}>
 
            <Link to='/editEmployeeDepartmentForm' state={{employeeDepartmentToEdit: employeeDepartment}} >
-           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditEmployeeDepartment}>Edit EmployeeDepartment</button>
+           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditEmployeeDepartment}>Edit Employee Department</button>
            </Link>
 
 

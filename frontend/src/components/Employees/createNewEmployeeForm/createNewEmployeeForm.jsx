@@ -33,7 +33,6 @@ function CreateNewEmployeeForm() {
         const [errorsEmployeeDepartment_Id, setErrorsEmployeeDepartment_Id] = useState({})
         const [errorsAcademicDepartment_Id, setErrorsAcademicDepartment_Id ] = useState({})
         const [errorsUserType_Id, setErrorsUserType_Id ] = useState({})
-        const [errorsAge, setErrorsAge ] = useState({})
         const [errorsZip, setErrorsZip ] = useState({})
         const [errorsPrimaryPayRate, setErrorsPrimaryPayRate ] = useState({})
         const [errorsSecondaryPayRate, setErrorsSecondaryPayRate ] = useState({})
@@ -59,7 +58,6 @@ function CreateNewEmployeeForm() {
             state	                :	null	,
             zip	                    :	null	,
             dob	                    :	null	,
-            age	                    :	null	,
             ssn	                    :	null	,
 
 // employment information form section 2----------------------------------------------------------
@@ -117,7 +115,6 @@ function CreateNewEmployeeForm() {
         const [state, setState] = useState("");
         const [zip, setZip] = useState("");
         const [dob, setDob] = useState("");
-        const [age, setAge] = useState("");
         const [ssn, setSsn] = useState("");
 
 
@@ -168,28 +165,6 @@ function CreateNewEmployeeForm() {
 
 
 
-
-// CreateNewEmployee Button Disabled------------------------------------------------------------------------
-
-
-    // const checkDisabled = () => {
-    //     if(
-    //     (country.length === 0 || !country) ||
-    //     (street.length === 0 || !street) ||
-    //     (city.length === 0 || !city) ||
-    //     (state.length === 0 || !state) ||
-    //     (latitude.length === 0 || !latitude) ||
-    //     (longitude.length === 0 || !longitude) ||
-    //     (state.length < 4) ||
-    //     (latitude.length < 6)
-    //     )
-    //     {setIsDisabled(true) } else {setIsDisabled(false)}
-
-    //    }
-
-    //    useEffect(()=> {
-    //     checkDisabled();
-    //    });
 
 
 
@@ -272,7 +247,6 @@ const checkInteger = () => {
     let employeeDepartment_IdNum = parseInt(employeeDepartment_Id);
     let academicDepartment_IdNum = parseInt(academicDepartment_Id);
     let level_IdNum = parseInt(level_Id);
-    let ageNum = parseInt(age);
     let zipNum = parseInt(zip);
     let primaryPayRateNum = parseInt(primaryPayRate);
     let secondaryPayRateNum = parseInt(secondaryPayRate);
@@ -283,7 +257,6 @@ const checkInteger = () => {
     let employeeDepartment_IdErrorBool = false;
     let academicDepartment_IdErrorBool = false;
     let level_IdErrorBool = false;
-    let ageErrorBool = false;
     let zipErrorBool = false;
     let primaryPayRateErrorBool = false;
     let secondaryPayRateErrorBool = false;
@@ -316,13 +289,6 @@ const checkInteger = () => {
         setErrorsUserType_Id({});
     }
 
-    if(age !== "" && (typeof ageNum !== "number" || isNaN(ageNum))){
-        ageErrorBool = true;
-        setErrorsAge({age: "Age must be an integer"});
-    } else {
-        ageErrorBool = false;
-        setErrorsAge({});
-    }
 
 
     if(zip !== "" && (typeof zipNum !== "number" || isNaN(zipNum))){
@@ -374,7 +340,6 @@ const checkInteger = () => {
         (employeeDepartment_IdErrorBool) ||
         (academicDepartment_IdErrorBool) ||
         (level_IdErrorBool) ||
-        (ageErrorBool) ||
         (zipErrorBool) ||
         (primaryPayRateErrorBool) ||
         (secondaryPayRateErrorBool) ||
@@ -434,7 +399,6 @@ const checkInteger = () => {
          if(	state	)	newEmployee	.	state	=	state	;
          if(	zip	)	newEmployee	.	zip	=	zip	;
          if(	dob	)	newEmployee	.	dob	=	dob	;
-         if(	age	)	newEmployee	.	age	=	age	;
          if(	ssn	)	newEmployee	.	ssn	=	ssn	;
          if(	firstLang	)	newEmployee	.	firstLang	=	firstLang	;
          if(	secondLang	)	newEmployee	.	secondLang	=	secondLang	;
@@ -780,26 +744,6 @@ const checkInteger = () => {
                             {errors.dob && <p className='CreateNewEmployeeErrors'>{errors.dob}</p>}
 
 
-                            <div id='ageContainer' className='CreateNewEmployeeFormLabelInputContainer'>
-
-                                        <label className='CreateNewEmployeeFormLabel'>
-                                            Age:
-                                            <input
-                                            className='CreateNewEmployeeFormInput'
-                                            id="age"
-                                            name="age"
-                                            type="text"
-                                            placeholder='Age'
-                                            value={age}
-                                            onChange={(e) => setAge(e.target.value)}
-
-                                            />
-                                        </label>
-
-                            </div>
-                            {errorsAge.age && <p className='CreateNewEmployeeErrors'>{errorsAge.age}</p>}
-
-
                             <div id='ssnContainer' className='CreateNewEmployeeFormLabelInputContainer'>
                                         <p className='CreateNewEmployeeFormRequired'>{required}</p>
                                         <label className='CreateNewEmployeeFormLabel'>
@@ -982,13 +926,6 @@ const checkInteger = () => {
 
                             </div>
                             {errorsPrimaryPayRate.primaryPayRate && <p className='CreateNewEmployeeErrors'>{errorsPrimaryPayRate.primaryPayRate}</p>}
-
-
-
-
-
-
-
 
 
 
