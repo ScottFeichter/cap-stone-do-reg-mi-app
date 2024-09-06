@@ -24,20 +24,18 @@ function FacilityDetailsPage() {
   // const navigate = useNavigate();
   let facility;
   let facilities;
-  let facilityId;
+  let fid;
   let facilityParams;
 
   // let location;
 
   facilityParams = useParams();
-  facilityId  = facilityParams.facilityId;
+  fid = facilityParams.facilityId;
   facilities = useSelector(state => state?.facilities?.facilities);
-  facility = facilities.find(facility => facility.id === +facilityId)
-
-  console.log("details", facilityParams, facilityId, facilities, "ep!!!!!!!!!!!!!", facility);
+  facility = facilities.find(facility => facility.id === 1)
 
 
-
+  console.log("facilityParams", facilityParams, "fid", fid, "facilities", facilities, "facility", facility);
 
 
 
@@ -47,8 +45,8 @@ const handleClickEditFacility = () => {
 }
 
 
-
- if(!facility) return null; // will flick a blank page
+ if(facilities.length === 0 || facilities === undefined) facility = {id: 1, name: "fake", branch_Id: 'fake'};
+//  if(!facility) return null; // will flick a blank page
 
  // THINGS THAT MAY TRIGGER A RE RENDER
  // change value of useState() hook
@@ -57,7 +55,7 @@ const handleClickEditFacility = () => {
  // RE RENDER MEANS THE DOM IS BEING UPDATE IN THE BROWSER - THE HTML IS CHANGING
  // BROWSER REFRESH COMPLETELY EMPTIES REDUX
 
-
+ console.log("facility", facility)
 
 //=================FUNCTION RETURN======================//
 
@@ -89,7 +87,7 @@ const handleClickEditFacility = () => {
 
               <FacilityDeleteModalButton
                 id={`${BASE_CLASS_NAME}DeleteButton`}
-                buttonText="Delete Employee Department"
+                buttonText="Delete Facility"
                 modalComponent={<FacilityDeleteModal facility={facility} />}
               />
 

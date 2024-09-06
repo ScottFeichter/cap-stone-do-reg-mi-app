@@ -37,7 +37,7 @@ function FacilityDetails(props){
         e.preventDefault();
         // document.body.scrollTop = 0; // For Safari
         // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        navigate('/facilities')
+        navigate('/resources')
     }
 
 
@@ -67,10 +67,10 @@ function FacilityDetails(props){
                         </div>
 
 
-                        <div id='imageURLContainer' className='FacilityDetailsFormLabelInputContainer'>
-                                <div className='FacilityDetailsFormLabel'>{"imageURL"}</div>
+                        <div id='branchIdContainer' className='FacilityDetailsFormLabelInputContainer'>
+                                <div className='FacilityDetailsFormLabel'>{"branchId"}</div>
                                 <div className='FacilityDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='FacilityDetailsFormInput'>{facility.imageURL ? facility.imageURL : nullReplacer}</div>
+                                <div className='FacilityDetailsFormInput'>{facility.branch_Id ? facility.branch_Id : nullReplacer}</div>
                         </div>
 
 
