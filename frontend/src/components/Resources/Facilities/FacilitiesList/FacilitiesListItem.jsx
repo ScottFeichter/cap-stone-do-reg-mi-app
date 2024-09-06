@@ -2,7 +2,7 @@ import './FacilitiesListItem.css';
 import { Link } from "react-router-dom";
 
 function FacilitiesListItem({ facility }) {
-  // console.log(facility);
+  console.log("facility in facilitiesListItem: ", facility);
   return (
     <>
 
@@ -22,8 +22,8 @@ function FacilitiesListItem({ facility }) {
           </Link>
         </div>
 
-        <div className="FacilitiesListItemContainerImageURL">
-          <p className="FacilitiesListItemP">{facility.imageURL ? facility.imageURL: "-"}</p>
+        <div className="FacilitiesListItemContainerBranchId">
+          <p className="FacilitiesListItemP">{facility.branch_Id? facility.branch_Id: "-"}</p>
         </div>
 
       </div>

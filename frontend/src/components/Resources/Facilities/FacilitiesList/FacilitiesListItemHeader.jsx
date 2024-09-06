@@ -14,8 +14,8 @@ function FacilitiesListItemHeader() {
             <h4 className="FacilitiesListItemHeaderItemH4">Name</h4>
         </div>
 
-        <div className="FacilitiesListItemHeaderItemContainerImageURL">
-            <h4 className="FacilitiesListItemHeaderItemH4">ImageURL</h4>
+        <div className="FacilitiesListItemHeaderItemContainerBranchId">
+            <h4 className="FacilitiesListItemHeaderItemH4">Branch ID</h4>
         </div>
 
       </div>
