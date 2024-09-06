@@ -39,13 +39,13 @@ function EditFacilityForm() {
 
 
             name	                    :	null	,
-            imageURL	                :	null	,
+            branch_Id	                :	null	,
 
         }
 
 
     const [name,setName] = useState(facilityToEdit.name||"")
-    const [imageURL,setImageURL] = useState(facilityToEdit.imageURL||"")
+    const [branch_Id,setBranch_Id] = useState(facilityToEdit.branch_Id||"")
 
 
 
@@ -64,7 +64,7 @@ const checkRequired = () => {
 
     if(!name) {
         nameBool = true;
-        setErrorsName({name: "First Name 1 is required"});
+        setErrorsName({name: "Name is required"});
     } else {
         nameBool = false;
         setErrorsName({});
@@ -105,7 +105,7 @@ const checkRequired = () => {
 
 
          if(name)	    editedFacility	.	name	    =	name	    ;
-         if(imageURL)	editedFacility	.	imageURL	=	imageURL	;
+         if(branch_Id)	editedFacility	.	branch_Id	=	branch_Id	;
 
 
          editedFacility.id = facilityToEdit.id;
@@ -134,7 +134,7 @@ const checkRequired = () => {
             await dispatch(facilitiesActions.thunkGetFacilityById(facilityId)).then(response => {
                 editedFacilityDetails = response;
 
-                navigate(`/departments`)
+                navigate(`/resources`)
                 return response
             });
 
@@ -185,24 +185,24 @@ const checkRequired = () => {
 
 
 
-                            <div id='imageURLContainer' className='EditFacilityFormLabelInputContainer'>
+                            <div id='branch_IdContainer' className='EditFacilityFormLabelInputContainer'>
 
                                         <label className='EditFacilityFormLabel'>
-                                            ImageURL:
+                                            Branch ID:
                                             <input
                                             className='EditFacilityFormInput'
-                                            id="imageURL"
-                                            name="imageURL"
+                                            id="branch_Id"
+                                            name="branch_Id"
                                             type="text"
-                                            placeholder='ImageURL'
-                                            value={imageURL}
-                                            onChange={(e) => setImageURL(e.target.value)}
+                                            placeholder='Branch_Id'
+                                            value={branch_Id}
+                                            onChange={(e) => setBranch_Id(e.target.value)}
 
                                             />
                                         </label>
 
                             </div>
-                            {errors.imageURL && <p className='EditFacilityErrors'>{errors.imageURL}</p>}
+                            {errors.branch_Id && <p className='EditFacilityErrors'>{errors.branch_Id}</p>}
 
 
                         </section>

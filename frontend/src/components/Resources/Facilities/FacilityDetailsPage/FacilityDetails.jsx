@@ -61,14 +61,14 @@ function FacilityDetails(props){
 
 
                         <div id='nameContainer' className='FacilityDetailsFormLabelInputContainer'>
-                                <div className='FacilityDetailsFormLabel'>{"name"}</div>
+                                <div className='FacilityDetailsFormLabel'>{"Name"}</div>
                                 <div className='FacilityDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='FacilityDetailsFormInput'>{facility.name ? facility.name : nullReplacer}</div>
                         </div>
 
 
                         <div id='branchIdContainer' className='FacilityDetailsFormLabelInputContainer'>
-                                <div className='FacilityDetailsFormLabel'>{"branchId"}</div>
+                                <div className='FacilityDetailsFormLabel'>{"Branch ID"}</div>
                                 <div className='FacilityDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='FacilityDetailsFormInput'>{facility.branch_Id ? facility.branch_Id : nullReplacer}</div>
                         </div>

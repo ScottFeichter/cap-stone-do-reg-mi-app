@@ -125,7 +125,7 @@ export const router = createBrowserRouter([
       // -------FACILITIES-------
 
       {
-        path: "/facilities/:facilitytId",
+        path: "/facilities/:facilityId",
         element: <FacilityDetailsPage />
       },
       {

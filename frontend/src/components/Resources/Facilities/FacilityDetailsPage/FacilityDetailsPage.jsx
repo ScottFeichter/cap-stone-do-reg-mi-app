@@ -33,10 +33,9 @@ function FacilityDetailsPage() {
   facilityParams = useParams();
   facilityId = facilityParams.facilityId;
   facilities = useSelector(state => state?.facilities?.facilities);
-  facility = facilities.find(facility => facility.id === 1)
+  facility = facilities.find(facility => facility.id === +facilityId)
 
-
-  console.log("facilityParams", facilityParams, "facilityId", facilityId, "facilities", facilities, "facility", facility);
+  // console.log("facilityParams", facilityParams, "facilityId", facilityId, "facilities", facilities, "facility", facility);
 
 
 

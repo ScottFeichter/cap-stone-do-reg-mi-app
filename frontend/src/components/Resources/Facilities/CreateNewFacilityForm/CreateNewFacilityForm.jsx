@@ -29,12 +29,12 @@ function CreateNewFacilityForm() {
 
         let newFacility = {
             name	                    :	null	,
-            imageURL	                :	null	,
+            branch_Id	                :	null	,
         }
 
 
         const [name, setName] = useState("");
-        const [imageURL, setStreet] = useState("");
+        const [branch_Id, setStreet] = useState("");
 
 
 // HELPERS FOR CreateNewFacility Button handler---------------------------------------------------
@@ -87,8 +87,8 @@ const checkRequired = () => {
 
 
 
-         if(	name	)	newFacility	.	name	=	name	;
-         if(	imageURL	)	newFacility	.	imageURL	=	imageURL	;
+         if(name)	    newFacility	.	name	    =	name	;
+         if(branch_Id)	newFacility	.	branch_Id	=	branch_Id	;
 
         //  console.log("newFacility 448: ", newFacility)
 
@@ -177,21 +177,21 @@ const checkRequired = () => {
                             <div id='ImageURLContainer' className='CreateNewFacilityFormLabelInputContainer'>
 
                                         <label className='CreateNewFacilityFormLabel'>
-                                            ImageURL:
+                                            Branch ID:
                                             <input
                                             className='CreateNewFacilityFormInput'
-                                            id="imageURL"
-                                            name="imageURL"
+                                            id="branch_Id"
+                                            name="branch_Id"
                                             type="text"
-                                            placeholder='ImageURL'
-                                            value={imageURL}
+                                            placeholder='Branch ID'
+                                            value={branch_Id}
                                             onChange={(e) => setStreet(e.target.value)}
 
                                             />
                                         </label>
 
                             </div>
-                            {errors.imageURL && <p className='CreateNewFacilityErrors'>{errors.imageURL}</p>}
+                            {errors.branch_Id && <p className='CreateNewFacilityErrors'>{errors.branch_Id}</p>}
 
 
 
