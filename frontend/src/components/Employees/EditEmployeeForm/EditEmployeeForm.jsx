@@ -471,7 +471,7 @@ const checkInteger = () => {
                             <h4 id="EditEmployeeFormSection1H4">Personal Information</h4>
 
                             <p id="EditEmployeeFormSection1P">
-                                Edit personal information for new employee.
+                                Edit personal information for existing employee.
                             </p>
                             <h5 className='EditEmployeeH5'>* indicates required field</h5>
 
@@ -787,7 +787,7 @@ const checkInteger = () => {
                         <h4 id="EditEmployeeFormSection2H4">Employment Information</h4>
 
                             <p id="EditEmployeeFormSection2P">
-                                Edit employment information for new employee.
+                                Edit employment information for existing employee.
                             </p>
                             <h5 className='EditEmployeeH5'>* indicates required field</h5>
 
@@ -959,7 +959,7 @@ const checkInteger = () => {
                         <h4 id="EditEmployeeFormSection3H4">Biographical Information</h4>
 
                             <p id="EditEmployeeFormSection3P">
-                                Edit biographical information for new employee.
+                                Edit biographical information for existing employee.
                             </p>
                             <h5 className='EditEmployeeH5'>* indicates required field</h5>
 
@@ -1157,7 +1157,7 @@ const checkInteger = () => {
                         <h4 id="EditEmployeeFormSection4H4">Additional Employment Information</h4>
 
                             <p id="EditEmployeeFormSection4P">
-                            Edit additional employment information for new employee.
+                            Edit additional employment information for existing employee.
                             </p>
                             <h5 className='EditEmployeeH5'>* indicates required field</h5>
 
