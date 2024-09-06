@@ -16,7 +16,7 @@ function AcademicDepartments() {
 
   return(
     <>
-        <h1 id="AcademicDepartmentsH1">Academic Departments</h1>
+        <h1 id="AcademicDepartmentsH1">Employee Departments</h1>
 
         <main id="AcademicDepartmentsMain">
 
@@ -26,7 +26,7 @@ function AcademicDepartments() {
             <nav id="AcademicDepartmentsNav">
               {/* <input type="text" id="AcademicDepartmentsSearchBar" placeholder="Search AcademicDepartments" ></input> */}
 
-              <button id="AcademicDepartmentsCreateButton" onClick={handleClick}>Create New Academic Department</button>
+              <button id="AcademicDepartmentsCreateButton" onClick={handleClick}>Create New Employee Department</button>
             </nav>
 
 

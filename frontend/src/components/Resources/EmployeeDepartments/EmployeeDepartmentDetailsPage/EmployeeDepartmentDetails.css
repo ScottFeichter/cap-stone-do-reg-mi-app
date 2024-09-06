@@ -1,0 +1,121 @@
+#EmployeeDepartmentDetailsMain {
+
+}
+
+
+#EmployeeDepartmentDetailsForm{
+    margin: 2rem 4rem 4rem 4rem;
+    padding: 0rem 0rem 0rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: var(--border);
+    border-radius: 25px;
+
+}
+
+
+.EmployeeDepartmentDetailsFormLabelInputContainer {
+    margin: 0 0 0 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px lightgrey solid;
+}
+
+.EmployeeDepartmentDetailsFormLabel {
+    text-align: right;
+    color: black;
+    font-size: medium;
+    font-weight: 600;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    width: 43%;
+    height: fit-content;
+    /* border: 2px blue solid; */
+}
+
+.EmployeeDepartmentDetailsFormInfoDivider{
+    color: black;
+    font-size: x-large;
+    font-weight: 900;
+    margin: 0 0 .15rem 0;
+    padding: 0 0 0 0;
+    width: 4%;
+    height: fit-content;
+    /* border: 2px orange solid; */
+
+}
+
+.EmployeeDepartmentDetailsFormInput {
+    text-align: left;
+    font-size: medium;
+    margin: 0;
+    padding: 0 0 0 0;
+    width: 43%;
+    height: fit-content;
+    /* border: 2px red solid; */
+}
+
+
+.EmployeeDepartmentDetailsHr {
+    width: 80%;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border: 1px grey solid;
+}
+
+#EmployeeDepartmentDetailsFormSection1, #EmployeeDepartmentDetailsFormSection2, #EmployeeDepartmentDetailsFormSection3, #EmployeeDepartmentDetailsFormSection4, #EmployeeDepartmentDetailsFormSection5     {
+    width: 80%;
+    /* border: brown 2px solid; */
+}
+
+#EmployeeDepartmentDetailsFormSection1H4, #EmployeeDepartmentDetailsFormSection2H4, #EmployeeDepartmentDetailsFormSection3H4, #EmployeeDepartmentDetailsFormSection4H4, #EmployeeDepartmentDetailsFormSection5H4 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+    /* border: 2px solid grey; */
+}
+
+
+
+#EmployeeDepartmentDetailsButton {
+    margin: 2rem 0 4rem 0;
+    width: 16rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 25px;
+}
+
+#EmployeeDepartmentDetailsButton:enabled {
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+}
+
+#EmployeeDepartmentDetailsButton:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#EmployeeDepartmentDetailsButton:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#EmployeeDepartmentDetailsButton:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}

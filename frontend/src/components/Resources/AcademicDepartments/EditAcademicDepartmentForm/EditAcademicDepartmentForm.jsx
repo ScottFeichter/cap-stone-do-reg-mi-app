@@ -39,15 +39,16 @@ function EditAcademicDepartmentForm() {
 
 
             name	                    :	null	,
-            chair	                    :	null	,
             imageURL	                :	null	,
 
         }
 
 
     const [name,setName] = useState(academicDepartmentToEdit.name||"")
-    const [chair,setChair] = useState(academicDepartmentToEdit.chair||"")
     const [imageURL,setImageURL] = useState(academicDepartmentToEdit.imageURL||"")
+
+
+
 
 
 
@@ -104,7 +105,6 @@ const checkRequired = () => {
 
 
          if(name)	    editedAcademicDepartment	.	name	    =	name	    ;
-         if(chair)	    editedAcademicDepartment	.	chair	    =	chair	    ;
          if(imageURL)	editedAcademicDepartment	.	imageURL	=	imageURL	;
 
 
@@ -145,7 +145,7 @@ const checkRequired = () => {
         return (
           <main id="EditAcademicDepartmentMain">
 
-            <h1 id='EditAcademicDepartmentH1'>Edit Academic Department</h1>
+            <h1 id='EditAcademicDepartmentH1'>Edit Employee Department</h1>
 
 
                     <form id='EditAcademicDepartmentForm' onSubmit={handleSubmit}>
@@ -153,10 +153,10 @@ const checkRequired = () => {
 {/* form section 1---------------------------------------------------------- */}
                         <section id="EditAcademicDepartmentFormSection1">
 
-                            <h4 id="EditAcademicDepartmentFormSection1H4">Information</h4>
+                            <h4 id="EditAcademicDepartmentFormSection1H4">Personal Information</h4>
 
                             <p id="EditAcademicDepartmentFormSection1P">
-                                Edit information for existing Academic Department.
+                                Edit information for existing academicDepartment.
                             </p>
                             <h5 className='EditAcademicDepartmentH5'>* indicates required field</h5>
 
@@ -182,27 +182,6 @@ const checkRequired = () => {
 
                             </div>
                             {errorsName.name && <p className='EditAcademicDepartmentErrors'>{errorsName.name}</p>}
-
-                            <div id='chairContainer' className='EditAcademicDepartmentFormLabelInputContainer'>
-
-
-                                        <label className='EditAcademicDepartmentFormLabel'>
-                                            Chair:
-
-                                            <input
-                                            className='EditAcademicDepartmentFormInput'
-                                            id="chair"
-                                            name="chair"
-                                            type="text"
-                                            placeholder='Chair'
-                                            value={chair}
-                                            onChange={(e) => setChair(e.target.value)}
-                                            required
-                                            />
-                                        </label>
-
-                                        </div>
-                                        {errors.chair && <p className='EditAcademicDepartmentErrors'>{errors.chair}</p>}
 
 
 

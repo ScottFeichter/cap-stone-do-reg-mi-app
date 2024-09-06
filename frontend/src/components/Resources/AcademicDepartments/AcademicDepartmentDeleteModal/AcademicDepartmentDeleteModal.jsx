@@ -8,7 +8,7 @@ import "./AcademicDepartmentDeleteModal.css"
 
 function AcademicDepartmentDeleteModal({academicDepartment}) {
 
-    console.log("Academic Department: ", academicDepartment);
+    console.log("employee Department: ", academicDepartment);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();

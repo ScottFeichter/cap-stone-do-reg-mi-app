@@ -1,5 +1,5 @@
-import './EditAcademicDepartmentForm.css';
-// const BASE_CLASS_NAME = "EditAcademicDepartmentForm"
+import './EditEmployeeDepartmentForm.css';
+// const BASE_CLASS_NAME = "EditEmployeeDepartmentForm"
 
 
 import {useState } from 'react';
@@ -7,11 +7,11 @@ import {useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 // import { useEffect } from 'react';
-import * as academicDepartmentsActions from '../../../../redux/academicDepartmentsReducer.js';
+import * as employeeDepartmentsActions from '../../../../redux/employeeDepartmentsReducer.js';
 
 
 
-function EditAcademicDepartmentForm() {
+function EditEmployeeDepartmentForm() {
 
         const required = "*";
 
@@ -19,9 +19,9 @@ function EditAcademicDepartmentForm() {
         const navigate = useNavigate();
 
         const location = useLocation();
-        const {academicDepartmentToEdit} = location.state;
+        const {employeeDepartmentToEdit} = location.state;
 
-        // console.log("academicDepartmentToEdit : ", academicDepartmentToEdit)
+        // console.log("employeeDepartmentToEdit : ", employeeDepartmentToEdit)
 
         const [errors, setErrors] = useState({});
 
@@ -35,24 +35,25 @@ function EditAcademicDepartmentForm() {
         // const [isDisabled, setIsDisabled] = useState(false);
 
 
-        let editedAcademicDepartment = {
+        let editedEmployeeDepartment = {
 
 
             name	                    :	null	,
-            chair	                    :	null	,
             imageURL	                :	null	,
 
         }
 
 
-    const [name,setName] = useState(academicDepartmentToEdit.name||"")
-    const [chair,setChair] = useState(academicDepartmentToEdit.chair||"")
-    const [imageURL,setImageURL] = useState(academicDepartmentToEdit.imageURL||"")
+    const [name,setName] = useState(employeeDepartmentToEdit.name||"")
+    const [imageURL,setImageURL] = useState(employeeDepartmentToEdit.imageURL||"")
 
 
 
 
-// HELPERS FOR EditAcademicDepartment Button handler---------------------------------------------------
+
+
+
+// HELPERS FOR EditEmployeeDepartment Button handler---------------------------------------------------
 
 
 
@@ -103,26 +104,25 @@ const checkRequired = () => {
 
 
 
-         if(name)	    editedAcademicDepartment	.	name	    =	name	    ;
-         if(chair)	    editedAcademicDepartment	.	chair	    =	chair	    ;
-         if(imageURL)	editedAcademicDepartment	.	imageURL	=	imageURL	;
+         if(name)	    editedEmployeeDepartment	.	name	    =	name	    ;
+         if(imageURL)	editedEmployeeDepartment	.	imageURL	=	imageURL	;
 
 
-         editedAcademicDepartment.id = academicDepartmentToEdit.id;
+         editedEmployeeDepartment.id = employeeDepartmentToEdit.id;
 
-        //  console.log("editedAcademicDepartment 423: ", editedAcademicDepartment)
+        //  console.log("editedEmployeeDepartment 423: ", editedEmployeeDepartment)
 
          // --------------------------MAKING THE DISPATCH---------------------//
-            let academicDepartmentId;
-            let editedAcademicDepartmentDetails;
-            if(editedAcademicDepartmentDetails);
+            let employeeDepartmentId;
+            let editedEmployeeDepartmentDetails;
+            if(editedEmployeeDepartmentDetails);
 
-            await dispatch(academicDepartmentsActions.thunkEditAcademicDepartment(editedAcademicDepartment))
+            await dispatch(employeeDepartmentsActions.thunkEditEmployeeDepartment(editedEmployeeDepartment))
             .then(response => {
-                dispatch(academicDepartmentsActions.thunkGetAcademicDepartmentsAll())
+                dispatch(employeeDepartmentsActions.thunkGetEmployeeDepartmentsAll())
                 // console.log("response 432: ", response, "response.payload", response.payload, "response.payload[0]", response.payload.id);
-                academicDepartmentId = response.payload.id
-                return academicDepartmentId
+                employeeDepartmentId = response.payload.id
+                return employeeDepartmentId
             }).catch(async (res) => {
                     // console.log("res 439", res);
                     const data = await res.json();
@@ -131,8 +131,8 @@ const checkRequired = () => {
                 }
             )
 
-            await dispatch(academicDepartmentsActions.thunkGetAcademicDepartmentById(academicDepartmentId)).then(response => {
-                editedAcademicDepartmentDetails = response;
+            await dispatch(employeeDepartmentsActions.thunkGetEmployeeDepartmentById(employeeDepartmentId)).then(response => {
+                editedEmployeeDepartmentDetails = response;
 
                 navigate(`/departments`)
                 return response
@@ -143,33 +143,33 @@ const checkRequired = () => {
 
 // return-----------------------------------
         return (
-          <main id="EditAcademicDepartmentMain">
+          <main id="EditEmployeeDepartmentMain">
 
-            <h1 id='EditAcademicDepartmentH1'>Edit Academic Department</h1>
+            <h1 id='EditEmployeeDepartmentH1'>Edit Employee Department</h1>
 
 
-                    <form id='EditAcademicDepartmentForm' onSubmit={handleSubmit}>
+                    <form id='EditEmployeeDepartmentForm' onSubmit={handleSubmit}>
 
 {/* form section 1---------------------------------------------------------- */}
-                        <section id="EditAcademicDepartmentFormSection1">
+                        <section id="EditEmployeeDepartmentFormSection1">
 
-                            <h4 id="EditAcademicDepartmentFormSection1H4">Information</h4>
+                            <h4 id="EditEmployeeDepartmentFormSection1H4">Personal Information</h4>
 
-                            <p id="EditAcademicDepartmentFormSection1P">
-                                Edit information for existing Academic Department.
+                            <p id="EditEmployeeDepartmentFormSection1P">
+                                Edit information for existing employeeDepartment.
                             </p>
-                            <h5 className='EditAcademicDepartmentH5'>* indicates required field</h5>
+                            <h5 className='EditEmployeeDepartmentH5'>* indicates required field</h5>
 
 
 
-                            <div id='nameContainer' className='EditAcademicDepartmentFormLabelInputContainer'>
+                            <div id='nameContainer' className='EditEmployeeDepartmentFormLabelInputContainer'>
 
-                                        <p className='EditAcademicDepartmentFormRequired'>{required}</p>
-                                        <label className='EditAcademicDepartmentFormLabel'>
+                                        <p className='EditEmployeeDepartmentFormRequired'>{required}</p>
+                                        <label className='EditEmployeeDepartmentFormLabel'>
                                             Name:
 
                                             <input
-                                            className='EditAcademicDepartmentFormInput'
+                                            className='EditEmployeeDepartmentFormInput'
                                             id="name"
                                             name="name"
                                             type="text"
@@ -181,37 +181,16 @@ const checkRequired = () => {
                                         </label>
 
                             </div>
-                            {errorsName.name && <p className='EditAcademicDepartmentErrors'>{errorsName.name}</p>}
-
-                            <div id='chairContainer' className='EditAcademicDepartmentFormLabelInputContainer'>
-
-
-                                        <label className='EditAcademicDepartmentFormLabel'>
-                                            Chair:
-
-                                            <input
-                                            className='EditAcademicDepartmentFormInput'
-                                            id="chair"
-                                            name="chair"
-                                            type="text"
-                                            placeholder='Chair'
-                                            value={chair}
-                                            onChange={(e) => setChair(e.target.value)}
-                                            required
-                                            />
-                                        </label>
-
-                                        </div>
-                                        {errors.chair && <p className='EditAcademicDepartmentErrors'>{errors.chair}</p>}
+                            {errorsName.name && <p className='EditEmployeeDepartmentErrors'>{errorsName.name}</p>}
 
 
 
-                            <div id='imageURLContainer' className='EditAcademicDepartmentFormLabelInputContainer'>
+                            <div id='imageURLContainer' className='EditEmployeeDepartmentFormLabelInputContainer'>
 
-                                        <label className='EditAcademicDepartmentFormLabel'>
+                                        <label className='EditEmployeeDepartmentFormLabel'>
                                             ImageURL:
                                             <input
-                                            className='EditAcademicDepartmentFormInput'
+                                            className='EditEmployeeDepartmentFormInput'
                                             id="imageURL"
                                             name="imageURL"
                                             type="text"
@@ -223,18 +202,18 @@ const checkRequired = () => {
                                         </label>
 
                             </div>
-                            {errors.imageURL && <p className='EditAcademicDepartmentErrors'>{errors.imageURL}</p>}
+                            {errors.imageURL && <p className='EditEmployeeDepartmentErrors'>{errors.imageURL}</p>}
 
 
                         </section>
 {/* form button---------------------------------------------------------- */}
-                        {requiredFieldsMessage.message && <p className='EditAcademicDepartmentRequiredErrors'>{requiredFieldsMessage.message}</p>}
+                        {requiredFieldsMessage.message && <p className='EditEmployeeDepartmentRequiredErrors'>{requiredFieldsMessage.message}</p>}
 
 
                         <div id="buttonContainer">
 
                             <button
-                                id="EditAcademicDepartmentButton"
+                                id="EditEmployeeDepartmentButton"
                                 type="submit"
                                 onClick={handleSubmit}
                                 >Submit Edit
@@ -251,4 +230,4 @@ const checkRequired = () => {
 
 
 
-export default EditAcademicDepartmentForm;
+export default EditEmployeeDepartmentForm;
