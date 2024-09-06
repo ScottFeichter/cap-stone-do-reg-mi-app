@@ -1,8 +1,8 @@
 import './FacilitiesListItem.css';
 import { Link } from "react-router-dom";
 
-function FacilitiesListItem({ academicDepartment }) {
-  // console.log(academicDepartment);
+function FacilitiesListItem({ facility }) {
+  // console.log(facility);
   return (
     <>
 
@@ -10,20 +10,20 @@ function FacilitiesListItem({ academicDepartment }) {
       <div className="FacilitiesListItemContainer">
 
         <div className="FacilitiesListItemContainerID">
-            <p className="FacilitiesListItemP"> {academicDepartment.id ? academicDepartment.id : "-"}</p>
+            <p className="FacilitiesListItemP"> {facility.id ? facility.id : "-"}</p>
         </div>
 
         <div className="FacilitiesListItemContainerName">
           <Link
-            to={`/facilities/${academicDepartment.id}`}
-            state={{academicDepartment: academicDepartment}}
+            to={`/facilities/${facility.id}`}
+            state={{facility: facility}}
             className="FacilitiesListItemP">
-              {academicDepartment.name}
+              {facility.name}
           </Link>
         </div>
 
         <div className="FacilitiesListItemContainerImageURL">
-          <p className="FacilitiesListItemP">{academicDepartment.imageURL ? academicDepartment.imageURL: "-"}</p>
+          <p className="FacilitiesListItemP">{facility.imageURL ? facility.imageURL: "-"}</p>
         </div>
 
       </div>

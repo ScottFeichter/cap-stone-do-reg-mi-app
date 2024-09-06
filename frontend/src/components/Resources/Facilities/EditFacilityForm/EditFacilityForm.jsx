@@ -19,9 +19,9 @@ function EditFacilityForm() {
         const navigate = useNavigate();
 
         const location = useLocation();
-        const {academicDepartmentToEdit} = location.state;
+        const {facilityToEdit} = location.state;
 
-        // console.log("academicDepartmentToEdit : ", academicDepartmentToEdit)
+        // console.log("facilityToEdit : ", facilityToEdit)
 
         const [errors, setErrors] = useState({});
 
@@ -44,8 +44,8 @@ function EditFacilityForm() {
         }
 
 
-    const [name,setName] = useState(academicDepartmentToEdit.name||"")
-    const [imageURL,setImageURL] = useState(academicDepartmentToEdit.imageURL||"")
+    const [name,setName] = useState(facilityToEdit.name||"")
+    const [imageURL,setImageURL] = useState(facilityToEdit.imageURL||"")
 
 
 
@@ -108,12 +108,12 @@ const checkRequired = () => {
          if(imageURL)	editedFacility	.	imageURL	=	imageURL	;
 
 
-         editedFacility.id = academicDepartmentToEdit.id;
+         editedFacility.id = facilityToEdit.id;
 
         //  console.log("editedFacility 423: ", editedFacility)
 
          // --------------------------MAKING THE DISPATCH---------------------//
-            let academicDepartmentId;
+            let facilityId;
             let editedFacilityDetails;
             if(editedFacilityDetails);
 
@@ -121,8 +121,8 @@ const checkRequired = () => {
             .then(response => {
                 dispatch(facilitiesActions.thunkGetFacilitiesAll())
                 // console.log("response 432: ", response, "response.payload", response.payload, "response.payload[0]", response.payload.id);
-                academicDepartmentId = response.payload.id
-                return academicDepartmentId
+                facilityId = response.payload.id
+                return facilityId
             }).catch(async (res) => {
                     // console.log("res 439", res);
                     const data = await res.json();
@@ -131,7 +131,7 @@ const checkRequired = () => {
                 }
             )
 
-            await dispatch(facilitiesActions.thunkGetFacilityById(academicDepartmentId)).then(response => {
+            await dispatch(facilitiesActions.thunkGetFacilityById(facilityId)).then(response => {
                 editedFacilityDetails = response;
 
                 navigate(`/departments`)
@@ -145,7 +145,7 @@ const checkRequired = () => {
         return (
           <main id="EditFacilityMain">
 
-            <h1 id='EditFacilityH1'>Edit Employee Department</h1>
+            <h1 id='EditFacilityH1'>Edit Facility</h1>
 
 
                     <form id='EditFacilityForm' onSubmit={handleSubmit}>
@@ -153,10 +153,10 @@ const checkRequired = () => {
 {/* form section 1---------------------------------------------------------- */}
                         <section id="EditFacilityFormSection1">
 
-                            <h4 id="EditFacilityFormSection1H4">Personal Information</h4>
+                            <h4 id="EditFacilityFormSection1H4">Information</h4>
 
                             <p id="EditFacilityFormSection1P">
-                                Edit information for existing academicDepartment.
+                                Edit information for existing facility.
                             </p>
                             <h5 className='EditFacilityH5'>* indicates required field</h5>
 

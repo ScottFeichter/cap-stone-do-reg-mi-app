@@ -93,7 +93,7 @@ const checkRequired = () => {
         //  console.log("newFacility 448: ", newFacility)
 
          // --------------------------MAKING THE DISPATCH---------------------//
-            let academicDepartmentId;
+            let facilityId;
             let newFacilityDetails;
             if(newFacilityDetails);
 
@@ -102,9 +102,9 @@ const checkRequired = () => {
                 return response
             })
             .then(response => {
-                academicDepartmentId = response.payload[0].id;
+                facilityId = response.payload[0].id;
                 dispatch(facilitiesActions.thunkGetFacilitiesAll());
-                return academicDepartmentId;
+                return facilityId;
             }).catch(async (res) => {
                     const data = await res.json();
                     if (data.errors) setErrors(data.errors);
@@ -113,14 +113,14 @@ const checkRequired = () => {
             )
 
             await dispatch(facilitiesActions.thunkGetFacilitiesAll()).then((response) => {
-                dispatch(facilitiesActions.thunkGetFacilityById(academicDepartmentId));
+                dispatch(facilitiesActions.thunkGetFacilityById(facilityId));
                 return response
             }).then(response => {
                 dispatch(facilitiesActions.thunkGetFacilitiesAll())
                 return response
             }).then(response => {
                 newFacilityDetails = response;
-                navigate(`/facilities/${academicDepartmentId}`)
+                navigate(`/facilities/${facilityId}`)
                 return response
             });
 
@@ -134,7 +134,7 @@ const checkRequired = () => {
         return (
           <main id="CreateNewFacilityMain">
 
-            <h1 id='CreateNewFacilityH1'>Create A New Employee Department</h1>
+            <h1 id='CreateNewFacilityH1'>Create A New Facility</h1>
 
 
                     <form id='CreateNewFacilityForm' onSubmit={handleSubmit}>
@@ -145,7 +145,7 @@ const checkRequired = () => {
                             <h4 id="CreateNewFacilityFormSection1H4">Information</h4>
 
                             <p id="CreateNewFacilityFormSection1P">
-                                Enter information for new academicDepartment.
+                                Enter information for new facility.
                             </p>
                             <h5 className='CreateNewFacilityH5'>* indicates required field</h5>
 
@@ -209,7 +209,7 @@ const checkRequired = () => {
                                 id="CreateNewFacilityButton"
                                 type="submit"
                                 onClick={handleSubmit}
-                                >Create Employee Department
+                                >Create Facility
                             </button>
                         </div>
 

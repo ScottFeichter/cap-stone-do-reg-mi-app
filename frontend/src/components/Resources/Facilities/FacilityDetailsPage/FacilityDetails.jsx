@@ -16,12 +16,12 @@ function FacilityDetails(props){
 
     const navigate = useNavigate()
 
-    // const academicDepartment = useSelector(state => state.facilities.facilities[1])
-    const academicDepartment = props.academicDepartment;
+    // const facility = useSelector(state => state.facilities.facilities[1])
+    const facility = props.facility;
 
-    // const academicDepartmentObjectKeys = Object.keys(academicDepartment);
-    // const academicDepartmentObjectValues = Object.values(academicDepartment);
-    // const academicDepartmentObjectEntries = Object.entries(academicDepartment);
+    // const facilityObjectKeys = Object.keys(facility);
+    // const facilityObjectValues = Object.values(facility);
+    // const facilityObjectEntries = Object.entries(facility);
 
     const infoDivider = ":";
     const nullReplacer = `- -`
@@ -56,21 +56,21 @@ function FacilityDetails(props){
                         <div id='nameContainer' className='FacilityDetailsFormLabelInputContainer'>
                                 <div className='FacilityDetailsFormLabel'>{"ID"}</div>
                                 <div className='FacilityDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='FacilityDetailsFormInput'>{academicDepartment.id ? academicDepartment.id : nullReplacer}</div>
+                                <div className='FacilityDetailsFormInput'>{facility.id ? facility.id : nullReplacer}</div>
                         </div>
 
 
                         <div id='nameContainer' className='FacilityDetailsFormLabelInputContainer'>
                                 <div className='FacilityDetailsFormLabel'>{"name"}</div>
                                 <div className='FacilityDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='FacilityDetailsFormInput'>{academicDepartment.name ? academicDepartment.name : nullReplacer}</div>
+                                <div className='FacilityDetailsFormInput'>{facility.name ? facility.name : nullReplacer}</div>
                         </div>
 
 
                         <div id='imageURLContainer' className='FacilityDetailsFormLabelInputContainer'>
                                 <div className='FacilityDetailsFormLabel'>{"imageURL"}</div>
                                 <div className='FacilityDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='FacilityDetailsFormInput'>{academicDepartment.imageURL ? academicDepartment.imageURL : nullReplacer}</div>
+                                <div className='FacilityDetailsFormInput'>{facility.imageURL ? facility.imageURL : nullReplacer}</div>
                         </div>
 
 
