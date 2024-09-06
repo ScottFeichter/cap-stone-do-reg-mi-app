@@ -37,7 +37,7 @@ function CreateNewBranchForm() {
             street	                    :	null	,
             city	                    :	null	,
             state	                    :	null	,
-            zip	                    :	null	,
+            zip	                        :	null	,
         }
 
 

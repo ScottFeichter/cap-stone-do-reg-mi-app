@@ -24,9 +24,15 @@ function EditBranchForm() {
         // console.log("branchToEdit : ", branchToEdit)
 
         const [errors, setErrors] = useState({});
+        if(errors); // stop yelling at me
+
 
         //-----required
         const [errorsName, setErrorsName] = useState({});
+        const [errorsStreet, setErrorsStreet] = useState({});
+        const [errorsCity, setErrorsCity] = useState({});
+        const [errorsState, setErrorsState] = useState({});
+        const [errorsZip, setErrorsZip] = useState({});
         const [requiredFieldsMessage, setRequiredFieldsMessage] = useState({});
 
 
@@ -37,17 +43,20 @@ function EditBranchForm() {
 
         let editedBranch = {
 
-
             name	                    :	null	,
-            imageURL	                :	null	,
+            street	                    :	null	,
+            city	                    :	null	,
+            state	                    :	null	,
+            zip	                        :	null	,
 
         }
 
 
-    const [name,setName] = useState(branchToEdit.name||"")
-    const [imageURL,setImageURL] = useState(branchToEdit.imageURL||"")
-
-
+        const [name, setName] = useState(branchToEdit.name || "");
+        const [street, setStreet] = useState(branchToEdit.street || "");
+        const [city, setCity] = useState(branchToEdit.city || "");
+        const [state, setState] = useState(branchToEdit.state || "");
+        const [zip, setZip] = useState(branchToEdit.zip || "");
 
 
 
@@ -61,18 +70,59 @@ function EditBranchForm() {
 const checkRequired = () => {
 
     let nameBool = false;
+    let streetBool = false;
+    let cityBool = false;
+    let stateBool = false;
+    let zipBool = false;
 
     if(!name) {
         nameBool = true;
-        setErrorsName({name: "First Name 1 is required"});
+        setErrorsName({name: "Name 1 is required"});
     } else {
         nameBool = false;
         setErrorsName({});
     }
 
+    if(!street) {
+        streetBool = true;
+        setErrorsStreet({street: "Street 1 is required"});
+    } else {
+        streetBool = false;
+        setErrorsStreet({});
+    }
+
+    if(!city) {
+        cityBool = true;
+        setErrorsCity({city: "City 1 is required"});
+    } else {
+        cityBool = false;
+        setErrorsCity({});
+    }
+
+    if(!state) {
+        stateBool = true;
+        setErrorsState({state: "State 1 is required"});
+    } else {
+        stateBool = false;
+        setErrorsState({});
+    }
+
+
+    if(!zip) {
+        zipBool = true;
+        setErrorsZip({zip: "Zip 1 is required"});
+    } else {
+        zipBool = false;
+        setErrorsZip({});
+    }
+
 
     if (
-        (nameBool)
+        (nameBool) ||
+        (streetBool) ||
+        (cityBool) ||
+        (stateBool) ||
+        (zipBool)
     ) {
         return true
     } else {
@@ -104,8 +154,11 @@ const checkRequired = () => {
 
 
 
-         if(name)	    editedBranch	.	name	    =	name	    ;
-         if(imageURL)	editedBranch	.	imageURL	=	imageURL	;
+         if(name)	    editedBranch	.	name	=	name	;
+         if(street)	    editedBranch	.	street	=	street	;
+         if(city)	    editedBranch	.	city	=	city	;
+         if(state)	    editedBranch	.	state	=	state	;
+         if(zip)	    editedBranch	.	zip	    =	zip	    ;
 
 
          editedBranch.id = branchToEdit.id;
@@ -183,26 +236,96 @@ const checkRequired = () => {
                             </div>
                             {errorsName.name && <p className='EditBranchErrors'>{errorsName.name}</p>}
 
+                            <div id='streetContainer' className='EditBranchFormLabelInputContainer'>
 
+                            <p className='EditBranchFormRequired'>{required}</p>
+                            <label className='EditBranchFormLabel'>
+                                Street :
 
-                            <div id='imageURLContainer' className='EditBranchFormLabelInputContainer'>
-
-                                        <label className='EditBranchFormLabel'>
-                                            ImageURL:
-                                            <input
-                                            className='EditBranchFormInput'
-                                            id="imageURL"
-                                            name="imageURL"
-                                            type="text"
-                                            placeholder='ImageURL'
-                                            value={imageURL}
-                                            onChange={(e) => setImageURL(e.target.value)}
-
-                                            />
-                                        </label>
+                                <input
+                                className='EditBranchFormInput'
+                                id="street"
+                                name="street"
+                                type="text"
+                                placeholder='Street'
+                                value={street}
+                                onChange={(e) => setStreet(e.target.value)}
+                                required
+                                />
+                            </label>
 
                             </div>
-                            {errors.imageURL && <p className='EditBranchErrors'>{errors.imageURL}</p>}
+                            {errorsStreet.street && <p className='EditBranchErrors'>{errorsStreet.street}</p>}
+
+
+                            <div id='cityContainer' className='EditBranchFormLabelInputContainer'>
+
+                            <p className='EditBranchFormRequired'>{required}</p>
+                            <label className='EditBranchFormLabel'>
+                                City :
+
+                                <input
+                                className='EditBranchFormInput'
+                                id="city"
+                                name="city"
+                                type="text"
+                                placeholder='City'
+                                value={city}
+                                onChange={(e) => setCity(e.target.value)}
+                                required
+                                />
+                            </label>
+
+                            </div>
+                            {errorsCity.city && <p className='EditBranchErrors'>{errorsCity.city}</p>}
+
+
+
+                            <div id='stateContainer' className='EditBranchFormLabelInputContainer'>
+
+                            <p className='EditBranchFormRequired'>{required}</p>
+                            <label className='EditBranchFormLabel'>
+                                State :
+
+                                <input
+                                className='EditBranchFormInput'
+                                id="state"
+                                name="state"
+                                type="text"
+                                placeholder='State'
+                                value={state}
+                                onChange={(e) => setState(e.target.value)}
+                                required
+                                />
+                            </label>
+
+                            </div>
+                            {errorsState.state && <p className='EditBranchErrors'>{errorsState.state}</p>}
+
+
+
+                            <div id='zipContainer' className='EditBranchFormLabelInputContainer'>
+
+                            <p className='EditBranchFormRequired'>{required}</p>
+                            <label className='EditBranchFormLabel'>
+                                Zip :
+
+                                <input
+                                className='EditBranchFormInput'
+                                id="zip"
+                                name="zip"
+                                type="text"
+                                placeholder='Zip'
+                                value={zip}
+                                onChange={(e) => setZip(e.target.value)}
+                                required
+                                />
+                            </label>
+
+                            </div>
+                            {errorsZip.zip && <p className='EditBranchErrors'>{errorsZip.zip}</p>}
+
+
 
 
                         </section>
