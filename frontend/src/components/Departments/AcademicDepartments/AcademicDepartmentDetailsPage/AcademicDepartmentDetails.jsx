@@ -67,6 +67,15 @@ function AcademicDepartmentDetails(props){
                         </div>
 
 
+
+                        <div id='chairContainer' className='AcademicDepartmentDetailsFormLabelInputContainer'>
+                                <div className='AcademicDepartmentDetailsFormLabel'>{"chair"}</div>
+                                <div className='AcademicDepartmentDetailsFormInfoDivider'>{infoDivider}</div>
+                                <div className='AcademicDepartmentDetailsFormInput'>{academicDepartment.chair ? academicDepartment.chair : nullReplacer}</div>
+                        </div>
+
+
+
                         <div id='imageURLContainer' className='AcademicDepartmentDetailsFormLabelInputContainer'>
                                 <div className='AcademicDepartmentDetailsFormLabel'>{"imageURL"}</div>
                                 <div className='AcademicDepartmentDetailsFormInfoDivider'>{infoDivider}</div>
