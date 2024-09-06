@@ -20,11 +20,11 @@ module.exports = {
         employeeDepartment_Id: {
           type: Sequelize.INTEGER,
           allowNull: true,
-          references: {
-            model: 'EmployeeDepartments',
-            key: 'id',
-          },
-          // onDelete: 'CASCADE'
+          // references: {
+          //   model: 'EmployeeDepartments',
+          //   key: 'id',
+          // },
+          // onDelete: 'SET NULL'
         },
         academicDepartment_Id: {
           type: Sequelize.INTEGER,

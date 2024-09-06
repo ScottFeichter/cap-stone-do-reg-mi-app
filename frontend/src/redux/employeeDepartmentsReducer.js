@@ -149,7 +149,7 @@ export const thunkEditEmployeeDepartment = (editedEmployeeDepartment) => async (
 /** DELETE EMPLOYEE DEPARTMENTS */
 export const thunkDeleteEmployeeDepartment = (employeeDepartment) => async (dispatch) => {
   const employeeDepartmentId = employeeDepartment.id;
-  console.log("in thunk id: ", employeeDepartmentId)
+  // console.log("in thunk id: ", employeeDepartmentId);
   const response = await csrfFetch(`/api/employeeDepartments/${employeeDepartmentId}`, {
     method: "DELETE",
   });
