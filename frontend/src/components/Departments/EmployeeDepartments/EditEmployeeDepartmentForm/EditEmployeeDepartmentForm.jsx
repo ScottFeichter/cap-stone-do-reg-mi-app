@@ -7,7 +7,7 @@ import {useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 // import { useEffect } from 'react';
-import * as employeeDepartmentsActions from '../../../redux/employeeDepartmentsReducer.js';
+import * as employeeDepartmentsActions from '../../../../redux/employeeDepartmentsReducer.js';
 
 
 

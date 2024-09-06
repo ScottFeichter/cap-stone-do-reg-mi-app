@@ -1,7 +1,7 @@
-import { useModal } from "../../../context/Modal";
+import { useModal } from "../../../../context/Modal";
 import {useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import * as employeeDepartmentsActions from '../../../redux/employeeDepartmentsReducer.js';
+import * as employeeDepartmentsActions from '../../../../redux/employeeDepartmentsReducer.js';
 import "./EmployeeDepartmentDeleteModal.css"
 
 
