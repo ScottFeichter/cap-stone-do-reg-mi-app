@@ -26,6 +26,19 @@ import ProfilePage from "../components/Profile/ProfilePage.jsx";
   // -----------RESOURCES-------------
 import Resources from "../components/Resources/Resources.jsx";
 
+ // ------------BRANCHES--------------
+
+ import BranchDetailsPage from "../components/Resources/Branches/BranchDetailsPage/BranchDetailsPage.jsx";
+ import CreateNewBranchForm from "../components/Resources/Branches/CreateNewBranchForm/CreateNewBranchForm.jsx";
+ import EditBranchForm from "../components/Resources/Branches/EditBranchForm/EditBranchForm.jsx";
+
+ // ------------FACILITIES------------
+
+ import FacilityDetailsPage from "../components/Resources/Facilities/FacilityDetailsPage/FacilityDetailsPage.jsx";
+ import CreateNewFacilityForm from "../components/Resources/Facilities/CreateNewFacilityForm/CreateNewFacilityForm.jsx";
+ import EditFacilityForm from "../components/Resources/Facilities/EditFacilityForm/EditFacilityForm.jsx";
+
+
 
   // -----------TEACHERS--------------
   import Teachers from "../components/Teachers/Teachers.jsx";
@@ -38,7 +51,7 @@ import Students from "../components/Students/Students.jsx";
 
   // -----------EMPLOYEES-------------
 import Employees from "../components/Employees/Employees.jsx";
-import CreateNewEmployeeForm from "../components/Employees/createNewEmployeeForm/createNewEmployeeForm.jsx";
+import CreateNewEmployeeForm from "../components/Employees/CreateNewEmployeeForm/CreateNewEmployeeForm.jsx";
 import EditEmployeeForm from "../components/Employees/EditEmployeeForm/EditEmployeeForm.jsx";
 import EmployeeDetailPage from "../components/Employees/EmployeeDetailsPage/EmployeeDetailsPage.jsx";
 // import EmployeeDetails from "../components/Employees/EmployeeDetailsPage/EmployeeDetails.jsx";
@@ -47,9 +60,17 @@ import EmployeeDetailPage from "../components/Employees/EmployeeDetailsPage/Empl
   // -----------DEPARTMENTS-----------
 import Departments from "../components/Departments/Departments.jsx";
 
+ // -------EMPLOYEE DEPARTMENTS-------
+
 import EmployeeDepartmentDetailsPage from "../components/Departments/EmployeeDepartments/EmployeeDepartmentDetailsPage/EmployeeDepartmentDetailsPage.jsx";
-import CreateNewEmployeeDepartmentsForm from "../components/Departments/EmployeeDepartments/CreateNewEmployeeDepartmentForm/CreateNewEmployeeDepartmentForm.jsx";
+import CreateNewEmployeeDepartmentForm from "../components/Departments/EmployeeDepartments/CreateNewEmployeeDepartmentForm/CreateNewEmployeeDepartmentForm.jsx";
 import EditEmployeeDepartmentForm from "../components/Departments/EmployeeDepartments/EditEmployeeDepartmentForm/EditEmployeeDepartmentForm.jsx";
+
+// -------ACADEMIC DEPARTMENTS-------
+
+import AcademicDepartmentDetailsPage from "../components/Departments/AcademicDepartments/AcademicDepartmentDetailsPage/AcademicDepartmentDetailsPage.jsx";
+import CreateNewAcademicDepartmentForm from "../components/Departments/AcademicDepartments/CreateNewAcademicDepartmentForm/CreateNewAcademicDepartmentForm.jsx";
+import EditAcademicDepartmentForm from "../components/Departments/AcademicDepartments/EditAcademicDepartmentForm/EditAcademicDepartmentForm.jsx";
 
 
  // -----------CATCH ALL--------------
@@ -86,6 +107,40 @@ export const router = createBrowserRouter([
         },
 
 
+        // -------BRANCHES-------
+
+        {
+          path: "/branches/:branchId",
+          element: <BranchDetailsPage />
+        },
+        {
+          path: "/createNewBranchForm/",
+          element: <CreateNewBranchForm />,
+        },
+        {
+          path: "/editBranchForm/",
+          element: <EditBranchForm />,
+        },
+
+      // -------FACILITIES-------
+
+      {
+        path: "/facilities/:facilityId",
+        element: <FacilityDetailsPage />
+      },
+      {
+        path: "/createNewFacilityForm/",
+        element: <CreateNewFacilityForm />,
+      },
+      {
+        path: "/editFacilityForm/",
+        element: <EditFacilityForm />,
+      },
+
+
+
+
+
       // -----------DEPARTMENTS------------
         {
           path: "/departments",
@@ -94,18 +149,36 @@ export const router = createBrowserRouter([
 
 
       // -------EMPLOYEE DEPARTMENTS-------
+
         {
           path: "/employeeDepartments/:employeeDepartmentId",
           element: <EmployeeDepartmentDetailsPage />
         },
         {
-          path: "/createNewEmployeeDepartmentForm/",
-          element: <CreateNewEmployeeDepartmentsForm />,
+          path: "/createNewFacilityForm/",
+          element: <CreateNewEmployeeDepartmentForm />,
         },
         {
-          path: "/editEmployeeDepartmentForm/",
+          path: "/editFacilityForm/",
           element: <EditEmployeeDepartmentForm />,
         },
+
+      // -------ACADEMIC DEPARTMENTS-------
+
+      {
+        path: "/academicDepartments/:academicDepartmentId",
+        element: <AcademicDepartmentDetailsPage />
+      },
+      {
+        path: "/createNewAcademicDepartmentForm/",
+        element: <CreateNewAcademicDepartmentForm />,
+      },
+      {
+        path: "/editAcademicDepartmentForm/",
+        element: <EditAcademicDepartmentForm />,
+      },
+
+
 
 
 

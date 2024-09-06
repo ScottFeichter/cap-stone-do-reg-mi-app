@@ -5,6 +5,8 @@ import './CatchAll.css';
 
 //==================PROGRAM IMPORTS=====================//
 
+import { FaHeartBroken } from "react-icons/fa";
+
 
 //================COMPONENT IMPORTS=====================//
 
@@ -14,14 +16,17 @@ function CatchAll(){
 
 
 
-
-
 //=================FUNCTION RETURN======================//
     return (<>
         <main className={`${BASE_CLASS_NAME}Main`}>
+
+        <h1 className={`${BASE_CLASS_NAME}H1`}>404 Page Not Found</h1>
             <div className={`${BASE_CLASS_NAME}Div`}>
-                <h1 className={`${BASE_CLASS_NAME}H1`}>404 Page not found</h1>
-                    <h3 className={`${BASE_CLASS_NAME}H3`}>Not all those who wander are lost, but it seems you may have taken a wrong turn.</h3>
+                    <h3 className={`${BASE_CLASS_NAME}H3`}>Not all those who wander are lost...</h3>
+
+                    <FaHeartBroken id={`${BASE_CLASS_NAME}FaHeartBroken`}/>
+
+                    <h3 className={`${BASE_CLASS_NAME}H3`}>...but it seems you may have taken a wrong turn.</h3>
             </div>
         </main>
     </>)

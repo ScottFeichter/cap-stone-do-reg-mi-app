@@ -1,0 +1,22 @@
+.EmployeeDepartmentsListPagination {
+    margin: 2rem 0 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .EmployeeDepartmentsListPagination a {
+    color: var(--green1);
+    text-align: center;
+    width: 20px;
+    height: fit-content;
+    padding-bottom: 20px;
+    /* border-bottom: 2px solid transparent; */
+  }
+
+  .EmployeeDepartmentsListPagination a:hover {
+    color: var(--green2);
+    border-bottom: 2px solid var(--purple);
+    padding-bottom: 20px;
+  }

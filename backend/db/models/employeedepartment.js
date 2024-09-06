@@ -9,11 +9,12 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      // EmployeeDepartment.hasMany(models.Employee, {
-      //   foreignKey: 'employeeDepartment_Id',
-      //   // onDelete: 'CASCADE',
-      //   // hooks: true
-      // });
+      EmployeeDepartment.hasMany(models.Employee, {
+        foreignKey: 'employeeDepartment_Id',
+        // constraints: false
+        // onDelete: 'SET NULL',
+        // hooks: true
+      });
     }
   }
   EmployeeDepartment.init(

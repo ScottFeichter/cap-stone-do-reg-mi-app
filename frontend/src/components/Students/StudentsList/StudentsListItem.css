@@ -1,0 +1,233 @@
+
+.StudentsListItemContainer {
+    display: flex;
+    margin: 0;
+    text-wrap: nowrap;
+    width: fit-content;
+    /* border: blue 2px solid; */
+  }
+
+   /* ---------ITEM GENERIC----------- */
+
+  .StudentsListItemContainerGeneric {
+    font-size: .8rem;
+    width: 8rem;
+    /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+     /* ---------ITEM SPECIFIC----------- */
+     /* ---Should match the header css--- */
+
+.StudentsListItemContainerID {
+    font-size: .8rem;
+    width: 2rem;
+   /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemContainerED {
+    font-size: .8rem;
+    width: 2rem;
+   /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemContainerAD {
+    font-size: .8rem;
+    width: 2rem;
+   /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemContainerName {
+    font-size: .9rem;
+    width: 10rem;
+   /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemContainerStreet {
+    font-size: .8rem;
+    width: 8rem;
+   /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemContainerCity {
+    font-size: .8rem;
+    width: 8rem;
+   /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemContainerState {
+    font-size: .8rem;
+    width: 4rem;
+   /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemContainerZip {
+    font-size: .8rem;
+    width: 6rem;
+   /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemContainerPhone {
+    font-size: .8rem;
+    width: 6rem;
+   /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+
+  .StudentsListItemContainerEmail {
+    font-size: .8rem;
+    width: 10rem;
+   /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+  .StudentsListItemContainerLang {
+    font-size: .8rem;
+    width: 5rem;
+   /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemContainerInst {
+    font-size: .8rem;
+    width: 5rem;
+   /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+
+    /* ---------???----------- */
+    .StudentsListItemH4{
+        margin: 0;
+        text-wrap: nowrap;
+        width: fit-content;
+        /* border: 1px darkgrey solid; */
+    }
+
+    .StudentsListItemP{
+        margin: 0;
+        text-wrap: nowrap;
+        width: fit-content;
+        /* border: 1px orange solid; */
+    }
+
+    .StudentsListItemBorder {
+        border: 0.5px solid var(--time-line);
+        margin-left: 90px;
+      }

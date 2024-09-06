@@ -1,0 +1,166 @@
+#EmployeeDepartmentsMain{
+    overflow: hidden;
+    margin: 0 1rem 0 1rem;
+    padding: .5rem .5rem .5rem .5rem;
+    /* border: 2px blue solid; */
+
+}
+
+#EmployeeDepartmentsNav{
+    text-align: center;
+    /* margin: 0; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-evenly; */
+    /* border: var(--border); */
+}
+
+#EmployeeDepartmentsH1{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 1rem 0 0 0;
+}
+
+
+
+/*================= CREATE BUTTON =================*/
+
+#EmployeeDepartmentsCreateButton {
+    margin: 1rem .5rem 1rem .5rem;
+    width: 18rem;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+
+}
+
+#EmployeeDepartmentsCreateButton:enabled {
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: border, background-color;
+
+    /* animation-name: none;
+    animation-delay: none;
+    animation-duration: .3s;
+    animation-timing-function: calc();
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: initial; */
+
+
+}
+
+#EmployeeDepartmentsCreateButton:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#EmployeeDepartmentsCreateButton:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#EmployeeDepartmentsCreateButton:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}
+
+
+
+
+
+/*================== SEARCH BAR ==================*/
+
+#EmployeeDepartmentsSearchBar::placeholder{
+    color: white;
+    text-align: center;
+    opacity: 1;
+}
+
+#EmployeeDepartmentsSearchBar:hover::placeholder{
+    color: black;
+    text-align: center;
+    opacity: 1;
+}
+
+#EmployeeDepartmentsSearchBar:focus::placeholder{
+    color: lightgrey;
+    text-align: center;
+    opacity: 1;
+    text-indent: -.5rem;
+}
+
+
+
+#EmployeeDepartmentsSearchBar {
+    margin: 1rem .5rem 1rem .5rem;
+    width: 200px;
+    height: 25.5px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+
+#EmployeeDepartmentsSearchBar:enabled {
+    color: var(--searchBarColor);
+    background-color: var(--searchBarBackgroundColor);
+    border: var(--searchBarBorder);
+
+
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: border, background-color;
+
+    /* animation-name: none;
+    animation-delay: none;
+    animation-duration: .3s;
+    animation-timing-function: calc();
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: initial; */
+
+}
+
+
+/* #EmployeeDepartmentsSearchBar:disabled {
+    color: var(--searchBarDisabledColor);
+    background-color: var(--searchBarDisabledBackgroundColor);
+    border: var(--searchBarDisabledBorder);
+
+} */
+
+#EmployeeDepartmentsSearchBar:enabled:hover {
+    color: color;
+    background-color: var(--green2);
+    border: 1px solid var(--green2);
+    cursor: pointer;
+}
+
+
+
+#EmployeeDepartmentsSearchBar:enabled:focus{
+    color: black;
+    background-color: white;
+    border: 1px grey solid; /* this not doing well its doing but is being overlaid by the browser */
+    outline: 1px solid var(--green2);
+	outline-offset: -2px;
+    text-indent: .5rem;
+    cursor: text;
+}

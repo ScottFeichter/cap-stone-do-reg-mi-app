@@ -1,5 +1,5 @@
 import './CreateNewEmployeeDepartmentForm.css';
-// const BASE_CLASS_NAME = "CreateNewEmployeeForm"
+// const BASE_CLASS_NAME = "CreateNewEmployeeDepartmentForm"
 
 
 import {useState } from 'react';
@@ -10,7 +10,7 @@ import * as employeeDepartmentsActions from '../../../../redux/employeeDepartmen
 
 
 
-function CreateNewEmployeeForm() {
+function CreateNewEmployeeDepartmentForm() {
 
         const required = "*";
 
@@ -21,31 +21,23 @@ function CreateNewEmployeeForm() {
 
         //-----required
         const [errorsName, setErrorsName] = useState({});
-        // const [errorsImageURL, setErrorsImageURL] = useState({});
         const [requiredFieldsMessage, setRequiredFieldsMessage] = useState({});
 
 
+        // const [isDisabled, setIsDisabled] = useState(false);
 
 
         let newEmployeeDepartment = {
-            name	            :	null	,
-            imageURL            :	null	,
+            name	                    :	null	,
+            imageURL	                :	null	,
         }
 
 
-
-
-// personal information form section 1----------------------------------------------------------
-
-
-
         const [name, setName] = useState("");
-        const [imageURL, setImageURL] = useState("");
+        const [imageURL, setStreet] = useState("");
 
 
-// HELPERS FOR CreateNewEmployee Button handler---------------------------------------------------
-
-
+// HELPERS FOR CreateNewEmployeeDepartment Button handler---------------------------------------------------
 
 // helper for handleSubmit check required fields
 const checkRequired = () => {
@@ -54,23 +46,21 @@ const checkRequired = () => {
 
     if(!name) {
         nameBool = true;
-        setErrorsName({name: "Name is required"});
+        setErrorsName({name: "First Name 1 is required"});
     } else {
         nameBool = false;
         setErrorsName({});
     }
 
+
     if (
         (nameBool)
-
     ) {
         return true
     } else {
         return false;
     }
-
 }
-
 
 
 
@@ -78,7 +68,7 @@ const checkRequired = () => {
 // -----------------------------HANDLE SUBMIT -------------------------------//
         const handleSubmit = async (e) => {
             e.preventDefault();
-            // console.log('HANDLE SUBMIT NEW EMPLOYEE DEPARTMENT IS RUNNING');
+            // console.log('HANDLE SUBMIT NEW EMPLOYEE IS RUNNING');
 
         // -----------------CLIENT SIDE VALIDATIONS-----------------------//
 
@@ -93,15 +83,12 @@ const checkRequired = () => {
 
 
 
-
-
-         // ---------------REPLACING NEW EMPLOYEE DEPARTMENT OBJECT VALUES WITH USER INPUT IF EXISTS---------//
+         // ---------------REPLACING NEW EMPLOYEE OBJECT VALUES WITH USER INPUT IF EXISTS---------//
 
 
 
-         if(name)	    newEmployeeDepartment	.	name	    =	name	    ;
-         if(imageURL)	newEmployeeDepartment	.	imageURL	=	imageURL	;
-
+         if(	name	)	newEmployeeDepartment	.	name	=	name	;
+         if(	imageURL	)	newEmployeeDepartment	.	imageURL	=	imageURL	;
 
         //  console.log("newEmployeeDepartment 448: ", newEmployeeDepartment)
 
@@ -133,11 +120,11 @@ const checkRequired = () => {
                 return response
             }).then(response => {
                 newEmployeeDepartmentDetails = response;
-                navigate(`/employees/${employeeDepartmentId}`)
+                navigate(`/employeeDepartments/${employeeDepartmentId}`)
                 return response
             });
 
-            // console.log('HANDLE SUBMIT NEW EMPLOYEE DEPARTMENT HAS FINISHED RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+            // console.log('HANDLE SUBMIT NEW EMPLOYEE HAS FINISHED RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
         }
 
 
@@ -147,7 +134,7 @@ const checkRequired = () => {
         return (
           <main id="CreateNewEmployeeDepartmentMain">
 
-            <h1 id='CreateNewEmployeeDepartmentH1'>Create New Employee Department</h1>
+            <h1 id='CreateNewEmployeeDepartmentH1'>Create A New Employee Department</h1>
 
 
                     <form id='CreateNewEmployeeDepartmentForm' onSubmit={handleSubmit}>
@@ -158,7 +145,7 @@ const checkRequired = () => {
                             <h4 id="CreateNewEmployeeDepartmentFormSection1H4">Information</h4>
 
                             <p id="CreateNewEmployeeDepartmentFormSection1P">
-                                Enter information for new employee department.
+                                Enter information for new employeeDepartment.
                             </p>
                             <h5 className='CreateNewEmployeeDepartmentH5'>* indicates required field</h5>
 
@@ -168,7 +155,7 @@ const checkRequired = () => {
 
                                         <p className='CreateNewEmployeeDepartmentFormRequired'>{required}</p>
                                         <label className='CreateNewEmployeeDepartmentFormLabel'>
-                                            Name:
+                                            Name :
 
                                             <input
                                             className='CreateNewEmployeeDepartmentFormInput'
@@ -186,18 +173,19 @@ const checkRequired = () => {
                             {errorsName.name && <p className='CreateNewEmployeeDepartmentErrors'>{errorsName.name}</p>}
 
 
-                            <div id='imageURLContainer' className='CreateNewEmployeeDepartmentFormLabelInputContainer'>
+
+                            <div id='ImageURLContainer' className='CreateNewEmployeeDepartmentFormLabelInputContainer'>
 
                                         <label className='CreateNewEmployeeDepartmentFormLabel'>
-                                            Image URL:
+                                            ImageURL:
                                             <input
                                             className='CreateNewEmployeeDepartmentFormInput'
                                             id="imageURL"
                                             name="imageURL"
                                             type="text"
-                                            placeholder='Image URL'
+                                            placeholder='ImageURL'
                                             value={imageURL}
-                                            onChange={(e) => setImageURL(e.target.value)}
+                                            onChange={(e) => setStreet(e.target.value)}
 
                                             />
                                         </label>
@@ -207,13 +195,9 @@ const checkRequired = () => {
 
 
 
-
                         </section>
 
                         <hr className='CreateNewEmployeeDepartmentHr'></hr>
-
-
-
 
 {/* form button---------------------------------------------------------- */}
                         {requiredFieldsMessage.message && <p className='CreateNewEmployeeDepartmentRequiredErrors'>{requiredFieldsMessage.message}</p>}
@@ -239,4 +223,4 @@ const checkRequired = () => {
 
 
 
-export default CreateNewEmployeeForm;
+export default CreateNewEmployeeDepartmentForm;

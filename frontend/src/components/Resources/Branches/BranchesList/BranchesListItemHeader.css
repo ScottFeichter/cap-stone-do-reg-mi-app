@@ -1,0 +1,111 @@
+
+.BranchesListItemHeaderContainer {
+    display: flex;
+    margin: 0 1rem 1rem 1rem;
+    text-wrap: nowrap;
+    width: fit-content;
+    /* border: blue 2px solid; */
+  }
+
+
+   /* ---------ITEM SPECIFIC----------- */
+   /* ----Should match the item css---- */
+
+.BranchesListItemHeaderItemContainerID {
+    width: 4rem;
+   /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+  .BranchesListItemHeaderItemContainerName {
+    width: 8rem;
+    /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .BranchesListItemHeaderItemContainerStreet {
+    width: 8rem;
+  /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+  .BranchesListItemHeaderItemContainerCity {
+    width: 8rem;
+  /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+  .BranchesListItemHeaderItemContainerState {
+    width: 4rem;
+  /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+  .BranchesListItemHeaderItemContainerZip {
+    width: 8rem;
+  /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+
+    /* ---------???----------- */
+.BranchesListItemHeaderItemH4{
+    margin: 0;
+    text-wrap: nowrap;
+    width: fit-content;
+    /* border: 1px darkgrey solid; */
+}

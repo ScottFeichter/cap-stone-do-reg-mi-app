@@ -5,6 +5,7 @@
 import './EmployeeDepartmentDetails.css';
 
 //==================PROGRAM IMPORTS=====================//
+import {useNavigate} from 'react-router-dom';
 // import { useSelector } from 'react-redux';
 
 //================COMPONENT IMPORTS=====================//
@@ -13,12 +14,14 @@ import './EmployeeDepartmentDetails.css';
 //===============FUNCTION DECLARATION===================//
 function EmployeeDepartmentDetails(props){
 
-    // const employee = useSelector(state => state.employees.employees[1])
+    const navigate = useNavigate()
+
+    // const employeeDepartment = useSelector(state => state.employeeDepartments.employeeDepartments[1])
     const employeeDepartment = props.employeeDepartment;
 
-    // const employeeObjectKeys = Object.keys(employee);
-    // const employeeObjectValues = Object.values(employee);
-    // const employeeObjectEntries = Object.entries(employee);
+    // const employeeDepartmentObjectKeys = Object.keys(employeeDepartment);
+    // const employeeDepartmentObjectValues = Object.values(employeeDepartment);
+    // const employeeDepartmentObjectEntries = Object.entries(employeeDepartment);
 
     const infoDivider = ":";
     const nullReplacer = `- -`
@@ -32,8 +35,9 @@ function EmployeeDepartmentDetails(props){
 
     const handleScroll = (e) => {
         e.preventDefault();
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        // document.body.scrollTop = 0; // For Safari
+        // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        navigate('/departments')
     }
 
 
@@ -47,7 +51,7 @@ function EmployeeDepartmentDetails(props){
 
                     <section id="EmployeeDepartmentDetailsFormSection1">
 
-                        <h4 id="EmployeeDepartmentDetailsFormSection1H4">Personal Information</h4>
+                        <h4 id="EmployeeDepartmentDetailsFormSection1H4">Information</h4>
 
                         <div id='nameContainer' className='EmployeeDepartmentDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDepartmentDetailsFormLabel'>{"ID"}</div>
@@ -62,6 +66,7 @@ function EmployeeDepartmentDetails(props){
                                 <div className='EmployeeDepartmentDetailsFormInput'>{employeeDepartment.name ? employeeDepartment.name : nullReplacer}</div>
                         </div>
 
+
                         <div id='imageURLContainer' className='EmployeeDepartmentDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDepartmentDetailsFormLabel'>{"imageURL"}</div>
                                 <div className='EmployeeDepartmentDetailsFormInfoDivider'>{infoDivider}</div>
@@ -69,20 +74,19 @@ function EmployeeDepartmentDetails(props){
                         </div>
 
 
-
-
                     </section>
 
                     <hr className='EmployeeDepartmentDetailsHr'></hr>
+{/* form section 2---------------------------------------------------------- */}
 
-{/* to top button---------------------------------------------------------- */}
+
 
                         <div id="EmployeeDepartmentDetailsButtonContainer">
                             <button
                                 id="EmployeeDepartmentDetailsButton"
                                 type="submit"
                                 onClick={handleScroll}
-                                >Back To Top
+                                >Back
                             </button>
                         </div>
 
