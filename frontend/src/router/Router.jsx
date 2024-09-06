@@ -26,6 +26,19 @@ import ProfilePage from "../components/Profile/ProfilePage.jsx";
   // -----------RESOURCES-------------
 import Resources from "../components/Resources/Resources.jsx";
 
+ // ------------BRANCHES--------------
+
+ import BranchDetailsPage from "../components/Departments/Branches/BranchDetailsPage/BranchDetailsPage.jsx";
+ import CreateNewBranchForm from "../components/Departments/Branches/CreateNewBranchForm/CreateNewBranchForm.jsx";
+ import EditBranchForm from "../components/Departments/Branches/EditBranchForm/EditBranchForm.jsx";
+
+ // ------------FACILITIES------------
+
+ import FacilityDetailsPage from "../components/Departments/Facilities/FacilityDetailsPage/FacilityDetailsPage.jsx";
+ import CreateNewFacilityForm from "../components/Departments/Facilities/CreateNewFacilityForm/CreateNewFacilityForm.jsx";
+ import EditFacilityForm from "../components/Departments/Facilities/EditFacilityForm/EditFacilityForm.jsx";
+
+
 
   // -----------TEACHERS--------------
   import Teachers from "../components/Teachers/Teachers.jsx";
@@ -94,6 +107,40 @@ export const router = createBrowserRouter([
         },
 
 
+        // -------BRANCHES-------
+
+        {
+          path: "/branches/:branchId",
+          element: <BranchDetailsPage />
+        },
+        {
+          path: "/createNewBranchForm/",
+          element: <CreateNewBranchForm />,
+        },
+        {
+          path: "/editBranchForm/",
+          element: <EditBranchForm />,
+        },
+
+      // -------FACILITIES-------
+
+      {
+        path: "/facilities/:facilitytId",
+        element: <AcademicDepartmentDetailsPage />
+      },
+      {
+        path: "/createNewAcademicDepartmentForm/",
+        element: <CreateNewAcademicDepartmentForm />,
+      },
+      {
+        path: "/editAcademicDepartmentForm/",
+        element: <EditAcademicDepartmentForm />,
+      },
+
+
+
+
+
       // -----------DEPARTMENTS------------
         {
           path: "/departments",
@@ -105,15 +152,15 @@ export const router = createBrowserRouter([
 
         {
           path: "/employeeDepartments/:employeeDepartmentId",
-          element: <EmployeeDepartmentDetailsPage />
+          element: <FacilityDetailsPage />
         },
         {
-          path: "/createNewEmployeeDepartmentForm/",
-          element: <CreateNewEmployeeDepartmentForm />,
+          path: "/createNewFacilityForm/",
+          element: <CreateNewFacilityForm />,
         },
         {
-          path: "/editEmployeeDepartmentForm/",
-          element: <EditEmployeeDepartmentForm />,
+          path: "/editFacilityForm/",
+          element: <EditFacilityForm />,
         },
 
       // -------ACADEMIC DEPARTMENTS-------
