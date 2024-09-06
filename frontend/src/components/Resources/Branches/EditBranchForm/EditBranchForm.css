@@ -1,19 +1,19 @@
-#EditAcademicDepartmentMain {
+#EditBranchMain {
 
 }
 
-#EditAcademicDepartmentH1 {
+#EditBranchH1 {
     text-align: center;
 }
 
-.EditAcademicDepartmentErrors {
+.EditBranchErrors {
     color: red;
     text-align: center;
     font-weight: bold;
     margin: -1rem 0 1.5rem 0;
 }
 
-.EditAcademicDepartmentRequiredErrors {
+.EditBranchRequiredErrors {
     color: red;
     text-align: center;
     font-weight: bold;
@@ -21,7 +21,7 @@
 }
 
 
-#EditAcademicDepartmentForm{
+#EditBranchForm{
     margin: 2rem 4rem 4rem 4rem;
     padding: 0rem 0rem 0rem 0rem;
     border: var(--border);
@@ -35,13 +35,13 @@
 
 
 
-.EditAcademicDepartmentFormLabelInputContainer {
+.EditBranchFormLabelInputContainer {
     display: flex;
     justify-content: center;
     /* border: 2px grey solid; */
 }
 
-.EditAcademicDepartmentFormLabel {
+.EditBranchFormLabel {
     color: black;
     font-size: medium;
     font-weight: 600;
@@ -55,7 +55,7 @@
 
 
 
-.EditAcademicDepartmentFormInput {
+.EditBranchFormInput {
     font-size: small;
     height: 1.5rem;
     margin-bottom: 1.5rem;
@@ -65,7 +65,7 @@
 
 
 
-.EditAcademicDepartmentFormRequired{
+.EditBranchFormRequired{
     position:sticky;
 
     margin: 1.25rem 0 0 -1rem;
@@ -78,18 +78,18 @@
 
 
 
-.EditAcademicDepartmentHr {
+.EditBranchHr {
     border: 1px grey solid;
     width: 80%;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
 }
 
-#EditAcademicDepartmentFormSection1, #EditAcademicDepartmentFormSection2, #EditAcademicDepartmentFormSection3, #EditAcademicDepartmentFormSection4, #EditAcademicDepartmentFormSection5     {
+#EditBranchFormSection1, #EditBranchFormSection2, #EditBranchFormSection3, #EditBranchFormSection4, #EditBranchFormSection5     {
     width: 450px;
 }
 
-#EditAcademicDepartmentFormSection1H4, #EditAcademicDepartmentFormSection2H4, #EditAcademicDepartmentFormSection3H4, #EditAcademicDepartmentFormSection4H4, #EditAcademicDepartmentFormSection5H4 {
+#EditBranchFormSection1H4, #EditBranchFormSection2H4, #EditBranchFormSection3H4, #EditBranchFormSection4H4, #EditBranchFormSection5H4 {
     text-align: center;
     text-decoration: underline;
     font-size: x-large;
@@ -98,7 +98,7 @@
     /* border: 2px solid grey; */
 }
 
-#EditAcademicDepartmentFormSection1P, #EditAcademicDepartmentFormSection2P, #EditAcademicDepartmentFormSection3P, #EditAcademicDepartmentFormSection4P, #EditAcademicDepartmentFormSection5P {
+#EditBranchFormSection1P, #EditBranchFormSection2P, #EditBranchFormSection3P, #EditBranchFormSection4P, #EditBranchFormSection5P {
     text-align: center;
     margin: -1rem 0 .5rem 0;
     font-size: medium;
@@ -106,7 +106,7 @@
     color: black;
 }
 
-.EditAcademicDepartmentH5 {
+.EditBranchH5 {
     margin: 0rem 0 3rem 0;
     color: red;
     text-align: center;
@@ -114,7 +114,7 @@
 
 
 
-#EditAcademicDepartmentButton {
+#EditBranchButton {
     margin: 2rem 0 4rem 0;
     width: 16rem;
     height: 2.5rem;
@@ -123,28 +123,28 @@
     border-radius: 25px;
 }
 
-#EditAcademicDepartmentButton:enabled {
+#EditBranchButton:enabled {
     color: var(--buttonColor);
     background-color: var(--buttonBackgroundColor);
     border: var(--buttonBorder);
 
 }
 
-#EditAcademicDepartmentButton:disabled {
+#EditBranchButton:disabled {
     color: var(--buttonDisabledColor);
     background-color: var(--buttonDisabledBackgroundColor);
     border: var(--buttonDisabledBorder);
 
 }
 
-#EditAcademicDepartmentButton:enabled:hover {
+#EditBranchButton:enabled:hover {
     color: var(--buttonHoverColor);
     background-color: var(--buttonHoverBackgroundColor);
     border: var(--buttonHoverBorder);
     cursor: pointer;
 }
 
-#EditAcademicDepartmentButton:enabled:active{
+#EditBranchButton:enabled:active{
     color: var(--buttonActiveColor);
     background-color: var(--buttonActiveBackgroundColor);
     border: var(--buttonActiveBorder);

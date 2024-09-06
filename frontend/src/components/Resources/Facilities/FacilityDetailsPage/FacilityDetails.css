@@ -1,9 +1,9 @@
-#EmployeeDepartmentDetailsMain {
+#FacilityDetailsMain {
 
 }
 
 
-#EmployeeDepartmentDetailsForm{
+#FacilityDetailsForm{
     margin: 2rem 4rem 4rem 4rem;
     padding: 0rem 0rem 0rem 0rem;
     display: flex;
@@ -16,7 +16,7 @@
 }
 
 
-.EmployeeDepartmentDetailsFormLabelInputContainer {
+.FacilityDetailsFormLabelInputContainer {
     margin: 0 0 0 0;
     text-align: center;
     display: flex;
@@ -25,7 +25,7 @@
     border-bottom: 1px lightgrey solid;
 }
 
-.EmployeeDepartmentDetailsFormLabel {
+.FacilityDetailsFormLabel {
     text-align: right;
     color: black;
     font-size: medium;
@@ -37,7 +37,7 @@
     /* border: 2px blue solid; */
 }
 
-.EmployeeDepartmentDetailsFormInfoDivider{
+.FacilityDetailsFormInfoDivider{
     color: black;
     font-size: x-large;
     font-weight: 900;
@@ -49,7 +49,7 @@
 
 }
 
-.EmployeeDepartmentDetailsFormInput {
+.FacilityDetailsFormInput {
     text-align: left;
     font-size: medium;
     margin: 0;
@@ -60,19 +60,19 @@
 }
 
 
-.EmployeeDepartmentDetailsHr {
+.FacilityDetailsHr {
     width: 80%;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
     border: 1px grey solid;
 }
 
-#EmployeeDepartmentDetailsFormSection1, #EmployeeDepartmentDetailsFormSection2, #EmployeeDepartmentDetailsFormSection3, #EmployeeDepartmentDetailsFormSection4, #EmployeeDepartmentDetailsFormSection5     {
+#FacilityDetailsFormSection1, #FacilityDetailsFormSection2, #FacilityDetailsFormSection3, #FacilityDetailsFormSection4, #FacilityDetailsFormSection5     {
     width: 80%;
     /* border: brown 2px solid; */
 }
 
-#EmployeeDepartmentDetailsFormSection1H4, #EmployeeDepartmentDetailsFormSection2H4, #EmployeeDepartmentDetailsFormSection3H4, #EmployeeDepartmentDetailsFormSection4H4, #EmployeeDepartmentDetailsFormSection5H4 {
+#FacilityDetailsFormSection1H4, #FacilityDetailsFormSection2H4, #FacilityDetailsFormSection3H4, #FacilityDetailsFormSection4H4, #FacilityDetailsFormSection5H4 {
     text-align: center;
     text-decoration: underline;
     font-size: x-large;
@@ -83,7 +83,7 @@
 
 
 
-#EmployeeDepartmentDetailsButton {
+#FacilityDetailsButton {
     margin: 2rem 0 4rem 0;
     width: 16rem;
     height: 2.5rem;
@@ -92,28 +92,28 @@
     border-radius: 25px;
 }
 
-#EmployeeDepartmentDetailsButton:enabled {
+#FacilityDetailsButton:enabled {
     color: var(--buttonColor);
     background-color: var(--buttonBackgroundColor);
     border: var(--buttonBorder);
 
 }
 
-#EmployeeDepartmentDetailsButton:disabled {
+#FacilityDetailsButton:disabled {
     color: var(--buttonDisabledColor);
     background-color: var(--buttonDisabledBackgroundColor);
     border: var(--buttonDisabledBorder);
 
 }
 
-#EmployeeDepartmentDetailsButton:enabled:hover {
+#FacilityDetailsButton:enabled:hover {
     color: var(--buttonHoverColor);
     background-color: var(--buttonHoverBackgroundColor);
     border: var(--buttonHoverBorder);
     cursor: pointer;
 }
 
-#EmployeeDepartmentDetailsButton:enabled:active{
+#FacilityDetailsButton:enabled:active{
     color: var(--buttonActiveColor);
     background-color: var(--buttonActiveBackgroundColor);
     border: var(--buttonActiveBorder);

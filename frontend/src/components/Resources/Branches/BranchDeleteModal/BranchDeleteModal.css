@@ -1,18 +1,18 @@
-#AcademicDepartmentDeleteModalMain {
+#BranchDeleteModalMain {
     width: 36rem;
     height: 22rem;
 }
 
-#AcademicDepartmentDeleteModalH1 {
+#BranchDeleteModalH1 {
     text-align: center;
 }
 
-#AcademicDepartmentDeleteModalP {
+#BranchDeleteModalP {
     text-align: center;
 }
 
 
-#AcademicDepartmentDeleteModalButtonContainer{
+#BranchDeleteModalButtonContainer{
     margin: 2rem 4rem 4rem 4rem;
     padding: 2rem 0rem 1rem 0rem;
     border: var(--border);
@@ -24,7 +24,7 @@
 }
 
 /* delete button------------------------------------- */
-#YesAcademicDepartmentDeleteButton {
+#YesBranchDeleteButton {
     margin: 1rem 0 2rem 0;
     width: 18rem;
     height: 2rem;
@@ -36,14 +36,14 @@
     background-color: rgb(189, 1, 1);
 }
 
-#YesAcademicDepartmentDeleteButton:hover {
+#YesBranchDeleteButton:hover {
     cursor: pointer;
     color: white;
     border: 1px solid red;
     background-color: red;
 }
 
-#YesAcademicDepartmentDeleteButton:active{
+#YesBranchDeleteButton:active{
     cursor: pointer;
     color: red;
     border: 1px solid red;
@@ -53,7 +53,7 @@
 
 /* keep button------------------------------------- */
 
-#NoKeepAcademicDepartmentButton {
+#NoKeepBranchButton {
     margin: 1rem 0 2rem 0;
     width: 18rem;
     height: 2rem;
@@ -65,14 +65,14 @@
     background-color: var(--green1);
 }
 
-#NoKeepAcademicDepartmentButton:hover {
+#NoKeepBranchButton:hover {
     cursor: pointer;
     color: black;
     border: 1px solid var(--green2);
     background-color: var(--green2);
 }
 
-#NoKeepAcademicDepartmentButton:active{
+#NoKeepBranchButton:active{
     cursor: pointer;
     color: var(--green1);
     background-color: rgba(255, 255, 255, .5);

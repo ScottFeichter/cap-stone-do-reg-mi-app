@@ -1,40 +1,40 @@
-import './EmployeeDepartments.css';
+import './Facilities.css';
 // import { useSelector } from 'react-redux';
 import {useNavigate} from 'react-router-dom'
-import EmployeeDepartmentsList from './EmployeeDepartmentsList/EmployeeDepartmentsList.jsx';
-// import EmployeeDepartmentsSearchBar from './EmployeeDepartmentsSearch/SearchBar/EmployeeDepartmentsSearchBar';
+import FacilitiesList from './FacilitiesList/FacilitiesList.jsx';
+// import FacilitiesSearchBar from './FacilitiesSearch/SearchBar/FacilitiesSearchBar';
 
-function EmployeeDepartments() {
+function Facilities() {
   const navigate = useNavigate();
 
 
   const handleClick = (e) => {
     e.preventDefault();
-    navigate('/createNewEmployeeDepartmentForm');
+    navigate('/createNewFacilityForm');
   }
 
 
   return(
     <>
-        <h1 id="EmployeeDepartmentsH1">Employee Departments</h1>
+        <h1 id="FacilitiesH1">Employee Departments</h1>
 
-        <main id="EmployeeDepartmentsMain">
+        <main id="FacilitiesMain">
 
-          {/* <EmployeeDepartmentsSearchBar /> */}
+          {/* <FacilitiesSearchBar /> */}
 
 
-            <nav id="EmployeeDepartmentsNav">
-              {/* <input type="text" id="EmployeeDepartmentsSearchBar" placeholder="Search EmployeeDepartments" ></input> */}
+            <nav id="FacilitiesNav">
+              {/* <input type="text" id="FacilitiesSearchBar" placeholder="Search Facilities" ></input> */}
 
-              <button id="EmployeeDepartmentsCreateButton" onClick={handleClick}>Create New Employee Department</button>
+              <button id="FacilitiesCreateButton" onClick={handleClick}>Create New Employee Department</button>
             </nav>
 
 
-            <EmployeeDepartmentsList />
+            <FacilitiesList />
 
         </main>
     </>
   )
 }
 
-export default EmployeeDepartments;
+export default Facilities;

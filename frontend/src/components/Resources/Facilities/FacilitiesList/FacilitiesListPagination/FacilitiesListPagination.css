@@ -1,4 +1,4 @@
-.EmployeeDepartmentsListPagination {
+.FacilitiesListPagination {
     margin: 2rem 0 1rem 0;
     display: flex;
     align-items: center;
@@ -6,7 +6,7 @@
     gap: 25px;
   }
 
-  .EmployeeDepartmentsListPagination a {
+  .FacilitiesListPagination a {
     color: var(--green1);
     text-align: center;
     width: 20px;
@@ -15,7 +15,7 @@
     /* border-bottom: 2px solid transparent; */
   }
 
-  .EmployeeDepartmentsListPagination a:hover {
+  .FacilitiesListPagination a:hover {
     color: var(--green2);
     border-bottom: 2px solid var(--purple);
     padding-bottom: 20px;

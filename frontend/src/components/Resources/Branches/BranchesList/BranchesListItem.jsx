@@ -1,35 +1,35 @@
-import './AcademicDepartmentsListItem.css';
+import './BranchesListItem.css';
 import { Link } from "react-router-dom";
 
-function AcademicDepartmentsListItem({ academicDepartment }) {
-  // console.log(academicDepartment);
+function BranchesListItem({ branch }) {
+  // console.log(branch);
   return (
     <>
 
 
-      <div className="AcademicDepartmentsListItemContainer">
+      <div className="BranchesListItemContainer">
 
-        <div className="AcademicDepartmentsListItemContainerID">
-            <p className="AcademicDepartmentsListItemP"> {academicDepartment.id ? academicDepartment.id : "-"}</p>
+        <div className="BranchesListItemContainerID">
+            <p className="BranchesListItemP"> {branch.id ? branch.id : "-"}</p>
         </div>
 
-        <div className="AcademicDepartmentsListItemContainerName">
+        <div className="BranchesListItemContainerName">
           <Link
-            to={`/academicDepartments/${academicDepartment.id}`}
-            state={{academicDepartment: academicDepartment}}
-            className="AcademicDepartmentsListItemP">
-              {academicDepartment.name}
+            to={`/branches/${branch.id}`}
+            state={{branch: branch}}
+            className="BranchesListItemP">
+              {branch.name}
           </Link>
         </div>
 
-        <div className="AcademicDepartmentsListItemContainerImageURL">
-          <p className="AcademicDepartmentsListItemP">{academicDepartment.imageURL ? academicDepartment.imageURL: "-"}</p>
+        <div className="BranchesListItemContainerImageURL">
+          <p className="BranchesListItemP">{branch.imageURL ? branch.imageURL: "-"}</p>
         </div>
 
       </div>
-      {/* <div className="AcademicDepartmentsListItemBorder"></div> */}
+      {/* <div className="BranchesListItemBorder"></div> */}
     </>
   );
 }
 
-export default AcademicDepartmentsListItem;
+export default BranchesListItem;

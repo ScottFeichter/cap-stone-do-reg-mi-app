@@ -3,20 +3,20 @@
 // import { useNavigate } from "react-router-dom";
 // import { useSelector } from "react-redux";
 // // import * as searchActions from '../../../search'
-// // import * as employeeDepartmentsActions from "../../../../redux/employeeDepartmentsReducer";
+// // import * as facilitiesActions from "../../../../redux/facilitiesReducer";
 // // import { useDispatch } from "react-redux";
-// import "./EmployeeDepartmentsSearchBar.css";
+// import "./FacilitiesSearchBar.css";
 
 // // NOTE: DOC STRINGS MAY NEED UPDATED SORRY!!!!!! THINGS CHANGE AND I FORGET TO UPDATE THEM...
 
-// function EmployeeDepartmentsSearchBar() {
+// function FacilitiesSearchBar() {
 //   const navigate = useNavigate();
-//   const employeeDepartments = useSelector((state) => state?.employeeDepartments?.employeeDepartments);
+//   const facilities = useSelector((state) => state?.facilities?.facilities);
 //   // const dispatch = useDispatch();
 
 //   // useEffect(() => {
-//   //   dispatch(employeeDepartmentsActions.employeeDepartments());
-//   //   console.log("FROM SEARCHBAR.JSX dispatch(employeeDepartmentsActions.employeeDepartments());")
+//   //   dispatch(facilitiesActions.facilities());
+//   //   console.log("FROM SEARCHBAR.JSX dispatch(facilitiesActions.facilities());")
 //   // }, []);
 
 //   // =======================STATEFUL VARIABLES=======================
@@ -45,7 +45,7 @@
 
 //   /**
 //    * This useEffect runs everytime there is a change in the variable search
-//    * It captures the search value and filters it through the employeeDepartments (aka searchables)
+//    * It captures the search value and filters it through the facilities (aka searchables)
 //    * The result is the array of stock objects named suggestions
 //    * Then it creates an array called displaySuggestions which mirrors suggestions...
 //    * But it only contains a string of name_symbol, company_name, and ceo...
@@ -136,18 +136,18 @@
 
 //     let firstName = e.target.value;
 
-//     // console.log("firstName line 152", firstName, employeeDepartments);
-//     for (let i = 0; i < employeeDepartments.length; i++) {
-//       if (employeeDepartments[i].firstName === firstName) {
+//     // console.log("firstName line 152", firstName, facilities);
+//     for (let i = 0; i < facilities.length; i++) {
+//       if (facilities[i].firstName === firstName) {
 //         displayedSuggestions = [{ test: "test" }];
 //         // console.log(displayedSuggestions);
 
-//         document.getElementById("EmployeeDepartmentsSearchBarInput").focus();
+//         document.getElementById("FacilitiesSearchBarInput").focus();
 //         setSearch(firstName);
 //         // console.log(search);
 //         setSearch("");
-//         return navigate(`/employeeDepartments/${employeeDepartments[i].id}`, {
-//           state: { suggestions: employeeDepartments[i].id },
+//         return navigate(`/facilities/${facilities[i].id}`, {
+//           state: { suggestions: facilities[i].id },
 //         });
 //       }
 //     }
@@ -188,14 +188,14 @@
 
 //   // ===========================RETURN ===============================
 //   // =======================GRABING STOCK DATA FROM STORE=======================
-//   const navEmployeeDepartments = useSelector((store) => store.employeeDepartments.employeeDepartments);
-//   // console.log("navEmployeeDepartments from searchBar = ", navEmployeeDepartments)
-//   if (navEmployeeDepartments === null) return null;
+//   const navFacilities = useSelector((store) => store.facilities.facilities);
+//   // console.log("navFacilities from searchBar = ", navFacilities)
+//   if (navFacilities === null) return null;
 
-//   const searchables = navEmployeeDepartments;
+//   const searchables = navFacilities;
 
-//   // const searchables = navEmployeeDepartments.filter((navEmployeeDepartment) => {
-//   //   navEmployeeDepartment.firstName !== null
+//   // const searchables = navFacilities.filter((navAcademicDepartment) => {
+//   //   navAcademicDepartment.firstName !== null
 //   // });
 
 //   // const searchables = ["AAPL", "AMZN", "BUTT"]
@@ -203,12 +203,12 @@
 
 //   return (
 //     <>
-//       <main id="EmployeeDepartmentsSearchBarMain">
-//         <form id="EmployeeDepartmentsSearchBarForm" onSubmit={handleSubmit}>
-//           <label id="EmployeeDepartmentsSearchBarLabel">
+//       <main id="FacilitiesSearchBarMain">
+//         <form id="FacilitiesSearchBarForm" onSubmit={handleSubmit}>
+//           <label id="FacilitiesSearchBarLabel">
 //             <FaMagnifyingGlass onClick={handleSubmit} id="FaMagnifyingGlass" />
 //             <input
-//               id="EmployeeDepartmentsSearchBarInput"
+//               id="FacilitiesSearchBarInput"
 //               type="text"
 //               value={search}
 //               placeholder={placeHolder}
@@ -219,22 +219,22 @@
 //           </label>
 //           {/* {errors.search && <p>{errors.search}</p>} */}
 
-//           <button type="submit" id="EmployeeDepartmentsSearchBarButton">
+//           <button type="submit" id="FacilitiesSearchBarButton">
 //             submit
 //           </button>
 //         </form>
 
-//         <ul id="EmployeeDepartmentsSearchBarSuggestionsUl">
+//         <ul id="FacilitiesSearchBarSuggestionsUl">
 //           {searchSuggestions.length !== 0
 //             ? searchSuggestions.map((ele) => (
 //                 <li
 //                   key={searchSuggestions.indexOf(ele)}
-//                   className="EmployeeDepartmentsSearchBarSuggestionsUlLi"
+//                   className="FacilitiesSearchBarSuggestionsUlLi"
 //                 >
 //                   <button
 //                     onClick={handleSearchSuggestionButton}
 //                     value={ele}
-//                     className="EmployeeDepartmentsSearchBarSuggestionsUlLiButton"
+//                     className="FacilitiesSearchBarSuggestionsUlLiButton"
 //                   >
 //                     {ele}
 //                   </button>
@@ -247,4 +247,4 @@
 //   );
 // }
 
-// export default EmployeeDepartmentsSearchBar;
+// export default FacilitiesSearchBar;

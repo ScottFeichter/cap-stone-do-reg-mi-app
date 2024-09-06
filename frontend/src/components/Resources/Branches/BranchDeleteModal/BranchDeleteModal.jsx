@@ -1,14 +1,14 @@
 import { useModal } from "../../../../context/Modal";
 import {useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import * as academicDepartmentsActions from '../../../../redux/academicDepartmentsReducer.js';
-import "./AcademicDepartmentDeleteModal.css"
+import * as branchesActions from '../../../../redux/branchesReducer.js';
+import "./BranchDeleteModal.css"
 
 
 
-function AcademicDepartmentDeleteModal({academicDepartment}) {
+function BranchDeleteModal({branch}) {
 
-    console.log("employee Department: ", academicDepartment);
+    console.log("employee Department: ", branch);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -21,9 +21,9 @@ function AcademicDepartmentDeleteModal({academicDepartment}) {
     const handleDelete = (e) => {
         e.preventDefault();
 
-        return dispatch(academicDepartmentsActions.thunkDeleteAcademicDepartment(academicDepartment))
-            .then(() => {return dispatch(academicDepartmentsActions.thunkGetAcademicDepartmentsAll())})
-            .then(() => navigate('/academicDepartments'))
+        return dispatch(branchesActions.thunkDeleteBranch(branch))
+            .then(() => {return dispatch(branchesActions.thunkGetBranchesAll())})
+            .then(() => navigate('/branches'))
             .then(()=> closeModal())
     };
 
@@ -41,27 +41,27 @@ function AcademicDepartmentDeleteModal({academicDepartment}) {
 
 //  return-------------------------------------------
     return (
-        <main id="AcademicDepartmentDeleteModalMain">
+        <main id="BranchDeleteModalMain">
 
-            <h1 id="AcademicDepartmentDeleteModalH1">Confirm Delete</h1>
-            <p id="AcademicDepartmentDeleteModalP">Are you sure you want to remove this academicDepartment?</p>
+            <h1 id="BranchDeleteModalH1">Confirm Delete</h1>
+            <p id="BranchDeleteModalP">Are you sure you want to remove this branch?</p>
 
-            <div id="AcademicDepartmentDeleteModalButtonContainer">
+            <div id="BranchDeleteModalButtonContainer">
 
                 <button
-                    id="YesAcademicDepartmentDeleteButton"
-                    name="YesAcademicDepartmentDeleteButton"
+                    id="YesBranchDeleteButton"
+                    name="YesBranchDeleteButton"
                     type="button"
                     onClick={handleDelete}
-                >{"Yes (Delete AcademicDepartment)"}</button>
+                >{"Yes (Delete Branch)"}</button>
 
 
                 <button
-                    id="NoKeepAcademicDepartmentButton"
-                    name="NoKeepAcademicDepartmentButton"
+                    id="NoKeepBranchButton"
+                    name="NoKeepBranchButton"
                     type="button"
                     onClick={handleKeep}
-                >{"No (Keep AcademicDepartment)"}</button>
+                >{"No (Keep Branch)"}</button>
 
             </div>
 
@@ -70,4 +70,4 @@ function AcademicDepartmentDeleteModal({academicDepartment}) {
     )
 }
 
-export default AcademicDepartmentDeleteModal;
+export default BranchDeleteModal;

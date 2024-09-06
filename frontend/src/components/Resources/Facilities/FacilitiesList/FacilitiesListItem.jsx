@@ -1,35 +1,35 @@
-import './EmployeeDepartmentsListItem.css';
+import './FacilitiesListItem.css';
 import { Link } from "react-router-dom";
 
-function EmployeeDepartmentsListItem({ employeeDepartment }) {
-  // console.log(employeeDepartment);
+function FacilitiesListItem({ academicDepartment }) {
+  // console.log(academicDepartment);
   return (
     <>
 
 
-      <div className="EmployeeDepartmentsListItemContainer">
+      <div className="FacilitiesListItemContainer">
 
-        <div className="EmployeeDepartmentsListItemContainerID">
-            <p className="EmployeeDepartmentsListItemP"> {employeeDepartment.id ? employeeDepartment.id : "-"}</p>
+        <div className="FacilitiesListItemContainerID">
+            <p className="FacilitiesListItemP"> {academicDepartment.id ? academicDepartment.id : "-"}</p>
         </div>
 
-        <div className="EmployeeDepartmentsListItemContainerName">
+        <div className="FacilitiesListItemContainerName">
           <Link
-            to={`/employeeDepartments/${employeeDepartment.id}`}
-            state={{employeeDepartment: employeeDepartment}}
-            className="EmployeeDepartmentsListItemP">
-              {employeeDepartment.name}
+            to={`/facilities/${academicDepartment.id}`}
+            state={{academicDepartment: academicDepartment}}
+            className="FacilitiesListItemP">
+              {academicDepartment.name}
           </Link>
         </div>
 
-        <div className="EmployeeDepartmentsListItemContainerImageURL">
-          <p className="EmployeeDepartmentsListItemP">{employeeDepartment.imageURL ? employeeDepartment.imageURL: "-"}</p>
+        <div className="FacilitiesListItemContainerImageURL">
+          <p className="FacilitiesListItemP">{academicDepartment.imageURL ? academicDepartment.imageURL: "-"}</p>
         </div>
 
       </div>
-      {/* <div className="EmployeeDepartmentsListItemBorder"></div> */}
+      {/* <div className="FacilitiesListItemBorder"></div> */}
     </>
   );
 }
 
-export default EmployeeDepartmentsListItem;
+export default FacilitiesListItem;

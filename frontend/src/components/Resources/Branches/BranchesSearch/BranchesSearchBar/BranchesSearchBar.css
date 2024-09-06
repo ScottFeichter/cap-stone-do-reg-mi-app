@@ -1,4 +1,4 @@
-#AcademicDepartmentsSearchBarForm {
+#BranchesSearchBarForm {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,7 +9,7 @@
 
 
 
-#AcademicDepartmentsSearchBarLabel {
+#BranchesSearchBarLabel {
     display: flex;
     align-items: left;
     justify-content: center;
@@ -33,7 +33,7 @@
     cursor: pointer;
 }
 
-#AcademicDepartmentsSearchBarInput {
+#BranchesSearchBarInput {
     border: none;
     font-size: small;
     width: 22rem;
@@ -44,7 +44,7 @@
 
 }
 
-#AcademicDepartmentsSearchBarInput:focus {
+#BranchesSearchBarInput:focus {
     outline: none;
     /* filter: drop-shadow(0rem 1rem 0.75rem rgb(37, 15, 67)); */
     /* width: 21rem; */
@@ -52,7 +52,7 @@
     /* margin: 0 0 .1rem -0.5rem; */
 }
 
-#AcademicDepartmentsSearchBarButton {
+#BranchesSearchBarButton {
     visibility: hidden;
     margin: 0;
     padding: 0;
@@ -60,7 +60,7 @@
     font-size: .5rem;
 }
 
-#AcademicDepartmentsSearchBarSuggestionsUl{
+#BranchesSearchBarSuggestionsUl{
     list-style-type: none;
     position: absolute;
     margin-left: 0rem;
@@ -73,11 +73,11 @@
     /* border: 2px blue dashed; */
 }
 
-.AcademicDepartmentsSearchBarSuggestionsUlLi{
+.BranchesSearchBarSuggestionsUlLi{
     margin-left: .65rem;
 }
 
-.AcademicDepartmentsSearchBarSuggestionsUlLiButton{
+.BranchesSearchBarSuggestionsUlLiButton{
     font-style: italic;
     font-size: small;
     text-align: left;
@@ -95,7 +95,7 @@
 
 }
 
-.AcademicDepartmentsSearchBarSuggestionsUlLiButton:hover{
+.BranchesSearchBarSuggestionsUlLiButton:hover{
     color: white;
     background-color: rgba(85, 26, 139, 1);
     cursor: pointer;

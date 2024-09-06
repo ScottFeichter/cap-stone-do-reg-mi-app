@@ -1,4 +1,4 @@
-#AcademicDepartmentDetailsPageMain{
+#BranchDetailsPageMain{
     text-align: center;
     overflow: hidden;
     /* width: 1000px; */
@@ -8,14 +8,14 @@
     border-radius: 25px; */
 }
 
-#AcademicDepartmentDetailsPageNav{
+#BranchDetailsPageNav{
     text-align: center;
     /* display: flex;
     align-items: center;
     justify-content: space-evenly; */
 }
 
-#AcademicDepartmentDetailsPageH1{
+#BranchDetailsPageH1{
     text-align: center;
     font-size: 2.5rem;
     margin: 1rem 0 0 0;
@@ -25,7 +25,7 @@
 
 /*================= EDIT BUTTON =================*/
 
-#AcademicDepartmentDetailsPageEditButton {
+#BranchDetailsPageEditButton {
     margin: 1rem .5rem 1rem .5rem;
     width: 16rem;
     height: 1.8rem;
@@ -35,7 +35,7 @@
 
 }
 
-#AcademicDepartmentDetailsPageEditButton:enabled {
+#BranchDetailsPageEditButton:enabled {
     color: var(--buttonColor);
     background-color: var(--buttonBackgroundColor);
     border: var(--buttonBorder);
@@ -58,21 +58,21 @@
 
 }
 
-#AcademicDepartmentDetailsPageEditButton:disabled {
+#BranchDetailsPageEditButton:disabled {
     color: var(--buttonDisabledColor);
     background-color: var(--buttonDisabledBackgroundColor);
     border: var(--buttonDisabledBorder);
 
 }
 
-#AcademicDepartmentDetailsPageEditButton:enabled:hover {
+#BranchDetailsPageEditButton:enabled:hover {
     color: var(--buttonHoverColor);
     background-color: var(--buttonHoverBackgroundColor);
     border: var(--buttonHoverBorder);
     cursor: pointer;
 }
 
-#AcademicDepartmentDetailsPageEditButton:enabled:active{
+#BranchDetailsPageEditButton:enabled:active{
     color: var(--buttonActiveColor);
     background-color: var(--buttonActiveBackgroundColor);
     border: var(--buttonActiveBorder);
@@ -83,7 +83,7 @@
 
 /*================= DELETE BUTTON =================*/
 
-#AcademicDepartmentDetailsPageDeleteButton {
+#BranchDetailsPageDeleteButton {
     margin: 1rem .5rem 1rem .5rem;
     width: 12rem;
     height: 1.8rem;
@@ -93,7 +93,7 @@
 
 }
 
-#AcademicDepartmentDetailsPageDeleteButton:enabled {
+#BranchDetailsPageDeleteButton:enabled {
     color: var(--buttonColor);
     background-color: var(--buttonBackgroundColor);
     border: var(--buttonBorder);
@@ -116,21 +116,21 @@
 
 }
 
-#AcademicDepartmentDetailsPageDeleteButton:disabled {
+#BranchDetailsPageDeleteButton:disabled {
     color: var(--buttonDisabledColor);
     background-color: var(--buttonDisabledBackgroundColor);
     border: var(--buttonDisabledBorder);
 
 }
 
-#AcademicDepartmentDetailsPageDeleteButton:enabled:hover {
+#BranchDetailsPageDeleteButton:enabled:hover {
     color: var(--buttonHoverColor);
     background-color: var(--buttonHoverBackgroundColor);
     border: var(--buttonHoverBorder);
     cursor: pointer;
 }
 
-#AcademicDepartmentDetailsPageDeleteButton:enabled:active{
+#BranchDetailsPageDeleteButton:enabled:active{
     color: var(--buttonActiveColor);
     background-color: var(--buttonActiveBackgroundColor);
     border: var(--buttonActiveBorder);

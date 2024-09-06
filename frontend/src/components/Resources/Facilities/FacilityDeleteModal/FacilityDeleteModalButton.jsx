@@ -1,7 +1,7 @@
 import { useModal } from '../../../../context/Modal';
-import './EmployeeDepartmentDeleteModalButton.css';
+import './FacilityDeleteModalButton.css';
 
-function EmployeeDepartmentDeleteModalButton({
+function FacilityDeleteModalButton({
   modalComponent, // component to render inside the modal
   buttonText, // text of the button that opens the modal
   onButtonClick, // optional: callback function that will be called once the button that opens the modal is clicked
@@ -16,7 +16,7 @@ function EmployeeDepartmentDeleteModalButton({
   };
 
 
-  return <button onClick={onClick} className='EmployeeDepartmentDeleteModalButton'>{buttonText}</button>;
+  return <button onClick={onClick} className='FacilityDeleteModalButton'>{buttonText}</button>;
 }
 
-export default EmployeeDepartmentDeleteModalButton;
+export default FacilityDeleteModalButton;

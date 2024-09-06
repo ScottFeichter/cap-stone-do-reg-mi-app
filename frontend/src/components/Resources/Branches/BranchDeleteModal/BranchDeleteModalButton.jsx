@@ -1,7 +1,7 @@
 import { useModal } from '../../../../context/Modal';
-import './AcademicDepartmentDeleteModalButton.css';
+import './BranchDeleteModalButton.css';
 
-function AcademicDepartmentDeleteModalButton({
+function BranchDeleteModalButton({
   modalComponent, // component to render inside the modal
   buttonText, // text of the button that opens the modal
   onButtonClick, // optional: callback function that will be called once the button that opens the modal is clicked
@@ -16,7 +16,7 @@ function AcademicDepartmentDeleteModalButton({
   };
 
 
-  return <button onClick={onClick} className='AcademicDepartmentDeleteModalButton'>{buttonText}</button>;
+  return <button onClick={onClick} className='BranchDeleteModalButton'>{buttonText}</button>;
 }
 
-export default AcademicDepartmentDeleteModalButton;
+export default BranchDeleteModalButton;

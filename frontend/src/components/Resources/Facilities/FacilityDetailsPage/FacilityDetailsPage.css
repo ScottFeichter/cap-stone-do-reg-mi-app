@@ -1,4 +1,4 @@
-#EmployeeDepartmentDetailsPageMain{
+#FacilityDetailsPageMain{
     text-align: center;
     overflow: hidden;
     /* width: 1000px; */
@@ -8,14 +8,14 @@
     border-radius: 25px; */
 }
 
-#EmployeeDepartmentDetailsPageNav{
+#FacilityDetailsPageNav{
     text-align: center;
     /* display: flex;
     align-items: center;
     justify-content: space-evenly; */
 }
 
-#EmployeeDepartmentDetailsPageH1{
+#FacilityDetailsPageH1{
     text-align: center;
     font-size: 2.5rem;
     margin: 1rem 0 0 0;
@@ -25,7 +25,7 @@
 
 /*================= EDIT BUTTON =================*/
 
-#EmployeeDepartmentDetailsPageEditButton {
+#FacilityDetailsPageEditButton {
     margin: 1rem .5rem 1rem .5rem;
     width: 16rem;
     height: 1.8rem;
@@ -35,7 +35,7 @@
 
 }
 
-#EmployeeDepartmentDetailsPageEditButton:enabled {
+#FacilityDetailsPageEditButton:enabled {
     color: var(--buttonColor);
     background-color: var(--buttonBackgroundColor);
     border: var(--buttonBorder);
@@ -58,21 +58,21 @@
 
 }
 
-#EmployeeDepartmentDetailsPageEditButton:disabled {
+#FacilityDetailsPageEditButton:disabled {
     color: var(--buttonDisabledColor);
     background-color: var(--buttonDisabledBackgroundColor);
     border: var(--buttonDisabledBorder);
 
 }
 
-#EmployeeDepartmentDetailsPageEditButton:enabled:hover {
+#FacilityDetailsPageEditButton:enabled:hover {
     color: var(--buttonHoverColor);
     background-color: var(--buttonHoverBackgroundColor);
     border: var(--buttonHoverBorder);
     cursor: pointer;
 }
 
-#EmployeeDepartmentDetailsPageEditButton:enabled:active{
+#FacilityDetailsPageEditButton:enabled:active{
     color: var(--buttonActiveColor);
     background-color: var(--buttonActiveBackgroundColor);
     border: var(--buttonActiveBorder);
@@ -83,7 +83,7 @@
 
 /*================= DELETE BUTTON =================*/
 
-#EmployeeDepartmentDetailsPageDeleteButton {
+#FacilityDetailsPageDeleteButton {
     margin: 1rem .5rem 1rem .5rem;
     width: 12rem;
     height: 1.8rem;
@@ -93,7 +93,7 @@
 
 }
 
-#EmployeeDepartmentDetailsPageDeleteButton:enabled {
+#FacilityDetailsPageDeleteButton:enabled {
     color: var(--buttonColor);
     background-color: var(--buttonBackgroundColor);
     border: var(--buttonBorder);
@@ -116,21 +116,21 @@
 
 }
 
-#EmployeeDepartmentDetailsPageDeleteButton:disabled {
+#FacilityDetailsPageDeleteButton:disabled {
     color: var(--buttonDisabledColor);
     background-color: var(--buttonDisabledBackgroundColor);
     border: var(--buttonDisabledBorder);
 
 }
 
-#EmployeeDepartmentDetailsPageDeleteButton:enabled:hover {
+#FacilityDetailsPageDeleteButton:enabled:hover {
     color: var(--buttonHoverColor);
     background-color: var(--buttonHoverBackgroundColor);
     border: var(--buttonHoverBorder);
     cursor: pointer;
 }
 
-#EmployeeDepartmentDetailsPageDeleteButton:enabled:active{
+#FacilityDetailsPageDeleteButton:enabled:active{
     color: var(--buttonActiveColor);
     background-color: var(--buttonActiveBackgroundColor);
     border: var(--buttonActiveBorder);

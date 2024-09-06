@@ -1,4 +1,4 @@
-#AcademicDepartmentsMain{
+#BranchesMain{
     overflow: hidden;
     margin: 0 1rem 0 1rem;
     padding: .5rem .5rem .5rem .5rem;
@@ -6,7 +6,7 @@
 
 }
 
-#AcademicDepartmentsNav{
+#BranchesNav{
     text-align: center;
     /* margin: 0; */
     /* display: flex; */
@@ -15,7 +15,7 @@
     /* border: var(--border); */
 }
 
-#AcademicDepartmentsH1{
+#BranchesH1{
     text-align: center;
     font-size: 2.5rem;
     margin: 1rem 0 0 0;
@@ -25,7 +25,7 @@
 
 /*================= CREATE BUTTON =================*/
 
-#AcademicDepartmentsCreateButton {
+#BranchesCreateButton {
     margin: 1rem .5rem 1rem .5rem;
     width: 18rem;
     height: 2rem;
@@ -35,7 +35,7 @@
 
 }
 
-#AcademicDepartmentsCreateButton:enabled {
+#BranchesCreateButton:enabled {
     color: var(--buttonColor);
     background-color: var(--buttonBackgroundColor);
     border: var(--buttonBorder);
@@ -58,21 +58,21 @@
 
 }
 
-#AcademicDepartmentsCreateButton:disabled {
+#BranchesCreateButton:disabled {
     color: var(--buttonDisabledColor);
     background-color: var(--buttonDisabledBackgroundColor);
     border: var(--buttonDisabledBorder);
 
 }
 
-#AcademicDepartmentsCreateButton:enabled:hover {
+#BranchesCreateButton:enabled:hover {
     color: var(--buttonHoverColor);
     background-color: var(--buttonHoverBackgroundColor);
     border: var(--buttonHoverBorder);
     cursor: pointer;
 }
 
-#AcademicDepartmentsCreateButton:enabled:active{
+#BranchesCreateButton:enabled:active{
     color: var(--buttonActiveColor);
     background-color: var(--buttonActiveBackgroundColor);
     border: var(--buttonActiveBorder);
@@ -85,19 +85,19 @@
 
 /*================== SEARCH BAR ==================*/
 
-#AcademicDepartmentsSearchBar::placeholder{
+#BranchesSearchBar::placeholder{
     color: white;
     text-align: center;
     opacity: 1;
 }
 
-#AcademicDepartmentsSearchBar:hover::placeholder{
+#BranchesSearchBar:hover::placeholder{
     color: black;
     text-align: center;
     opacity: 1;
 }
 
-#AcademicDepartmentsSearchBar:focus::placeholder{
+#BranchesSearchBar:focus::placeholder{
     color: lightgrey;
     text-align: center;
     opacity: 1;
@@ -106,7 +106,7 @@
 
 
 
-#AcademicDepartmentsSearchBar {
+#BranchesSearchBar {
     margin: 1rem .5rem 1rem .5rem;
     width: 200px;
     height: 25.5px;
@@ -116,7 +116,7 @@
 }
 
 
-#AcademicDepartmentsSearchBar:enabled {
+#BranchesSearchBar:enabled {
     color: var(--searchBarColor);
     background-color: var(--searchBarBackgroundColor);
     border: var(--searchBarBorder);
@@ -139,14 +139,14 @@
 }
 
 
-/* #AcademicDepartmentsSearchBar:disabled {
+/* #BranchesSearchBar:disabled {
     color: var(--searchBarDisabledColor);
     background-color: var(--searchBarDisabledBackgroundColor);
     border: var(--searchBarDisabledBorder);
 
 } */
 
-#AcademicDepartmentsSearchBar:enabled:hover {
+#BranchesSearchBar:enabled:hover {
     color: color;
     background-color: var(--green2);
     border: 1px solid var(--green2);
@@ -155,7 +155,7 @@
 
 
 
-#AcademicDepartmentsSearchBar:enabled:focus{
+#BranchesSearchBar:enabled:focus{
     color: black;
     background-color: white;
     border: 1px grey solid; /* this not doing well its doing but is being overlaid by the browser */

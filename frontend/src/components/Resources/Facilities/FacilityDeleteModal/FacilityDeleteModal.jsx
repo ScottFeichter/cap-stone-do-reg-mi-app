@@ -1,14 +1,14 @@
 import { useModal } from "../../../../context/Modal";
 import {useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import * as employeeDepartmentsActions from '../../../../redux/employeeDepartmentsReducer.js';
-import "./EmployeeDepartmentDeleteModal.css"
+import * as facilitiesActions from '../../../../redux/facilitiesReducer.js';
+import "./FacilityDeleteModal.css"
 
 
 
-function EmployeeDepartmentDeleteModal({employeeDepartment}) {
+function FacilityDeleteModal({academicDepartment}) {
 
-    console.log("employee Department: ", employeeDepartment);
+    console.log("employee Department: ", academicDepartment);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -21,9 +21,9 @@ function EmployeeDepartmentDeleteModal({employeeDepartment}) {
     const handleDelete = (e) => {
         e.preventDefault();
 
-        return dispatch(employeeDepartmentsActions.thunkDeleteEmployeeDepartment(employeeDepartment))
-            .then(() => {return dispatch(employeeDepartmentsActions.thunkGetEmployeeDepartmentsAll())})
-            .then(() => navigate('/employeeDepartments'))
+        return dispatch(facilitiesActions.thunkDeleteFacility(academicDepartment))
+            .then(() => {return dispatch(facilitiesActions.thunkGetFacilitiesAll())})
+            .then(() => navigate('/facilities'))
             .then(()=> closeModal())
     };
 
@@ -41,27 +41,27 @@ function EmployeeDepartmentDeleteModal({employeeDepartment}) {
 
 //  return-------------------------------------------
     return (
-        <main id="EmployeeDepartmentDeleteModalMain">
+        <main id="FacilityDeleteModalMain">
 
-            <h1 id="EmployeeDepartmentDeleteModalH1">Confirm Delete</h1>
-            <p id="EmployeeDepartmentDeleteModalP">Are you sure you want to remove this employeeDepartment?</p>
+            <h1 id="FacilityDeleteModalH1">Confirm Delete</h1>
+            <p id="FacilityDeleteModalP">Are you sure you want to remove this academicDepartment?</p>
 
-            <div id="EmployeeDepartmentDeleteModalButtonContainer">
+            <div id="FacilityDeleteModalButtonContainer">
 
                 <button
-                    id="YesEmployeeDepartmentDeleteButton"
-                    name="YesEmployeeDepartmentDeleteButton"
+                    id="YesFacilityDeleteButton"
+                    name="YesFacilityDeleteButton"
                     type="button"
                     onClick={handleDelete}
-                >{"Yes (Delete EmployeeDepartment)"}</button>
+                >{"Yes (Delete Facility)"}</button>
 
 
                 <button
-                    id="NoKeepEmployeeDepartmentButton"
-                    name="NoKeepEmployeeDepartmentButton"
+                    id="NoKeepFacilityButton"
+                    name="NoKeepFacilityButton"
                     type="button"
                     onClick={handleKeep}
-                >{"No (Keep EmployeeDepartment)"}</button>
+                >{"No (Keep Facility)"}</button>
 
             </div>
 
@@ -70,4 +70,4 @@ function EmployeeDepartmentDeleteModal({employeeDepartment}) {
     )
 }
 
-export default EmployeeDepartmentDeleteModal;
+export default FacilityDeleteModal;

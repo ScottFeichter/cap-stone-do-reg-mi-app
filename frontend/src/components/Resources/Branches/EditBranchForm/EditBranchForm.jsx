@@ -1,5 +1,5 @@
-import './EditAcademicDepartmentForm.css';
-// const BASE_CLASS_NAME = "EditAcademicDepartmentForm"
+import './EditBranchForm.css';
+// const BASE_CLASS_NAME = "EditBranchForm"
 
 
 import {useState } from 'react';
@@ -7,11 +7,11 @@ import {useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 // import { useEffect } from 'react';
-import * as academicDepartmentsActions from '../../../../redux/academicDepartmentsReducer.js';
+import * as branchesActions from '../../../../redux/branchesReducer.js';
 
 
 
-function EditAcademicDepartmentForm() {
+function EditBranchForm() {
 
         const required = "*";
 
@@ -19,9 +19,9 @@ function EditAcademicDepartmentForm() {
         const navigate = useNavigate();
 
         const location = useLocation();
-        const {academicDepartmentToEdit} = location.state;
+        const {branchToEdit} = location.state;
 
-        // console.log("academicDepartmentToEdit : ", academicDepartmentToEdit)
+        // console.log("branchToEdit : ", branchToEdit)
 
         const [errors, setErrors] = useState({});
 
@@ -35,7 +35,7 @@ function EditAcademicDepartmentForm() {
         // const [isDisabled, setIsDisabled] = useState(false);
 
 
-        let editedAcademicDepartment = {
+        let editedBranch = {
 
 
             name	                    :	null	,
@@ -44,8 +44,8 @@ function EditAcademicDepartmentForm() {
         }
 
 
-    const [name,setName] = useState(academicDepartmentToEdit.name||"")
-    const [imageURL,setImageURL] = useState(academicDepartmentToEdit.imageURL||"")
+    const [name,setName] = useState(branchToEdit.name||"")
+    const [imageURL,setImageURL] = useState(branchToEdit.imageURL||"")
 
 
 
@@ -53,7 +53,7 @@ function EditAcademicDepartmentForm() {
 
 
 
-// HELPERS FOR EditAcademicDepartment Button handler---------------------------------------------------
+// HELPERS FOR EditBranch Button handler---------------------------------------------------
 
 
 
@@ -104,25 +104,25 @@ const checkRequired = () => {
 
 
 
-         if(name)	    editedAcademicDepartment	.	name	    =	name	    ;
-         if(imageURL)	editedAcademicDepartment	.	imageURL	=	imageURL	;
+         if(name)	    editedBranch	.	name	    =	name	    ;
+         if(imageURL)	editedBranch	.	imageURL	=	imageURL	;
 
 
-         editedAcademicDepartment.id = academicDepartmentToEdit.id;
+         editedBranch.id = branchToEdit.id;
 
-        //  console.log("editedAcademicDepartment 423: ", editedAcademicDepartment)
+        //  console.log("editedBranch 423: ", editedBranch)
 
          // --------------------------MAKING THE DISPATCH---------------------//
-            let academicDepartmentId;
-            let editedAcademicDepartmentDetails;
-            if(editedAcademicDepartmentDetails);
+            let branchId;
+            let editedBranchDetails;
+            if(editedBranchDetails);
 
-            await dispatch(academicDepartmentsActions.thunkEditAcademicDepartment(editedAcademicDepartment))
+            await dispatch(branchesActions.thunkEditBranch(editedBranch))
             .then(response => {
-                dispatch(academicDepartmentsActions.thunkGetAcademicDepartmentsAll())
+                dispatch(branchesActions.thunkGetBranchesAll())
                 // console.log("response 432: ", response, "response.payload", response.payload, "response.payload[0]", response.payload.id);
-                academicDepartmentId = response.payload.id
-                return academicDepartmentId
+                branchId = response.payload.id
+                return branchId
             }).catch(async (res) => {
                     // console.log("res 439", res);
                     const data = await res.json();
@@ -131,8 +131,8 @@ const checkRequired = () => {
                 }
             )
 
-            await dispatch(academicDepartmentsActions.thunkGetAcademicDepartmentById(academicDepartmentId)).then(response => {
-                editedAcademicDepartmentDetails = response;
+            await dispatch(branchesActions.thunkGetBranchById(branchId)).then(response => {
+                editedBranchDetails = response;
 
                 navigate(`/departments`)
                 return response
@@ -143,33 +143,33 @@ const checkRequired = () => {
 
 // return-----------------------------------
         return (
-          <main id="EditAcademicDepartmentMain">
+          <main id="EditBranchMain">
 
-            <h1 id='EditAcademicDepartmentH1'>Edit Employee Department</h1>
+            <h1 id='EditBranchH1'>Edit Employee Department</h1>
 
 
-                    <form id='EditAcademicDepartmentForm' onSubmit={handleSubmit}>
+                    <form id='EditBranchForm' onSubmit={handleSubmit}>
 
 {/* form section 1---------------------------------------------------------- */}
-                        <section id="EditAcademicDepartmentFormSection1">
+                        <section id="EditBranchFormSection1">
 
-                            <h4 id="EditAcademicDepartmentFormSection1H4">Personal Information</h4>
+                            <h4 id="EditBranchFormSection1H4">Personal Information</h4>
 
-                            <p id="EditAcademicDepartmentFormSection1P">
-                                Edit information for existing academicDepartment.
+                            <p id="EditBranchFormSection1P">
+                                Edit information for existing branch.
                             </p>
-                            <h5 className='EditAcademicDepartmentH5'>* indicates required field</h5>
+                            <h5 className='EditBranchH5'>* indicates required field</h5>
 
 
 
-                            <div id='nameContainer' className='EditAcademicDepartmentFormLabelInputContainer'>
+                            <div id='nameContainer' className='EditBranchFormLabelInputContainer'>
 
-                                        <p className='EditAcademicDepartmentFormRequired'>{required}</p>
-                                        <label className='EditAcademicDepartmentFormLabel'>
+                                        <p className='EditBranchFormRequired'>{required}</p>
+                                        <label className='EditBranchFormLabel'>
                                             Name:
 
                                             <input
-                                            className='EditAcademicDepartmentFormInput'
+                                            className='EditBranchFormInput'
                                             id="name"
                                             name="name"
                                             type="text"
@@ -181,16 +181,16 @@ const checkRequired = () => {
                                         </label>
 
                             </div>
-                            {errorsName.name && <p className='EditAcademicDepartmentErrors'>{errorsName.name}</p>}
+                            {errorsName.name && <p className='EditBranchErrors'>{errorsName.name}</p>}
 
 
 
-                            <div id='imageURLContainer' className='EditAcademicDepartmentFormLabelInputContainer'>
+                            <div id='imageURLContainer' className='EditBranchFormLabelInputContainer'>
 
-                                        <label className='EditAcademicDepartmentFormLabel'>
+                                        <label className='EditBranchFormLabel'>
                                             ImageURL:
                                             <input
-                                            className='EditAcademicDepartmentFormInput'
+                                            className='EditBranchFormInput'
                                             id="imageURL"
                                             name="imageURL"
                                             type="text"
@@ -202,18 +202,18 @@ const checkRequired = () => {
                                         </label>
 
                             </div>
-                            {errors.imageURL && <p className='EditAcademicDepartmentErrors'>{errors.imageURL}</p>}
+                            {errors.imageURL && <p className='EditBranchErrors'>{errors.imageURL}</p>}
 
 
                         </section>
 {/* form button---------------------------------------------------------- */}
-                        {requiredFieldsMessage.message && <p className='EditAcademicDepartmentRequiredErrors'>{requiredFieldsMessage.message}</p>}
+                        {requiredFieldsMessage.message && <p className='EditBranchRequiredErrors'>{requiredFieldsMessage.message}</p>}
 
 
                         <div id="buttonContainer">
 
                             <button
-                                id="EditAcademicDepartmentButton"
+                                id="EditBranchButton"
                                 type="submit"
                                 onClick={handleSubmit}
                                 >Submit Edit
@@ -230,4 +230,4 @@ const checkRequired = () => {
 
 
 
-export default EditAcademicDepartmentForm;
+export default EditBranchForm;

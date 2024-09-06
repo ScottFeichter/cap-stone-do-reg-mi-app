@@ -1,5 +1,5 @@
-import './EditEmployeeDepartmentForm.css';
-// const BASE_CLASS_NAME = "EditEmployeeDepartmentForm"
+import './EditFacilityForm.css';
+// const BASE_CLASS_NAME = "EditFacilityForm"
 
 
 import {useState } from 'react';
@@ -7,11 +7,11 @@ import {useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 // import { useEffect } from 'react';
-import * as employeeDepartmentsActions from '../../../../redux/employeeDepartmentsReducer.js';
+import * as facilitiesActions from '../../../../redux/facilitiesReducer.js';
 
 
 
-function EditEmployeeDepartmentForm() {
+function EditFacilityForm() {
 
         const required = "*";
 
@@ -19,9 +19,9 @@ function EditEmployeeDepartmentForm() {
         const navigate = useNavigate();
 
         const location = useLocation();
-        const {employeeDepartmentToEdit} = location.state;
+        const {academicDepartmentToEdit} = location.state;
 
-        // console.log("employeeDepartmentToEdit : ", employeeDepartmentToEdit)
+        // console.log("academicDepartmentToEdit : ", academicDepartmentToEdit)
 
         const [errors, setErrors] = useState({});
 
@@ -35,7 +35,7 @@ function EditEmployeeDepartmentForm() {
         // const [isDisabled, setIsDisabled] = useState(false);
 
 
-        let editedEmployeeDepartment = {
+        let editedFacility = {
 
 
             name	                    :	null	,
@@ -44,8 +44,8 @@ function EditEmployeeDepartmentForm() {
         }
 
 
-    const [name,setName] = useState(employeeDepartmentToEdit.name||"")
-    const [imageURL,setImageURL] = useState(employeeDepartmentToEdit.imageURL||"")
+    const [name,setName] = useState(academicDepartmentToEdit.name||"")
+    const [imageURL,setImageURL] = useState(academicDepartmentToEdit.imageURL||"")
 
 
 
@@ -53,7 +53,7 @@ function EditEmployeeDepartmentForm() {
 
 
 
-// HELPERS FOR EditEmployeeDepartment Button handler---------------------------------------------------
+// HELPERS FOR EditFacility Button handler---------------------------------------------------
 
 
 
@@ -104,25 +104,25 @@ const checkRequired = () => {
 
 
 
-         if(name)	    editedEmployeeDepartment	.	name	    =	name	    ;
-         if(imageURL)	editedEmployeeDepartment	.	imageURL	=	imageURL	;
+         if(name)	    editedFacility	.	name	    =	name	    ;
+         if(imageURL)	editedFacility	.	imageURL	=	imageURL	;
 
 
-         editedEmployeeDepartment.id = employeeDepartmentToEdit.id;
+         editedFacility.id = academicDepartmentToEdit.id;
 
-        //  console.log("editedEmployeeDepartment 423: ", editedEmployeeDepartment)
+        //  console.log("editedFacility 423: ", editedFacility)
 
          // --------------------------MAKING THE DISPATCH---------------------//
-            let employeeDepartmentId;
-            let editedEmployeeDepartmentDetails;
-            if(editedEmployeeDepartmentDetails);
+            let academicDepartmentId;
+            let editedFacilityDetails;
+            if(editedFacilityDetails);
 
-            await dispatch(employeeDepartmentsActions.thunkEditEmployeeDepartment(editedEmployeeDepartment))
+            await dispatch(facilitiesActions.thunkEditFacility(editedFacility))
             .then(response => {
-                dispatch(employeeDepartmentsActions.thunkGetEmployeeDepartmentsAll())
+                dispatch(facilitiesActions.thunkGetFacilitiesAll())
                 // console.log("response 432: ", response, "response.payload", response.payload, "response.payload[0]", response.payload.id);
-                employeeDepartmentId = response.payload.id
-                return employeeDepartmentId
+                academicDepartmentId = response.payload.id
+                return academicDepartmentId
             }).catch(async (res) => {
                     // console.log("res 439", res);
                     const data = await res.json();
@@ -131,8 +131,8 @@ const checkRequired = () => {
                 }
             )
 
-            await dispatch(employeeDepartmentsActions.thunkGetEmployeeDepartmentById(employeeDepartmentId)).then(response => {
-                editedEmployeeDepartmentDetails = response;
+            await dispatch(facilitiesActions.thunkGetFacilityById(academicDepartmentId)).then(response => {
+                editedFacilityDetails = response;
 
                 navigate(`/departments`)
                 return response
@@ -143,33 +143,33 @@ const checkRequired = () => {
 
 // return-----------------------------------
         return (
-          <main id="EditEmployeeDepartmentMain">
+          <main id="EditFacilityMain">
 
-            <h1 id='EditEmployeeDepartmentH1'>Edit Employee Department</h1>
+            <h1 id='EditFacilityH1'>Edit Employee Department</h1>
 
 
-                    <form id='EditEmployeeDepartmentForm' onSubmit={handleSubmit}>
+                    <form id='EditFacilityForm' onSubmit={handleSubmit}>
 
 {/* form section 1---------------------------------------------------------- */}
-                        <section id="EditEmployeeDepartmentFormSection1">
+                        <section id="EditFacilityFormSection1">
 
-                            <h4 id="EditEmployeeDepartmentFormSection1H4">Personal Information</h4>
+                            <h4 id="EditFacilityFormSection1H4">Personal Information</h4>
 
-                            <p id="EditEmployeeDepartmentFormSection1P">
-                                Edit information for existing employeeDepartment.
+                            <p id="EditFacilityFormSection1P">
+                                Edit information for existing academicDepartment.
                             </p>
-                            <h5 className='EditEmployeeDepartmentH5'>* indicates required field</h5>
+                            <h5 className='EditFacilityH5'>* indicates required field</h5>
 
 
 
-                            <div id='nameContainer' className='EditEmployeeDepartmentFormLabelInputContainer'>
+                            <div id='nameContainer' className='EditFacilityFormLabelInputContainer'>
 
-                                        <p className='EditEmployeeDepartmentFormRequired'>{required}</p>
-                                        <label className='EditEmployeeDepartmentFormLabel'>
+                                        <p className='EditFacilityFormRequired'>{required}</p>
+                                        <label className='EditFacilityFormLabel'>
                                             Name:
 
                                             <input
-                                            className='EditEmployeeDepartmentFormInput'
+                                            className='EditFacilityFormInput'
                                             id="name"
                                             name="name"
                                             type="text"
@@ -181,16 +181,16 @@ const checkRequired = () => {
                                         </label>
 
                             </div>
-                            {errorsName.name && <p className='EditEmployeeDepartmentErrors'>{errorsName.name}</p>}
+                            {errorsName.name && <p className='EditFacilityErrors'>{errorsName.name}</p>}
 
 
 
-                            <div id='imageURLContainer' className='EditEmployeeDepartmentFormLabelInputContainer'>
+                            <div id='imageURLContainer' className='EditFacilityFormLabelInputContainer'>
 
-                                        <label className='EditEmployeeDepartmentFormLabel'>
+                                        <label className='EditFacilityFormLabel'>
                                             ImageURL:
                                             <input
-                                            className='EditEmployeeDepartmentFormInput'
+                                            className='EditFacilityFormInput'
                                             id="imageURL"
                                             name="imageURL"
                                             type="text"
@@ -202,18 +202,18 @@ const checkRequired = () => {
                                         </label>
 
                             </div>
-                            {errors.imageURL && <p className='EditEmployeeDepartmentErrors'>{errors.imageURL}</p>}
+                            {errors.imageURL && <p className='EditFacilityErrors'>{errors.imageURL}</p>}
 
 
                         </section>
 {/* form button---------------------------------------------------------- */}
-                        {requiredFieldsMessage.message && <p className='EditEmployeeDepartmentRequiredErrors'>{requiredFieldsMessage.message}</p>}
+                        {requiredFieldsMessage.message && <p className='EditFacilityRequiredErrors'>{requiredFieldsMessage.message}</p>}
 
 
                         <div id="buttonContainer">
 
                             <button
-                                id="EditEmployeeDepartmentButton"
+                                id="EditFacilityButton"
                                 type="submit"
                                 onClick={handleSubmit}
                                 >Submit Edit
@@ -230,4 +230,4 @@ const checkRequired = () => {
 
 
 
-export default EditEmployeeDepartmentForm;
+export default EditFacilityForm;

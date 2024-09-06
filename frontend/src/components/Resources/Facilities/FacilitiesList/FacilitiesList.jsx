@@ -1,77 +1,77 @@
-import './EmployeeDepartmentsList.css';
+import './FacilitiesList.css';
 // import { useState } from 'react';
 import { useSelector } from 'react-redux'
 // import { useDispatch } from 'react-redux';
 // import { useNavigate } from 'react-router-dom';
-import EmployeeDepartmentsListItem from './EmployeeDepartmentsListItem';
-// import EmployeeDepartmentListPagination from "./EmployeeDepartmentListPagination/EmployeeDepartmentListPagination.jsx";
-import EmployeeDepartmentsListItemHeader from './EmployeeDepartmentsListItemHeader';
-// import { thunkGetEmployeeDepartmentsAll } from '../../redux/employeeDepartmentsReducer';
+import FacilitiesListItem from './FacilitiesListItem';
+// import FacilityListPagination from "./FacilityListPagination/FacilityListPagination.jsx";
+import FacilitiesListItemHeader from './FacilitiesListItemHeader';
+// import { thunkGetFacilitiesAll } from '../../redux/facilitiesReducer';
 
-function EmployeeDepartmentsList(){
+function FacilitiesList(){
 
     // const dispatch = useDispatch();
     // const navigate = useNavigate();
-    let employeeDepartmentsList = useSelector(state => state?.employeeDepartments?.employeeDepartments);
-    // console.log("employeeDepartmentsList 16: ", employeeDepartmentsList);
+    let facilitiesList = useSelector(state => state?.facilities?.facilities);
+    // console.log("facilitiesList 16: ", facilitiesList);
 
     // const [currentPage, setCurrentPage] = useState(1);
 
-    // const [employeeDepartmentsPerPage, setEmployeeDepartmentsPerPage] = useState(30);
-    // setEmployeeDepartmentsPerPage(30);
+    // const [facilitiesPerPage, setFacilitiesPerPage] = useState(30);
+    // setFacilitiesPerPage(30);
 
 
-    // const lastPostIndex = currentPage * employeeDepartmentsPerPage;
-    // const firstPostIndex = lastPostIndex - employeeDepartmentsPerPage;
+    // const lastPostIndex = currentPage * facilitiesPerPage;
+    // const firstPostIndex = lastPostIndex - facilitiesPerPage;
 
     // let currentPost;
-    // const currentPost = currentPost = employeeDepartmentsList.slice(firstPostIndex, lastPostIndex);
+    // const currentPost = currentPost = facilitiesList.slice(firstPostIndex, lastPostIndex);
 
-    // if(employeeDepartmentsList !== undefined && employeeDepartmentsList.length !== 0) {
+    // if(facilitiesList !== undefined && facilitiesList.length !== 0) {
       // console.log("line 29");
-      // currentPost = employeeDepartmentsList.slice(firstPostIndex, lastPostIndex);
+      // currentPost = facilitiesList.slice(firstPostIndex, lastPostIndex);
     // } else {
       // console.log("line 32")
-      // employeeDepartmentsList = [{test1: "test1"},{test2: "test"}];
-      // currentPost = employeeDepartmentsList.slice(firstPostIndex, lastPostIndex);
-      // dispatch(thunkGetEmployeeDepartmentsAll());
-      // navigate('/employeeDepartments');
+      // facilitiesList = [{test1: "test1"},{test2: "test"}];
+      // currentPost = facilitiesList.slice(firstPostIndex, lastPostIndex);
+      // dispatch(thunkGetFacilitiesAll());
+      // navigate('/facilities');
     // }
 
 
     // const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-    // console.log("employeeDepartmentsList 41: ", employeeDepartmentsList);
-    // console.log("currentPage: ", currentPage, "employeeDepartmentsPerPage : ", employeeDepartmentsPerPage, "lastPostIndex: ", lastPostIndex, "firstPostIndex: ", firstPostIndex, "currentPost: ", currentPost, "paginate: ");
+    // console.log("facilitiesList 41: ", facilitiesList);
+    // console.log("currentPage: ", currentPage, "facilitiesPerPage : ", facilitiesPerPage, "lastPostIndex: ", lastPostIndex, "firstPostIndex: ", firstPostIndex, "currentPost: ", currentPost, "paginate: ");
 
 
     // THE MAP IS OVER CURRENT POST WHEN USING PAGINATION!!!!!!!!!!
-    // employeeDepartment, id where in parens 60
+    // academicDepartment, id where in parens 60
 
-    console.log("employeeDepartmentsList: ", employeeDepartmentsList)
+    console.log("facilitiesList: ", facilitiesList)
 
 
     return(
     <>
-    <main className="EmployeeDepartmentsListMain">
-      <EmployeeDepartmentsListItemHeader />
+    <main className="FacilitiesListMain">
+      <FacilitiesListItemHeader />
 
-      <div className="EmployeeDepartmentsListContainer">
-        {employeeDepartmentsList.map((employeeDepartment) => {
+      <div className="FacilitiesListContainer">
+        {facilitiesList.map((academicDepartment) => {
           return (
-            <EmployeeDepartmentsListItem
-              employeeDepartment={employeeDepartment}
-              key={employeeDepartment.id}
-              // totalPages={employeeDepartmentsList.length}
-              // employeeDepartmentsPerPage={employeeDepartmentsPerPage}
+            <FacilitiesListItem
+              academicDepartment={academicDepartment}
+              key={academicDepartment.id}
+              // totalPages={facilitiesList.length}
+              // facilitiesPerPage={facilitiesPerPage}
             />
           );
         })}
 
 
-        {/* <EmployeeDepartmentListPagination
-          employeeDepartmentsPerPage={employeeDepartmentsPerPage}
-          totalPages={employeeDepartmentsList.length + 1}
+        {/* <FacilityListPagination
+          facilitiesPerPage={facilitiesPerPage}
+          totalPages={facilitiesList.length + 1}
           paginate={paginate}
         /> */}
       </div>
@@ -82,4 +82,4 @@ function EmployeeDepartmentsList(){
     )
 }
 
-export default EmployeeDepartmentsList;
+export default FacilitiesList;

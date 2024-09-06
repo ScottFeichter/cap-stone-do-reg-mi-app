@@ -1,7 +1,7 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
 
-import './AcademicDepartmentDetailsPage.css';
-const BASE_CLASS_NAME = "AcademicDepartmentDetailsPage";
+import './BranchDetailsPage.css';
+const BASE_CLASS_NAME = "BranchDetailsPage";
 
 
 //==================OTHER IMPORTS=======================//
@@ -11,44 +11,44 @@ const BASE_CLASS_NAME = "AcademicDepartmentDetailsPage";
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import AcademicDepartmentDetails from './AcademicDepartmentDetails';
-import AcademicDepartmentDeleteModal from '../AcademicDepartmentDeleteModal/AcademicDepartmentDeleteModal';
-import AcademicDepartmentDeleteModalButton from '../AcademicDepartmentDeleteModal/AcademicDepartmentDeleteModalButton'
+import BranchDetails from './BranchDetails';
+import BranchDeleteModal from '../BranchDeleteModal/BranchDeleteModal';
+import BranchDeleteModalButton from '../BranchDeleteModal/BranchDeleteModalButton'
 
 
 
 //===============FUNCTION DECLARATION===================//
 
-function AcademicDepartmentDetailsPage() {
+function BranchDetailsPage() {
 
   // const navigate = useNavigate();
-  let academicDepartment;
-  let academicDepartments;
-  let academicDepartmentId;
-  let academicDepartmentParams;
+  let branch;
+  let branches;
+  let branchId;
+  let branchParams;
 
   // let location;
 
-  academicDepartmentParams = useParams();
-  academicDepartmentId  = academicDepartmentParams.academicDepartmentId;
-  academicDepartments = useSelector(state => state?.academicDepartments?.academicDepartments);
-  academicDepartment = academicDepartments.find(academicDepartment => academicDepartment.id === +academicDepartmentId)
+  branchParams = useParams();
+  branchId  = branchParams.branchId;
+  branches = useSelector(state => state?.branches?.branches);
+  branch = branches.find(branch => branch.id === +branchId)
 
-  console.log("details", academicDepartmentParams, academicDepartmentId, academicDepartments, "ep!!!!!!!!!!!!!", academicDepartment);
-
-
+  console.log("details", branchParams, branchId, branches, "ep!!!!!!!!!!!!!", branch);
 
 
 
 
-const handleClickEditAcademicDepartment = () => {
+
+
+const handleClickEditBranch = () => {
   // e.preventDefault();
-  // navigate('/editAcademicDepartmentForm')
+  // navigate('/editBranchForm')
 }
 
 
 
- if(!academicDepartment) return null; // will flick a blank page
+ if(!branch) return null; // will flick a blank page
 
  // THINGS THAT MAY TRIGGER A RE RENDER
  // change value of useState() hook
@@ -68,8 +68,8 @@ const handleClickEditAcademicDepartment = () => {
 
             <nav id={`${BASE_CLASS_NAME}Nav`}>
 
-           <Link to='/editAcademicDepartmentForm' state={{academicDepartmentToEdit: academicDepartment}} >
-           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditAcademicDepartment}>Edit Employee Department</button>
+           <Link to='/editBranchForm' state={{branchToEdit: branch}} >
+           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditBranch}>Edit Employee Department</button>
            </Link>
 
 
@@ -77,20 +77,20 @@ const handleClickEditAcademicDepartment = () => {
 
 
 {/*
-              <button id={`${BASE_CLASS_NAME}DeleteButton`} onClick={handleClickDeleteAcademicDepartment}>
-                Delete AcademicDepartment
-                <AcademicDepartmentDeleteModalButton
-                            id="deleteAcademicDepartmentModalButton"
-                            buttonText="Delete AcademicDepartment"
-                            modalComponent={<AcademicDepartmentDeleteModal academicDepartment={academicDepartment} />}
+              <button id={`${BASE_CLASS_NAME}DeleteButton`} onClick={handleClickDeleteBranch}>
+                Delete Branch
+                <BranchDeleteModalButton
+                            id="deleteBranchModalButton"
+                            buttonText="Delete Branch"
+                            modalComponent={<BranchDeleteModal branch={branch} />}
                             />
 
               </button> */}
 
-              <AcademicDepartmentDeleteModalButton
+              <BranchDeleteModalButton
                 id={`${BASE_CLASS_NAME}DeleteButton`}
                 buttonText="Delete Employee Department"
-                modalComponent={<AcademicDepartmentDeleteModal academicDepartment={academicDepartment} />}
+                modalComponent={<BranchDeleteModal branch={branch} />}
               />
 
             </nav>
@@ -98,7 +98,7 @@ const handleClickEditAcademicDepartment = () => {
 
             <div>
 
-              <AcademicDepartmentDetails academicDepartment={academicDepartment}></AcademicDepartmentDetails>
+              <BranchDetails branch={branch}></BranchDetails>
 
 
 
@@ -112,4 +112,4 @@ const handleClickEditAcademicDepartment = () => {
 
 
 //===================FUNCTION EXPORT====================//
-export default AcademicDepartmentDetailsPage;
+export default BranchDetailsPage;

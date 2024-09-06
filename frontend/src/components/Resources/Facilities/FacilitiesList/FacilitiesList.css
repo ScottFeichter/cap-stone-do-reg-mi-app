@@ -1,4 +1,4 @@
-.EmployeeDepartmentsListMain {
+.FacilitiesListMain {
     overflow:hidden;
     text-wrap: none;
     text-align: center;
@@ -11,7 +11,7 @@
     border-radius: 25px;
   }
 
-  .EmployeeDepartmentsListContainer {
+  .FacilitiesListContainer {
     display: flex;
     flex-direction: column;
     gap: .25rem;

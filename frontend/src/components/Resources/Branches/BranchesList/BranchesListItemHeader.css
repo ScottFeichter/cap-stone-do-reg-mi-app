@@ -1,5 +1,5 @@
 
-.AcademicDepartmentsListItemHeaderContainer {
+.BranchesListItemHeaderContainer {
     display: flex;
     margin: 0 1rem 1rem 1rem;
     text-wrap: nowrap;
@@ -11,7 +11,7 @@
    /* ---------ITEM SPECIFIC----------- */
    /* ----Should match the item css---- */
 
-.AcademicDepartmentsListItemHeaderItemContainerID {
+.BranchesListItemHeaderItemContainerID {
     width: 8rem;
    /* customized on top */
     text-align: center;
@@ -27,7 +27,7 @@
   }
 
 
-  .AcademicDepartmentsListItemHeaderItemContainerName {
+  .BranchesListItemHeaderItemContainerName {
     width: 8rem;
     /* customized on top */
     text-align: center;
@@ -41,7 +41,7 @@
     /* border: green 2px solid; */
   }
 
-  .AcademicDepartmentsListItemHeaderItemContainerImageURL {
+  .BranchesListItemHeaderItemContainerImageURL {
     width: 8rem;
   /* customized on top */
     text-align: center;
@@ -58,7 +58,7 @@
 
 
     /* ---------???----------- */
-.AcademicDepartmentsListItemHeaderItemH4{
+.BranchesListItemHeaderItemH4{
     margin: 0;
     text-wrap: nowrap;
     width: fit-content;

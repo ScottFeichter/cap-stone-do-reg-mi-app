@@ -1,8 +1,8 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
 
-// const BASE_CLASS_NAME = "EmployeeDepartmentDetails";
+// const BASE_CLASS_NAME = "FacilityDetails";
 
-import './EmployeeDepartmentDetails.css';
+import './FacilityDetails.css';
 
 //==================PROGRAM IMPORTS=====================//
 import {useNavigate} from 'react-router-dom';
@@ -12,16 +12,16 @@ import {useNavigate} from 'react-router-dom';
 
 
 //===============FUNCTION DECLARATION===================//
-function EmployeeDepartmentDetails(props){
+function FacilityDetails(props){
 
     const navigate = useNavigate()
 
-    // const employeeDepartment = useSelector(state => state.employeeDepartments.employeeDepartments[1])
-    const employeeDepartment = props.employeeDepartment;
+    // const academicDepartment = useSelector(state => state.facilities.facilities[1])
+    const academicDepartment = props.academicDepartment;
 
-    // const employeeDepartmentObjectKeys = Object.keys(employeeDepartment);
-    // const employeeDepartmentObjectValues = Object.values(employeeDepartment);
-    // const employeeDepartmentObjectEntries = Object.entries(employeeDepartment);
+    // const academicDepartmentObjectKeys = Object.keys(academicDepartment);
+    // const academicDepartmentObjectValues = Object.values(academicDepartment);
+    // const academicDepartmentObjectEntries = Object.entries(academicDepartment);
 
     const infoDivider = ":";
     const nullReplacer = `- -`
@@ -44,46 +44,46 @@ function EmployeeDepartmentDetails(props){
 //=================FUNCTION RETURN======================//
     return (<>
 
-        <main id="EmployeeDepartmentDetailsMain">
+        <main id="FacilityDetailsMain">
 
-                <div id='EmployeeDepartmentDetailsForm' >
+                <div id='FacilityDetailsForm' >
 {/* form section 1---------------------------------------------------------- */}
 
-                    <section id="EmployeeDepartmentDetailsFormSection1">
+                    <section id="FacilityDetailsFormSection1">
 
-                        <h4 id="EmployeeDepartmentDetailsFormSection1H4">Information</h4>
+                        <h4 id="FacilityDetailsFormSection1H4">Information</h4>
 
-                        <div id='nameContainer' className='EmployeeDepartmentDetailsFormLabelInputContainer'>
-                                <div className='EmployeeDepartmentDetailsFormLabel'>{"ID"}</div>
-                                <div className='EmployeeDepartmentDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='EmployeeDepartmentDetailsFormInput'>{employeeDepartment.id ? employeeDepartment.id : nullReplacer}</div>
+                        <div id='nameContainer' className='FacilityDetailsFormLabelInputContainer'>
+                                <div className='FacilityDetailsFormLabel'>{"ID"}</div>
+                                <div className='FacilityDetailsFormInfoDivider'>{infoDivider}</div>
+                                <div className='FacilityDetailsFormInput'>{academicDepartment.id ? academicDepartment.id : nullReplacer}</div>
                         </div>
 
 
-                        <div id='nameContainer' className='EmployeeDepartmentDetailsFormLabelInputContainer'>
-                                <div className='EmployeeDepartmentDetailsFormLabel'>{"name"}</div>
-                                <div className='EmployeeDepartmentDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='EmployeeDepartmentDetailsFormInput'>{employeeDepartment.name ? employeeDepartment.name : nullReplacer}</div>
+                        <div id='nameContainer' className='FacilityDetailsFormLabelInputContainer'>
+                                <div className='FacilityDetailsFormLabel'>{"name"}</div>
+                                <div className='FacilityDetailsFormInfoDivider'>{infoDivider}</div>
+                                <div className='FacilityDetailsFormInput'>{academicDepartment.name ? academicDepartment.name : nullReplacer}</div>
                         </div>
 
 
-                        <div id='imageURLContainer' className='EmployeeDepartmentDetailsFormLabelInputContainer'>
-                                <div className='EmployeeDepartmentDetailsFormLabel'>{"imageURL"}</div>
-                                <div className='EmployeeDepartmentDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='EmployeeDepartmentDetailsFormInput'>{employeeDepartment.imageURL ? employeeDepartment.imageURL : nullReplacer}</div>
+                        <div id='imageURLContainer' className='FacilityDetailsFormLabelInputContainer'>
+                                <div className='FacilityDetailsFormLabel'>{"imageURL"}</div>
+                                <div className='FacilityDetailsFormInfoDivider'>{infoDivider}</div>
+                                <div className='FacilityDetailsFormInput'>{academicDepartment.imageURL ? academicDepartment.imageURL : nullReplacer}</div>
                         </div>
 
 
                     </section>
 
-                    <hr className='EmployeeDepartmentDetailsHr'></hr>
+                    <hr className='FacilityDetailsHr'></hr>
 {/* form section 2---------------------------------------------------------- */}
 
 
 
-                        <div id="EmployeeDepartmentDetailsButtonContainer">
+                        <div id="FacilityDetailsButtonContainer">
                             <button
-                                id="EmployeeDepartmentDetailsButton"
+                                id="FacilityDetailsButton"
                                 type="submit"
                                 onClick={handleScroll}
                                 >Back
@@ -98,4 +98,4 @@ function EmployeeDepartmentDetails(props){
 }
 
 //===================FUNCTION EXPORT====================//
-export default EmployeeDepartmentDetails;
+export default FacilityDetails;

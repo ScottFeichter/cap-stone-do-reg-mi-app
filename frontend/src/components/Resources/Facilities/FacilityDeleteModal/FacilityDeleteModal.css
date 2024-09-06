@@ -1,18 +1,18 @@
-#EmployeeDepartmentDeleteModalMain {
+#FacilityDeleteModalMain {
     width: 36rem;
     height: 22rem;
 }
 
-#EmployeeDepartmentDeleteModalH1 {
+#FacilityDeleteModalH1 {
     text-align: center;
 }
 
-#EmployeeDepartmentDeleteModalP {
+#FacilityDeleteModalP {
     text-align: center;
 }
 
 
-#EmployeeDepartmentDeleteModalButtonContainer{
+#FacilityDeleteModalButtonContainer{
     margin: 2rem 4rem 4rem 4rem;
     padding: 2rem 0rem 1rem 0rem;
     border: var(--border);
@@ -24,7 +24,7 @@
 }
 
 /* delete button------------------------------------- */
-#YesEmployeeDepartmentDeleteButton {
+#YesFacilityDeleteButton {
     margin: 1rem 0 2rem 0;
     width: 18rem;
     height: 2rem;
@@ -36,14 +36,14 @@
     background-color: rgb(189, 1, 1);
 }
 
-#YesEmployeeDepartmentDeleteButton:hover {
+#YesFacilityDeleteButton:hover {
     cursor: pointer;
     color: white;
     border: 1px solid red;
     background-color: red;
 }
 
-#YesEmployeeDepartmentDeleteButton:active{
+#YesFacilityDeleteButton:active{
     cursor: pointer;
     color: red;
     border: 1px solid red;
@@ -53,7 +53,7 @@
 
 /* keep button------------------------------------- */
 
-#NoKeepEmployeeDepartmentButton {
+#NoKeepFacilityButton {
     margin: 1rem 0 2rem 0;
     width: 18rem;
     height: 2rem;
@@ -65,14 +65,14 @@
     background-color: var(--green1);
 }
 
-#NoKeepEmployeeDepartmentButton:hover {
+#NoKeepFacilityButton:hover {
     cursor: pointer;
     color: black;
     border: 1px solid var(--green2);
     background-color: var(--green2);
 }
 
-#NoKeepEmployeeDepartmentButton:active{
+#NoKeepFacilityButton:active{
     cursor: pointer;
     color: var(--green1);
     background-color: rgba(255, 255, 255, .5);

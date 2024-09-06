@@ -1,19 +1,19 @@
-#CreateNewEmployeeDepartmentMain {
+#CreateNewFacilityMain {
 
 }
 
-#CreateNewEmployeeDepartmentH1 {
+#CreateNewFacilityH1 {
     text-align: center;
 }
 
-.CreateNewEmployeeDepartmentErrors {
+.CreateNewFacilityErrors {
     color: red;
     text-align: center;
     font-weight: bold;
     margin: -1rem 0 1.5rem 0;
 }
 
-.CreateNewEmployeeDepartmentRequiredErrors {
+.CreateNewFacilityRequiredErrors {
     color: red;
     text-align: center;
     font-weight: bold;
@@ -21,7 +21,7 @@
 }
 
 
-#CreateNewEmployeeDepartmentForm{
+#CreateNewFacilityForm{
     margin: 2rem 4rem 4rem 4rem;
     padding: 0rem 0rem 0rem 0rem;
     border: var(--border);
@@ -35,13 +35,13 @@
 
 
 
-.CreateNewEmployeeDepartmentFormLabelInputContainer {
+.CreateNewFacilityFormLabelInputContainer {
     display: flex;
     justify-content: center;
     /* border: 2px grey solid; */
 }
 
-.CreateNewEmployeeDepartmentFormLabel {
+.CreateNewFacilityFormLabel {
     color: black;
     font-size: medium;
     font-weight: 600;
@@ -55,7 +55,7 @@
 
 
 
-.CreateNewEmployeeDepartmentFormInput {
+.CreateNewFacilityFormInput {
     font-size: small;
     height: 1.5rem;
     margin-bottom: 1.5rem;
@@ -65,7 +65,7 @@
 
 
 
-.CreateNewEmployeeDepartmentFormRequired{
+.CreateNewFacilityFormRequired{
     position:sticky;
 
     margin: 1.25rem 0 0 -1rem;
@@ -78,18 +78,18 @@
 
 
 
-.CreateNewEmployeeDepartmentHr {
+.CreateNewFacilityHr {
     border: 1px grey solid;
     width: 80%;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
 }
 
-#CreateNewEmployeeDepartmentFormSection1, #CreateNewEmployeeDepartmentFormSection2, #CreateNewEmployeeDepartmentFormSection3, #CreateNewEmployeeDepartmentFormSection4, #CreateNewEmployeeDepartmentFormSection5     {
+#CreateNewFacilityFormSection1, #CreateNewFacilityFormSection2, #CreateNewFacilityFormSection3, #CreateNewFacilityFormSection4, #CreateNewFacilityFormSection5     {
     width: 450px;
 }
 
-#CreateNewEmployeeDepartmentFormSection1H4, #CreateNewEmployeeDepartmentFormSection2H4, #CreateNewEmployeeDepartmentFormSection3H4, #CreateNewEmployeeDepartmentFormSection4H4, #CreateNewEmployeeDepartmentFormSection5H4 {
+#CreateNewFacilityFormSection1H4, #CreateNewFacilityFormSection2H4, #CreateNewFacilityFormSection3H4, #CreateNewFacilityFormSection4H4, #CreateNewFacilityFormSection5H4 {
     text-align: center;
     text-decoration: underline;
     font-size: x-large;
@@ -98,7 +98,7 @@
     /* border: 2px solid grey; */
 }
 
-#CreateNewEmployeeDepartmentFormSection1P, #CreateNewEmployeeDepartmentFormSection2P, #CreateNewEmployeeDepartmentFormSection3P, #CreateNewEmployeeDepartmentFormSection4P, #CreateNewEmployeeDepartmentFormSection5P {
+#CreateNewFacilityFormSection1P, #CreateNewFacilityFormSection2P, #CreateNewFacilityFormSection3P, #CreateNewFacilityFormSection4P, #CreateNewFacilityFormSection5P {
     text-align: center;
     margin: -1rem 0 .5rem 0;
     font-size: medium;
@@ -106,7 +106,7 @@
     color: black;
 }
 
-.CreateNewEmployeeDepartmentH5 {
+.CreateNewFacilityH5 {
     margin: 0rem 0 3rem 0;
     color: red;
     text-align: center;
@@ -114,7 +114,7 @@
 
 
 
-#CreateNewEmployeeDepartmentButton {
+#CreateNewFacilityButton {
     margin: 2rem 0 4rem 0;
     width: 18rem;
     height: 2.5rem;
@@ -123,28 +123,28 @@
     border-radius: 25px;
 }
 
-#CreateNewEmployeeDepartmentButton:enabled {
+#CreateNewFacilityButton:enabled {
     color: var(--buttonColor);
     background-color: var(--buttonBackgroundColor);
     border: var(--buttonBorder);
 
 }
 
-#CreateNewEmployeeDepartmentButton:disabled {
+#CreateNewFacilityButton:disabled {
     color: var(--buttonDisabledColor);
     background-color: var(--buttonDisabledBackgroundColor);
     border: var(--buttonDisabledBorder);
 
 }
 
-#CreateNewEmployeeDepartmentButton:enabled:hover {
+#CreateNewFacilityButton:enabled:hover {
     color: var(--buttonHoverColor);
     background-color: var(--buttonHoverBackgroundColor);
     border: var(--buttonHoverBorder);
     cursor: pointer;
 }
 
-#CreateNewEmployeeDepartmentButton:enabled:active{
+#CreateNewFacilityButton:enabled:active{
     color: var(--buttonActiveColor);
     background-color: var(--buttonActiveBackgroundColor);
     border: var(--buttonActiveBorder);

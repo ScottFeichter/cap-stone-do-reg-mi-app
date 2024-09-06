@@ -1,5 +1,5 @@
 
-.EmployeeDepartmentsListItemContainer {
+.FacilitiesListItemContainer {
     display: flex;
     margin: 0;
     text-wrap: nowrap;
@@ -9,7 +9,7 @@
 
    /* ---------ITEM GENERIC----------- */
 
-  .EmployeeDepartmentsListItemContainerGeneric {
+  .FacilitiesListItemContainerGeneric {
     font-size: .8rem;
     width: 8rem;
     /* customized on top */
@@ -27,7 +27,7 @@
      /* ---------ITEM SPECIFIC----------- */
      /* ---Should match the header css--- */
 
-.EmployeeDepartmentsListItemContainerID {
+.FacilitiesListItemContainerID {
     font-size: .8rem;
     width: 8rem;
    /* customized on top */
@@ -43,7 +43,7 @@
   }
 
 
-  .EmployeeDepartmentsListItemContainerName {
+  .FacilitiesListItemContainerName {
     font-size: .9rem;
     width: 8rem;
    /* customized on top */
@@ -58,7 +58,7 @@
     /* border: green 2px solid; */
   }
 
-  .EmployeeDepartmentsListItemContainerImageURL {
+  .FacilitiesListItemContainerImageURL {
     font-size: .8rem;
     width: 8rem;
    /* customized on top */
@@ -75,21 +75,21 @@
 
 
     /* ---------???----------- */
-    .EmployeeDepartmentsListItemH4{
+    .FacilitiesListItemH4{
         margin: 0;
         text-wrap: nowrap;
         width: fit-content;
         /* border: 1px darkgrey solid; */
     }
 
-    .EmployeeDepartmentsListItemP{
+    .FacilitiesListItemP{
         margin: 0;
         text-wrap: nowrap;
         width: fit-content;
         /* border: 1px orange solid; */
     }
 
-    .EmployeeDepartmentsListItemBorder {
+    .FacilitiesListItemBorder {
         border: 0.5px solid var(--time-line);
         margin-left: 90px;
       }

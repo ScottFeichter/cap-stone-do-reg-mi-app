@@ -1,21 +1,21 @@
-import './EmployeeDepartmentsListItemHeader.css';
+import './FacilitiesListItemHeader.css';
 // import { Link } from "react-router-dom";
 
-function EmployeeDepartmentsListItemHeader() {
+function FacilitiesListItemHeader() {
   return (
     <>
-      <div className="EmployeeDepartmentsListItemHeaderContainer">
+      <div className="FacilitiesListItemHeaderContainer">
 
-        <div className="EmployeeDepartmentsListItemHeaderItemContainerID">
-          <h4 className="EmployeeDepartmentsListItemHeaderItemH4">ID</h4>
+        <div className="FacilitiesListItemHeaderItemContainerID">
+          <h4 className="FacilitiesListItemHeaderItemH4">ID</h4>
         </div>
 
-        <div className="EmployeeDepartmentsListItemHeaderItemContainerName">
-            <h4 className="EmployeeDepartmentsListItemHeaderItemH4">Name</h4>
+        <div className="FacilitiesListItemHeaderItemContainerName">
+            <h4 className="FacilitiesListItemHeaderItemH4">Name</h4>
         </div>
 
-        <div className="EmployeeDepartmentsListItemHeaderItemContainerImageURL">
-            <h4 className="EmployeeDepartmentsListItemHeaderItemH4">ImageURL</h4>
+        <div className="FacilitiesListItemHeaderItemContainerImageURL">
+            <h4 className="FacilitiesListItemHeaderItemH4">ImageURL</h4>
         </div>
 
       </div>
@@ -24,4 +24,4 @@ function EmployeeDepartmentsListItemHeader() {
   );
 }
 
-export default EmployeeDepartmentsListItemHeader;
+export default FacilitiesListItemHeader;

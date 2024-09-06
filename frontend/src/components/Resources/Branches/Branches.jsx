@@ -1,40 +1,40 @@
-import './AcademicDepartments.css';
+import './Branches.css';
 // import { useSelector } from 'react-redux';
 import {useNavigate} from 'react-router-dom'
-import AcademicDepartmentsList from './AcademicDepartmentsList/AcademicDepartmentsList.jsx';
-// import AcademicDepartmentsSearchBar from './AcademicDepartmentsSearch/SearchBar/AcademicDepartmentsSearchBar';
+import BranchesList from './BranchesList/BranchesList.jsx';
+// import BranchesSearchBar from './BranchesSearch/SearchBar/BranchesSearchBar';
 
-function AcademicDepartments() {
+function Branches() {
   const navigate = useNavigate();
 
 
   const handleClick = (e) => {
     e.preventDefault();
-    navigate('/createNewAcademicDepartmentForm');
+    navigate('/createNewBranchForm');
   }
 
 
   return(
     <>
-        <h1 id="AcademicDepartmentsH1">Employee Departments</h1>
+        <h1 id="BranchesH1">Employee Departments</h1>
 
-        <main id="AcademicDepartmentsMain">
+        <main id="BranchesMain">
 
-          {/* <AcademicDepartmentsSearchBar /> */}
+          {/* <BranchesSearchBar /> */}
 
 
-            <nav id="AcademicDepartmentsNav">
-              {/* <input type="text" id="AcademicDepartmentsSearchBar" placeholder="Search AcademicDepartments" ></input> */}
+            <nav id="BranchesNav">
+              {/* <input type="text" id="BranchesSearchBar" placeholder="Search Branches" ></input> */}
 
-              <button id="AcademicDepartmentsCreateButton" onClick={handleClick}>Create New Employee Department</button>
+              <button id="BranchesCreateButton" onClick={handleClick}>Create New Employee Department</button>
             </nav>
 
 
-            <AcademicDepartmentsList />
+            <BranchesList />
 
         </main>
     </>
   )
 }
 
-export default AcademicDepartments;
+export default Branches;

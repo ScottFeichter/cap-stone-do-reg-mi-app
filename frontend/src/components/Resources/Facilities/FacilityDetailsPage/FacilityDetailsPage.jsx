@@ -1,7 +1,7 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
 
-import './EmployeeDepartmentDetailsPage.css';
-const BASE_CLASS_NAME = "EmployeeDepartmentDetailsPage";
+import './FacilityDetailsPage.css';
+const BASE_CLASS_NAME = "FacilityDetailsPage";
 
 
 //==================OTHER IMPORTS=======================//
@@ -11,44 +11,44 @@ const BASE_CLASS_NAME = "EmployeeDepartmentDetailsPage";
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import EmployeeDepartmentDetails from './EmployeeDepartmentDetails';
-import EmployeeDepartmentDeleteModal from '../EmployeeDepartmentDeleteModal/EmployeeDepartmentDeleteModal';
-import EmployeeDepartmentDeleteModalButton from '../EmployeeDepartmentDeleteModal/EmployeeDepartmentDeleteModalButton'
+import FacilityDetails from './FacilityDetails';
+import FacilityDeleteModal from '../FacilityDeleteModal/FacilityDeleteModal';
+import FacilityDeleteModalButton from '../FacilityDeleteModal/FacilityDeleteModalButton'
 
 
 
 //===============FUNCTION DECLARATION===================//
 
-function EmployeeDepartmentDetailsPage() {
+function FacilityDetailsPage() {
 
   // const navigate = useNavigate();
-  let employeeDepartment;
-  let employeeDepartments;
-  let employeeDepartmentId;
-  let employeeDepartmentParams;
+  let academicDepartment;
+  let facilities;
+  let academicDepartmentId;
+  let academicDepartmentParams;
 
   // let location;
 
-  employeeDepartmentParams = useParams();
-  employeeDepartmentId  = employeeDepartmentParams.employeeDepartmentId;
-  employeeDepartments = useSelector(state => state?.employeeDepartments?.employeeDepartments);
-  employeeDepartment = employeeDepartments.find(employeeDepartment => employeeDepartment.id === +employeeDepartmentId)
+  academicDepartmentParams = useParams();
+  academicDepartmentId  = academicDepartmentParams.academicDepartmentId;
+  facilities = useSelector(state => state?.facilities?.facilities);
+  academicDepartment = facilities.find(academicDepartment => academicDepartment.id === +academicDepartmentId)
 
-  console.log("details", employeeDepartmentParams, employeeDepartmentId, employeeDepartments, "ep!!!!!!!!!!!!!", employeeDepartment);
-
-
+  console.log("details", academicDepartmentParams, academicDepartmentId, facilities, "ep!!!!!!!!!!!!!", academicDepartment);
 
 
 
 
-const handleClickEditEmployeeDepartment = () => {
+
+
+const handleClickEditFacility = () => {
   // e.preventDefault();
-  // navigate('/editEmployeeDepartmentForm')
+  // navigate('/editFacilityForm')
 }
 
 
 
- if(!employeeDepartment) return null; // will flick a blank page
+ if(!academicDepartment) return null; // will flick a blank page
 
  // THINGS THAT MAY TRIGGER A RE RENDER
  // change value of useState() hook
@@ -68,8 +68,8 @@ const handleClickEditEmployeeDepartment = () => {
 
             <nav id={`${BASE_CLASS_NAME}Nav`}>
 
-           <Link to='/editEmployeeDepartmentForm' state={{employeeDepartmentToEdit: employeeDepartment}} >
-           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditEmployeeDepartment}>Edit Employee Department</button>
+           <Link to='/editFacilityForm' state={{academicDepartmentToEdit: academicDepartment}} >
+           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditFacility}>Edit Employee Department</button>
            </Link>
 
 
@@ -77,20 +77,20 @@ const handleClickEditEmployeeDepartment = () => {
 
 
 {/*
-              <button id={`${BASE_CLASS_NAME}DeleteButton`} onClick={handleClickDeleteEmployeeDepartment}>
-                Delete EmployeeDepartment
-                <EmployeeDepartmentDeleteModalButton
-                            id="deleteEmployeeDepartmentModalButton"
-                            buttonText="Delete EmployeeDepartment"
-                            modalComponent={<EmployeeDepartmentDeleteModal employeeDepartment={employeeDepartment} />}
+              <button id={`${BASE_CLASS_NAME}DeleteButton`} onClick={handleClickDeleteFacility}>
+                Delete Facility
+                <FacilityDeleteModalButton
+                            id="deleteFacilityModalButton"
+                            buttonText="Delete Facility"
+                            modalComponent={<FacilityDeleteModal academicDepartment={academicDepartment} />}
                             />
 
               </button> */}
 
-              <EmployeeDepartmentDeleteModalButton
+              <FacilityDeleteModalButton
                 id={`${BASE_CLASS_NAME}DeleteButton`}
                 buttonText="Delete Employee Department"
-                modalComponent={<EmployeeDepartmentDeleteModal employeeDepartment={employeeDepartment} />}
+                modalComponent={<FacilityDeleteModal academicDepartment={academicDepartment} />}
               />
 
             </nav>
@@ -98,7 +98,7 @@ const handleClickEditEmployeeDepartment = () => {
 
             <div>
 
-              <EmployeeDepartmentDetails employeeDepartment={employeeDepartment}></EmployeeDepartmentDetails>
+              <FacilityDetails academicDepartment={academicDepartment}></FacilityDetails>
 
 
 
@@ -112,4 +112,4 @@ const handleClickEditEmployeeDepartment = () => {
 
 
 //===================FUNCTION EXPORT====================//
-export default EmployeeDepartmentDetailsPage;
+export default FacilityDetailsPage;

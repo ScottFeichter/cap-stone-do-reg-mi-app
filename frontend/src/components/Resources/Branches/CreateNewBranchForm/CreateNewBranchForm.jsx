@@ -1,16 +1,16 @@
-import './CreateNewAcademicDepartmentForm.css';
-// const BASE_CLASS_NAME = "CreateNewAcademicDepartmentForm"
+import './CreateNewBranchForm.css';
+// const BASE_CLASS_NAME = "CreateNewBranchForm"
 
 
 import {useState } from 'react';
 import {useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 // import { useEffect } from 'react';
-import * as academicDepartmentsActions from '../../../../redux/academicDepartmentsReducer.js';
+import * as branchesActions from '../../../../redux/branchesReducer.js';
 
 
 
-function CreateNewAcademicDepartmentForm() {
+function CreateNewBranchForm() {
 
         const required = "*";
 
@@ -27,7 +27,7 @@ function CreateNewAcademicDepartmentForm() {
         // const [isDisabled, setIsDisabled] = useState(false);
 
 
-        let newAcademicDepartment = {
+        let newBranch = {
             name	                    :	null	,
             imageURL	                :	null	,
         }
@@ -37,7 +37,7 @@ function CreateNewAcademicDepartmentForm() {
         const [imageURL, setStreet] = useState("");
 
 
-// HELPERS FOR CreateNewAcademicDepartment Button handler---------------------------------------------------
+// HELPERS FOR CreateNewBranch Button handler---------------------------------------------------
 
 // helper for handleSubmit check required fields
 const checkRequired = () => {
@@ -87,24 +87,24 @@ const checkRequired = () => {
 
 
 
-         if(	name	)	newAcademicDepartment	.	name	=	name	;
-         if(	imageURL	)	newAcademicDepartment	.	imageURL	=	imageURL	;
+         if(	name	)	newBranch	.	name	=	name	;
+         if(	imageURL	)	newBranch	.	imageURL	=	imageURL	;
 
-        //  console.log("newAcademicDepartment 448: ", newAcademicDepartment)
+        //  console.log("newBranch 448: ", newBranch)
 
          // --------------------------MAKING THE DISPATCH---------------------//
-            let academicDepartmentId;
-            let newAcademicDepartmentDetails;
-            if(newAcademicDepartmentDetails);
+            let branchId;
+            let newBranchDetails;
+            if(newBranchDetails);
 
-            await dispatch(academicDepartmentsActions.thunkCreateAcademicDepartment(newAcademicDepartment))
+            await dispatch(branchesActions.thunkCreateBranch(newBranch))
             .then(response => {
                 return response
             })
             .then(response => {
-                academicDepartmentId = response.payload[0].id;
-                dispatch(academicDepartmentsActions.thunkGetAcademicDepartmentsAll());
-                return academicDepartmentId;
+                branchId = response.payload[0].id;
+                dispatch(branchesActions.thunkGetBranchesAll());
+                return branchId;
             }).catch(async (res) => {
                     const data = await res.json();
                     if (data.errors) setErrors(data.errors);
@@ -112,15 +112,15 @@ const checkRequired = () => {
                 }
             )
 
-            await dispatch(academicDepartmentsActions.thunkGetAcademicDepartmentsAll()).then((response) => {
-                dispatch(academicDepartmentsActions.thunkGetAcademicDepartmentById(academicDepartmentId));
+            await dispatch(branchesActions.thunkGetBranchesAll()).then((response) => {
+                dispatch(branchesActions.thunkGetBranchById(branchId));
                 return response
             }).then(response => {
-                dispatch(academicDepartmentsActions.thunkGetAcademicDepartmentsAll())
+                dispatch(branchesActions.thunkGetBranchesAll())
                 return response
             }).then(response => {
-                newAcademicDepartmentDetails = response;
-                navigate(`/academicDepartments/${academicDepartmentId}`)
+                newBranchDetails = response;
+                navigate(`/branches/${branchId}`)
                 return response
             });
 
@@ -132,33 +132,33 @@ const checkRequired = () => {
 
 // return-----------------------------------
         return (
-          <main id="CreateNewAcademicDepartmentMain">
+          <main id="CreateNewBranchMain">
 
-            <h1 id='CreateNewAcademicDepartmentH1'>Create A New Employee Department</h1>
+            <h1 id='CreateNewBranchH1'>Create A New Employee Department</h1>
 
 
-                    <form id='CreateNewAcademicDepartmentForm' onSubmit={handleSubmit}>
+                    <form id='CreateNewBranchForm' onSubmit={handleSubmit}>
 
 {/* form section 1---------------------------------------------------------- */}
-                        <section id="CreateNewAcademicDepartmentFormSection1">
+                        <section id="CreateNewBranchFormSection1">
 
-                            <h4 id="CreateNewAcademicDepartmentFormSection1H4">Information</h4>
+                            <h4 id="CreateNewBranchFormSection1H4">Information</h4>
 
-                            <p id="CreateNewAcademicDepartmentFormSection1P">
-                                Enter information for new academicDepartment.
+                            <p id="CreateNewBranchFormSection1P">
+                                Enter information for new branch.
                             </p>
-                            <h5 className='CreateNewAcademicDepartmentH5'>* indicates required field</h5>
+                            <h5 className='CreateNewBranchH5'>* indicates required field</h5>
 
 
 
-                            <div id='nameContainer' className='CreateNewAcademicDepartmentFormLabelInputContainer'>
+                            <div id='nameContainer' className='CreateNewBranchFormLabelInputContainer'>
 
-                                        <p className='CreateNewAcademicDepartmentFormRequired'>{required}</p>
-                                        <label className='CreateNewAcademicDepartmentFormLabel'>
+                                        <p className='CreateNewBranchFormRequired'>{required}</p>
+                                        <label className='CreateNewBranchFormLabel'>
                                             Name :
 
                                             <input
-                                            className='CreateNewAcademicDepartmentFormInput'
+                                            className='CreateNewBranchFormInput'
                                             id="name"
                                             name="name"
                                             type="text"
@@ -170,16 +170,16 @@ const checkRequired = () => {
                                         </label>
 
                             </div>
-                            {errorsName.name && <p className='CreateNewAcademicDepartmentErrors'>{errorsName.name}</p>}
+                            {errorsName.name && <p className='CreateNewBranchErrors'>{errorsName.name}</p>}
 
 
 
-                            <div id='ImageURLContainer' className='CreateNewAcademicDepartmentFormLabelInputContainer'>
+                            <div id='ImageURLContainer' className='CreateNewBranchFormLabelInputContainer'>
 
-                                        <label className='CreateNewAcademicDepartmentFormLabel'>
+                                        <label className='CreateNewBranchFormLabel'>
                                             ImageURL:
                                             <input
-                                            className='CreateNewAcademicDepartmentFormInput'
+                                            className='CreateNewBranchFormInput'
                                             id="imageURL"
                                             name="imageURL"
                                             type="text"
@@ -191,22 +191,22 @@ const checkRequired = () => {
                                         </label>
 
                             </div>
-                            {errors.imageURL && <p className='CreateNewAcademicDepartmentErrors'>{errors.imageURL}</p>}
+                            {errors.imageURL && <p className='CreateNewBranchErrors'>{errors.imageURL}</p>}
 
 
 
                         </section>
 
-                        <hr className='CreateNewAcademicDepartmentHr'></hr>
+                        <hr className='CreateNewBranchHr'></hr>
 
 {/* form button---------------------------------------------------------- */}
-                        {requiredFieldsMessage.message && <p className='CreateNewAcademicDepartmentRequiredErrors'>{requiredFieldsMessage.message}</p>}
+                        {requiredFieldsMessage.message && <p className='CreateNewBranchRequiredErrors'>{requiredFieldsMessage.message}</p>}
 
 
                         <div id="buttonContainer">
 
                             <button
-                                id="CreateNewAcademicDepartmentButton"
+                                id="CreateNewBranchButton"
                                 type="submit"
                                 onClick={handleSubmit}
                                 >Create Employee Department
@@ -223,4 +223,4 @@ const checkRequired = () => {
 
 
 
-export default CreateNewAcademicDepartmentForm;
+export default CreateNewBranchForm;

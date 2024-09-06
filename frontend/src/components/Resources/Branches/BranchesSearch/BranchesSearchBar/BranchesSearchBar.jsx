@@ -3,20 +3,20 @@
 // import { useNavigate } from "react-router-dom";
 // import { useSelector } from "react-redux";
 // // import * as searchActions from '../../../search'
-// // import * as academicDepartmentsActions from "../../../../redux/academicDepartmentsReducer";
+// // import * as branchesActions from "../../../../redux/branchesReducer";
 // // import { useDispatch } from "react-redux";
-// import "./AcademicDepartmentsSearchBar.css";
+// import "./BranchesSearchBar.css";
 
 // // NOTE: DOC STRINGS MAY NEED UPDATED SORRY!!!!!! THINGS CHANGE AND I FORGET TO UPDATE THEM...
 
-// function AcademicDepartmentsSearchBar() {
+// function BranchesSearchBar() {
 //   const navigate = useNavigate();
-//   const academicDepartments = useSelector((state) => state?.academicDepartments?.academicDepartments);
+//   const branches = useSelector((state) => state?.branches?.branches);
 //   // const dispatch = useDispatch();
 
 //   // useEffect(() => {
-//   //   dispatch(academicDepartmentsActions.academicDepartments());
-//   //   console.log("FROM SEARCHBAR.JSX dispatch(academicDepartmentsActions.academicDepartments());")
+//   //   dispatch(branchesActions.branches());
+//   //   console.log("FROM SEARCHBAR.JSX dispatch(branchesActions.branches());")
 //   // }, []);
 
 //   // =======================STATEFUL VARIABLES=======================
@@ -45,7 +45,7 @@
 
 //   /**
 //    * This useEffect runs everytime there is a change in the variable search
-//    * It captures the search value and filters it through the academicDepartments (aka searchables)
+//    * It captures the search value and filters it through the branches (aka searchables)
 //    * The result is the array of stock objects named suggestions
 //    * Then it creates an array called displaySuggestions which mirrors suggestions...
 //    * But it only contains a string of name_symbol, company_name, and ceo...
@@ -136,18 +136,18 @@
 
 //     let firstName = e.target.value;
 
-//     // console.log("firstName line 152", firstName, academicDepartments);
-//     for (let i = 0; i < academicDepartments.length; i++) {
-//       if (academicDepartments[i].firstName === firstName) {
+//     // console.log("firstName line 152", firstName, branches);
+//     for (let i = 0; i < branches.length; i++) {
+//       if (branches[i].firstName === firstName) {
 //         displayedSuggestions = [{ test: "test" }];
 //         // console.log(displayedSuggestions);
 
-//         document.getElementById("AcademicDepartmentsSearchBarInput").focus();
+//         document.getElementById("BranchesSearchBarInput").focus();
 //         setSearch(firstName);
 //         // console.log(search);
 //         setSearch("");
-//         return navigate(`/academicDepartments/${academicDepartments[i].id}`, {
-//           state: { suggestions: academicDepartments[i].id },
+//         return navigate(`/branches/${branches[i].id}`, {
+//           state: { suggestions: branches[i].id },
 //         });
 //       }
 //     }
@@ -188,14 +188,14 @@
 
 //   // ===========================RETURN ===============================
 //   // =======================GRABING STOCK DATA FROM STORE=======================
-//   const navAcademicDepartments = useSelector((store) => store.academicDepartments.academicDepartments);
-//   // console.log("navAcademicDepartments from searchBar = ", navAcademicDepartments)
-//   if (navAcademicDepartments === null) return null;
+//   const navBranches = useSelector((store) => store.branches.branches);
+//   // console.log("navBranches from searchBar = ", navBranches)
+//   if (navBranches === null) return null;
 
-//   const searchables = navAcademicDepartments;
+//   const searchables = navBranches;
 
-//   // const searchables = navAcademicDepartments.filter((navAcademicDepartment) => {
-//   //   navAcademicDepartment.firstName !== null
+//   // const searchables = navBranches.filter((navBranch) => {
+//   //   navBranch.firstName !== null
 //   // });
 
 //   // const searchables = ["AAPL", "AMZN", "BUTT"]
@@ -203,12 +203,12 @@
 
 //   return (
 //     <>
-//       <main id="AcademicDepartmentsSearchBarMain">
-//         <form id="AcademicDepartmentsSearchBarForm" onSubmit={handleSubmit}>
-//           <label id="AcademicDepartmentsSearchBarLabel">
+//       <main id="BranchesSearchBarMain">
+//         <form id="BranchesSearchBarForm" onSubmit={handleSubmit}>
+//           <label id="BranchesSearchBarLabel">
 //             <FaMagnifyingGlass onClick={handleSubmit} id="FaMagnifyingGlass" />
 //             <input
-//               id="AcademicDepartmentsSearchBarInput"
+//               id="BranchesSearchBarInput"
 //               type="text"
 //               value={search}
 //               placeholder={placeHolder}
@@ -219,22 +219,22 @@
 //           </label>
 //           {/* {errors.search && <p>{errors.search}</p>} */}
 
-//           <button type="submit" id="AcademicDepartmentsSearchBarButton">
+//           <button type="submit" id="BranchesSearchBarButton">
 //             submit
 //           </button>
 //         </form>
 
-//         <ul id="AcademicDepartmentsSearchBarSuggestionsUl">
+//         <ul id="BranchesSearchBarSuggestionsUl">
 //           {searchSuggestions.length !== 0
 //             ? searchSuggestions.map((ele) => (
 //                 <li
 //                   key={searchSuggestions.indexOf(ele)}
-//                   className="AcademicDepartmentsSearchBarSuggestionsUlLi"
+//                   className="BranchesSearchBarSuggestionsUlLi"
 //                 >
 //                   <button
 //                     onClick={handleSearchSuggestionButton}
 //                     value={ele}
-//                     className="AcademicDepartmentsSearchBarSuggestionsUlLiButton"
+//                     className="BranchesSearchBarSuggestionsUlLiButton"
 //                   >
 //                     {ele}
 //                   </button>
@@ -247,4 +247,4 @@
 //   );
 // }
 
-// export default AcademicDepartmentsSearchBar;
+// export default BranchesSearchBar;

@@ -1,19 +1,19 @@
-#EditEmployeeDepartmentMain {
+#EditFacilityMain {
 
 }
 
-#EditEmployeeDepartmentH1 {
+#EditFacilityH1 {
     text-align: center;
 }
 
-.EditEmployeeDepartmentErrors {
+.EditFacilityErrors {
     color: red;
     text-align: center;
     font-weight: bold;
     margin: -1rem 0 1.5rem 0;
 }
 
-.EditEmployeeDepartmentRequiredErrors {
+.EditFacilityRequiredErrors {
     color: red;
     text-align: center;
     font-weight: bold;
@@ -21,7 +21,7 @@
 }
 
 
-#EditEmployeeDepartmentForm{
+#EditFacilityForm{
     margin: 2rem 4rem 4rem 4rem;
     padding: 0rem 0rem 0rem 0rem;
     border: var(--border);
@@ -35,13 +35,13 @@
 
 
 
-.EditEmployeeDepartmentFormLabelInputContainer {
+.EditFacilityFormLabelInputContainer {
     display: flex;
     justify-content: center;
     /* border: 2px grey solid; */
 }
 
-.EditEmployeeDepartmentFormLabel {
+.EditFacilityFormLabel {
     color: black;
     font-size: medium;
     font-weight: 600;
@@ -55,7 +55,7 @@
 
 
 
-.EditEmployeeDepartmentFormInput {
+.EditFacilityFormInput {
     font-size: small;
     height: 1.5rem;
     margin-bottom: 1.5rem;
@@ -65,7 +65,7 @@
 
 
 
-.EditEmployeeDepartmentFormRequired{
+.EditFacilityFormRequired{
     position:sticky;
 
     margin: 1.25rem 0 0 -1rem;
@@ -78,18 +78,18 @@
 
 
 
-.EditEmployeeDepartmentHr {
+.EditFacilityHr {
     border: 1px grey solid;
     width: 80%;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
 }
 
-#EditEmployeeDepartmentFormSection1, #EditEmployeeDepartmentFormSection2, #EditEmployeeDepartmentFormSection3, #EditEmployeeDepartmentFormSection4, #EditEmployeeDepartmentFormSection5     {
+#EditFacilityFormSection1, #EditFacilityFormSection2, #EditFacilityFormSection3, #EditFacilityFormSection4, #EditFacilityFormSection5     {
     width: 450px;
 }
 
-#EditEmployeeDepartmentFormSection1H4, #EditEmployeeDepartmentFormSection2H4, #EditEmployeeDepartmentFormSection3H4, #EditEmployeeDepartmentFormSection4H4, #EditEmployeeDepartmentFormSection5H4 {
+#EditFacilityFormSection1H4, #EditFacilityFormSection2H4, #EditFacilityFormSection3H4, #EditFacilityFormSection4H4, #EditFacilityFormSection5H4 {
     text-align: center;
     text-decoration: underline;
     font-size: x-large;
@@ -98,7 +98,7 @@
     /* border: 2px solid grey; */
 }
 
-#EditEmployeeDepartmentFormSection1P, #EditEmployeeDepartmentFormSection2P, #EditEmployeeDepartmentFormSection3P, #EditEmployeeDepartmentFormSection4P, #EditEmployeeDepartmentFormSection5P {
+#EditFacilityFormSection1P, #EditFacilityFormSection2P, #EditFacilityFormSection3P, #EditFacilityFormSection4P, #EditFacilityFormSection5P {
     text-align: center;
     margin: -1rem 0 .5rem 0;
     font-size: medium;
@@ -106,7 +106,7 @@
     color: black;
 }
 
-.EditEmployeeDepartmentH5 {
+.EditFacilityH5 {
     margin: 0rem 0 3rem 0;
     color: red;
     text-align: center;
@@ -114,7 +114,7 @@
 
 
 
-#EditEmployeeDepartmentButton {
+#EditFacilityButton {
     margin: 2rem 0 4rem 0;
     width: 16rem;
     height: 2.5rem;
@@ -123,28 +123,28 @@
     border-radius: 25px;
 }
 
-#EditEmployeeDepartmentButton:enabled {
+#EditFacilityButton:enabled {
     color: var(--buttonColor);
     background-color: var(--buttonBackgroundColor);
     border: var(--buttonBorder);
 
 }
 
-#EditEmployeeDepartmentButton:disabled {
+#EditFacilityButton:disabled {
     color: var(--buttonDisabledColor);
     background-color: var(--buttonDisabledBackgroundColor);
     border: var(--buttonDisabledBorder);
 
 }
 
-#EditEmployeeDepartmentButton:enabled:hover {
+#EditFacilityButton:enabled:hover {
     color: var(--buttonHoverColor);
     background-color: var(--buttonHoverBackgroundColor);
     border: var(--buttonHoverBorder);
     cursor: pointer;
 }
 
-#EditEmployeeDepartmentButton:enabled:active{
+#EditFacilityButton:enabled:active{
     color: var(--buttonActiveColor);
     background-color: var(--buttonActiveBackgroundColor);
     border: var(--buttonActiveBorder);

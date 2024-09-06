@@ -1,6 +1,6 @@
-import './EmployeeListEmployeeDepartmentsListPagination.css'
+import './EmployeeListFacilitiesListPagination.css'
 
-function EmployeeDepartmentsListPagination({ employeesPerPage, totalPages, paginate }) {
+function FacilitiesListPagination({ employeesPerPage, totalPages, paginate }) {
     let pages = [];
 
     for (let i = 1; i < Math.ceil(totalPages / employeesPerPage); i++) {
@@ -9,7 +9,7 @@ function EmployeeDepartmentsListPagination({ employeesPerPage, totalPages, pagin
 
     return (
       <>
-        <div className="EmployeeDepartmentsListPagination">
+        <div className="FacilitiesListPagination">
           {pages.map((number, index) => {
             return (
               <a onClick={() => paginate(number)} key={index} href="#">
@@ -22,4 +22,4 @@ function EmployeeDepartmentsListPagination({ employeesPerPage, totalPages, pagin
     );
   }
 
-  export default EmployeeDepartmentsListPagination;
+  export default FacilitiesListPagination;
