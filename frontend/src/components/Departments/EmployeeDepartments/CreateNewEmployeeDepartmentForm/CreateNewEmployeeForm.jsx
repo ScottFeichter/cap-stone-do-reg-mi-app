@@ -209,7 +209,7 @@ const checkRequired = () => {
                                 id="CreateNewEmployeeDepartmentButton"
                                 type="submit"
                                 onClick={handleSubmit}
-                                >Create EmployeeDepartment
+                                >Create Employee Department
                             </button>
                         </div>
 

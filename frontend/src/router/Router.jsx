@@ -38,7 +38,7 @@ import Students from "../components/Students/Students.jsx";
 
   // -----------EMPLOYEES-------------
 import Employees from "../components/Employees/Employees.jsx";
-import CreateNewEmployeeForm from "../components/Employees/createNewEmployeeForm/createNewEmployeeForm.jsx";
+import CreateNewEmployeeForm from "../components/Departments/EmployeeDepartments/CreateNewEmployeeDepartmentForm/CreateNewEmployeeForm.jsx";
 import EditEmployeeForm from "../components/Employees/EditEmployeeForm/EditEmployeeForm.jsx";
 import EmployeeDetailPage from "../components/Employees/EmployeeDetailsPage/EmployeeDetailsPage.jsx";
 // import EmployeeDetails from "../components/Employees/EmployeeDetailsPage/EmployeeDetails.jsx";
@@ -48,8 +48,8 @@ import EmployeeDetailPage from "../components/Employees/EmployeeDetailsPage/Empl
 import Departments from "../components/Departments/Departments.jsx";
 
 import EmployeeDepartmentDetailsPage from "../components/Departments/EmployeeDepartments/EmployeeDepartmentDetailsPage/EmployeeDepartmentDetailsPage.jsx";
-import CreateNewEmployeeDepartmentsForm from "../components/Departments/EmployeeDepartments/CreateNewEmployeeDepartmentForm/CreateNewEmployeeDepartmentForm.jsx";
-import EditEmployeeDepartmentForm from "../components/Departments/EmployeeDepartments/EditEmployeeDepartmentForm/EditEmployeeDepartmentForm.jsx";
+import CreateNewEmployeeDepartmentForm from "../components/Departments/EmployeeDepartments/CreateNewEmployeeDepartmentForm/CreateNewEmployeeDepartmentForm.jsx";
+import EditEmployeeDepartmentForm from "../components/Departments/EmployeeDepartments/EditEmployeeDepartmentForm/EditDepartmentEmployeeForm.jsx";
 
 
  // -----------CATCH ALL--------------
@@ -94,13 +94,14 @@ export const router = createBrowserRouter([
 
 
       // -------EMPLOYEE DEPARTMENTS-------
+
         {
           path: "/employeeDepartments/:employeeDepartmentId",
           element: <EmployeeDepartmentDetailsPage />
         },
         {
           path: "/createNewEmployeeDepartmentForm/",
-          element: <CreateNewEmployeeDepartmentsForm />,
+          element: <CreateNewEmployeeDepartmentForm />,
         },
         {
           path: "/editEmployeeDepartmentForm/",
