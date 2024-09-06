@@ -14,9 +14,23 @@ function BranchesListItemHeader() {
             <h4 className="BranchesListItemHeaderItemH4">Name</h4>
         </div>
 
-        <div className="BranchesListItemHeaderItemContainerImageURL">
-            <h4 className="BranchesListItemHeaderItemH4">ImageURL</h4>
+        <div className="BranchesListItemHeaderItemContainerStreet">
+            <h4 className="BranchesListItemHeaderItemH4">Street</h4>
         </div>
+
+        <div className="BranchesListItemHeaderItemContainerCity">
+            <h4 className="BranchesListItemHeaderItemH4">City</h4>
+        </div>
+
+        <div className="BranchesListItemHeaderItemContainerState">
+            <h4 className="BranchesListItemHeaderItemH4">State</h4>
+        </div>
+
+        <div className="BranchesListItemHeaderItemContainerZip">
+            <h4 className="BranchesListItemHeaderItemH4">Zip</h4>
+        </div>
+
+
 
       </div>
 
