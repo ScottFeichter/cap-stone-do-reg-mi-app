@@ -126,15 +126,15 @@ export const router = createBrowserRouter([
 
       {
         path: "/facilities/:facilitytId",
-        element: <AcademicDepartmentDetailsPage />
+        element: <FacilityDetailsPage />
       },
       {
-        path: "/createNewAcademicDepartmentForm/",
-        element: <CreateNewAcademicDepartmentForm />,
+        path: "/createNewFacilityForm/",
+        element: <CreateNewFacilityForm />,
       },
       {
-        path: "/editAcademicDepartmentForm/",
-        element: <EditAcademicDepartmentForm />,
+        path: "/editFacilityForm/",
+        element: <EditFacilityForm />,
       },
 
 
@@ -152,15 +152,15 @@ export const router = createBrowserRouter([
 
         {
           path: "/employeeDepartments/:employeeDepartmentId",
-          element: <FacilityDetailsPage />
+          element: <EmployeeDepartmentDetailsPage />
         },
         {
           path: "/createNewFacilityForm/",
-          element: <CreateNewFacilityForm />,
+          element: <CreateNewEmployeeDepartmentForm />,
         },
         {
           path: "/editFacilityForm/",
-          element: <EditFacilityForm />,
+          element: <EditEmployeeDepartmentForm />,
         },
 
       // -------ACADEMIC DEPARTMENTS-------
