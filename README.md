@@ -4,7 +4,7 @@
 
 ![db-schema]
 
-[db-schema]: ./ADMIN/schema/Do-Reg-Mi-Schema-3.png
+[db-schema]: ./admin/schema/Do-Reg-Mi-Schema-3.png
 
 ## API Documentation
 
