@@ -67,11 +67,33 @@ function BranchDetails(props){
                         </div>
 
 
-                        <div id='imageURLContainer' className='BranchDetailsFormLabelInputContainer'>
-                                <div className='BranchDetailsFormLabel'>{"imageURL"}</div>
+                        <div id='streetContainer' className='BranchDetailsFormLabelInputContainer'>
+                                <div className='BranchDetailsFormLabel'>{"street"}</div>
                                 <div className='BranchDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='BranchDetailsFormInput'>{branch.imageURL ? branch.imageURL : nullReplacer}</div>
+                                <div className='BranchDetailsFormInput'>{branch.street ? branch.street : nullReplacer}</div>
                         </div>
+
+                        <div id='cityContainer' className='BranchDetailsFormLabelInputContainer'>
+                                <div className='BranchDetailsFormLabel'>{"city"}</div>
+                                <div className='BranchDetailsFormInfoDivider'>{infoDivider}</div>
+                                <div className='BranchDetailsFormInput'>{branch.city ? branch.city : nullReplacer}</div>
+                        </div>
+
+
+                        <div id='stateContainer' className='BranchDetailsFormLabelInputContainer'>
+                                <div className='BranchDetailsFormLabel'>{"state"}</div>
+                                <div className='BranchDetailsFormInfoDivider'>{infoDivider}</div>
+                                <div className='BranchDetailsFormInput'>{branch.state ? branch.state : nullReplacer}</div>
+                        </div>
+
+
+                        <div id='zipContainer' className='BranchDetailsFormLabelInputContainer'>
+                                <div className='BranchDetailsFormLabel'>{"zip"}</div>
+                                <div className='BranchDetailsFormInfoDivider'>{infoDivider}</div>
+                                <div className='BranchDetailsFormInput'>{branch.zip ? branch.zip : nullReplacer}</div>
+                        </div>
+
+
 
 
                     </section>
