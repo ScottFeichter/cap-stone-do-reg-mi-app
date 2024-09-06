@@ -37,7 +37,7 @@ function FacilityDetails(props){
         e.preventDefault();
         // document.body.scrollTop = 0; // For Safari
         // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        navigate('/departments')
+        navigate('/facilities')
     }
 
 
