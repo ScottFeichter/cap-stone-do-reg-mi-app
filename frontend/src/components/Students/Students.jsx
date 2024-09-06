@@ -1,19 +1,38 @@
 import './Students.css';
 // import { useSelector } from 'react-redux';
+import {useNavigate} from 'react-router-dom'
+import StudentsList from './StudentsList/StudentsList.jsx';
+// import StudentsSearchBar from './StudentsSearch/SearchBar/StudentsSearchBar';
 
 function Students() {
-  // const students = useSelector(state => state.students.students);
-  // console.log("students: ", students);
+  const navigate = useNavigate();
+
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    navigate('/createNewStudentForm');
+  }
 
 
   return(
     <>
-        <main>
-            <div>
-                <h1>This is Students!</h1>
-            </div>
-        </main>
+        <h1 id="StudentsH1">Students</h1>
 
+        <main id="StudentsMain">
+
+          {/* <StudentsSearchBar /> */}
+
+
+            <nav id="StudentsNav">
+              {/* <input type="text" id="StudentsSearchBar" placeholder="Search Students" ></input> */}
+
+              <button id="StudentsCreateButton" onClick={handleClick}>Create New Student</button>
+            </nav>
+
+
+            <StudentsList />
+
+        </main>
     </>
   )
 }

@@ -1,11 +1,10 @@
 .EmployeeDepartmentDeleteModalButton {
     margin: 1rem .5rem 1rem .5rem;
-    width: 18rem;
+    width: 16rem;
     height: 1.8rem;
     font-size: 1rem;
     font-weight: 500;
     border-radius: 5px;
-
 }
 
 .EmployeeDepartmentDeleteModalButton:enabled {
@@ -27,15 +26,12 @@
     animation-direction: normal;
     animation-fill-mode: both;
     animation-play-state: initial; */
-
-
 }
 
 .EmployeeDepartmentDeleteModalButton:disabled {
     color: var(--buttonDisabledColor);
     background-color: var(--buttonDisabledBackgroundColor);
     border: var(--buttonDisabledBorder);
-
 }
 
 .EmployeeDepartmentDeleteModalButton:enabled:hover {

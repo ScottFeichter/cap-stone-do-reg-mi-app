@@ -1,0 +1,202 @@
+
+.StudentsListItemHeaderContainer {
+    display: flex;
+    margin: 0 1rem 1rem 1rem;
+    text-wrap: nowrap;
+    width: fit-content;
+    /* border: blue 2px solid; */
+  }
+
+  /* ---------ITEM GENERIC----------- */
+
+  .StudentsListItemHeaderItemContainerGeneric {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+   /* ---------ITEM SPECIFIC----------- */
+   /* ----Should match the item css---- */
+
+.StudentsListItemHeaderItemContainerID {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemHeaderItemContainerED {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemHeaderItemContainerAD {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemHeaderItemContainerName {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemHeaderItemContainerStreet {
+    width: 8rem;
+  /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemHeaderItemContainerCity {
+    width: 8rem;
+    /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemHeaderItemContainerState {
+    width: 4rem;
+    /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemHeaderItemContainerZip {
+    width: 6rem;
+    /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemHeaderItemContainerPhone {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+
+  .StudentsListItemHeaderItemContainerEmail {
+    width: 10rem;
+  /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+  .StudentsListItemHeaderItemContainerLang {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .StudentsListItemHeaderItemContainerInst {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+
+
+
+    /* ---------???----------- */
+.StudentsListItemHeaderItemH4{
+    margin: 0;
+    text-wrap: nowrap;
+    width: fit-content;
+    /* border: 1px darkgrey solid; */
+}

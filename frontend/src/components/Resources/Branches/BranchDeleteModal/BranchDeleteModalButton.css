@@ -1,0 +1,49 @@
+.BranchDeleteModalButton {
+    margin: 1rem .5rem 1rem .5rem;
+    width: 16rem;
+    height: 1.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.BranchDeleteModalButton:enabled {
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: border, background-color;
+
+    /* animation-name: none;
+    animation-delay: none;
+    animation-duration: .3s;
+    animation-timing-function: calc();
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: initial; */
+}
+
+.BranchDeleteModalButton:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+}
+
+.BranchDeleteModalButton:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+.BranchDeleteModalButton:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}

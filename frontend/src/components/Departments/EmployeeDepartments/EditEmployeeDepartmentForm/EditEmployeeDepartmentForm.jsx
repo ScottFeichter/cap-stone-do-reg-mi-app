@@ -23,7 +23,7 @@ function EditEmployeeDepartmentForm() {
 
         // console.log("employeeDepartmentToEdit : ", employeeDepartmentToEdit)
 
-        // const [errors, setErrors] = useState({});
+        const [errors, setErrors] = useState({});
 
         //-----required
         const [errorsName, setErrorsName] = useState({});
@@ -32,22 +32,16 @@ function EditEmployeeDepartmentForm() {
 
 
 
-        //-----must be integers
-
-
-
         // const [isDisabled, setIsDisabled] = useState(false);
 
 
         let editedEmployeeDepartment = {
 
-// personal information form section 1----------------------------------------------------------
-            name	            :	null	,
-            imageURL	            :	null	,
+
+            name	                    :	null	,
+            imageURL	                :	null	,
 
         }
-
-
 
 
     const [name,setName] = useState(employeeDepartmentToEdit.name||"")
@@ -59,7 +53,7 @@ function EditEmployeeDepartmentForm() {
 
 
 
-// HELPERS FOR EditEmployee Button handler---------------------------------------------------
+// HELPERS FOR EditEmployeeDepartment Button handler---------------------------------------------------
 
 
 
@@ -68,48 +62,37 @@ const checkRequired = () => {
 
     let nameBool = false;
 
-
-
-
     if(!name) {
         nameBool = true;
-        setErrorsName({name: "Name is required"});
+        setErrorsName({name: "First Name 1 is required"});
     } else {
         nameBool = false;
         setErrorsName({});
     }
 
 
-
-
-
     if (
         (nameBool)
-
-
     ) {
         return true
     } else {
         return false;
     }
-
 }
-
-
-
 
 
 // -----------------------------HANDLE SUBMIT -------------------------------//
         const handleSubmit = async (e) => {
             e.preventDefault();
-            // console.log('HANDLE SUBMIT EDIT EMPLOYEE DEPARTMENT IS RUNNING');
+            // console.log('HANDLE SUBMIT EDIT EMPLOYEE IS RUNNING');
 
         // -----------------CLIENT SIDE VALIDATIONS-----------------------//
 
             if(checkRequired()) {
 
                 setRequiredFieldsMessage({message: "Required field must be complete - see errors above."});
-                // return console.log("HANDLE SUBMIT STOPPED DUE TO REQUIRED FIELD MISSING INFORMATION")
+                // console.log("HANDLE SUBMIT STOPPED DUE TO REQUIRED FIELD MISSING INFORMATION")
+                return
             } else {
                 setRequiredFieldsMessage({});
             }
@@ -117,14 +100,13 @@ const checkRequired = () => {
 
 
 
-
-
-         // ---------------REPLACING NEW EMPLOYEE DEPARTMENT OBJECT VALUES WITH USER INPUT IF EXISTS---------//
+         // ---------------REPLACING NEW EMPLOYEE OBJECT VALUES WITH USER INPUT IF EXISTS---------//
 
 
 
-         if(	name	)	editedEmployeeDepartment	.	name	=	name	;
-         if(	imageURL	)	editedEmployeeDepartment	.	imageURL	=	imageURL	;
+         if(name)	    editedEmployeeDepartment	.	name	    =	name	    ;
+         if(imageURL)	editedEmployeeDepartment	.	imageURL	=	imageURL	;
+
 
          editedEmployeeDepartment.id = employeeDepartmentToEdit.id;
 
@@ -144,8 +126,7 @@ const checkRequired = () => {
             }).catch(async (res) => {
                     // console.log("res 439", res);
                     const data = await res.json();
-                    if(data);
-                    // if (data.errors) setErrors(data.errors);
+                    if (data.errors) setErrors(data.errors);
                     // console.log('CATCH DISPATCH RAN DATA:', data, 'DATA.ERRORS: ', data.errors, 'RES: ', res);
                 }
             )
@@ -157,11 +138,8 @@ const checkRequired = () => {
                 return response
             });
 
-            // console.log('HANDLE SUBMIT NEW EMPLOYEE DEPARTMENT HAS FINISHED RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+            // console.log('HANDLE SUBMIT NEW EMPLOYEE HAS FINISHED RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
         }
-
-
-
 
 // return-----------------------------------
         return (
@@ -178,7 +156,7 @@ const checkRequired = () => {
                             <h4 id="EditEmployeeDepartmentFormSection1H4">Personal Information</h4>
 
                             <p id="EditEmployeeDepartmentFormSection1P">
-                                Edit personal information for new employee.
+                                Edit information for existing employeeDepartment.
                             </p>
                             <h5 className='EditEmployeeDepartmentH5'>* indicates required field</h5>
 
@@ -203,16 +181,12 @@ const checkRequired = () => {
                                         </label>
 
                             </div>
-                            {errorsName.name && <p className='EditEmployeeErrors'>{errorsName.name}</p>}
-
-
-
+                            {errorsName.name && <p className='EditEmployeeDepartmentErrors'>{errorsName.name}</p>}
 
 
 
                             <div id='imageURLContainer' className='EditEmployeeDepartmentFormLabelInputContainer'>
 
-                                        <p className='EditEmployeeDepartmentFormRequired'>{required}</p>
                                         <label className='EditEmployeeDepartmentFormLabel'>
                                             ImageURL:
                                             <input
@@ -223,23 +197,15 @@ const checkRequired = () => {
                                             placeholder='ImageURL'
                                             value={imageURL}
                                             onChange={(e) => setImageURL(e.target.value)}
-                                            required
+
                                             />
                                         </label>
 
-
                             </div>
+                            {errors.imageURL && <p className='EditEmployeeDepartmentErrors'>{errors.imageURL}</p>}
 
 
-                    </section>
-
-
-
-                        <hr className='EditEmployeeHr'></hr>
-
-
-
-
+                        </section>
 {/* form button---------------------------------------------------------- */}
                         {requiredFieldsMessage.message && <p className='EditEmployeeDepartmentRequiredErrors'>{requiredFieldsMessage.message}</p>}
 

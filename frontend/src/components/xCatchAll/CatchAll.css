@@ -1,31 +1,43 @@
 .CatchAllMain{
     background-color: var(--backgroundColor);
-    border: var(--border);
+    /* border: var(--border); */
     text-align: center;
     text-wrap: nowrap;
     overflow: hidden;
 }
 
+.CatchAllH1{
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem 0 1rem 0;
+}
+
 .CatchAllDiv{
-    margin: 1rem 4rem 1rem 4rem;
+    margin: 0rem 4rem 1rem 4rem;
     height: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content:space-evenly;
     border: var(--border);
     border-radius: 25px;
 }
 
-.CatchAllH1{
-    text-align: center;
-    font-size: 2.5rem;
-    margin: 1rem 0 0 0;
+#CatchAllFaHeartBroken{
+
+    /* width: 20rem; */
+    width: 4rem;
+    height: 4rem;
+    margin: 0 0 0 0;
+    padding: 0;
+    color: var(--green1);
 }
+
+
 
 .CatchAllH3{
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 1rem 0 1rem 0;
     color: var(--green1)
 }

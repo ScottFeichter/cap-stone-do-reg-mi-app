@@ -126,15 +126,15 @@ export const thunkCreateFacility = (newFacility) => async (dispatch) => {
 
 /** PUT FACILITIES */
 export const thunkEditFacility = (editedFacility) => async (dispatch) => {
-  const { facilityId, updatedFacility } = editedFacility;
+  const { id } = editedFacility;
 //  console.log('THUNK EDIT FACILITY FROM FACILITIES REDUCER RAN', updatedFacility);
 
-  const response = await csrfFetch(`/api/facilities/${facilityId}`, {
+  const response = await csrfFetch(`/api/facilities/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify(updatedFacility)
+    body: JSON.stringify(editedFacility)
   });
 
   const data = await response.json();

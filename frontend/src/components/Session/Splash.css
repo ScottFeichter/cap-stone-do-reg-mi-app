@@ -12,7 +12,9 @@
     border: var(--border);
 }
 
-#SplashH1{}
+#SplashH1{
+    font-size: xx-large;
+}
 
 #SplashDivLoginSignupContainer{
     margin: 4rem auto 2rem auto;
