@@ -12,7 +12,7 @@
    /* ----Should match the item css---- */
 
 .BranchesListItemHeaderItemContainerID {
-    width: 8rem;
+    width: 4rem;
    /* customized on top */
     text-align: center;
     display: flex;
@@ -41,7 +41,52 @@
     /* border: green 2px solid; */
   }
 
-  .BranchesListItemHeaderItemContainerImageURL {
+  .BranchesListItemHeaderItemContainerStreet {
+    width: 8rem;
+  /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+  .BranchesListItemHeaderItemContainerCity {
+    width: 8rem;
+  /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+  .BranchesListItemHeaderItemContainerState {
+    width: 4rem;
+  /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+  .BranchesListItemHeaderItemContainerZip {
     width: 8rem;
   /* customized on top */
     text-align: center;

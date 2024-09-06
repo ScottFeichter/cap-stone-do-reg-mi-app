@@ -46,9 +46,9 @@ function FacilitiesList(){
 
 
     // THE MAP IS OVER CURRENT POST WHEN USING PAGINATION!!!!!!!!!!
-    // academicDepartment, id where in parens 60
+    // facility, id where in parens 60
 
-    console.log("facilitiesList: ", facilitiesList)
+    // console.log("facilitiesList: ", facilitiesList)
 
 
     return(
@@ -57,11 +57,11 @@ function FacilitiesList(){
       <FacilitiesListItemHeader />
 
       <div className="FacilitiesListContainer">
-        {facilitiesList.map((academicDepartment) => {
+        {facilitiesList.map((facility) => {
           return (
             <FacilitiesListItem
-              academicDepartment={academicDepartment}
-              key={academicDepartment.id}
+              facility={facility}
+              key={facility.id}
               // totalPages={facilitiesList.length}
               // facilitiesPerPage={facilitiesPerPage}
             />

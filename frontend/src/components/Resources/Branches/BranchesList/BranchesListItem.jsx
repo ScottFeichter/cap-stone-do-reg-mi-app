@@ -22,8 +22,20 @@ function BranchesListItem({ branch }) {
           </Link>
         </div>
 
-        <div className="BranchesListItemContainerImageURL">
-          <p className="BranchesListItemP">{branch.imageURL ? branch.imageURL: "-"}</p>
+        <div className="BranchesListItemContainerStreet">
+          <p className="BranchesListItemP">{branch.street ? branch.street: "-"}</p>
+        </div>
+
+        <div className="BranchesListItemContainerCity">
+          <p className="BranchesListItemP">{branch.city ? branch.city: "-"}</p>
+        </div>
+
+        <div className="BranchesListItemContainerState">
+          <p className="BranchesListItemP">{branch.state ? branch.state: "-"}</p>
+        </div>
+
+        <div className="BranchesListItemContainerZip">
+          <p className="BranchesListItemP">{branch.zip ? branch.zip: "-"}</p>
         </div>
 
       </div>

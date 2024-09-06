@@ -19,9 +19,9 @@ function EditFacilityForm() {
         const navigate = useNavigate();
 
         const location = useLocation();
-        const {academicDepartmentToEdit} = location.state;
+        const {facilityToEdit} = location.state;
 
-        // console.log("academicDepartmentToEdit : ", academicDepartmentToEdit)
+        // console.log("facilityToEdit : ", facilityToEdit)
 
         const [errors, setErrors] = useState({});
 
@@ -39,13 +39,13 @@ function EditFacilityForm() {
 
 
             name	                    :	null	,
-            imageURL	                :	null	,
+            branch_Id	                :	null	,
 
         }
 
 
-    const [name,setName] = useState(academicDepartmentToEdit.name||"")
-    const [imageURL,setImageURL] = useState(academicDepartmentToEdit.imageURL||"")
+    const [name,setName] = useState(facilityToEdit.name||"")
+    const [branch_Id,setBranch_Id] = useState(facilityToEdit.branch_Id||"")
 
 
 
@@ -64,7 +64,7 @@ const checkRequired = () => {
 
     if(!name) {
         nameBool = true;
-        setErrorsName({name: "First Name 1 is required"});
+        setErrorsName({name: "Name is required"});
     } else {
         nameBool = false;
         setErrorsName({});
@@ -105,15 +105,15 @@ const checkRequired = () => {
 
 
          if(name)	    editedFacility	.	name	    =	name	    ;
-         if(imageURL)	editedFacility	.	imageURL	=	imageURL	;
+         if(branch_Id)	editedFacility	.	branch_Id	=	branch_Id	;
 
 
-         editedFacility.id = academicDepartmentToEdit.id;
+         editedFacility.id = facilityToEdit.id;
 
         //  console.log("editedFacility 423: ", editedFacility)
 
          // --------------------------MAKING THE DISPATCH---------------------//
-            let academicDepartmentId;
+            let facilityId;
             let editedFacilityDetails;
             if(editedFacilityDetails);
 
@@ -121,8 +121,8 @@ const checkRequired = () => {
             .then(response => {
                 dispatch(facilitiesActions.thunkGetFacilitiesAll())
                 // console.log("response 432: ", response, "response.payload", response.payload, "response.payload[0]", response.payload.id);
-                academicDepartmentId = response.payload.id
-                return academicDepartmentId
+                facilityId = response.payload.id
+                return facilityId
             }).catch(async (res) => {
                     // console.log("res 439", res);
                     const data = await res.json();
@@ -131,10 +131,10 @@ const checkRequired = () => {
                 }
             )
 
-            await dispatch(facilitiesActions.thunkGetFacilityById(academicDepartmentId)).then(response => {
+            await dispatch(facilitiesActions.thunkGetFacilityById(facilityId)).then(response => {
                 editedFacilityDetails = response;
 
-                navigate(`/departments`)
+                navigate(`/resources`)
                 return response
             });
 
@@ -145,7 +145,7 @@ const checkRequired = () => {
         return (
           <main id="EditFacilityMain">
 
-            <h1 id='EditFacilityH1'>Edit Employee Department</h1>
+            <h1 id='EditFacilityH1'>Edit Facility</h1>
 
 
                     <form id='EditFacilityForm' onSubmit={handleSubmit}>
@@ -153,10 +153,10 @@ const checkRequired = () => {
 {/* form section 1---------------------------------------------------------- */}
                         <section id="EditFacilityFormSection1">
 
-                            <h4 id="EditFacilityFormSection1H4">Personal Information</h4>
+                            <h4 id="EditFacilityFormSection1H4">Information</h4>
 
                             <p id="EditFacilityFormSection1P">
-                                Edit information for existing academicDepartment.
+                                Edit information for existing facility.
                             </p>
                             <h5 className='EditFacilityH5'>* indicates required field</h5>
 
@@ -185,24 +185,24 @@ const checkRequired = () => {
 
 
 
-                            <div id='imageURLContainer' className='EditFacilityFormLabelInputContainer'>
+                            <div id='branch_IdContainer' className='EditFacilityFormLabelInputContainer'>
 
                                         <label className='EditFacilityFormLabel'>
-                                            ImageURL:
+                                            Branch ID:
                                             <input
                                             className='EditFacilityFormInput'
-                                            id="imageURL"
-                                            name="imageURL"
+                                            id="branch_Id"
+                                            name="branch_Id"
                                             type="text"
-                                            placeholder='ImageURL'
-                                            value={imageURL}
-                                            onChange={(e) => setImageURL(e.target.value)}
+                                            placeholder='Branch_Id'
+                                            value={branch_Id}
+                                            onChange={(e) => setBranch_Id(e.target.value)}
 
                                             />
                                         </label>
 
                             </div>
-                            {errors.imageURL && <p className='EditFacilityErrors'>{errors.imageURL}</p>}
+                            {errors.branch_Id && <p className='EditFacilityErrors'>{errors.branch_Id}</p>}
 
 
                         </section>

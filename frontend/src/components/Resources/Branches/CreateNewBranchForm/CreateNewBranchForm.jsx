@@ -18,9 +18,14 @@ function CreateNewBranchForm() {
         const navigate = useNavigate();
 
         const [errors, setErrors] = useState({});
+        if(errors); // stop yelling at me
 
         //-----required
         const [errorsName, setErrorsName] = useState({});
+        const [errorsStreet, setErrorsStreet] = useState({});
+        const [errorsCity, setErrorsCity] = useState({});
+        const [errorsState, setErrorsState] = useState({});
+        const [errorsZip, setErrorsZip] = useState({});
         const [requiredFieldsMessage, setRequiredFieldsMessage] = useState({});
 
 
@@ -29,12 +34,19 @@ function CreateNewBranchForm() {
 
         let newBranch = {
             name	                    :	null	,
-            imageURL	                :	null	,
+            street	                    :	null	,
+            city	                    :	null	,
+            state	                    :	null	,
+            zip	                        :	null	,
         }
 
 
         const [name, setName] = useState("");
-        const [imageURL, setStreet] = useState("");
+        const [street, setStreet] = useState("");
+        const [city, setCity] = useState("");
+        const [state, setState] = useState("");
+        const [zip, setZip] = useState("");
+
 
 
 // HELPERS FOR CreateNewBranch Button handler---------------------------------------------------
@@ -43,18 +55,59 @@ function CreateNewBranchForm() {
 const checkRequired = () => {
 
     let nameBool = false;
+    let streetBool = false;
+    let cityBool = false;
+    let stateBool = false;
+    let zipBool = false;
 
     if(!name) {
         nameBool = true;
-        setErrorsName({name: "First Name 1 is required"});
+        setErrorsName({name: "Name 1 is required"});
     } else {
         nameBool = false;
         setErrorsName({});
     }
 
+    if(!street) {
+        streetBool = true;
+        setErrorsStreet({street: "Street 1 is required"});
+    } else {
+        streetBool = false;
+        setErrorsStreet({});
+    }
+
+    if(!city) {
+        cityBool = true;
+        setErrorsCity({city: "City 1 is required"});
+    } else {
+        cityBool = false;
+        setErrorsCity({});
+    }
+
+    if(!state) {
+        stateBool = true;
+        setErrorsState({state: "State 1 is required"});
+    } else {
+        stateBool = false;
+        setErrorsState({});
+    }
+
+
+    if(!zip) {
+        zipBool = true;
+        setErrorsZip({zip: "Zip 1 is required"});
+    } else {
+        zipBool = false;
+        setErrorsZip({});
+    }
+
 
     if (
-        (nameBool)
+        (nameBool) ||
+        (streetBool) ||
+        (cityBool) ||
+        (stateBool) ||
+        (zipBool)
     ) {
         return true
     } else {
@@ -88,7 +141,11 @@ const checkRequired = () => {
 
 
          if(	name	)	newBranch	.	name	=	name	;
-         if(	imageURL	)	newBranch	.	imageURL	=	imageURL	;
+         if(	street	)	newBranch	.	street	=	street	;
+         if(	city	)	newBranch	.	city	=	city	;
+         if(	state	)	newBranch	.	state	=	state	;
+         if(	zip	    )	newBranch	.	zip	    =	zip	    ;
+
 
         //  console.log("newBranch 448: ", newBranch)
 
@@ -173,26 +230,94 @@ const checkRequired = () => {
                             {errorsName.name && <p className='CreateNewBranchErrors'>{errorsName.name}</p>}
 
 
+                            <div id='streetContainer' className='CreateNewBranchFormLabelInputContainer'>
 
-                            <div id='ImageURLContainer' className='CreateNewBranchFormLabelInputContainer'>
-
+                                        <p className='CreateNewBranchFormRequired'>{required}</p>
                                         <label className='CreateNewBranchFormLabel'>
-                                            ImageURL:
+                                            Street :
+
                                             <input
                                             className='CreateNewBranchFormInput'
-                                            id="imageURL"
-                                            name="imageURL"
+                                            id="street"
+                                            name="street"
                                             type="text"
-                                            placeholder='ImageURL'
-                                            value={imageURL}
+                                            placeholder='Street'
+                                            value={street}
                                             onChange={(e) => setStreet(e.target.value)}
-
+                                            required
                                             />
                                         </label>
 
                             </div>
-                            {errors.imageURL && <p className='CreateNewBranchErrors'>{errors.imageURL}</p>}
+                            {errorsStreet.street && <p className='CreateNewBranchErrors'>{errorsStreet.street}</p>}
 
+
+                            <div id='cityContainer' className='CreateNewBranchFormLabelInputContainer'>
+
+                                        <p className='CreateNewBranchFormRequired'>{required}</p>
+                                        <label className='CreateNewBranchFormLabel'>
+                                            City :
+
+                                            <input
+                                            className='CreateNewBranchFormInput'
+                                            id="city"
+                                            name="city"
+                                            type="text"
+                                            placeholder='City'
+                                            value={city}
+                                            onChange={(e) => setCity(e.target.value)}
+                                            required
+                                            />
+                                        </label>
+
+                            </div>
+                            {errorsCity.city && <p className='CreateNewBranchErrors'>{errorsCity.city}</p>}
+
+
+
+                            <div id='stateContainer' className='CreateNewBranchFormLabelInputContainer'>
+
+                                        <p className='CreateNewBranchFormRequired'>{required}</p>
+                                        <label className='CreateNewBranchFormLabel'>
+                                            State :
+
+                                            <input
+                                            className='CreateNewBranchFormInput'
+                                            id="state"
+                                            name="state"
+                                            type="text"
+                                            placeholder='State'
+                                            value={state}
+                                            onChange={(e) => setState(e.target.value)}
+                                            required
+                                            />
+                                        </label>
+
+                            </div>
+                            {errorsState.state && <p className='CreateNewBranchErrors'>{errorsState.state}</p>}
+
+
+
+                            <div id='zipContainer' className='CreateNewBranchFormLabelInputContainer'>
+
+                                        <p className='CreateNewBranchFormRequired'>{required}</p>
+                                        <label className='CreateNewBranchFormLabel'>
+                                            Zip :
+
+                                            <input
+                                            className='CreateNewBranchFormInput'
+                                            id="zip"
+                                            name="zip"
+                                            type="text"
+                                            placeholder='Zip'
+                                            value={zip}
+                                            onChange={(e) => setZip(e.target.value)}
+                                            required
+                                            />
+                                        </label>
+
+                            </div>
+                            {errorsZip.zip && <p className='CreateNewBranchErrors'>{errorsZip.zip}</p>}
 
 
                         </section>
@@ -209,7 +334,7 @@ const checkRequired = () => {
                                 id="CreateNewBranchButton"
                                 type="submit"
                                 onClick={handleSubmit}
-                                >Create Employee Department
+                                >Create Branch
                             </button>
                         </div>
 

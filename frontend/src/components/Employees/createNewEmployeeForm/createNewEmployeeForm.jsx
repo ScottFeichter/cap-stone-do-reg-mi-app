@@ -22,7 +22,7 @@ function CreateNewEmployeeForm() {
         //-----required
         const [errorsFirstName, setErrorsFirstName] = useState({});
         const [errorsLastName, setErrorsLastName] = useState({});
-        const [errorsPersonalPhone, setErrorsPersonalPhone] = useState({});
+        const [errorsPhone, setErrorsPhone] = useState({});
         const [errorsFirstLang, setErrorsFirstLang] = useState({});
         const [errorsSsn, setErrorsSsn] = useState({});
         const [requiredFieldsMessage, setRequiredFieldsMessage] = useState({});
@@ -32,7 +32,7 @@ function CreateNewEmployeeForm() {
         //-----must be integers
         const [errorsEmployeeDepartment_Id, setErrorsEmployeeDepartment_Id] = useState({})
         const [errorsAcademicDepartment_Id, setErrorsAcademicDepartment_Id ] = useState({})
-        const [errorsUserType_Id, setErrorsUserType_Id ] = useState({})
+        const [errorsLevel_Id, setErrorsLevel_Id ] = useState({})
         const [errorsZip, setErrorsZip ] = useState({})
         const [errorsPrimaryPayRate, setErrorsPrimaryPayRate ] = useState({})
         const [errorsSecondaryPayRate, setErrorsSecondaryPayRate ] = useState({})
@@ -51,8 +51,8 @@ function CreateNewEmployeeForm() {
             middleName	            :	null	,
             lastName	            :	null	,
             familyName	            :	null	,
-            email	        :	null	,
-            phone	        :	null	,
+            email	                :	null	,
+            phone	                :	null	,
             street	                :	null	,
             city	                :	null	,
             state	                :	null	,
@@ -109,7 +109,7 @@ function CreateNewEmployeeForm() {
         const [lastName, setLastName] = useState("");
         const [familyName, setFamilyName] = useState("");
         const [email, setPersonalEmail] = useState("");
-        const [phone, setPersonalPhone] = useState("");
+        const [phone, setPhone] = useState("");
         const [street, setStreet] = useState("");
         const [city, setCity] = useState("");
         const [state, setState] = useState("");
@@ -124,7 +124,7 @@ function CreateNewEmployeeForm() {
 
         const [employeeDepartment_Id, setEmployeeDepartment_Id] = useState("");
         const [academicDepartment_Id, setAcademicDepartment_Id] = useState("");
-        const [level_Id, setUserType_Id] = useState("");
+        const [level_Id, setLevel_Id] = useState("");
         const [primaryTitle, setPrimaryTitle] = useState("");
         const [primaryStartDate, setPrimaryStartDate] = useState("");
         const [primaryEndDate, setPrimaryEndDate] = useState("");
@@ -200,10 +200,10 @@ const checkRequired = () => {
 
     if(!phone) {
         phoneBool = true;
-        setErrorsPersonalPhone({phone: "Personal Phone is required"});
+        setErrorsPhone({phone: "Personal Phone is required"});
     } else {
         phoneBool = false;
-        setErrorsPersonalPhone({});
+        setErrorsPhone({});
     }
 
     if(!firstLang) {
@@ -283,10 +283,10 @@ const checkInteger = () => {
 
     if(level_Id !== "" && (typeof level_IdNum !== "number" || isNaN(level_IdNum))){
         level_IdErrorBool = true;
-        setErrorsUserType_Id({level_Id: "User Type ID must be an integer"});
+        setErrorsLevel_Id({level_Id: "User Type ID must be an integer"});
     } else {
         level_IdErrorBool = false;
-        setErrorsUserType_Id({});
+        setErrorsLevel_Id({});
     }
 
 
@@ -629,14 +629,14 @@ const checkInteger = () => {
                                             type="text"
                                             placeholder='Personal Phone'
                                             value={phone}
-                                            onChange={(e) => setPersonalPhone(e.target.value)}
+                                            onChange={(e) => setPhone(e.target.value)}
                                             required
                                             />
                                         </label>
 
 
                             </div>
-                            {errorsPersonalPhone.phone && <p className='CreateNewEmployeeErrors'>{errorsPersonalPhone.phone}</p>}
+                            {errorsPhone.phone && <p className='CreateNewEmployeeErrors'>{errorsPhone.phone}</p>}
 
 
 
@@ -835,13 +835,13 @@ const checkInteger = () => {
                                             type="text"
                                             placeholder='User Type ID'
                                             value={level_Id}
-                                            onChange={(e) => setUserType_Id(e.target.value)}
+                                            onChange={(e) => setLevel_Id(e.target.value)}
 
                                             />
                                         </label>
 
                             </div>
-                            {errorsUserType_Id.level_Id && <p className='CreateNewEmployeeErrors'>{errorsUserType_Id.level_Id}</p>}
+                            {errorsLevel_Id.level_Id && <p className='CreateNewEmployeeErrors'>{errorsLevel_Id.level_Id}</p>}
 
 
 

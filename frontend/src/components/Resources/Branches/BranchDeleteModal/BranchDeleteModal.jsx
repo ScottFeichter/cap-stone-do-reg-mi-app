@@ -8,7 +8,7 @@ import "./BranchDeleteModal.css"
 
 function BranchDeleteModal({branch}) {
 
-    console.log("employee Department: ", branch);
+    // console.log("branch: ", branch);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();

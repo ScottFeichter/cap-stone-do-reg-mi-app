@@ -22,22 +22,20 @@ import FacilityDeleteModalButton from '../FacilityDeleteModal/FacilityDeleteModa
 function FacilityDetailsPage() {
 
   // const navigate = useNavigate();
-  let academicDepartment;
+  let facility;
   let facilities;
-  let academicDepartmentId;
-  let academicDepartmentParams;
+  let facilityId;
+  let facilityParams;
+
 
   // let location;
 
-  academicDepartmentParams = useParams();
-  academicDepartmentId  = academicDepartmentParams.academicDepartmentId;
+  facilityParams = useParams();
+  facilityId = facilityParams.facilityId;
   facilities = useSelector(state => state?.facilities?.facilities);
-  academicDepartment = facilities.find(academicDepartment => academicDepartment.id === +academicDepartmentId)
+  facility = facilities.find(facility => facility.id === +facilityId)
 
-  console.log("details", academicDepartmentParams, academicDepartmentId, facilities, "ep!!!!!!!!!!!!!", academicDepartment);
-
-
-
+  // console.log("facilityParams", facilityParams, "facilityId", facilityId, "facilities", facilities, "facility", facility);
 
 
 
@@ -48,7 +46,7 @@ const handleClickEditFacility = () => {
 
 
 
- if(!academicDepartment) return null; // will flick a blank page
+ if(!facility) return null; // will flick a blank page
 
  // THINGS THAT MAY TRIGGER A RE RENDER
  // change value of useState() hook
@@ -57,19 +55,19 @@ const handleClickEditFacility = () => {
  // RE RENDER MEANS THE DOM IS BEING UPDATE IN THE BROWSER - THE HTML IS CHANGING
  // BROWSER REFRESH COMPLETELY EMPTIES REDUX
 
-
+ console.log("facility", facility)
 
 //=================FUNCTION RETURN======================//
 
   return(
     <>
-        <h1 id={`${BASE_CLASS_NAME}H1`}>Employee Department Details</h1>
+        <h1 id={`${BASE_CLASS_NAME}H1`}>Facilities Details</h1>
         <main id={`${BASE_CLASS_NAME}Main`}>
 
             <nav id={`${BASE_CLASS_NAME}Nav`}>
 
-           <Link to='/editFacilityForm' state={{academicDepartmentToEdit: academicDepartment}} >
-           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditFacility}>Edit Employee Department</button>
+           <Link to='/editFacilityForm' state={{facilityToEdit: facility}} >
+           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditFacility}>Edit Facility</button>
            </Link>
 
 
@@ -82,15 +80,15 @@ const handleClickEditFacility = () => {
                 <FacilityDeleteModalButton
                             id="deleteFacilityModalButton"
                             buttonText="Delete Facility"
-                            modalComponent={<FacilityDeleteModal academicDepartment={academicDepartment} />}
+                            modalComponent={<FacilityDeleteModal facility={facility} />}
                             />
 
               </button> */}
 
               <FacilityDeleteModalButton
                 id={`${BASE_CLASS_NAME}DeleteButton`}
-                buttonText="Delete Employee Department"
-                modalComponent={<FacilityDeleteModal academicDepartment={academicDepartment} />}
+                buttonText="Delete Facility"
+                modalComponent={<FacilityDeleteModal facility={facility} />}
               />
 
             </nav>
@@ -98,7 +96,7 @@ const handleClickEditFacility = () => {
 
             <div>
 
-              <FacilityDetails academicDepartment={academicDepartment}></FacilityDetails>
+              <FacilityDetails facility={facility}></FacilityDetails>
 
 
 

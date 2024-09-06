@@ -29,7 +29,7 @@
 
 .BranchesListItemContainerID {
     font-size: .8rem;
-    width: 8rem;
+    width: 4rem;
    /* customized on top */
     text-align: center;
     display: flex;
@@ -58,7 +58,52 @@
     /* border: green 2px solid; */
   }
 
-  .BranchesListItemContainerImageURL {
+  .BranchesListItemContainerStreet {
+    font-size: .8rem;
+    width: 8rem;
+   /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .BranchesListItemContainerCity {
+    font-size: .8rem;
+    width: 8rem;
+   /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .BranchesListItemContainerState {
+    font-size: .8rem;
+    width: 4rem;
+   /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .BranchesListItemContainerZip {
     font-size: .8rem;
     width: 8rem;
    /* customized on top */

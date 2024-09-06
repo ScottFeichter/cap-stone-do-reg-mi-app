@@ -6,9 +6,9 @@ import "./FacilityDeleteModal.css"
 
 
 
-function FacilityDeleteModal({academicDepartment}) {
+function FacilityDeleteModal({facility}) {
 
-    console.log("employee Department: ", academicDepartment);
+    console.log("facility: ", facility);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -21,9 +21,9 @@ function FacilityDeleteModal({academicDepartment}) {
     const handleDelete = (e) => {
         e.preventDefault();
 
-        return dispatch(facilitiesActions.thunkDeleteFacility(academicDepartment))
+        return dispatch(facilitiesActions.thunkDeleteFacility(facility))
             .then(() => {return dispatch(facilitiesActions.thunkGetFacilitiesAll())})
-            .then(() => navigate('/facilities'))
+            .then(() => navigate('/resources'))
             .then(()=> closeModal())
     };
 
@@ -44,7 +44,7 @@ function FacilityDeleteModal({academicDepartment}) {
         <main id="FacilityDeleteModalMain">
 
             <h1 id="FacilityDeleteModalH1">Confirm Delete</h1>
-            <p id="FacilityDeleteModalP">Are you sure you want to remove this academicDepartment?</p>
+            <p id="FacilityDeleteModalP">Are you sure you want to remove this facility?</p>
 
             <div id="FacilityDeleteModalButtonContainer">
 
