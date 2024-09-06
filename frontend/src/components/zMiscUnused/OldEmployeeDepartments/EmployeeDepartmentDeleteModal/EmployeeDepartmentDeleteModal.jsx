@@ -1,12 +1,12 @@
-import { useModal } from "../../../context/Modal";
+import { useModal } from "../../../../context/Modal.jsx";
 import {useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import * as employeeDepartmentsActions from '../../../redux/employeeDepartmentsReducer.js';
+import * as employeeDepartmentsActions from '../../../../redux/employeeDepartmentsReducer.js';
 import "./EmployeeDepartmentDeleteModal.css"
 
 
 
-function EmployeeDepartmentDeleteModal({employeeDepartment}) {
+function EmployeeDepartmentDeleteModal({employee}) {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -19,9 +19,9 @@ function EmployeeDepartmentDeleteModal({employeeDepartment}) {
     const handleDelete = (e) => {
         e.preventDefault();
 
-        return dispatch(employeeDepartmentsActions.thunkDeleteEmployeeDepartment(employeeDepartment))
+        return dispatch(employeeDepartmentsActions.thunkDeleteEmployeeDepartment(employee))
             .then(() => {return dispatch(employeeDepartmentsActions.thunkGetEmployeeDepartmentsAll())})
-            .then(() => navigate('/employeeDepartments'))
+            .then(() => navigate('/employees'))
             .then(()=> closeModal())
     };
 
@@ -42,7 +42,7 @@ function EmployeeDepartmentDeleteModal({employeeDepartment}) {
         <main id="EmployeeDepartmentDeleteModalMain">
 
             <h1 id="EmployeeDepartmentDeleteModalH1">Confirm Delete</h1>
-            <p id="EmployeeDepartmentDeleteModalP">Are you sure you want to remove this employeeDepartment?</p>
+            <p id="EmployeeDepartmentDeleteModalP">Are you sure you want to remove this employee?</p>
 
             <div id="EmployeeDepartmentDeleteModalButtonContainer">
 
@@ -51,7 +51,7 @@ function EmployeeDepartmentDeleteModal({employeeDepartment}) {
                     name="YesEmployeeDepartmentDeleteButton"
                     type="button"
                     onClick={handleDelete}
-                >{"Yes (Delete EmployeeDepartment)"}</button>
+                >{"Yes (Delete Employee Department)"}</button>
 
 
                 <button
@@ -59,7 +59,7 @@ function EmployeeDepartmentDeleteModal({employeeDepartment}) {
                     name="NoKeepEmployeeDepartmentButton"
                     type="button"
                     onClick={handleKeep}
-                >{"No (Keep EmployeeDepartment)"}</button>
+                >{"No (Keep Employee Department)"}</button>
 
             </div>
 

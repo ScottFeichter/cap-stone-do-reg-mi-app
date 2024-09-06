@@ -1,7 +1,7 @@
 import './EmployeeDepartments.css';
 // import { useSelector } from 'react-redux';
 import {useNavigate} from 'react-router-dom'
-import EmployeeDepartmentsList from './EmployeeDepartmentsList/EmployeeDepartmentsList.jsx';
+import EmployeeDepartmentsList from './EmployeeDepartmentsList.jsx';
 // import EmployeeDepartmentsSearchBar from './EmployeeDepartmentsSearch/SearchBar/EmployeeDepartmentsSearchBar';
 
 function EmployeeDepartments() {
@@ -16,7 +16,7 @@ function EmployeeDepartments() {
 
   return(
     <>
-        <h1 id="EmployeeDepartmentsH1">EmployeeDepartments</h1>
+        <h1 id="EmployeeDepartmentsH1">Employee Departments</h1>
 
         <main id="EmployeeDepartmentsMain">
 
@@ -26,7 +26,7 @@ function EmployeeDepartments() {
             <nav id="EmployeeDepartmentsNav">
               {/* <input type="text" id="EmployeeDepartmentsSearchBar" placeholder="Search EmployeeDepartments" ></input> */}
 
-              <button id="EmployeeDepartmentsCreateButton" onClick={handleClick}>Create New EmployeeDepartment</button>
+              <button id="EmployeeDepartmentsCreateButton" onClick={handleClick}>Create Employee Department</button>
             </nav>
 
 

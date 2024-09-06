@@ -1,21 +1,21 @@
-#EmployeeDepartmentsMain{
+#EmployeeDepartmentDetailsPageMain{
+    text-align: center;
     overflow: hidden;
+    /* width: 1000px; */
     margin: 0 1rem 0 1rem;
     padding: .5rem .5rem .5rem .5rem;
-    /* border: 2px blue solid; */
-
+    /* border: grey 1px solid;
+    border-radius: 25px; */
 }
 
-#EmployeeDepartmentsNav{
+#EmployeeDepartmentDetailsPageNav{
     text-align: center;
-    /* margin: 0; */
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: space-evenly; */
-    /* border: var(--border); */
+    /* display: flex;
+    align-items: center;
+    justify-content: space-evenly; */
 }
 
-#EmployeeDepartmentsH1{
+#EmployeeDepartmentDetailsPageH1{
     text-align: center;
     font-size: 2.5rem;
     margin: 1rem 0 0 0;
@@ -23,19 +23,19 @@
 
 
 
-/*================= CREATE BUTTON =================*/
+/*================= EDIT BUTTON =================*/
 
-#EmployeeDepartmentsCreateButton {
+#EmployeeDepartmentDetailsPageEditButton {
     margin: 1rem .5rem 1rem .5rem;
-    width: 206px;
-    height: 30px;
+    width: 18rem;
+    height: 1.8rem;
     font-size: 1rem;
     font-weight: 500;
     border-radius: 5px;
 
 }
 
-#EmployeeDepartmentsCreateButton:enabled {
+#EmployeeDepartmentDetailsPageEditButton:enabled {
     color: var(--buttonColor);
     background-color: var(--buttonBackgroundColor);
     border: var(--buttonBorder);
@@ -58,21 +58,21 @@
 
 }
 
-#EmployeeDepartmentsCreateButton:disabled {
+#EmployeeDepartmentDetailsPageEditButton:disabled {
     color: var(--buttonDisabledColor);
     background-color: var(--buttonDisabledBackgroundColor);
     border: var(--buttonDisabledBorder);
 
 }
 
-#EmployeeDepartmentsCreateButton:enabled:hover {
+#EmployeeDepartmentDetailsPageEditButton:enabled:hover {
     color: var(--buttonHoverColor);
     background-color: var(--buttonHoverBackgroundColor);
     border: var(--buttonHoverBorder);
     cursor: pointer;
 }
 
-#EmployeeDepartmentsCreateButton:enabled:active{
+#EmployeeDepartmentDetailsPageEditButton:enabled:active{
     color: var(--buttonActiveColor);
     background-color: var(--buttonActiveBackgroundColor);
     border: var(--buttonActiveBorder);
@@ -81,45 +81,22 @@
 
 
 
+/*================= DELETE BUTTON =================*/
 
-
-/*================== SEARCH BAR ==================*/
-
-#EmployeeDepartmentsSearchBar::placeholder{
-    color: white;
-    text-align: center;
-    opacity: 1;
-}
-
-#EmployeeDepartmentsSearchBar:hover::placeholder{
-    color: black;
-    text-align: center;
-    opacity: 1;
-}
-
-#EmployeeDepartmentsSearchBar:focus::placeholder{
-    color: lightgrey;
-    text-align: center;
-    opacity: 1;
-    text-indent: -.5rem;
-}
-
-
-
-#EmployeeDepartmentsSearchBar {
+#EmployeeDepartmentDetailsPageDeleteButton {
     margin: 1rem .5rem 1rem .5rem;
-    width: 200px;
-    height: 25.5px;
+    width: 12rem;
+    height: 1.8rem;
     font-size: 1rem;
     font-weight: 500;
     border-radius: 5px;
+
 }
 
-
-#EmployeeDepartmentsSearchBar:enabled {
-    color: var(--searchBarColor);
-    background-color: var(--searchBarBackgroundColor);
-    border: var(--searchBarBorder);
+#EmployeeDepartmentDetailsPageDeleteButton:enabled {
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
 
 
     transition-delay: 0s;
@@ -136,31 +113,40 @@
     animation-fill-mode: both;
     animation-play-state: initial; */
 
+
 }
 
+#EmployeeDepartmentDetailsPageDeleteButton:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
 
-/* #EmployeeDepartmentsSearchBar:disabled {
-    color: var(--searchBarDisabledColor);
-    background-color: var(--searchBarDisabledBackgroundColor);
-    border: var(--searchBarDisabledBorder);
+}
 
-} */
+#EmployeeDepartmentDetailsPageDeleteButton:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
 
-#EmployeeDepartmentsSearchBar:enabled:hover {
-    color: color;
-    background-color: var(--green2);
-    border: 1px solid var(--green2);
+#EmployeeDepartmentDetailsPageDeleteButton:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
     cursor: pointer;
 }
 
 
+    /* spotDeleteButton-------------------------- */
 
-#EmployeeDepartmentsSearchBar:enabled:focus{
-    color: black;
-    background-color: white;
-    border: 1px grey solid; /* this not doing well its doing but is being overlaid by the browser */
-    outline: 1px solid var(--green2);
-	outline-offset: -2px;
-    text-indent: .5rem;
-    cursor: text;
+    #spotToManageUpdateHiddenButton {
+
+        color: none;
+        background-color: white;
+        border: none;
+        margin: 0;
+        padding: 0;
 }
+
+#deleteSpotModalButton{}

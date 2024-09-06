@@ -6,7 +6,7 @@ const BASE_CLASS_NAME = "EmployeeDepartmentDetailsPage";
 
 //==================OTHER IMPORTS=======================//
 
-// import { useNavigate } from 'react-router-dom'
+
 // import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
@@ -21,7 +21,7 @@ import EmployeeDepartmentDeleteModalButton from '../EmployeeDepartmentDeleteModa
 
 function EmployeeDepartmentDetailsPage() {
 
-  // const navigate = useNavigate();
+
   let employeeDepartment;
   let employeeDepartments;
   let employeeDepartmentId;
@@ -34,6 +34,12 @@ function EmployeeDepartmentDetailsPage() {
   employeeDepartments = useSelector(state => state?.employeeDepartments?.employeeDepartments);
   employeeDepartment = employeeDepartments.find(employeeDepartment => employeeDepartment.id === +employeeDepartmentId)
 
+  // if(!employeeDepartment){
+  //   location = useLocation();
+  //   employeeDepartment = location.state.employeeDepartment;
+  // }
+
+
 
 
 
@@ -45,29 +51,20 @@ const handleClickEditEmployeeDepartment = () => {
 }
 
 
-
- if(!employeeDepartment) return null; // will flick a blank page
-
- // THINGS THAT MAY TRIGGER A RE RENDER
- // change value of useState() hook
- // an update to the slice being tracked by useSelector()
-
- // RE RENDER MEANS THE DOM IS BEING UPDATE IN THE BROWSER - THE HTML IS CHANGING
- // BROWSER REFRESH COMPLETELY EMPTIES REDUX
-
+if(!employeeDepartment) return null;
 
 
 //=================FUNCTION RETURN======================//
 
   return(
     <>
-        <h1 id={`${BASE_CLASS_NAME}H1`}>EmployeeDepartment Details</h1>
+        <h1 id={`${BASE_CLASS_NAME}H1`}>Employee Department Details</h1>
         <main id={`${BASE_CLASS_NAME}Main`}>
 
             <nav id={`${BASE_CLASS_NAME}Nav`}>
 
            <Link to='/editEmployeeDepartmentForm' state={{employeeDepartmentToEdit: employeeDepartment}} >
-           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditEmployeeDepartment}>Edit EmployeeDepartment</button>
+           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditEmployeeDepartment}>Edit Employee Department</button>
            </Link>
 
 
@@ -75,11 +72,11 @@ const handleClickEditEmployeeDepartment = () => {
 
 
 {/*
-              <button id={`${BASE_CLASS_NAME}DeleteButton`} onClick={handleClickDeleteEmployeeDepartment}>
-                Delete EmployeeDepartment
+              <button id={`${BASE_CLASS_NAME}DeleteButton`} onClick={handleClickDeleteEmployee}>
+                Delete Employee
                 <EmployeeDepartmentDeleteModalButton
-                            id="deleteEmployeeDepartmentModalButton"
-                            buttonText="Delete EmployeeDepartment"
+                            id="deleteEmployeeModalButton"
+                            buttonText="Delete Employee"
                             modalComponent={<EmployeeDepartmentDeleteModal employeeDepartment={employeeDepartment} />}
                             />
 
@@ -87,7 +84,7 @@ const handleClickEditEmployeeDepartment = () => {
 
               <EmployeeDepartmentDeleteModalButton
                 id={`${BASE_CLASS_NAME}DeleteButton`}
-                buttonText="Delete EmployeeDepartment"
+                buttonText="Delete Employee Department"
                 modalComponent={<EmployeeDepartmentDeleteModal employeeDepartment={employeeDepartment} />}
               />
 
