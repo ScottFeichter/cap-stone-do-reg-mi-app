@@ -32,6 +32,10 @@ function EmployeeDetailsPage() {
   employeeParams = useParams();
   employeeId  = employeeParams.employeeId;
   employees = useSelector(state => state?.employees?.employees);
+
+  if(!employees.length) return null;
+
+
   employee = employees.find(employee => employee.id === +employeeId)
 
 

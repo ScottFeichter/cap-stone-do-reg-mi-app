@@ -16,7 +16,7 @@ function Facilities() {
 
   return(
     <>
-        <h1 id="FacilitiesH1">Employee Departments</h1>
+        <h1 id="FacilitiesH1">Facilities</h1>
 
         <main id="FacilitiesMain">
 
@@ -26,7 +26,7 @@ function Facilities() {
             <nav id="FacilitiesNav">
               {/* <input type="text" id="FacilitiesSearchBar" placeholder="Search Facilities" ></input> */}
 
-              <button id="FacilitiesCreateButton" onClick={handleClick}>Create New Employee Department</button>
+              <button id="FacilitiesCreateButton" onClick={handleClick}>Create New Facility</button>
             </nav>
 
 

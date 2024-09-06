@@ -16,7 +16,7 @@ function Branches() {
 
   return(
     <>
-        <h1 id="BranchesH1">Employee Departments</h1>
+        <h1 id="BranchesH1">Branches</h1>
 
         <main id="BranchesMain">
 
@@ -26,7 +26,7 @@ function Branches() {
             <nav id="BranchesNav">
               {/* <input type="text" id="BranchesSearchBar" placeholder="Search Branches" ></input> */}
 
-              <button id="BranchesCreateButton" onClick={handleClick}>Create New Employee Department</button>
+              <button id="BranchesCreateButton" onClick={handleClick}>Create New Branch</button>
             </nav>
 
 
