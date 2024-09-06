@@ -24,18 +24,19 @@ function FacilityDetailsPage() {
   // const navigate = useNavigate();
   let facility;
   let facilities;
-  let fid;
+  let facilityId;
   let facilityParams;
+
 
   // let location;
 
   facilityParams = useParams();
-  fid = facilityParams.facilityId;
+  facilityId = facilityParams.facilityId;
   facilities = useSelector(state => state?.facilities?.facilities);
   facility = facilities.find(facility => facility.id === 1)
 
 
-  console.log("facilityParams", facilityParams, "fid", fid, "facilities", facilities, "facility", facility);
+  console.log("facilityParams", facilityParams, "facilityId", facilityId, "facilities", facilities, "facility", facility);
 
 
 
@@ -45,8 +46,8 @@ const handleClickEditFacility = () => {
 }
 
 
- if(facilities.length === 0 || facilities === undefined) facility = {id: 1, name: "fake", branch_Id: 'fake'};
-//  if(!facility) return null; // will flick a blank page
+
+ if(!facility) return null; // will flick a blank page
 
  // THINGS THAT MAY TRIGGER A RE RENDER
  // change value of useState() hook

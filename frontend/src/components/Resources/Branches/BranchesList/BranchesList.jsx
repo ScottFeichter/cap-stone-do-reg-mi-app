@@ -48,7 +48,7 @@ function BranchesList(){
     // THE MAP IS OVER CURRENT POST WHEN USING PAGINATION!!!!!!!!!!
     // branch, id where in parens 60
 
-    console.log("branchesList: ", branchesList)
+    // console.log("branchesList: ", branchesList)
 
 
     return(

@@ -34,7 +34,7 @@ function BranchDetailsPage() {
   branches = useSelector(state => state?.branches?.branches);
   branch = branches.find(branch => branch.id === +branchId)
 
-  console.log("details", branchParams, branchId, branches, "ep!!!!!!!!!!!!!", branch);
+  // console.log("details", branchParams, branchId, branches, "ep!!!!!!!!!!!!!", branch);
 
 
 
@@ -63,13 +63,13 @@ const handleClickEditBranch = () => {
 
   return(
     <>
-        <h1 id={`${BASE_CLASS_NAME}H1`}>Employee Department Details</h1>
+        <h1 id={`${BASE_CLASS_NAME}H1`}>Branch Details</h1>
         <main id={`${BASE_CLASS_NAME}Main`}>
 
             <nav id={`${BASE_CLASS_NAME}Nav`}>
 
            <Link to='/editBranchForm' state={{branchToEdit: branch}} >
-           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditBranch}>Edit Employee Department</button>
+           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditBranch}>Edit Branch</button>
            </Link>
 
 
@@ -89,7 +89,7 @@ const handleClickEditBranch = () => {
 
               <BranchDeleteModalButton
                 id={`${BASE_CLASS_NAME}DeleteButton`}
-                buttonText="Delete Employee Department"
+                buttonText="Delete Branch"
                 modalComponent={<BranchDeleteModal branch={branch} />}
               />
 

@@ -2,7 +2,7 @@ import './FacilitiesListItem.css';
 import { Link } from "react-router-dom";
 
 function FacilitiesListItem({ facility }) {
-  console.log("facility in facilitiesListItem: ", facility);
+  // console.log("facility in facilitiesListItem: ", facility);
   return (
     <>
 

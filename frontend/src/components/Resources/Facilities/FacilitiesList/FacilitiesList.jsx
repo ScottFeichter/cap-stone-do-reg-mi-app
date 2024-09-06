@@ -48,7 +48,7 @@ function FacilitiesList(){
     // THE MAP IS OVER CURRENT POST WHEN USING PAGINATION!!!!!!!!!!
     // facility, id where in parens 60
 
-    console.log("facilitiesList: ", facilitiesList)
+    // console.log("facilitiesList: ", facilitiesList)
 
 
     return(
