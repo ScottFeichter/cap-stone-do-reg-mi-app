@@ -134,7 +134,7 @@ const checkRequired = () => {
         return (
           <main id="CreateNewEmployeeDepartmentMain">
 
-            <h1 id='CreateNewEmployeeDepartmentH1'>Create A New EmployeeDepartment</h1>
+            <h1 id='CreateNewEmployeeDepartmentH1'>Create A New Employee Department</h1>
 
 
                     <form id='CreateNewEmployeeDepartmentForm' onSubmit={handleSubmit}>
@@ -142,10 +142,10 @@ const checkRequired = () => {
 {/* form section 1---------------------------------------------------------- */}
                         <section id="CreateNewEmployeeDepartmentFormSection1">
 
-                            <h4 id="CreateNewEmployeeDepartmentFormSection1H4">Personal Information</h4>
+                            <h4 id="CreateNewEmployeeDepartmentFormSection1H4">Information</h4>
 
                             <p id="CreateNewEmployeeDepartmentFormSection1P">
-                                Enter personal information for new employeeDepartment.
+                                Enter information for new employeeDepartment.
                             </p>
                             <h5 className='CreateNewEmployeeDepartmentH5'>* indicates required field</h5>
 
