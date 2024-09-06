@@ -1,7 +1,7 @@
 import './Resources.css';
 // import { useSelector } from 'react-redux';
-import Branches from './Branches/Branches.jsx';
-import Facilities from './Facilities/Facilities.jsx';
+import Branches from './Branches/Branches.jsx'
+import Facilities from './Facilities/Facilities.jsx'
 
 function Resources() {
   // const branches = useSelector(state => state.branches.branches);
@@ -13,8 +13,8 @@ function Resources() {
     <>
         <main>
             <div>
-              <Branches></Branches>
-              <Facilities></Facilities>
+                <Branches></Branches>
+                <Facilities></Facilities>
             </div>
         </main>
     </>

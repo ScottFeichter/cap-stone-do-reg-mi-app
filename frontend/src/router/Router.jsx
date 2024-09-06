@@ -26,6 +26,19 @@ import ProfilePage from "../components/Profile/ProfilePage.jsx";
   // -----------RESOURCES-------------
 import Resources from "../components/Resources/Resources.jsx";
 
+ // ------------BRANCHES--------------
+
+ import BranchDetailsPage from "../components/Resources/Branches/BranchDetailsPage/BranchDetailsPage.jsx";
+ import CreateNewBranchForm from "../components/Resources/Branches/CreateNewBranchForm/CreateNewBranchForm.jsx";
+ import EditBranchForm from "../components/Resources/Branches/EditBranchForm/EditBranchForm.jsx";
+
+ // ------------FACILITIES------------
+
+ import FacilityDetailsPage from "../components/Resources/Facilities/FacilityDetailsPage/FacilityDetailsPage.jsx";
+ import CreateNewFacilityForm from "../components/Resources/Facilities/CreateNewFacilityForm/CreateNewFacilityForm.jsx";
+ import EditFacilityForm from "../components/Resources/Facilities/EditFacilityForm/EditFacilityForm.jsx";
+
+
 
   // -----------TEACHERS--------------
   import Teachers from "../components/Teachers/Teachers.jsx";
@@ -94,6 +107,40 @@ export const router = createBrowserRouter([
         },
 
 
+        // -------BRANCHES-------
+
+        {
+          path: "/branches/:branchId",
+          element: <BranchDetailsPage />
+        },
+        {
+          path: "/createNewBranchForm/",
+          element: <CreateNewBranchForm />,
+        },
+        {
+          path: "/editBranchForm/",
+          element: <EditBranchForm />,
+        },
+
+      // -------FACILITIES-------
+
+      {
+        path: "/facilities/:facilitytId",
+        element: <FacilityDetailsPage />
+      },
+      {
+        path: "/createNewFacilityForm/",
+        element: <CreateNewFacilityForm />,
+      },
+      {
+        path: "/editFacilityForm/",
+        element: <EditFacilityForm />,
+      },
+
+
+
+
+
       // -----------DEPARTMENTS------------
         {
           path: "/departments",
@@ -108,11 +155,11 @@ export const router = createBrowserRouter([
           element: <EmployeeDepartmentDetailsPage />
         },
         {
-          path: "/createNewEmployeeDepartmentForm/",
+          path: "/createNewFacilityForm/",
           element: <CreateNewEmployeeDepartmentForm />,
         },
         {
-          path: "/editEmployeeDepartmentForm/",
+          path: "/editFacilityForm/",
           element: <EditEmployeeDepartmentForm />,
         },
 

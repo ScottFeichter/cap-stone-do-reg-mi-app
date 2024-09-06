@@ -1,0 +1,152 @@
+#CreateNewBranchMain {
+
+}
+
+#CreateNewBranchH1 {
+    text-align: center;
+}
+
+.CreateNewBranchErrors {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin: -1rem 0 1.5rem 0;
+}
+
+.CreateNewBranchRequiredErrors {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin: 1rem 0 1.5rem 0;
+}
+
+
+#CreateNewBranchForm{
+    margin: 2rem 4rem 4rem 4rem;
+    padding: 0rem 0rem 0rem 0rem;
+    border: var(--border);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.CreateNewBranchFormLabelInputContainer {
+    display: flex;
+    justify-content: center;
+    /* border: 2px grey solid; */
+}
+
+.CreateNewBranchFormLabel {
+    color: black;
+    font-size: medium;
+    font-weight: 600;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+
+
+.CreateNewBranchFormInput {
+    font-size: small;
+    height: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 442px;
+}
+
+
+
+
+.CreateNewBranchFormRequired{
+    position:sticky;
+
+    margin: 1.25rem 0 0 -1rem;
+    padding: .5rem .5rem 0 0;
+    color: red;
+    font-size: medium;
+}
+
+
+
+
+
+.CreateNewBranchHr {
+    border: 1px grey solid;
+    width: 80%;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#CreateNewBranchFormSection1, #CreateNewBranchFormSection2, #CreateNewBranchFormSection3, #CreateNewBranchFormSection4, #CreateNewBranchFormSection5     {
+    width: 450px;
+}
+
+#CreateNewBranchFormSection1H4, #CreateNewBranchFormSection2H4, #CreateNewBranchFormSection3H4, #CreateNewBranchFormSection4H4, #CreateNewBranchFormSection5H4 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+    /* border: 2px solid grey; */
+}
+
+#CreateNewBranchFormSection1P, #CreateNewBranchFormSection2P, #CreateNewBranchFormSection3P, #CreateNewBranchFormSection4P, #CreateNewBranchFormSection5P {
+    text-align: center;
+    margin: -1rem 0 .5rem 0;
+    font-size: medium;
+    font-weight: 400;
+    color: black;
+}
+
+.CreateNewBranchH5 {
+    margin: 0rem 0 3rem 0;
+    color: red;
+    text-align: center;
+}
+
+
+
+#CreateNewBranchButton {
+    margin: 2rem 0 4rem 0;
+    width: 18rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 25px;
+}
+
+#CreateNewBranchButton:enabled {
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+}
+
+#CreateNewBranchButton:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#CreateNewBranchButton:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#CreateNewBranchButton:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}
