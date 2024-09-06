@@ -38,7 +38,7 @@ import Students from "../components/Students/Students.jsx";
 
   // -----------EMPLOYEES-------------
 import Employees from "../components/Employees/Employees.jsx";
-import CreateNewEmployeeForm from "../components/Departments/EmployeeDepartments/CreateNewEmployeeDepartmentForm/CreateNewEmployeeForm.jsx";
+import CreateNewEmployeeForm from "../components/Employees/CreateNewEmployeeForm/CreateNewEmployeeForm.jsx";
 import EditEmployeeForm from "../components/Employees/EditEmployeeForm/EditEmployeeForm.jsx";
 import EmployeeDetailPage from "../components/Employees/EmployeeDetailsPage/EmployeeDetailsPage.jsx";
 // import EmployeeDetails from "../components/Employees/EmployeeDetailsPage/EmployeeDetails.jsx";
