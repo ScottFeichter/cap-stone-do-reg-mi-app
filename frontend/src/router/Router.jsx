@@ -28,15 +28,15 @@ import Resources from "../components/Resources/Resources.jsx";
 
  // ------------BRANCHES--------------
 
- import BranchDetailsPage from "../components/Departments/Branches/BranchDetailsPage/BranchDetailsPage.jsx";
- import CreateNewBranchForm from "../components/Departments/Branches/CreateNewBranchForm/CreateNewBranchForm.jsx";
- import EditBranchForm from "../components/Departments/Branches/EditBranchForm/EditBranchForm.jsx";
+ import BranchDetailsPage from "../components/Resources/Branches/BranchDetailsPage/BranchDetailsPage.jsx";
+ import CreateNewBranchForm from "../components/Resources/Branches/CreateNewBranchForm/CreateNewBranchForm.jsx";
+ import EditBranchForm from "../components/Resources/Branches/EditBranchForm/EditBranchForm.jsx";
 
  // ------------FACILITIES------------
 
- import FacilityDetailsPage from "../components/Departments/Facilities/FacilityDetailsPage/FacilityDetailsPage.jsx";
- import CreateNewFacilityForm from "../components/Departments/Facilities/CreateNewFacilityForm/CreateNewFacilityForm.jsx";
- import EditFacilityForm from "../components/Departments/Facilities/EditFacilityForm/EditFacilityForm.jsx";
+ import FacilityDetailsPage from "../components/Resources/Facilities/FacilityDetailsPage/FacilityDetailsPage.jsx";
+ import CreateNewFacilityForm from "../components/Resources/Facilities/CreateNewFacilityForm/CreateNewFacilityForm.jsx";
+ import EditFacilityForm from "../components/Resources/Facilities/EditFacilityForm/EditFacilityForm.jsx";
 
 
 
