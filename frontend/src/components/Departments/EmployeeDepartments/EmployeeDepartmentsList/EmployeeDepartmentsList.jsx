@@ -45,19 +45,23 @@ function EmployeeDepartmentsList(){
     // console.log("currentPage: ", currentPage, "employeeDepartmentsPerPage : ", employeeDepartmentsPerPage, "lastPostIndex: ", lastPostIndex, "firstPostIndex: ", firstPostIndex, "currentPost: ", currentPost, "paginate: ");
 
 
-    // THE MAP IS OVER CURRENT POST WHEN USING PAGINATIO
+    // THE MAP IS OVER CURRENT POST WHEN USING PAGINATION!!!!!!!!!!
+    // employeeDepartment, id where in parens 60
+
+    console.log("employeeDepartmentsList: ", employeeDepartmentsList)
+
 
     return(
     <>
-    <main className="EmployeeDepartmentListMain">
+    <main className="EmployeeDepartmentsListMain">
       <EmployeeDepartmentsListItemHeader />
 
-      <div className="EmployeeDepartmentListContainer">
-        {employeeDepartmentsList.map((employeeDepartment, id) => {
+      <div className="EmployeeDepartmentsListContainer">
+        {employeeDepartmentsList.map((employeeDepartment) => {
           return (
             <EmployeeDepartmentsListItem
               employeeDepartment={employeeDepartment}
-              key={id}
+              key={employeeDepartment.id}
               // totalPages={employeeDepartmentsList.length}
               // employeeDepartmentsPerPage={employeeDepartmentsPerPage}
             />
