@@ -47,9 +47,17 @@ import EmployeeDetailPage from "../components/Employees/EmployeeDetailsPage/Empl
   // -----------DEPARTMENTS-----------
 import Departments from "../components/Departments/Departments.jsx";
 
+ // -------EMPLOYEE DEPARTMENTS-------
+
 import EmployeeDepartmentDetailsPage from "../components/Departments/EmployeeDepartments/EmployeeDepartmentDetailsPage/EmployeeDepartmentDetailsPage.jsx";
 import CreateNewEmployeeDepartmentForm from "../components/Departments/EmployeeDepartments/CreateNewEmployeeDepartmentForm/CreateNewEmployeeDepartmentForm.jsx";
 import EditEmployeeDepartmentForm from "../components/Departments/EmployeeDepartments/EditEmployeeDepartmentForm/EditEmployeeDepartmentForm.jsx";
+
+// -------ACADEMIC DEPARTMENTS-------
+
+import AcademicDepartmentDetailsPage from "../components/Departments/AcademicDepartments/AcademicDepartmentDetailsPage/AcademicDepartmentDetailsPage.jsx";
+import CreateNewAcademicDepartmentForm from "../components/Departments/AcademicDepartments/CreateNewAcademicDepartmentForm/CreateNewAcademicDepartmentForm.jsx";
+import EditAcademicDepartmentForm from "../components/Departments/AcademicDepartments/EditAcademicDepartmentForm/EditAcademicDepartmentForm.jsx";
 
 
  // -----------CATCH ALL--------------
@@ -107,6 +115,23 @@ export const router = createBrowserRouter([
           path: "/editEmployeeDepartmentForm/",
           element: <EditEmployeeDepartmentForm />,
         },
+
+      // -------ACADEMIC DEPARTMENTS-------
+
+      {
+        path: "/academicDepartments/:academicDepartmentId",
+        element: <AcademicDepartmentDetailsPage />
+      },
+      {
+        path: "/createNewAcademicDepartmentForm/",
+        element: <CreateNewAcademicDepartmentForm />,
+      },
+      {
+        path: "/editAcademicDepartmentForm/",
+        element: <EditAcademicDepartmentForm />,
+      },
+
+
 
 
 
