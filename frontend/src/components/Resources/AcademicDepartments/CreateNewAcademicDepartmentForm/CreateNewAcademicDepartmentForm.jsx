@@ -134,7 +134,7 @@ const checkRequired = () => {
         return (
           <main id="CreateNewAcademicDepartmentMain">
 
-            <h1 id='CreateNewAcademicDepartmentH1'>Create A New Academic Department</h1>
+            <h1 id='CreateNewAcademicDepartmentH1'>Create A New Employee Department</h1>
 
 
                     <form id='CreateNewAcademicDepartmentForm' onSubmit={handleSubmit}>
@@ -209,7 +209,7 @@ const checkRequired = () => {
                                 id="CreateNewAcademicDepartmentButton"
                                 type="submit"
                                 onClick={handleSubmit}
-                                >Create Academic Department
+                                >Create Employee Department
                             </button>
                         </div>
 

@@ -63,13 +63,13 @@ const handleClickEditAcademicDepartment = () => {
 
   return(
     <>
-        <h1 id={`${BASE_CLASS_NAME}H1`}>Academic Department Details</h1>
+        <h1 id={`${BASE_CLASS_NAME}H1`}>Employee Department Details</h1>
         <main id={`${BASE_CLASS_NAME}Main`}>
 
             <nav id={`${BASE_CLASS_NAME}Nav`}>
 
            <Link to='/editAcademicDepartmentForm' state={{academicDepartmentToEdit: academicDepartment}} >
-           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditAcademicDepartment}>Edit Academic Department</button>
+           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditAcademicDepartment}>Edit Employee Department</button>
            </Link>
 
 
@@ -89,7 +89,7 @@ const handleClickEditAcademicDepartment = () => {
 
               <AcademicDepartmentDeleteModalButton
                 id={`${BASE_CLASS_NAME}DeleteButton`}
-                buttonText="Delete Academic Department"
+                buttonText="Delete Employee Department"
                 modalComponent={<AcademicDepartmentDeleteModal academicDepartment={academicDepartment} />}
               />
 

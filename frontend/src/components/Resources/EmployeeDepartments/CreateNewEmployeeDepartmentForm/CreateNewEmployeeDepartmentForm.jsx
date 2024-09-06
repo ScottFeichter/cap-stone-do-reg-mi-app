@@ -1,16 +1,16 @@
-import './CreateNewAcademicDepartmentForm.css';
-// const BASE_CLASS_NAME = "CreateNewAcademicDepartmentForm"
+import './CreateNewEmployeeDepartmentForm.css';
+// const BASE_CLASS_NAME = "CreateNewEmployeeDepartmentForm"
 
 
 import {useState } from 'react';
 import {useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 // import { useEffect } from 'react';
-import * as academicDepartmentsActions from '../../../../redux/academicDepartmentsReducer.js';
+import * as employeeDepartmentsActions from '../../../../redux/employeeDepartmentsReducer.js';
 
 
 
-function CreateNewAcademicDepartmentForm() {
+function CreateNewEmployeeDepartmentForm() {
 
         const required = "*";
 
@@ -27,7 +27,7 @@ function CreateNewAcademicDepartmentForm() {
         // const [isDisabled, setIsDisabled] = useState(false);
 
 
-        let newAcademicDepartment = {
+        let newEmployeeDepartment = {
             name	                    :	null	,
             imageURL	                :	null	,
         }
@@ -37,7 +37,7 @@ function CreateNewAcademicDepartmentForm() {
         const [imageURL, setStreet] = useState("");
 
 
-// HELPERS FOR CreateNewAcademicDepartment Button handler---------------------------------------------------
+// HELPERS FOR CreateNewEmployeeDepartment Button handler---------------------------------------------------
 
 // helper for handleSubmit check required fields
 const checkRequired = () => {
@@ -87,24 +87,24 @@ const checkRequired = () => {
 
 
 
-         if(	name	)	newAcademicDepartment	.	name	=	name	;
-         if(	imageURL	)	newAcademicDepartment	.	imageURL	=	imageURL	;
+         if(	name	)	newEmployeeDepartment	.	name	=	name	;
+         if(	imageURL	)	newEmployeeDepartment	.	imageURL	=	imageURL	;
 
-        //  console.log("newAcademicDepartment 448: ", newAcademicDepartment)
+        //  console.log("newEmployeeDepartment 448: ", newEmployeeDepartment)
 
          // --------------------------MAKING THE DISPATCH---------------------//
-            let academicDepartmentId;
-            let newAcademicDepartmentDetails;
-            if(newAcademicDepartmentDetails);
+            let employeeDepartmentId;
+            let newEmployeeDepartmentDetails;
+            if(newEmployeeDepartmentDetails);
 
-            await dispatch(academicDepartmentsActions.thunkCreateAcademicDepartment(newAcademicDepartment))
+            await dispatch(employeeDepartmentsActions.thunkCreateEmployeeDepartment(newEmployeeDepartment))
             .then(response => {
                 return response
             })
             .then(response => {
-                academicDepartmentId = response.payload[0].id;
-                dispatch(academicDepartmentsActions.thunkGetAcademicDepartmentsAll());
-                return academicDepartmentId;
+                employeeDepartmentId = response.payload[0].id;
+                dispatch(employeeDepartmentsActions.thunkGetEmployeeDepartmentsAll());
+                return employeeDepartmentId;
             }).catch(async (res) => {
                     const data = await res.json();
                     if (data.errors) setErrors(data.errors);
@@ -112,15 +112,15 @@ const checkRequired = () => {
                 }
             )
 
-            await dispatch(academicDepartmentsActions.thunkGetAcademicDepartmentsAll()).then((response) => {
-                dispatch(academicDepartmentsActions.thunkGetAcademicDepartmentById(academicDepartmentId));
+            await dispatch(employeeDepartmentsActions.thunkGetEmployeeDepartmentsAll()).then((response) => {
+                dispatch(employeeDepartmentsActions.thunkGetEmployeeDepartmentById(employeeDepartmentId));
                 return response
             }).then(response => {
-                dispatch(academicDepartmentsActions.thunkGetAcademicDepartmentsAll())
+                dispatch(employeeDepartmentsActions.thunkGetEmployeeDepartmentsAll())
                 return response
             }).then(response => {
-                newAcademicDepartmentDetails = response;
-                navigate(`/academicDepartments/${academicDepartmentId}`)
+                newEmployeeDepartmentDetails = response;
+                navigate(`/employeeDepartments/${employeeDepartmentId}`)
                 return response
             });
 
@@ -132,33 +132,33 @@ const checkRequired = () => {
 
 // return-----------------------------------
         return (
-          <main id="CreateNewAcademicDepartmentMain">
+          <main id="CreateNewEmployeeDepartmentMain">
 
-            <h1 id='CreateNewAcademicDepartmentH1'>Create A New Academic Department</h1>
+            <h1 id='CreateNewEmployeeDepartmentH1'>Create A New Employee Department</h1>
 
 
-                    <form id='CreateNewAcademicDepartmentForm' onSubmit={handleSubmit}>
+                    <form id='CreateNewEmployeeDepartmentForm' onSubmit={handleSubmit}>
 
 {/* form section 1---------------------------------------------------------- */}
-                        <section id="CreateNewAcademicDepartmentFormSection1">
+                        <section id="CreateNewEmployeeDepartmentFormSection1">
 
-                            <h4 id="CreateNewAcademicDepartmentFormSection1H4">Information</h4>
+                            <h4 id="CreateNewEmployeeDepartmentFormSection1H4">Information</h4>
 
-                            <p id="CreateNewAcademicDepartmentFormSection1P">
-                                Enter information for new academicDepartment.
+                            <p id="CreateNewEmployeeDepartmentFormSection1P">
+                                Enter information for new employeeDepartment.
                             </p>
-                            <h5 className='CreateNewAcademicDepartmentH5'>* indicates required field</h5>
+                            <h5 className='CreateNewEmployeeDepartmentH5'>* indicates required field</h5>
 
 
 
-                            <div id='nameContainer' className='CreateNewAcademicDepartmentFormLabelInputContainer'>
+                            <div id='nameContainer' className='CreateNewEmployeeDepartmentFormLabelInputContainer'>
 
-                                        <p className='CreateNewAcademicDepartmentFormRequired'>{required}</p>
-                                        <label className='CreateNewAcademicDepartmentFormLabel'>
+                                        <p className='CreateNewEmployeeDepartmentFormRequired'>{required}</p>
+                                        <label className='CreateNewEmployeeDepartmentFormLabel'>
                                             Name :
 
                                             <input
-                                            className='CreateNewAcademicDepartmentFormInput'
+                                            className='CreateNewEmployeeDepartmentFormInput'
                                             id="name"
                                             name="name"
                                             type="text"
@@ -170,16 +170,16 @@ const checkRequired = () => {
                                         </label>
 
                             </div>
-                            {errorsName.name && <p className='CreateNewAcademicDepartmentErrors'>{errorsName.name}</p>}
+                            {errorsName.name && <p className='CreateNewEmployeeDepartmentErrors'>{errorsName.name}</p>}
 
 
 
-                            <div id='ImageURLContainer' className='CreateNewAcademicDepartmentFormLabelInputContainer'>
+                            <div id='ImageURLContainer' className='CreateNewEmployeeDepartmentFormLabelInputContainer'>
 
-                                        <label className='CreateNewAcademicDepartmentFormLabel'>
+                                        <label className='CreateNewEmployeeDepartmentFormLabel'>
                                             ImageURL:
                                             <input
-                                            className='CreateNewAcademicDepartmentFormInput'
+                                            className='CreateNewEmployeeDepartmentFormInput'
                                             id="imageURL"
                                             name="imageURL"
                                             type="text"
@@ -191,25 +191,25 @@ const checkRequired = () => {
                                         </label>
 
                             </div>
-                            {errors.imageURL && <p className='CreateNewAcademicDepartmentErrors'>{errors.imageURL}</p>}
+                            {errors.imageURL && <p className='CreateNewEmployeeDepartmentErrors'>{errors.imageURL}</p>}
 
 
 
                         </section>
 
-                        <hr className='CreateNewAcademicDepartmentHr'></hr>
+                        <hr className='CreateNewEmployeeDepartmentHr'></hr>
 
 {/* form button---------------------------------------------------------- */}
-                        {requiredFieldsMessage.message && <p className='CreateNewAcademicDepartmentRequiredErrors'>{requiredFieldsMessage.message}</p>}
+                        {requiredFieldsMessage.message && <p className='CreateNewEmployeeDepartmentRequiredErrors'>{requiredFieldsMessage.message}</p>}
 
 
                         <div id="buttonContainer">
 
                             <button
-                                id="CreateNewAcademicDepartmentButton"
+                                id="CreateNewEmployeeDepartmentButton"
                                 type="submit"
                                 onClick={handleSubmit}
-                                >Create Academic Department
+                                >Create Employee Department
                             </button>
                         </div>
 
@@ -223,4 +223,4 @@ const checkRequired = () => {
 
 
 
-export default CreateNewAcademicDepartmentForm;
+export default CreateNewEmployeeDepartmentForm;

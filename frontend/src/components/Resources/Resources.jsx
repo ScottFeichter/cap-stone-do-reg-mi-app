@@ -1,6 +1,7 @@
 import './Resources.css';
-
 // import { useSelector } from 'react-redux';
+import Branches from './Branches/Branches.jsx';
+import Facilities from './Facilities/Facilities.jsx';
 
 function Resources() {
   // const branches = useSelector(state => state.branches.branches);
@@ -12,7 +13,8 @@ function Resources() {
     <>
         <main>
             <div>
-                <h1>This is Resources!</h1>
+              <Branches></Branches>
+              <Facilities></Facilities>
             </div>
         </main>
     </>

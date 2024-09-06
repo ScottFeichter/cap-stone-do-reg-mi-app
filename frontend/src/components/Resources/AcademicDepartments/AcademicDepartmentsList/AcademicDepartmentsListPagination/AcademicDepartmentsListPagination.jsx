@@ -1,9 +1,9 @@
-import './AcademicListAcademicDepartmentsListPagination.css'
+import './EmployeeListAcademicDepartmentsListPagination.css'
 
-function AcademicDepartmentsListPagination({ AcademicsPerPage, totalPages, paginate }) {
+function AcademicDepartmentsListPagination({ employeesPerPage, totalPages, paginate }) {
     let pages = [];
 
-    for (let i = 1; i < Math.ceil(totalPages / AcademicsPerPage); i++) {
+    for (let i = 1; i < Math.ceil(totalPages / employeesPerPage); i++) {
       pages.push(i);
     }
 

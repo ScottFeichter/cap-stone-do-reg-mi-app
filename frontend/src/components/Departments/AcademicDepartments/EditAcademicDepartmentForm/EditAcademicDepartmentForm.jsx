@@ -145,7 +145,7 @@ const checkRequired = () => {
         return (
           <main id="EditAcademicDepartmentMain">
 
-            <h1 id='EditAcademicDepartmentH1'>Edit Employee Department</h1>
+            <h1 id='EditAcademicDepartmentH1'>Edit Academic Department</h1>
 
 
                     <form id='EditAcademicDepartmentForm' onSubmit={handleSubmit}>
