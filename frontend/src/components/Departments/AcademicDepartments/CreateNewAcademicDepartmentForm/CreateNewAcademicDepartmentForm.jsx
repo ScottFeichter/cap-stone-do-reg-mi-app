@@ -29,12 +29,15 @@ function CreateNewAcademicDepartmentForm() {
 
         let newAcademicDepartment = {
             name	                    :	null	,
+            chair	                    :	null	,
             imageURL	                :	null	,
         }
 
 
         const [name, setName] = useState("");
+        const [chair,setChair] = useState("")
         const [imageURL, setStreet] = useState("");
+
 
 
 // HELPERS FOR CreateNewAcademicDepartment Button handler---------------------------------------------------
@@ -87,8 +90,9 @@ const checkRequired = () => {
 
 
 
-         if(	name	)	newAcademicDepartment	.	name	=	name	;
-         if(	imageURL	)	newAcademicDepartment	.	imageURL	=	imageURL	;
+         if(name)       newAcademicDepartment	.	name	    =	name	    ;
+         if(chair)	    newAcademicDepartment	.	chair	    =	chair	    ;
+         if(imageURL)	newAcademicDepartment	.	imageURL	=	imageURL	;
 
         //  console.log("newAcademicDepartment 448: ", newAcademicDepartment)
 
@@ -171,6 +175,28 @@ const checkRequired = () => {
 
                             </div>
                             {errorsName.name && <p className='CreateNewAcademicDepartmentErrors'>{errorsName.name}</p>}
+
+
+                            <div id='chairContainer' className='EditAcademicDepartmentFormLabelInputContainer'>
+
+
+                            <label className='EditAcademicDepartmentFormLabel'>
+                                Chair:
+
+                                <input
+                                className='EditAcademicDepartmentFormInput'
+                                id="chair"
+                                name="chair"
+                                type="text"
+                                placeholder='Chair'
+                                value={chair}
+                                onChange={(e) => setChair(e.target.value)}
+                                required
+                                />
+                            </label>
+
+                            </div>
+                            {errors.chair && <p className='EditAcademicDepartmentErrors'>{errors.chair}</p>}
 
 
 
