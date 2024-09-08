@@ -13,7 +13,7 @@
 
 
 
-/* ============================H4 CONTAINER======================= */
+/* ============================TRANSPORT CONTAINER======================= */
 
 
 #CreateNewBranchTransportContainer{
@@ -124,23 +124,6 @@
 
 
 
-
-
-
-/* =========================SECTION 1 H4======================== */
-
-#CreateNewBranchFormSection1H4{
-    text-align: center;
-    text-decoration: underline;
-    font-size: x-large;
-    font-weight: bold;
-    color: black;
-    /* border: 2px solid grey; */
-}
-
-
-
-
 /* =========================FORM======================== */
 
 
@@ -225,7 +208,7 @@
 }
 
 
-#CreateNewBranchFormSection2H4, #CreateNewBranchFormSection3H4, #CreateNewBranchFormSection4H4, #CreateNewBranchFormSection5H4 {
+#CreateNewBranchFormSection1H4, #CreateNewBranchFormSection2H4, #CreateNewBranchFormSection3H4, #CreateNewBranchFormSection4H4, #CreateNewBranchFormSection5H4 {
     text-align: center;
     text-decoration: underline;
     font-size: x-large;

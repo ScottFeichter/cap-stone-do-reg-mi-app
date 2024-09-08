@@ -98,7 +98,7 @@ const checkRequired = () => {
 
     if(!zip) {
         zipBool = true;
-        setErrorsZip({zip: "Zip 1 is required"});
+        setErrorsZip({zip: "Zip is required"});
     } else {
         zipBool = false;
         setErrorsZip({});
@@ -205,7 +205,7 @@ const checkRequired = () => {
         // }
 
 
-// return-----------------------------------
+// return================================
         return (
           <main id="CreateNewBranchMain">
 

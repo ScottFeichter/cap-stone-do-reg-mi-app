@@ -1,5 +1,5 @@
 import './Logo.css';
-import logo from '../../../../../ADMIN/images/logoDraft5.png'
+import logoDraft5 from '../../../../../ADMIN/images/logoDraft5.png'
 
 function Logo() {
 
@@ -9,7 +9,7 @@ function Logo() {
     <>
       <main id="LogoMain">
 
-          <img id="LogoImg" src={logo} alt="DoRegMi" ></img>
+          <img id="LogoImg" src={logoDraft5} alt="DoRegMi" ></img>
 
       </main>
     </>
