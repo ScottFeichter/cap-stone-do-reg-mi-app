@@ -152,6 +152,7 @@ const checkRequired = () => {
     let lastNameBool = false;
     let phoneBool = false;
     let firstLangBool = false;
+    let headOfHouseholdBool = false;
 
 
 
@@ -188,13 +189,23 @@ const checkRequired = () => {
         setErrorsFirstLang({})
     }
 
+    if(!headOfHousehold) {
+        headOfHouseholdBool = true;
+        setErrorsFirstLang({headOfHousehold: "Head of Household True or False is required"});
+
+    } else {
+        headOfHouseholdBool = false;
+        setErrorsFirstLang({})
+    }
+
 
 
     if (
         (firstNameBool) ||
-        (lastNameBool) ||
-        (phoneBool) ||
-        (firstLangBool)
+        (lastNameBool)  ||
+        (phoneBool)     ||
+        (firstLangBool) ||
+        (headOfHouseholdBool)
     ) {
         return true
     } else {
@@ -265,12 +276,12 @@ const checkInteger = () => {
 const checkBool = () => {
 
 
-    let headOfHouseholdBool = headOfHousehold;
+
     let headOfHouseholdErrorBool = false;
 
 
 
-    if(headOfHousehold !== "" && (typeof !!headOfHouseholdBool !== "boolean")) {
+    if(headOfHousehold !== "" && (typeof !!headOfHousehold !== "boolean")) {
         headOfHouseholdErrorBool = true;
         setErrorsHeadOfHousehold({headOfHousehold: "Head of Household must be True or False"});
     } else {
@@ -723,6 +734,7 @@ const checkBool = () => {
 
                             <div id='headOfHouseholdContainer' className='CreateNewStudentFormLabelInputContainer'>
 
+                                        <p className='CreateNewStudentFormRequired'>{required}</p>
                                         <label className='CreateNewStudentFormLabel'>
                                             Head Of Household:
                                             <input
