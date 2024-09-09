@@ -88,6 +88,7 @@ const handleClickEditBranch = () => {
               </button> */}
 
               <BranchDeleteModalButton
+                // contentClassName={`${BASE_CLASS_NAME}CustomModal`}
                 id={`${BASE_CLASS_NAME}DeleteButton`}
                 buttonText="Delete Branch"
                 modalComponent={<BranchDeleteModal branch={branch} />}

@@ -7,6 +7,11 @@ import {useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 // import { useEffect } from 'react';
+
+import { TbPlayerSkipBackFilled } from "react-icons/tb";
+// import { TbPlayerSkipForwardFilled } from "react-icons/tb";
+
+
 import * as branchesActions from '../../../../redux/branchesReducer.js';
 
 
@@ -77,7 +82,7 @@ const checkRequired = () => {
 
     if(!name) {
         nameBool = true;
-        setErrorsName({name: "Name 1 is required"});
+        setErrorsName({name: "Name is required"});
     } else {
         nameBool = false;
         setErrorsName({});
@@ -85,7 +90,7 @@ const checkRequired = () => {
 
     if(!street) {
         streetBool = true;
-        setErrorsStreet({street: "Street 1 is required"});
+        setErrorsStreet({street: "Street is required"});
     } else {
         streetBool = false;
         setErrorsStreet({});
@@ -93,7 +98,7 @@ const checkRequired = () => {
 
     if(!city) {
         cityBool = true;
-        setErrorsCity({city: "City 1 is required"});
+        setErrorsCity({city: "City is required"});
     } else {
         cityBool = false;
         setErrorsCity({});
@@ -101,7 +106,7 @@ const checkRequired = () => {
 
     if(!state) {
         stateBool = true;
-        setErrorsState({state: "State 1 is required"});
+        setErrorsState({state: "State is required"});
     } else {
         stateBool = false;
         setErrorsState({});
@@ -110,7 +115,7 @@ const checkRequired = () => {
 
     if(!zip) {
         zipBool = true;
-        setErrorsZip({zip: "Zip 1 is required"});
+        setErrorsZip({zip: "Zip is required"});
     } else {
         zipBool = false;
         setErrorsZip({});
@@ -194,11 +199,46 @@ const checkRequired = () => {
             // console.log('HANDLE SUBMIT NEW EMPLOYEE HAS FINISHED RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
         }
 
-// return-----------------------------------
+
+// =====================TRANSPORT BUTTONS HANDLERS=========================
+
+        // -----------------------------HANDLE BACK -------------------------------//
+        const handleBackClick = async (e) => {
+            e.preventDefault();
+            // console.log('HANDLE BACK');
+            navigate(`/branches/${branchToEdit.id}`);
+        }
+
+        // -----------------------------HANDLE FORWARD -------------------------------//
+        // const handleForthClick = async (e) => {
+        //     e.preventDefault();
+        //     // console.log('HANDLE FORTH');
+        //     navigate('/createNewFacilityForm');
+        // }
+
+
+
+
+
+// return=================================
         return (
           <main id="EditBranchMain">
 
-            <h1 id='EditBranchH1'>Edit Employee Department</h1>
+            <h1 id='EditBranchH1'>Edit Branch</h1>
+
+
+            <div id="EditBranchTransportContainer">
+
+                <button  id='EditBranchBack' onClick={handleBackClick}>
+                    <TbPlayerSkipBackFilled id={`EditBranchTbPlayerBack`} />Back To Details
+                </button>
+
+
+                {/* <button id='EditBranchForth' onClick={handleForthClick}>Forth
+                    <TbPlayerSkipForwardFilled id={`EditBranchTbPlayerForth`} />
+                </button> */}
+
+            </div>
 
 
                     <form id='EditBranchForm' onSubmit={handleSubmit}>
@@ -206,7 +246,7 @@ const checkRequired = () => {
 {/* form section 1---------------------------------------------------------- */}
                         <section id="EditBranchFormSection1">
 
-                            <h4 id="EditBranchFormSection1H4">Personal Information</h4>
+                            <h4 id="EditBranchFormSection1H4">Information</h4>
 
                             <p id="EditBranchFormSection1P">
                                 Edit information for existing branch.

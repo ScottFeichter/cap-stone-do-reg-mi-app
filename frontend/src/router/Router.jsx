@@ -12,7 +12,7 @@ import Layout from "./Layout";
 
 
   // -----------SIGNUP----------------
-import SignupFormModal from "../components/Session/SignupForm/SignupFormModal/SignupFormModal.jsx";
+import SignupForm from "../components/Session/SignupForm/SignupForm.jsx";
 
 
   // -----------HOME------------------
@@ -42,46 +42,57 @@ import Resources from "../components/Resources/Resources.jsx";
 
   // -----------TEACHERS--------------
   import Teachers from "../components/Teachers/Teachers.jsx";
+  // import CreateNewTeacherForm from "../components/Teachers/CreateNewTeacherForm/CreateNewTeacherForm.jsx";
+  // import EditTeacherForm from "../components/Teachers/EditTeacherForm/EditTeacherForm.jsx";
+  // import TeacherDetailPage from "../components/Teachers/TeacherDetailsPage/TeacherDetailsPage.jsx";
+  // import TeacherDetails from "../components/Teachers/TeacherDetailsPage/TeacherDetails.jsx";
 
 
   // -----------STUDENTS--------------
-import Students from "../components/Students/Students.jsx";
+  import Students from "../components/Students/Students.jsx";
+  import CreateNewStudentForm from "../components/Students/CreateNewStudentForm/CreateNewStudentForm.jsx";
+  import EditStudentForm from "../components/Students/EditStudentForm/EditStudentForm.jsx";
+  import StudentDetailPage from "../components/Students/StudentDetailsPage/StudentDetailsPage.jsx";
+  // import StudentDetails from "../components/Students/StudentDetailsPage/StudentDetails.jsx";
 
 
 
   // -----------EMPLOYEES-------------
-import Employees from "../components/Employees/Employees.jsx";
-import CreateNewEmployeeForm from "../components/Employees/CreateNewEmployeeForm/CreateNewEmployeeForm.jsx";
-import EditEmployeeForm from "../components/Employees/EditEmployeeForm/EditEmployeeForm.jsx";
-import EmployeeDetailPage from "../components/Employees/EmployeeDetailsPage/EmployeeDetailsPage.jsx";
-// import EmployeeDetails from "../components/Employees/EmployeeDetailsPage/EmployeeDetails.jsx";
+  import Employees from "../components/Employees/Employees.jsx";
+  import CreateNewEmployeeForm from "../components/Employees/CreateNewEmployeeForm/CreateNewEmployeeForm.jsx";
+  import EditEmployeeForm from "../components/Employees/EditEmployeeForm/EditEmployeeForm.jsx";
+  import EmployeeDetailPage from "../components/Employees/EmployeeDetailsPage/EmployeeDetailsPage.jsx";
+  // import EmployeeDetails from "../components/Employees/EmployeeDetailsPage/EmployeeDetails.jsx";
 
 
   // -----------DEPARTMENTS-----------
-import Departments from "../components/Departments/Departments.jsx";
+  import Departments from "../components/Departments/Departments.jsx";
+
+
 
  // -------EMPLOYEE DEPARTMENTS-------
 
-import EmployeeDepartmentDetailsPage from "../components/Departments/EmployeeDepartments/EmployeeDepartmentDetailsPage/EmployeeDepartmentDetailsPage.jsx";
-import CreateNewEmployeeDepartmentForm from "../components/Departments/EmployeeDepartments/CreateNewEmployeeDepartmentForm/CreateNewEmployeeDepartmentForm.jsx";
-import EditEmployeeDepartmentForm from "../components/Departments/EmployeeDepartments/EditEmployeeDepartmentForm/EditEmployeeDepartmentForm.jsx";
-
-// -------ACADEMIC DEPARTMENTS-------
-
-import AcademicDepartmentDetailsPage from "../components/Departments/AcademicDepartments/AcademicDepartmentDetailsPage/AcademicDepartmentDetailsPage.jsx";
-import CreateNewAcademicDepartmentForm from "../components/Departments/AcademicDepartments/CreateNewAcademicDepartmentForm/CreateNewAcademicDepartmentForm.jsx";
-import EditAcademicDepartmentForm from "../components/Departments/AcademicDepartments/EditAcademicDepartmentForm/EditAcademicDepartmentForm.jsx";
+  import EmployeeDepartmentDetailsPage from "../components/Departments/EmployeeDepartments/EmployeeDepartmentDetailsPage/EmployeeDepartmentDetailsPage.jsx";
+  import CreateNewEmployeeDepartmentForm from "../components/Departments/EmployeeDepartments/CreateNewEmployeeDepartmentForm/CreateNewEmployeeDepartmentForm.jsx";
+  import EditEmployeeDepartmentForm from "../components/Departments/EmployeeDepartments/EditEmployeeDepartmentForm/EditEmployeeDepartmentForm.jsx";
 
 
- // -----------CATCH ALL--------------
-import CatchAll from "../components/xCatchAll/CatchAll.jsx";
+  // -------ACADEMIC DEPARTMENTS-------
+
+  import AcademicDepartmentDetailsPage from "../components/Departments/AcademicDepartments/AcademicDepartmentDetailsPage/AcademicDepartmentDetailsPage.jsx";
+  import CreateNewAcademicDepartmentForm from "../components/Departments/AcademicDepartments/CreateNewAcademicDepartmentForm/CreateNewAcademicDepartmentForm.jsx";
+  import EditAcademicDepartmentForm from "../components/Departments/AcademicDepartments/EditAcademicDepartmentForm/EditAcademicDepartmentForm.jsx";
+
+
+  // -----------CATCH ALL--------------
+  import CatchAll from "../components/xCatchAll/CatchAll.jsx";
 
 
 
 //===============FUNCTION DECLARATION===================//
 export const router = createBrowserRouter([
   {  path: "/signupform",
-    element: <SignupFormModal />
+    element: <SignupForm />
   },
   {
     element: <Layout />,
@@ -155,11 +166,11 @@ export const router = createBrowserRouter([
           element: <EmployeeDepartmentDetailsPage />
         },
         {
-          path: "/createNewFacilityForm/",
+          path: "/createNewEmployeeDepartmentForm/",
           element: <CreateNewEmployeeDepartmentForm />,
         },
         {
-          path: "/editFacilityForm/",
+          path: "/editEmployeeDepartmentForm/",
           element: <EditEmployeeDepartmentForm />,
         },
 
@@ -194,6 +205,19 @@ export const router = createBrowserRouter([
         {
           path: "/students",
           element: <Students />
+        },
+
+        {
+          path: "/students/:studentId",
+          element: <StudentDetailPage />
+        },
+        {
+          path: "/createNewStudentForm/",
+          element: <CreateNewStudentForm />,
+        },
+        {
+          path: "/editStudentForm/",
+          element: <EditStudentForm />,
         },
 
 

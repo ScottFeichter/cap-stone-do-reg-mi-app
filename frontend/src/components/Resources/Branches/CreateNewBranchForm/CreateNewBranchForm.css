@@ -1,39 +1,142 @@
 #CreateNewBranchMain {
-
+    overflow: hidden;
+    margin: 0 1rem 0 1rem;
+    padding: .5rem .5rem .5rem .5rem;
+    /* border: 2px blue solid; */
 }
 
 #CreateNewBranchH1 {
     text-align: center;
+    font-size: 2.5rem;
+    margin: .5rem 0 0 0;
 }
 
-.CreateNewBranchErrors {
-    color: red;
-    text-align: center;
-    font-weight: bold;
-    margin: -1rem 0 1.5rem 0;
+
+
+/* ============================TRANSPORT CONTAINER======================= */
+
+
+#CreateNewBranchTransportContainer{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px pink solid; */
 }
 
-.CreateNewBranchRequiredErrors {
-    color: red;
+
+/* ==================== BACK ========================= */
+
+#CreateNewBranchBack:enabled{
+
     text-align: center;
-    font-weight: bold;
-    margin: 1rem 0 1.5rem 0;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500px;
+    /* margin-right: 1rem; */
+    margin: 1.5rem .5rem 0rem .5rem;
+    width: 14rem;
+    height: 2rem;
+
+
+    display: flex;
+    gap: 0rem;
+    align-items: center;
+    justify-content: space-evenly;
+
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+    border-radius: 5px;
+
 }
+
+
+#CreateNewBranchBack:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#CreateNewBranchBack:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#CreateNewBranchBack:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}
+
+
+
+
+/* ==================== FORTH ======================== */
+#CreateNewBranchForth:enabled{
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500px;
+    margin-left: 1rem;
+    width: 6rem;
+    padding: .5rem 0.5rem .5rem .5rem;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+    border-radius: 5px;
+
+}
+
+
+#CreateNewBranchForth:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#CreateNewBranchForth:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#CreateNewBranchForth:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}
+
+
+
+/* =========================FORM======================== */
 
 
 #CreateNewBranchForm{
-    margin: 2rem 4rem 4rem 4rem;
+    margin: 1.5rem 4rem 4rem 4rem;
     padding: 0rem 0rem 0rem 0rem;
-    border: var(--border);
-    border-radius: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: var(--border);
+    border-radius: 25px;
 }
-
-
-
 
 .CreateNewBranchFormLabelInputContainer {
     display: flex;
@@ -64,18 +167,33 @@
 
 
 
+.CreateNewBranchH5 {
+    margin: 0rem 0 3rem 0;
+    color: red;
+    text-align: center;
+}
 
 .CreateNewBranchFormRequired{
     position:sticky;
-
     margin: 1.25rem 0 0 -1rem;
     padding: .5rem .5rem 0 0;
     color: red;
     font-size: medium;
 }
 
+.CreateNewBranchErrors {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin: -1rem 0 1.5rem 0;
+}
 
-
+.CreateNewBranchRequiredErrors {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin: 1rem 0 1.5rem 0;
+}
 
 
 .CreateNewBranchHr {
@@ -88,6 +206,7 @@
 #CreateNewBranchFormSection1, #CreateNewBranchFormSection2, #CreateNewBranchFormSection3, #CreateNewBranchFormSection4, #CreateNewBranchFormSection5     {
     width: 450px;
 }
+
 
 #CreateNewBranchFormSection1H4, #CreateNewBranchFormSection2H4, #CreateNewBranchFormSection3H4, #CreateNewBranchFormSection4H4, #CreateNewBranchFormSection5H4 {
     text-align: center;
@@ -106,13 +225,11 @@
     color: black;
 }
 
-.CreateNewBranchH5 {
-    margin: 0rem 0 3rem 0;
-    color: red;
-    text-align: center;
-}
 
 
+
+
+/* ==================== BUTTON ======================== */
 
 #CreateNewBranchButton {
     margin: 2rem 0 4rem 0;

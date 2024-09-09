@@ -27,3 +27,14 @@ npx dotenv sequelize-cli db:seed:all 			            // runs the up
 npx dotenv sequelize-cli db:seed:undo 			            // runs the down
 npx dotenv sequelize db:seed:undo --seed <name of seeder> 	// runs the down
 npx dotenv sequelize-cli db:seed:undo:all 			        // runs the down
+
+
+##### SEQUELIZE ALIASES
+
+alias ndsdma="npx dotenv sequelize-cli db:migrate"
+
+alias ndsdmau="npx dotenv sequelize-cli db:migrate:undo:all"
+
+alias ndsdsa="npx dotenv sequelize-cli db:seed:all"
+
+alias ndsdsau="npx dotenv sequelize-cli db:seed:undo:all"

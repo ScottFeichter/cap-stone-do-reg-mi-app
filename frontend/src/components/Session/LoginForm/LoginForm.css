@@ -1,7 +1,10 @@
+/* ======================MAIN========================== */
+
 #LoginFormMain{
     width: 19rem;
-    height: 42rem;
-    margin: 0 0 2rem 0;
+    height: 49rem;
+    margin: 0 0 0rem 0;
+    padding: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -23,6 +26,10 @@
     gap: 2rem;
 }
 
+/* #firstNameContainer{
+    margin: 2rem 0 0 0;
+} */
+
 .LoginFormLabel{
     display: flex;
     flex-direction: column;
@@ -36,6 +43,18 @@
     border: var(--border);
 }
 
+.LoginFormErrors {
+    position: absolute;
+    color: red;
+    top: 4rem;
+    right: 0rem;
+    width: 20rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ======================BUTTON========================== */
+
 #LoginFormButton {
     margin: 1rem .5rem 4rem .5rem;
     width: 8rem;
@@ -43,8 +62,6 @@
     font-size: 1.25rem;
     font-weight: 500;
     border-radius: 15px;
-
-
 }
 
 #LoginFormButton:enabled {

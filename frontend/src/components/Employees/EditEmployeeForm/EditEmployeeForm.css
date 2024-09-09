@@ -6,6 +6,127 @@
     text-align: center;
 }
 
+/* ============================TRANSPORT CONTAINER======================= */
+
+
+#EditEmployeeTransportContainer{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px pink solid; */
+}
+
+
+/* ==================== BACK ========================= */
+
+#EditEmployeeBack:enabled{
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500px;
+    /* margin-right: 1rem; */
+    margin: 1.5rem .5rem 0rem .5rem;
+    width: 14rem;
+    height: 2rem;
+
+
+    display: flex;
+    gap: 0rem;
+    align-items: center;
+    justify-content: space-evenly;
+
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+    border-radius: 5px;
+
+}
+
+
+#EditEmployeeBack:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#EditEmployeeBack:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#EditEmployeeBack:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}
+
+
+
+
+/* ==================== FORTH ======================== */
+#EditEmployeeForth:enabled{
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500px;
+    margin-left: 1rem;
+    width: 6rem;
+    padding: .5rem 0.5rem .5rem .5rem;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+    border-radius: 5px;
+
+}
+
+
+#EditEmployeeForth:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#EditEmployeeForth:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#EditEmployeeForth:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .EditEmployeeErrors {
     color: red;
     text-align: center;
