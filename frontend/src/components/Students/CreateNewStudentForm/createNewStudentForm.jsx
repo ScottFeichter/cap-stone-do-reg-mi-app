@@ -113,7 +113,7 @@ function CreateNewStudentForm() {
 
         const [household_Id, setHousehold_Id] = useState("");
         const [headOfHousehold, setHeadOfHousehold] = useState("");
-        const [yearlyIncome, setYearlyIncome] = useState(0);
+        const [yearlyIncome, setYearlyIncome] = useState("");
         const [level_Id, setLevel_Id] = useState("");
 
 
@@ -238,6 +238,7 @@ const checkInteger = () => {
         setErrorsLevel_Id({});
     }
 
+    console.log("yearlyIncome: ", yearlyIncome, typeof yearlyIncome);
     if(yearlyIncome !== "" && (typeof yearlyIncomeNum !== "number" || isNaN(yearlyIncomeNum))){
         yearlyIncomeErrorBool = true;
         setErrorsYearlyIncome({yearlyIncome: "Yearly income must be an integer"});
