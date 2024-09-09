@@ -1,6 +1,6 @@
 import './Splash.css';
 import LoginForm from "./LoginForm/LoginForm.jsx";
-import SignupFormModal from "./SignupForm/SignupFormModal/SignupFormModal.jsx";
+import SignupForm from "./SignupForm/SignupForm.jsx";
 
 
 function SplashPage() {
@@ -16,7 +16,7 @@ function SplashPage() {
 
             <div id="SplashDivLoginSignupContainer">
                 <LoginForm></LoginForm>
-                <SignupFormModal></SignupFormModal>
+                <SignupForm></SignupForm>
             </div>
 
           </main>
