@@ -281,9 +281,9 @@ const checkBool = () => {
 
 
 
-    if(headOfHousehold !== "" && (typeof !!headOfHousehold !== "boolean")) {
+    if(headOfHousehold !== "" && ((headOfHousehold !== true) || (headOfHousehold !== false))) {
         headOfHouseholdErrorBool = true;
-        setErrorsHeadOfHousehold({headOfHousehold: "Head of Household must be True or False"});
+        setErrorsHeadOfHousehold({headOfHousehold: "Head of Household must be true or false"});
     } else {
         headOfHouseholdErrorBool = false;
         setErrorsHeadOfHousehold({});
@@ -334,7 +334,7 @@ const checkBool = () => {
 
 
             if(checkBool()) {
-                setRequiredFieldsMessage({message: "Field(s) must be True or False - see errors above."});
+                setRequiredFieldsMessage({message: "Field(s) must be true or false - see errors above."});
                 // console.log("HANDLE SUBMIT STOPPED DUE TO FIELD(S) MUST BE TRUE OR FALSE")
                 return
             } else {
@@ -348,7 +348,7 @@ const checkBool = () => {
 
 
          if(	household_Id	)	newStudent	.	household_Id	=	household_Id	;
-         if(	headOfHousehold	)	newStudent	.	headOfHousehold	=	headOfHousehold	;
+         if(	headOfHousehold	)	newStudent	.	headOfHousehold	=	!!(headOfHousehold.toLocaleLowerCase())	;
          if(	level_Id	)	newStudent	.	level_Id	=	level_Id	;
          if(	firstName	)	newStudent	.	firstName	=	firstName	;
          if(	nickName	)	newStudent	.	nickName	=	nickName	;
