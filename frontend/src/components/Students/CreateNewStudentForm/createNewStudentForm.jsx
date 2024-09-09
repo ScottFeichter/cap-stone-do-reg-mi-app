@@ -191,11 +191,11 @@ const checkRequired = () => {
 
     if(!headOfHousehold) {
         headOfHouseholdBool = true;
-        setErrorsFirstLang({headOfHousehold: "Head of Household True or False is required"});
+        setErrorsHeadOfHousehold({headOfHousehold: "Head of Household True or False is required"});
 
     } else {
         headOfHouseholdBool = false;
-        setErrorsFirstLang({})
+        setErrorsHeadOfHousehold({})
     }
 
 
