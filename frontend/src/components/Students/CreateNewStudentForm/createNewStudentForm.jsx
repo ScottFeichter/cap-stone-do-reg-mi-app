@@ -281,7 +281,7 @@ const checkBool = () => {
 
 
 
-    if(headOfHousehold !== "" && ((headOfHousehold !== true) || (headOfHousehold !== false))) {
+    if(headOfHousehold !== "" && ((headOfHousehold.toLocaleLowerCase() !== "true") || (headOfHousehold.toLocaleLowerCase() !== "false"))) {
         headOfHouseholdErrorBool = true;
         setErrorsHeadOfHousehold({headOfHousehold: "Head of Household must be true or false"});
     } else {
