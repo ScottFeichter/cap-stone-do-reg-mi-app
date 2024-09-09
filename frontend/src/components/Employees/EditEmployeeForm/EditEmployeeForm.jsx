@@ -7,6 +7,11 @@ import {useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 // import { useEffect } from 'react';
+
+import { TbPlayerSkipBackFilled } from "react-icons/tb";
+// import { TbPlayerSkipForwardFilled } from "react-icons/tb";
+
+
 import * as employeesActions from '../../../redux/employeesReducer.js';
 
 
@@ -441,12 +446,44 @@ const checkInteger = () => {
 
 
 
+// =====================TRANSPORT BUTTONS HANDLERS=========================
+
+        // -----------------------------HANDLE BACK -------------------------------//
+        const handleBackClick = async (e) => {
+            e.preventDefault();
+            // console.log('HANDLE BACK');
+            navigate(`/employees/${employeeToEdit.id}`);
+        }
+
+        // -----------------------------HANDLE FORWARD -------------------------------//
+        // const handleForthClick = async (e) => {
+        //     e.preventDefault();
+        //     // console.log('HANDLE FORTH');
+        //     navigate('/createNewFacilityForm');
+        // }
+
+
+
+
 
 // return-----------------------------------
         return (
           <main id="EditEmployeeMain">
 
             <h1 id='EditEmployeeH1'>Edit Employee</h1>
+
+            <div id="EditEmployeeTransportContainer">
+
+                <button  id='EditEmployeeBack' onClick={handleBackClick}>
+                    <TbPlayerSkipBackFilled id={`EditEmployeeTbPlayerBack`} />Back To Details
+                </button>
+
+
+                {/* <button id='EditEmployeeFormForth' onClick={handleForthClick}>Forth
+                    <TbPlayerSkipForwardFilled id={`EditEmployeeFormTbPlayerForth`} />
+                </button> */}
+
+            </div>
 
 
                     <form id='EditEmployeeForm' onSubmit={handleSubmit}>

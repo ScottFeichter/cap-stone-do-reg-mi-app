@@ -200,7 +200,7 @@ const checkRequired = () => {
         }
 
 
-// =====================TRANSPORT BUTTONS=========================
+// =====================TRANSPORT BUTTONS HANDLERS=========================
 
         // -----------------------------HANDLE BACK -------------------------------//
         const handleBackClick = async (e) => {
@@ -227,15 +227,15 @@ const checkRequired = () => {
             <h1 id='EditBranchH1'>Edit Branch</h1>
 
 
-            <div id="CreateNewBranchTransportContainer">
+            <div id="EditBranchTransportContainer">
 
-                <button  id='CreateNewBranchBack' onClick={handleBackClick}>
-                    <TbPlayerSkipBackFilled id={`CreateNewBranchTbPlayerBack`} />Back To Details
+                <button  id='EditBranchBack' onClick={handleBackClick}>
+                    <TbPlayerSkipBackFilled id={`EditBranchTbPlayerBack`} />Back To Details
                 </button>
 
 
-                {/* <button id='CreateNewBranchForth' onClick={handleForthClick}>Forth
-                    <TbPlayerSkipForwardFilled id={`CreateNewBranchTbPlayerForth`} />
+                {/* <button id='EditBranchForth' onClick={handleForthClick}>Forth
+                    <TbPlayerSkipForwardFilled id={`EditBranchTbPlayerForth`} />
                 </button> */}
 
             </div>

@@ -18,7 +18,7 @@
 /* ============================TRANSPORT CONTAINER======================= */
 
 
-#CreateNewBranchTransportContainer{
+#EditBranchTransportContainer{
     padding: 0;
     margin: 0;
     display: flex;
@@ -30,7 +30,7 @@
 
 /* ==================== BACK ========================= */
 
-#CreateNewBranchBack:enabled{
+#EditBranchBack:enabled{
 
     text-align: center;
     text-decoration: none;
@@ -55,21 +55,21 @@
 }
 
 
-#CreateNewBranchBack:disabled {
+#EditBranchBack:disabled {
     color: var(--buttonDisabledColor);
     background-color: var(--buttonDisabledBackgroundColor);
     border: var(--buttonDisabledBorder);
 
 }
 
-#CreateNewBranchBack:enabled:hover {
+#EditBranchBack:enabled:hover {
     color: var(--buttonHoverColor);
     background-color: var(--buttonHoverBackgroundColor);
     border: var(--buttonHoverBorder);
     cursor: pointer;
 }
 
-#CreateNewBranchBack:enabled:active{
+#EditBranchBack:enabled:active{
     color: var(--buttonActiveColor);
     background-color: var(--buttonActiveBackgroundColor);
     border: var(--buttonActiveBorder);
@@ -80,7 +80,7 @@
 
 
 /* ==================== FORTH ======================== */
-#CreateNewBranchForth:enabled{
+#EditBranchForth:enabled{
 
     text-align: center;
     text-decoration: none;
@@ -103,21 +103,21 @@
 }
 
 
-#CreateNewBranchForth:disabled {
+#EditBranchForth:disabled {
     color: var(--buttonDisabledColor);
     background-color: var(--buttonDisabledBackgroundColor);
     border: var(--buttonDisabledBorder);
 
 }
 
-#CreateNewBranchForth:enabled:hover {
+#EditBranchForth:enabled:hover {
     color: var(--buttonHoverColor);
     background-color: var(--buttonHoverBackgroundColor);
     border: var(--buttonHoverBorder);
     cursor: pointer;
 }
 
-#CreateNewBranchForth:enabled:active{
+#EditBranchForth:enabled:active{
     color: var(--buttonActiveColor);
     background-color: var(--buttonActiveBackgroundColor);
     border: var(--buttonActiveBorder);
