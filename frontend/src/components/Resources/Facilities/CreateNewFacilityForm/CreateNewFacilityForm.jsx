@@ -6,6 +6,10 @@ import {useState } from 'react';
 import {useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 // import { useEffect } from 'react';
+// import { TbPlayerSkipBackFilled } from "react-icons/tb";
+// import { TbPlayerSkipForwardFilled } from "react-icons/tb";
+
+
 import * as facilitiesActions from '../../../../redux/facilitiesReducer.js';
 
 
@@ -46,7 +50,7 @@ const checkRequired = () => {
 
     if(!name) {
         nameBool = true;
-        setErrorsName({name: "First Name 1 is required"});
+        setErrorsName({name: "Name is required"});
     } else {
         nameBool = false;
         setErrorsName({});
@@ -129,12 +133,43 @@ const checkRequired = () => {
 
 
 
+        // -----------------------------HANDLE BACK -------------------------------//
+        // const handleBackClick = async (e) => {
+        //     e.preventDefault();
+        //     console.log('HANDLE BACK');
+        //     navigate('/resources');
+        // }
 
-// return-----------------------------------
+        // -----------------------------HANDLE FORWARD -------------------------------//
+        // const handleForthClick = async (e) => {
+        //     e.preventDefault();
+        //     // console.log('HANDLE FORTH');
+        //     navigate('/createNewFacilityForm');
+        // }
+
+
+
+
+
+// return================================
         return (
           <main id="CreateNewFacilityMain">
 
             <h1 id='CreateNewFacilityH1'>Create A New Facility</h1>
+
+            <div id="CreateNewFacilityTransportContainer">
+
+                {/* <button  id='CreateNewFacilityBack' onClick={handleBackClick}>
+                    <TbPlayerSkipBackFilled id={`CreateNewFacilityTbPlayerBack`} />Back To Resources
+                </button> */}
+
+
+
+                {/* <button id='CreateNewFacilityForth' onClick={handleForthClick}>Forth
+                    <TbPlayerSkipForwardFilled id={`CreateNewFacilityTbPlayerForth`} />
+                </button> */}
+
+            </div>
 
 
                     <form id='CreateNewFacilityForm' onSubmit={handleSubmit}>

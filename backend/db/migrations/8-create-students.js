@@ -28,7 +28,7 @@ module.exports = {
           // onDelete: 'CASCADE'
         },
         headOfHousehold: {
-          allowNull: false,
+          allowNull: true,
           unique: false,
           type: Sequelize.BOOLEAN,
         },

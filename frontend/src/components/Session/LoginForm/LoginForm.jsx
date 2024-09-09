@@ -35,7 +35,7 @@ function LoginForm() {
 
         <form onSubmit={handleSubmit} id="LoginFormForm">
           <label className="LoginFormLabel">
-            Username or Email
+            username or email:
             <input
               className="LoginFormInput"
               type="text"
@@ -44,8 +44,10 @@ function LoginForm() {
               required
             />
           </label>
+
+
           <label className="LoginFormLabel">
-            Password
+            password:
             <input
               className="LoginFormInput"
               type="password"
@@ -55,6 +57,8 @@ function LoginForm() {
             />
           </label>
           {errors.credential && <p>{errors.credential}</p>}
+
+          
           <button
             id="LoginFormButton"
             type="submit">Submit</button>

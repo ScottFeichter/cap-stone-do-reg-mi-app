@@ -49,92 +49,92 @@ function EmployeeDetails(props){
 
                         <h4 id="EmployeeDetailsFormSection1H4">Personal Information</h4>
 
-                        <div id='firstNameContainer' className='EmployeeDetailsFormLabelInputContainer'>
+                        <div className='EmployeeDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDetailsFormLabel'>{"ID"}</div>
                                 <div className='EmployeeDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='EmployeeDetailsFormInput'>{employee.id ? employee.id : nullReplacer}</div>
                         </div>
 
 
-                        <div id='firstNameContainer' className='EmployeeDetailsFormLabelInputContainer'>
+                        <div className='EmployeeDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDetailsFormLabel'>{"firstName"}</div>
                                 <div className='EmployeeDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='EmployeeDetailsFormInput'>{employee.firstName ? employee.firstName : nullReplacer}</div>
                         </div>
 
-                        <div id='nickNameContainer' className='EmployeeDetailsFormLabelInputContainer'>
+                        <div  className='EmployeeDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDetailsFormLabel'>{"nickName"}</div>
                                 <div className='EmployeeDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='EmployeeDetailsFormInput'>{employee.nickName ? employee.nickName : nullReplacer}</div>
                         </div>
 
-                        <div id='middleNameContainer' className='EmployeeDetailsFormLabelInputContainer'>
+                        <div className='EmployeeDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDetailsFormLabel'>{"middleName"}</div>
                                 <div className='EmployeeDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='EmployeeDetailsFormInput'>{employee.middleName ? employee.middleName : nullReplacer}</div>
                         </div>
 
-                        <div id='lastNameContainer' className='EmployeeDetailsFormLabelInputContainer'>
+                        <div  className='EmployeeDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDetailsFormLabel'>{"lastName"}</div>
                                 <div className='EmployeeDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='EmployeeDetailsFormInput'>{employee.lastName ? employee.lastName : nullReplacer}</div>
                         </div>
 
-                        <div id='familyNameContainer' className='EmployeeDetailsFormLabelInputContainer'>
+                        <div  className='EmployeeDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDetailsFormLabel'>{"familyName"}</div>
                                 <div className='EmployeeDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='EmployeeDetailsFormInput'>{employee.familyName ? employee.familyName : nullReplacer}</div>
                         </div>
 
-                        <div id='emailContainer' className='EmployeeDetailsFormLabelInputContainer'>
+                        <div  className='EmployeeDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDetailsFormLabel'>{"email"}</div>
                                 <div className='EmployeeDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='EmployeeDetailsFormInput'>{employee.email ? employee.email : nullReplacer}</div>
                         </div>
 
-                        <div id='phoneContainer' className='EmployeeDetailsFormLabelInputContainer'>
+                        <div  className='EmployeeDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDetailsFormLabel'>{"phone"}</div>
                                 <div className='EmployeeDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='EmployeeDetailsFormInput'>{employee.phone ? employee.phone : nullReplacer}</div>
                         </div>
 
-                        <div id='streetContainer' className='EmployeeDetailsFormLabelInputContainer'>
+                        <div  className='EmployeeDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDetailsFormLabel'>{"street"}</div>
                                 <div className='EmployeeDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='EmployeeDetailsFormInput'>{employee.street ? employee.street : nullReplacer}</div>
                         </div>
 
-                        <div id='cityContainer' className='EmployeeDetailsFormLabelInputContainer'>
+                        <div  className='EmployeeDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDetailsFormLabel'>{"city"}</div>
                                 <div className='EmployeeDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='EmployeeDetailsFormInput'>{employee.city ? employee.city : nullReplacer}</div>
                         </div>
 
-                        <div id='stateContainer' className='EmployeeDetailsFormLabelInputContainer'>
+                        <div  className='EmployeeDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDetailsFormLabel'>{"state"}</div>
                                 <div className='EmployeeDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='EmployeeDetailsFormInput'>{employee.state ? employee.state : nullReplacer}</div>
                         </div>
 
-                        <div id='zipContainer' className='EmployeeDetailsFormLabelInputContainer'>
+                        <div  className='EmployeeDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDetailsFormLabel'>{"zip"}</div>
                                 <div className='EmployeeDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='EmployeeDetailsFormInput'>{employee.zip ? employee.zip : nullReplacer}</div>
                         </div>
 
-                        <div id='dobContainer' className='EmployeeDetailsFormLabelInputContainer'>
+                        <div className='EmployeeDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDetailsFormLabel'>{"dob"}</div>
                                 <div className='EmployeeDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='EmployeeDetailsFormInput'>{employee.dob ? employee.dob : nullReplacer}</div>
                         </div>
 
-                        <div id='ageContainer' className='EmployeeDetailsFormLabelInputContainer'>
+                        <div  className='EmployeeDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDetailsFormLabel'>{"age"}</div>
                                 <div className='EmployeeDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='EmployeeDetailsFormInput'>{employee.age ? employee.age : nullReplacer}</div>
                         </div>
 
-                        <div id='ssnContainer' className='EmployeeDetailsFormLabelInputContainer'>
+                        <div  className='EmployeeDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDetailsFormLabel'>{"ssn"}</div>
                                 <div className='EmployeeDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='EmployeeDetailsFormInput'>{employee.ssn ? employee.ssn : nullReplacer}</div>

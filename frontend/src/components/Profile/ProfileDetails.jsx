@@ -28,7 +28,7 @@ return (<>
 
                 <section id="ProfileDetailsFormSection1">
 
-                    <h4 id="ProfileDetailsFormSection1H4">Personal Information</h4>
+                    <h4 id="ProfileDetailsFormSection1H4">Profile Information</h4>
 
                     {profileObjectEntries.map((arr)=> {
                         const k = arr[0];

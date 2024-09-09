@@ -1,23 +1,51 @@
-#VerticalNavBarDivContainer{
-    display: inline-flex;
-    margin: 0rem 0rem 0rem 0rem;
-    padding: 0rem 0 0rem 0;
-    /* border: green solid 2px; */
+#SignupFormMain{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: var(--border);
+    border-radius: 25px;
 }
 
+#SignupFormH1{
 
-.VerticalNavBarButton {
-    margin: 1rem .5rem 1rem .5rem;
+    padding: 3rem 0 1rem 0;
+}
+
+#SignupFormForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.SignupFormLabel{
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem 0 2rem;
+    /* border: 2px purple solid; */
+}
+
+.SignupFormInput{
+    height: 1.25rem;
+    width: 14rem;
+    border: var(--border);
+}
+
+#SignupFormButton {
+    margin: 1rem .5rem 4rem .5rem;
     width: 8rem;
     height: 2.5rem;
     font-size: 1.25rem;
     font-weight: 500;
-    border-radius: 10px;
+    border-radius: 15px;
 
 
 }
 
-.VerticalNavBarButton:enabled {
+#SignupFormButton:enabled {
     color: var(--buttonColor);
     background-color: var(--buttonBackgroundColor);
     border: var(--buttonBorder);
@@ -27,34 +55,23 @@
     transition-duration: .2s;
     transition-timing-function: ease-in-out;
     transition-property: border, background-color;
-
-    /* animation-name: none;
-    animation-delay: none;
-    animation-duration: .3s;
-    animation-timing-function: calc();
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    animation-play-state: initial; */
-
-
 }
 
-.VerticalNavBarButton:disabled {
+#SignupFormButton:disabled {
     color: var(--buttonDisabledColor);
     background-color: var(--buttonDisabledBackgroundColor);
     border: var(--buttonDisabledBorder);
 
 }
 
-.VerticalNavBarButton:enabled:hover {
+#SignupFormButton:enabled:hover {
     color: var(--buttonHoverColor);
     background-color: var(--buttonHoverBackgroundColor);
     border: var(--buttonHoverBorder);
     cursor: pointer;
 }
 
-.VerticalNavBarButton:enabled:active{
+#SignupFormButton:enabled:active{
     color: var(--buttonActiveColor);
     background-color: var(--buttonActiveBackgroundColor);
     border: var(--buttonActiveBorder);

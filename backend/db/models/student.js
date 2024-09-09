@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
       },
       headOfHousehold: {
-        allowNull: false,
+        allowNull: true,
         unique: false,
         type: DataTypes.BOOLEAN,
       },
