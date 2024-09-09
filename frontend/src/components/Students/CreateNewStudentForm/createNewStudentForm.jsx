@@ -31,6 +31,7 @@ function CreateNewStudentForm() {
         //-----must be integers
         const [errorsHousehold_Id, setErrorsHousehold_Id] = useState({})
         const [errorsLevel_Id, setErrorsLevel_Id ] = useState({})
+        const [errorsYearlyIncome, setErrorsYearlyIncome] = useState({})
 
 
 
@@ -64,6 +65,7 @@ function CreateNewStudentForm() {
 // account information form section 2----------------------------------------------------------
             household_Id	        :	null	,
             headOfHousehold	        :	null	,
+            yearlyIncome	        :	null	,
             level_Id	            :	null	,
 
 
@@ -111,6 +113,7 @@ function CreateNewStudentForm() {
 
         const [household_Id, setHousehold_Id] = useState("");
         const [headOfHousehold, setHeadOfHousehold] = useState("");
+        const [yearlyIncome, setYearlyIncome] = useState(0);
         const [level_Id, setLevel_Id] = useState("");
 
 
@@ -208,11 +211,13 @@ const checkInteger = () => {
 
     let household_IdNum = parseInt(household_Id);
     let level_IdNum = parseInt(level_Id);
+    let yearlyIncomeNum = parseInt(level_Id);
 
 
 
     let household_IdErrorBool = false;
     let level_IdErrorBool = false;
+    let yearlyIncomeErrorBool = false;
 
 
     if(household_Id !== "" && (typeof household_IdNum !== "number" || isNaN(household_IdNum))) {
@@ -227,16 +232,25 @@ const checkInteger = () => {
 
     if(level_Id !== "" && (typeof level_IdNum !== "number" || isNaN(level_IdNum))){
         level_IdErrorBool = true;
-        setErrorsLevel_Id({level_Id: "User Type ID must be an integer"});
+        setErrorsLevel_Id({level_Id: "Level ID must be an integer"});
     } else {
         level_IdErrorBool = false;
         setErrorsLevel_Id({});
     }
 
+    if(yearlyIncome !== "" && (typeof yearlyIncomeNum !== "number" || isNaN(yearlyIncomeNum))){
+        yearlyIncomeErrorBool = true;
+        setErrorsYearlyIncome({yearlyIncome: "Yearly income must be an integer"});
+    } else {
+        yearlyIncomeErrorBool = false;
+        setErrorsYearlyIncome({});
+    }
+
 
     if (
         (household_IdErrorBool) ||
-        (level_IdErrorBool)
+        (level_IdErrorBool)     ||
+        (yearlyIncomeErrorBool)
     ) {
         return true;
     } else {
@@ -255,7 +269,7 @@ const checkBool = () => {
 
 
 
-    if(headOfHousehold !== "" && (typeof headOfHouseholdBool !== "boolean")) {
+    if(headOfHousehold !== "" && (typeof !!headOfHouseholdBool !== "boolean")) {
         headOfHouseholdErrorBool = true;
         setErrorsHeadOfHousehold({headOfHousehold: "Head of Household must be True or False"});
     } else {
@@ -336,6 +350,7 @@ const checkBool = () => {
          if(	state	)	newStudent	.	state	=	state	;
          if(	zip	)	newStudent	.	zip	=	zip	;
          if(	dob	)	newStudent	.	dob	=	dob	;
+         if(	yearlyIncome	)	newStudent	.	yearlyIncome	=	yearlyIncome	;
          if(	firstLang	)	newStudent	.	firstLang	=	firstLang	;
          if(	secondLang	)	newStudent	.	secondLang	=	secondLang	;
          if(	thirdLang	)	newStudent	.	thirdLang	=	thirdLang	;
@@ -363,7 +378,7 @@ const checkBool = () => {
             }).catch(async (res) => {
                     const data = await res.json();
                     if (data.errors) setErrors(data.errors);
-                    // console.log('CATCH DISPATCH RAN DATA:', data, 'DATA.ERRORS: ', data.errors, 'RES: ', res);
+                    console.log('CATCH DISPATCH RAN DATA:', data, 'DATA.ERRORS: ', data.errors, 'RES: ', res);
                 }
             )
 
@@ -379,7 +394,7 @@ const checkBool = () => {
                 return response
             });
 
-            // console.log('HANDLE SUBMIT NEW EMPLOYEE HAS FINISHED RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+            console.log('HANDLE SUBMIT NEW EMPLOYEE HAS FINISHED RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
         }
 
 
@@ -723,6 +738,26 @@ const checkBool = () => {
 
                             </div>
                             {errorsHeadOfHousehold.headOfHousehold && <p className='CreateNewStudentErrors'>{errorsHeadOfHousehold.headOfHousehold}</p>}
+
+
+                            <div id='yearlyIncomeContainer' className='CreateNewStudentFormLabelInputContainer'>
+
+                                <label className='CreateNewStudentFormLabel'>
+                                    Yearly Income:
+                                    <input
+                                    className='CreateNewStudentFormInput'
+                                    id="yearlyIncome"
+                                    name="yearlyIncome"
+                                    type="text"
+                                    placeholder='Yearly Income'
+                                    value={yearlyIncome}
+                                    onChange={(e) => setYearlyIncome(e.target.value)}
+
+                                    />
+                                </label>
+
+                            </div>
+                            {errorsYearlyIncome.yearlyIncome && <p className='CreateNewStudentErrors'>{errorsYearlyIncome.yearlyIncome}</p>}
 
 
 
