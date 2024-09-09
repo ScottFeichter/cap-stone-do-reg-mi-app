@@ -98,18 +98,18 @@ function EditStudentForm() {
 
 
 
-            const [firstName, setFirstName] = useState("");
-            const [nickName, setNickName] = useState("");
-            const [middleName, setMiddleName] = useState("");
-            const [lastName, setLastName] = useState("");
-            const [familyName, setFamilyName] = useState("");
-            const [email, setPersonalEmail] = useState("");
-            const [phone, setPhone] = useState("");
-            const [street, setStreet] = useState("");
-            const [city, setCity] = useState("");
-            const [state, setState] = useState("");
-            const [zip, setZip] = useState("");
-            const [dob, setDob] = useState("");
+            const [firstName, setFirstName] = useState(studentToEdit.firstName || "");
+            const [nickName, setNickName] = useState(studentToEdit.nickName || "");
+            const [middleName, setMiddleName] = useState(studentToEdit.middleName || "");
+            const [lastName, setLastName] = useState(studentToEdit.lastName || "");
+            const [familyName, setFamilyName] = useState(studentToEdit.familyName || "");
+            const [email, setPersonalEmail] = useState(studentToEdit.email || "");
+            const [phone, setPhone] = useState(studentToEdit.phone || "");
+            const [street, setStreet] = useState(studentToEdit.street || "");
+            const [city, setCity] = useState(studentToEdit.city || "");
+            const [state, setState] = useState(studentToEdit.state || "");
+            const [zip, setZip] = useState(studentToEdit.zip || "");
+            const [dob, setDob] = useState(studentToEdit.dob || "");
 
 
 
@@ -117,10 +117,10 @@ function EditStudentForm() {
 
             // account information form section 2----------------------------------------------------------
 
-            const [household_Id, setHousehold_Id] = useState("");
-            const [headOfHousehold, setHeadOfHousehold] = useState("");
-            const [yearlyIncome, setYearlyIncome] = useState("");
-            const [level_Id, setLevel_Id] = useState("");
+            const [household_Id, setHousehold_Id] = useState(studentToEdit.household_Id || "");
+            const [headOfHousehold, setHeadOfHousehold] = useState(studentToEdit.headOfHousehold || "");
+            const [yearlyIncome, setYearlyIncome] = useState(studentToEdit.yearlyIncome || "");
+            const [level_Id, setLevel_Id] = useState(studentToEdit.level_Id || "");
 
 
 
@@ -128,14 +128,14 @@ function EditStudentForm() {
             // biographical information form section 3----------------------------------------------------------
 
 
-            const [firstLang, setFirstLang] = useState("");
-            const [secondLang, setSecondLang] = useState("");
-            const [thirdLang, setThirdLang] = useState("");
-            const [firstInst, setFirstInst] = useState("");
-            const [secondInst, setSecondInst] = useState("");
-            const [thirdInst, setThirdInst] = useState("");
-            const [biography, setBiography] = useState("");
-            const [notes, setNotes] = useState("");
+            const [firstLang, setFirstLang] = useState(studentToEdit.firstLang || "");
+            const [secondLang, setSecondLang] = useState(studentToEdit.secondLang || "");
+            const [thirdLang, setThirdLang] = useState(studentToEdit.thirdLang || "");
+            const [firstInst, setFirstInst] = useState(studentToEdit.firstInst || "");
+            const [secondInst, setSecondInst] = useState(studentToEdit.secondInst || "");
+            const [thirdInst, setThirdInst] = useState(studentToEdit.thirdInst || "");
+            const [biography, setBiography] = useState(studentToEdit.biography || "");
+            const [notes, setNotes] = useState(studentToEdit.notes || "");
 
 
 
