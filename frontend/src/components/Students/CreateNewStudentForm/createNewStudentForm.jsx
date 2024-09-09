@@ -281,7 +281,7 @@ const checkBool = () => {
 
 
 
-    if(headOfHousehold !== "" && ((headOfHousehold.toLocaleLowerCase() !== "true") || (headOfHousehold.toLocaleLowerCase() !== "false"))) {
+    if(headOfHousehold !== "" && ((headOfHousehold.toLowerCase() !== "true") || (headOfHousehold.toLowerCase() !== "false"))) {
         headOfHouseholdErrorBool = true;
         setErrorsHeadOfHousehold({headOfHousehold: "Head of Household must be true or false"});
     } else {
@@ -348,7 +348,7 @@ const checkBool = () => {
 
 
          if(	household_Id	)	newStudent	.	household_Id	=	household_Id	;
-         if(	headOfHousehold	)	newStudent	.	headOfHousehold	=	!!(headOfHousehold.toLocaleLowerCase())	;
+         if(	headOfHousehold	)	newStudent	.	headOfHousehold	=	!!(headOfHousehold.toLowerCase())	;
          if(	level_Id	)	newStudent	.	level_Id	=	level_Id	;
          if(	firstName	)	newStudent	.	firstName	=	firstName	;
          if(	nickName	)	newStudent	.	nickName	=	nickName	;
