@@ -21,10 +21,10 @@ module.exports = {
           allowNull: true,
           unique: false,
           type: Sequelize.INTEGER,
-          references: {
-            model: 'Households',
-            key: 'id',
-          },
+          // references: {
+          //   model: 'Households',
+          //   key: 'id',
+          // },
           // onDelete: 'CASCADE'
         },
         headOfHousehold: {
@@ -35,10 +35,10 @@ module.exports = {
         level_Id: {
           allowNull: true,
           type: Sequelize.INTEGER,
-          references: {
-            model: 'Levels',
-            key: 'id',
-          },
+          // references: {
+          //   model: 'Levels',
+          //   key: 'id',
+          // },
           // onDelete: 'CASCADE'
         },
         firstName: {

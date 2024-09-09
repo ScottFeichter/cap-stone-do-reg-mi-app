@@ -157,7 +157,7 @@ const checkRequired = () => {
 
     if(!firstName) {
         firstNameBool = true;
-        setErrorsFirstName({firstName: "First Name 1 is required"});
+        setErrorsFirstName({firstName: "First Name is required"});
     } else {
         firstNameBool = false;
         setErrorsFirstName({});
@@ -165,7 +165,7 @@ const checkRequired = () => {
 
     if(!lastName) {
         lastNameBool = true;
-        setErrorsLastName({lastName: "Last Name 1 is required"});
+        setErrorsLastName({lastName: "Last Name is required"});
     } else {
         lastNameBool = false;
         setErrorsLastName({});
@@ -173,7 +173,7 @@ const checkRequired = () => {
 
     if(!phone) {
         phoneBool = true;
-        setErrorsPhone({phone: "Personal Phone is required"});
+        setErrorsPhone({phone: "Phone is required"});
     } else {
         phoneBool = false;
         setErrorsPhone({});
