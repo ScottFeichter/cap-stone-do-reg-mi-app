@@ -7,6 +7,10 @@ import {useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 // import { useEffect } from 'react';
+
+import { TbPlayerSkipBackFilled } from "react-icons/tb";
+// import { TbPlayerSkipForwardFilled } from "react-icons/tb";
+
 import * as studentsActions from '../../../redux/studentsReducer.js';
 
 
@@ -28,22 +32,22 @@ function EditStudentForm() {
         //-----required
         const [errorsFirstName, setErrorsFirstName] = useState({});
         const [errorsLastName, setErrorsLastName] = useState({});
-        const [errorsPersonalPhone, setErrorsPersonalPhone] = useState({});
+        const [errorsPhone, setErrorsPhone] = useState({});
         const [errorsFirstLang, setErrorsFirstLang] = useState({});
-        const [errorsSsn, setErrorsSsn] = useState({});
         const [requiredFieldsMessage, setRequiredFieldsMessage] = useState({});
 
 
 
         //-----must be integers
-        const [errorsStudentDepartment_Id, setErrorsStudentDepartment_Id] = useState({})
-        const [errorsAcademicDepartment_Id, setErrorsAcademicDepartment_Id ] = useState({})
-        const [errorsUserType_Id, setErrorsUserType_Id ] = useState({})
-        const [errorsZip, setErrorsZip ] = useState({})
-        const [errorsPrimaryPayRate, setErrorsPrimaryPayRate ] = useState({})
-        const [errorsSecondaryPayRate, setErrorsSecondaryPayRate ] = useState({})
-        const [errorsTertiaryPayRate, setErrorsTertiaryPayRate ] = useState({})
-        const [errorsQuarternaryPayRate, setErrorsQuarternaryPayRate ] = useState({})
+        const [errorsHousehold_Id, setErrorsHousehold_Id] = useState({})
+        const [errorsLevel_Id, setErrorsLevel_Id ] = useState({})
+        const [errorsYearlyIncome, setErrorsYearlyIncome] = useState({})
+
+
+
+
+        //-----must be bools
+        const [errorsHeadOfHousehold, setErrorsHeadOfHousehold ] = useState({})
 
 
         // const [isDisabled, setIsDisabled] = useState(false);
@@ -51,98 +55,93 @@ function EditStudentForm() {
 
         let editedStudent = {
 
-// personal information form section 1----------------------------------------------------------
-            firstName	            :	null	,
-            nickName	            :	null	,
-            middleName	            :	null	,
-            lastName	            :	null	,
-            familyName	            :	null	,
-            email	                :	null	,
-            phone	                :	null	,
-            street	                :	null	,
-            city	                :	null	,
-            state	                :	null	,
-            zip	                    :	null	,
-            dob	                    :	null	,
-            ssn	                    :	null	,
+            // personal information form section 1----------------------------------------------------------
+                        firstName	            :	null	,
+                        nickName	            :	null	,
+                        middleName	            :	null	,
+                        lastName	            :	null	,
+                        familyName	            :	null	,
+                        email	                :	null	,
+                        phone	                :	null	,
+                        street	                :	null	,
+                        city	                :	null	,
+                        state	                :	null	,
+                        zip	                    :	null	,
+                        dob	                    :	null	,
 
-// employment information form section 2----------------------------------------------------------
-            studentDepartment_Id	:	null	,
-            academicDepartment_Id	:	null	,
-            level_Id	            :	null	,
-            primaryTitle	        :	null	,
-            primaryStartDate	    :	null	,
-            primaryEndDate	        :	null	,
-            primaryPayRate	        :	null	,
 
-// biographical information form section 3----------------------------------------------------------
-            firstLang	            :	null	,
-            secondLang	            :	null	,
-            thirdLang	            :	null	,
-            firstInst	            :	null	,
-            secondInst	            :	null	,
-            thirdInst	            :	null	,
-            biography	            :	null	,
-            notes	                :	null	,
+            // account information form section 2----------------------------------------------------------
+                        household_Id	        :	null	,
+                        headOfHousehold	        :	null	,
+                        yearlyIncome	        :	null	,
+                        level_Id	            :	null	,
 
-// additional employment information form section 2----------------------------------------------------------
-            secondaryTitle	        :	null	,
-            secondaryStartDate	    :	null	,
-            secondaryEndDate	    :	null	,
-            secondaryPayRate	    :	null	,
-            tertiaryTitle	        :	null	,
-            tertiaryStartDate	    :	null	,
-            tertiaryEndDate	        :	null	,
-            tertiaryPayRate	        :	null	,
-            quarternaryTitle	    :	null	,
-            quarternaryStartDate	:	null	,
-            quarternaryEndDate	    :	null	,
-            quarternaryPayRate	    :	null	,
 
-        }
+            // biographical information form section 3----------------------------------------------------------
+                        firstLang	            :	null	,
+                        secondLang	            :	null	,
+                        thirdLang	            :	null	,
+                        firstInst	            :	null	,
+                        secondInst	            :	null	,
+                        thirdInst	            :	null	,
+                        biography	            :	null	,
+                        notes	                :	null	,
+
+            // additional information form section 4----------------------------------------------------------
+
+
+                    }
+
+
+            // personal information form section 1----------------------------------------------------------
 
 
 
-    const [studentDepartment_Id,setStudentDepartment_Id] = useState(studentToEdit.studentDepartment_Id||"")
-    const [academicDepartment_Id,setAcademicDepartment_Id] = useState(studentToEdit.academicDepartment_Id||"")
-    const [level_Id,setUserType_Id] = useState(studentToEdit.level_Id||"")
-    const [firstName,setFirstName] = useState(studentToEdit.firstName||"")
-    const [nickName,setNickName] = useState(studentToEdit.nickName||"")
-    const [middleName,setMiddleName] = useState(studentToEdit.middleName||"")
-    const [lastName,setLastName] = useState(studentToEdit.lastName||"")
-    const [familyName,setFamilyName] = useState(studentToEdit.familyName||"")
-    const [email,setPersonalEmail] = useState(studentToEdit.email||"")
-    const [phone,setPersonalPhone] = useState(studentToEdit.phone||"")
-    const [street,setStreet] = useState(studentToEdit.street||"")
-    const [city,setCity] = useState(studentToEdit.city||"")
-    const [state,setState] = useState(studentToEdit.state||"")
-    const [zip,setZip] = useState(studentToEdit.zip||"")
-    const [dob,setDob] = useState(studentToEdit.dob||"")
-    const [ssn,setSsn] = useState(studentToEdit.ssn||"")
-    const [firstLang,setFirstLang] = useState(studentToEdit.firstLang||"")
-    const [secondLang,setSecondLang] = useState(studentToEdit.secondLang||"")
-    const [thirdLang,setThirdLang] = useState(studentToEdit.thirdLang||"")
-    const [firstInst,setFirstInst] = useState(studentToEdit.firstInst||"")
-    const [secondInst,setSecondInst] = useState(studentToEdit.secondInst||"")
-    const [thirdInst,setThirdInst] = useState(studentToEdit.thirdInst||"")
-    const [primaryTitle,setPrimaryTitle] = useState(studentToEdit.primaryTitle||"")
-    const [primaryStartDate,setPrimaryStartDate] = useState(studentToEdit.primaryStartDate||"")
-    const [primaryEndDate,setPrimaryEndDate] = useState(studentToEdit.primaryEndDate||"")
-    const [primaryPayRate,setPrimaryPayRate] = useState(studentToEdit.primaryPayRate||"")
-    const [secondaryTitle,setSecondaryTitle] = useState(studentToEdit.secondaryTitle||"")
-    const [secondaryStartDate,setSecondaryStartDate] = useState(studentToEdit.secondaryStartDate||"")
-    const [secondaryEndDate,setSecondaryEndDate] = useState(studentToEdit.secondaryEndDate||"")
-    const [secondaryPayRate,setSecondaryPayRate] = useState(studentToEdit.secondaryPayRate||"")
-    const [tertiaryTitle,setTertiaryTitle] = useState(studentToEdit.tertiaryTitle||"")
-    const [tertiaryStartDate,setTertiaryStartDate] = useState(studentToEdit.tertiaryStartDate||"")
-    const [tertiaryEndDate,setTertiaryEndDate] = useState(studentToEdit.tertiaryEndDate||"")
-    const [tertiaryPayRate,setTertiaryPayRate] = useState(studentToEdit.tertiaryPayRate||"")
-    const [quarternaryTitle,setQuarternaryTitle] = useState(studentToEdit.quarternaryTitle||"")
-    const [quarternaryStartDate,setQuarternaryStartDate] = useState(studentToEdit.quarternaryStartDate||"")
-    const [quarternaryEndDate,setQuarternaryEndDate] = useState(studentToEdit.quarternaryEndDate||"")
-    const [quarternaryPayRate,setQuarternaryPayRate] = useState(studentToEdit.quarternaryPayRate||"")
-    const [biography,setBiography] = useState(studentToEdit.biography||"")
-    const [notes,setNotes] = useState(studentToEdit.notes||"")
+
+            const [firstName, setFirstName] = useState("");
+            const [nickName, setNickName] = useState("");
+            const [middleName, setMiddleName] = useState("");
+            const [lastName, setLastName] = useState("");
+            const [familyName, setFamilyName] = useState("");
+            const [email, setPersonalEmail] = useState("");
+            const [phone, setPhone] = useState("");
+            const [street, setStreet] = useState("");
+            const [city, setCity] = useState("");
+            const [state, setState] = useState("");
+            const [zip, setZip] = useState("");
+            const [dob, setDob] = useState("");
+
+
+
+
+
+            // account information form section 2----------------------------------------------------------
+
+            const [household_Id, setHousehold_Id] = useState("");
+            const [headOfHousehold, setHeadOfHousehold] = useState("");
+            const [yearlyIncome, setYearlyIncome] = useState("");
+            const [level_Id, setLevel_Id] = useState("");
+
+
+
+
+            // biographical information form section 3----------------------------------------------------------
+
+
+            const [firstLang, setFirstLang] = useState("");
+            const [secondLang, setSecondLang] = useState("");
+            const [thirdLang, setThirdLang] = useState("");
+            const [firstInst, setFirstInst] = useState("");
+            const [secondInst, setSecondInst] = useState("");
+            const [thirdInst, setThirdInst] = useState("");
+            const [biography, setBiography] = useState("");
+            const [notes, setNotes] = useState("");
+
+
+
+            // additional information section 4----------------------------------------------------------
+
+
 
 
 
@@ -160,12 +159,12 @@ const checkRequired = () => {
     let lastNameBool = false;
     let phoneBool = false;
     let firstLangBool = false;
-    let ssnBool = false;
+
 
 
     if(!firstName) {
         firstNameBool = true;
-        setErrorsFirstName({firstName: "First name is required"});
+        setErrorsFirstName({firstName: "First Name 1 is required"});
     } else {
         firstNameBool = false;
         setErrorsFirstName({});
@@ -173,7 +172,7 @@ const checkRequired = () => {
 
     if(!lastName) {
         lastNameBool = true;
-        setErrorsLastName({lastName: "Last name  is required"});
+        setErrorsLastName({lastName: "Last Name 1 is required"});
     } else {
         lastNameBool = false;
         setErrorsLastName({});
@@ -181,10 +180,10 @@ const checkRequired = () => {
 
     if(!phone) {
         phoneBool = true;
-        setErrorsPersonalPhone({phone: "Phone is required"});
+        setErrorsPhone({phone: "Personal Phone is required"});
     } else {
         phoneBool = false;
-        setErrorsPersonalPhone({});
+        setErrorsPhone({});
     }
 
     if(!firstLang) {
@@ -196,21 +195,13 @@ const checkRequired = () => {
         setErrorsFirstLang({})
     }
 
-    if(!ssn) {
-        ssnBool = true;
-        setErrorsSsn({ssn: "SSN is required"});
 
-    } else {
-        ssnBool = false;
-        setErrorsSsn({})
-    }
 
     if (
         (firstNameBool) ||
         (lastNameBool) ||
         (phoneBool) ||
-        (firstLangBool) ||
-        (ssnBool)
+        (firstLangBool)
     ) {
         return true
     } else {
@@ -225,113 +216,86 @@ const checkRequired = () => {
 // helper for handleSubmit check integer fields
 const checkInteger = () => {
 
-    let studentDepartment_IdNum = parseInt(studentDepartment_Id);
-    let academicDepartment_IdNum = parseInt(academicDepartment_Id);
+    let household_IdNum = parseInt(household_Id);
     let level_IdNum = parseInt(level_Id);
-    let zipNum = parseInt(zip);
-    let primaryPayRateNum = parseInt(primaryPayRate);
-    let secondaryPayRateNum = parseInt(secondaryPayRate);
-    let tertiaryPayRateNum = parseInt(tertiaryPayRate);
-    let quarternaryPayRateNum = parseInt(quarternaryPayRate);
+    let yearlyIncomeNum = parseInt(level_Id);
 
 
-    let studentDepartment_IdErrorBool = false;
-    let academicDepartment_IdErrorBool = false;
+
+    let household_IdErrorBool = false;
     let level_IdErrorBool = false;
-    let zipErrorBool = false;
-    let primaryPayRateErrorBool = false;
-    let secondaryPayRateErrorBool = false;
-    let tertiaryPayRateErrorBool = false;
-    let quarternaryPayRateErrorBool = false;
+    let yearlyIncomeErrorBool = false;
 
-    if(studentDepartment_Id !== "" && (typeof studentDepartment_IdNum !== "number" || isNaN(studentDepartment_IdNum))) {
-        studentDepartment_IdErrorBool = true;
-        setErrorsStudentDepartment_Id({studentDepartment_Id: "Student Department ID must be an integer"});
+
+    if(household_Id !== "" && (typeof household_IdNum !== "number" || isNaN(household_IdNum))) {
+        household_IdErrorBool = true;
+        setErrorsHousehold_Id({household_Id: "Student Department ID must be an integer"});
     } else {
-        studentDepartment_IdErrorBool = false;
-        setErrorsStudentDepartment_Id({});
+        household_IdErrorBool = false;
+        setErrorsHousehold_Id({});
     }
 
-
-    if(academicDepartment_Id !== "" && (typeof academicDepartment_IdNum !== "number" || isNaN(academicDepartment_IdNum))) {
-        academicDepartment_IdErrorBool = true;
-        setErrorsAcademicDepartment_Id({academicDepartment_Id: "Academic Department ID must be an integer"});
-    } else {
-        academicDepartment_IdErrorBool = false;
-        setErrorsAcademicDepartment_Id({});
-    }
 
 
     if(level_Id !== "" && (typeof level_IdNum !== "number" || isNaN(level_IdNum))){
         level_IdErrorBool = true;
-        setErrorsUserType_Id({level_Id: "User Type ID must be an integer"});
+        setErrorsLevel_Id({level_Id: "Level ID must be an integer"});
     } else {
         level_IdErrorBool = false;
-        setErrorsUserType_Id({});
+        setErrorsLevel_Id({});
     }
 
-
-
-    if(zip !== "" && (typeof zipNum !== "number" || isNaN(zipNum))){
-        zipErrorBool = true;
-        setErrorsZip({zip: "Zip must be an integer"});
+    console.log("yearlyIncome: ", yearlyIncome, typeof yearlyIncome);
+    if(yearlyIncome !== "" && (typeof yearlyIncomeNum !== "number" || isNaN(yearlyIncomeNum))){
+        yearlyIncomeErrorBool = true;
+        setErrorsYearlyIncome({yearlyIncome: "Yearly income must be an integer"});
     } else {
-        zipErrorBool = false;
-        setErrorsZip({});
-    }
-
-
-    if(primaryPayRate !== "" && (typeof primaryPayRateNum !== "number" || isNaN(primaryPayRateNum))){
-        primaryPayRateErrorBool = true;
-        setErrorsPrimaryPayRate({primaryPayRate: "Primary Pay Rate must be an integer"});
-    } else {
-        primaryPayRateErrorBool = false;
-        setErrorsPrimaryPayRate({});
-    }
-
-
-    if(secondaryPayRate !== "" && (typeof secondaryPayRateNum !== "number" || isNaN(secondaryPayRateNum))){
-        secondaryPayRateErrorBool = true;
-        setErrorsSecondaryPayRate({secondaryPayRate: "Secondary Pay Rate must be an integer"});
-    } else {
-        secondaryPayRateErrorBool = false;
-        setErrorsSecondaryPayRate({});
-    }
-
-
-    if(tertiaryPayRate !== "" && (typeof tertiaryPayRateNum !== "number" || isNaN(tertiaryPayRateNum))){
-        tertiaryPayRateErrorBool = true;
-        setErrorsTertiaryPayRate({tertiaryPayRate: "Tertiary Pay Rate must be an integer"});
-    } else {
-        tertiaryPayRateErrorBool = false;
-        setErrorsTertiaryPayRate({});
-    }
-
-
-    if(quarternaryPayRate !== "" && (typeof quarternaryPayRateNum !== "number" || isNaN(quarternaryPayRateNum))){
-        quarternaryPayRateErrorBool = true;
-        setErrorsQuarternaryPayRate({quarternaryPayRate: "Quarternary Pay Rate must be an integer"});
-    } else {
-        quarternaryPayRateErrorBool = false;
-        setErrorsQuarternaryPayRate({});
+        yearlyIncomeErrorBool = false;
+        setErrorsYearlyIncome({});
     }
 
 
     if (
-        (studentDepartment_IdErrorBool) ||
-        (academicDepartment_IdErrorBool) ||
-        (level_IdErrorBool) ||
-        (zipErrorBool) ||
-        (primaryPayRateErrorBool) ||
-        (secondaryPayRateErrorBool) ||
-        (tertiaryPayRateErrorBool) ||
-        (quarternaryPayRateErrorBool)
+        (household_IdErrorBool) ||
+        (level_IdErrorBool)     ||
+        (yearlyIncomeErrorBool)
     ) {
         return true;
     } else {
         return false;
     }
 }
+
+
+
+// helper for handleSubmit check bool fields
+const checkBool = () => {
+
+
+    let headOfHouseholdBool = parseInt(headOfHousehold);
+    let headOfHouseholdErrorBool = false;
+
+
+
+    if(headOfHousehold !== "" && (typeof !!headOfHouseholdBool !== "boolean")) {
+        headOfHouseholdErrorBool = true;
+        setErrorsHeadOfHousehold({headOfHousehold: "Head of Household must be True or False"});
+    } else {
+        headOfHouseholdErrorBool = false;
+        setErrorsHeadOfHousehold({});
+    }
+
+
+
+    if (
+        (headOfHouseholdErrorBool)
+    ) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 
 
@@ -361,12 +325,21 @@ const checkInteger = () => {
             }
 
 
+            if(checkBool()) {
+                setRequiredFieldsMessage({message: "Field(s) must be True or False - see errors above."});
+                // console.log("HANDLE SUBMIT STOPPED DUE TO FIELD(S) MUST BE TRUE OR FALSE")
+                return
+            } else {
+                setRequiredFieldsMessage({});
+            }
+
+
 
          // ---------------REPLACING NEW EMPLOYEE OBJECT VALUES WITH USER INPUT IF EXISTS---------//
 
 
-         if(	studentDepartment_Id	)	editedStudent	.	studentDepartment_Id	=	studentDepartment_Id	;
-         if(	academicDepartment_Id	)	editedStudent	.	academicDepartment_Id	=	academicDepartment_Id	;
+         if(	household_Id	)	editedStudent	.	household_Id	=	household_Id	;
+         if(	headOfHousehold	)	editedStudent	.	headOfHousehold	=	headOfHousehold	;
          if(	level_Id	)	editedStudent	.	level_Id	=	level_Id	;
          if(	firstName	)	editedStudent	.	firstName	=	firstName	;
          if(	nickName	)	editedStudent	.	nickName	=	nickName	;
@@ -380,29 +353,13 @@ const checkInteger = () => {
          if(	state	)	editedStudent	.	state	=	state	;
          if(	zip	)	editedStudent	.	zip	=	zip	;
          if(	dob	)	editedStudent	.	dob	=	dob	;
-         if(	ssn	)	editedStudent	.	ssn	=	ssn	;
+         if(	yearlyIncome	)	editedStudent	.	yearlyIncome	=	yearlyIncome	;
          if(	firstLang	)	editedStudent	.	firstLang	=	firstLang	;
          if(	secondLang	)	editedStudent	.	secondLang	=	secondLang	;
          if(	thirdLang	)	editedStudent	.	thirdLang	=	thirdLang	;
          if(	firstInst	)	editedStudent	.	firstInst	=	firstInst	;
          if(	secondInst	)	editedStudent	.	secondInst	=	secondInst	;
          if(	thirdInst	)	editedStudent	.	thirdInst	=	thirdInst	;
-         if(	primaryTitle	)	editedStudent	.	primaryTitle	=	primaryTitle	;
-         if(	primaryStartDate	)	editedStudent	.	primaryStartDate	=	primaryStartDate	;
-         if(	primaryEndDate	)	editedStudent	.	primaryEndDate	=	primaryEndDate	;
-         if(	primaryPayRate	)	editedStudent	.	primaryPayRate	=	primaryPayRate	;
-         if(	secondaryTitle	)	editedStudent	.	secondaryTitle	=	secondaryTitle	;
-         if(	secondaryStartDate	)	editedStudent	.	secondaryStartDate	=	secondaryStartDate	;
-         if(	secondaryEndDate	)	editedStudent	.	secondaryEndDate	=	secondaryEndDate	;
-         if(	secondaryPayRate	)	editedStudent	.	secondaryPayRate	=	secondaryPayRate	;
-         if(	tertiaryTitle	)	editedStudent	.	tertiaryTitle	=	tertiaryTitle	;
-         if(	tertiaryStartDate	)	editedStudent	.	tertiaryStartDate	=	tertiaryStartDate	;
-         if(	tertiaryEndDate	)	editedStudent	.	tertiaryEndDate	=	tertiaryEndDate	;
-         if(	tertiaryPayRate	)	editedStudent	.	tertiaryPayRate	=	tertiaryPayRate	;
-         if(	quarternaryTitle	)	editedStudent	.	quarternaryTitle	=	quarternaryTitle	;
-         if(	quarternaryStartDate	)	editedStudent	.	quarternaryStartDate	=	quarternaryStartDate	;
-         if(	quarternaryEndDate	)	editedStudent	.	quarternaryEndDate	=	quarternaryEndDate	;
-         if(	quarternaryPayRate	)	editedStudent	.	quarternaryPayRate	=	quarternaryPayRate	;
          if(	biography	)	editedStudent	.	biography	=	biography	;
          if(	notes	)	editedStudent	.	notes	=	notes	;
 
@@ -440,6 +397,26 @@ const checkInteger = () => {
         }
 
 
+// =====================TRANSPORT BUTTONS HANDLERS=========================
+
+        // -----------------------------HANDLE BACK -------------------------------//
+        const handleBackClick = async (e) => {
+            e.preventDefault();
+            // console.log('HANDLE BACK');
+            navigate(`/students/${studentToEdit.id}`);
+        }
+
+        // -----------------------------HANDLE FORWARD -------------------------------//
+        // const handleForthClick = async (e) => {
+        //     e.preventDefault();
+        //     // console.log('HANDLE FORTH');
+        //     navigate('/createNewFacilityForm');
+        // }
+
+
+
+
+
 
 
 // return-----------------------------------
@@ -447,6 +424,20 @@ const checkInteger = () => {
           <main id="EditStudentMain">
 
             <h1 id='EditStudentH1'>Edit Student</h1>
+
+
+            <div id="EditStudentTransportContainer">
+
+                <button  id='EditStudentBack' onClick={handleBackClick}>
+                    <TbPlayerSkipBackFilled id={`EditStudentTbPlayerBack`} />Back To Details
+                </button>
+
+
+                {/* <button id='EditStudentForth' onClick={handleForthClick}>Forth
+                    <TbPlayerSkipForwardFilled id={`EditStudentTbPlayerForth`} />
+                </button> */}
+
+            </div>
 
 
                     <form id='EditStudentForm' onSubmit={handleSubmit}>

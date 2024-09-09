@@ -82,7 +82,7 @@ const checkRequired = () => {
 
     if(!name) {
         nameBool = true;
-        setErrorsName({name: "Name 1 is required"});
+        setErrorsName({name: "Name is required"});
     } else {
         nameBool = false;
         setErrorsName({});
@@ -90,7 +90,7 @@ const checkRequired = () => {
 
     if(!street) {
         streetBool = true;
-        setErrorsStreet({street: "Street 1 is required"});
+        setErrorsStreet({street: "Street is required"});
     } else {
         streetBool = false;
         setErrorsStreet({});
@@ -98,7 +98,7 @@ const checkRequired = () => {
 
     if(!city) {
         cityBool = true;
-        setErrorsCity({city: "City 1 is required"});
+        setErrorsCity({city: "City is required"});
     } else {
         cityBool = false;
         setErrorsCity({});
@@ -106,7 +106,7 @@ const checkRequired = () => {
 
     if(!state) {
         stateBool = true;
-        setErrorsState({state: "State 1 is required"});
+        setErrorsState({state: "State is required"});
     } else {
         stateBool = false;
         setErrorsState({});
@@ -115,7 +115,7 @@ const checkRequired = () => {
 
     if(!zip) {
         zipBool = true;
-        setErrorsZip({zip: "Zip 1 is required"});
+        setErrorsZip({zip: "Zip is required"});
     } else {
         zipBool = false;
         setErrorsZip({});
