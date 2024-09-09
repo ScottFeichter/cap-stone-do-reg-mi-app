@@ -6,7 +6,7 @@ import {useState } from 'react';
 import {useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 // import { useEffect } from 'react';
-import { TbPlayerSkipBackFilled } from "react-icons/tb";
+// import { TbPlayerSkipBackFilled } from "react-icons/tb";
 // import { TbPlayerSkipForwardFilled } from "react-icons/tb";
 
 import * as branchesActions from '../../../../redux/branchesReducer.js';
@@ -191,11 +191,11 @@ const checkRequired = () => {
 
 
         // -----------------------------HANDLE BACK -------------------------------//
-        const handleBackClick = async (e) => {
-            e.preventDefault();
-            console.log('HANDLE BACK');
-            navigate('/resources');
-        }
+        // const handleBackClick = async (e) => {
+        //     e.preventDefault();
+        //     console.log('HANDLE BACK');
+        //     navigate('/resources');
+        // }
 
         // -----------------------------HANDLE FORWARD -------------------------------//
         // const handleForthClick = async (e) => {
@@ -213,10 +213,10 @@ const checkRequired = () => {
 
 
                         <div id="CreateNewBranchTransportContainer">
-
+{/*
                             <button  id='CreateNewBranchBack' onClick={handleBackClick}>
                                 <TbPlayerSkipBackFilled id={`CreateNewBranchTbPlayerBack`} />Back To Resources
-                            </button>
+                            </button> */}
 
 
 

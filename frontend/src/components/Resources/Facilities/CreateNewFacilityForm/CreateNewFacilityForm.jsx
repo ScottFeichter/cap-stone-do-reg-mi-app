@@ -6,7 +6,7 @@ import {useState } from 'react';
 import {useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 // import { useEffect } from 'react';
-import { TbPlayerSkipBackFilled } from "react-icons/tb";
+// import { TbPlayerSkipBackFilled } from "react-icons/tb";
 // import { TbPlayerSkipForwardFilled } from "react-icons/tb";
 
 
@@ -134,11 +134,11 @@ const checkRequired = () => {
 
 
         // -----------------------------HANDLE BACK -------------------------------//
-        const handleBackClick = async (e) => {
-            e.preventDefault();
-            console.log('HANDLE BACK');
-            navigate('/resources');
-        }
+        // const handleBackClick = async (e) => {
+        //     e.preventDefault();
+        //     console.log('HANDLE BACK');
+        //     navigate('/resources');
+        // }
 
         // -----------------------------HANDLE FORWARD -------------------------------//
         // const handleForthClick = async (e) => {
@@ -159,9 +159,9 @@ const checkRequired = () => {
 
             <div id="CreateNewFacilityTransportContainer">
 
-                <button  id='CreateNewFacilityBack' onClick={handleBackClick}>
+                {/* <button  id='CreateNewFacilityBack' onClick={handleBackClick}>
                     <TbPlayerSkipBackFilled id={`CreateNewFacilityTbPlayerBack`} />Back To Resources
-                </button>
+                </button> */}
 
 
 
