@@ -265,7 +265,7 @@ const checkInteger = () => {
 const checkBool = () => {
 
 
-    let headOfHouseholdBool = parseInt(headOfHousehold);
+    let headOfHouseholdBool = headOfHousehold;
     let headOfHouseholdErrorBool = false;
 
 
@@ -395,7 +395,7 @@ const checkBool = () => {
                 return response
             });
 
-            console.log('HANDLE SUBMIT NEW EMPLOYEE HAS FINISHED RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+            // console.log('HANDLE SUBMIT NEW EMPLOYEE HAS FINISHED RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
         }
 
 
