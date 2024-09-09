@@ -1,4 +1,6 @@
 #StudentDetailsMain {
+    overflow: hidden;
+    text-wrap: nowrap;
 
 }
 

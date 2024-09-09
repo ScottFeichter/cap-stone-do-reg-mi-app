@@ -280,8 +280,7 @@ const checkBool = () => {
     let headOfHouseholdErrorBool = false;
 
 
-
-    if(headOfHousehold !== "" && ((headOfHousehold.toLowerCase() !== "true") || (headOfHousehold.toLowerCase() !== "false"))) {
+    if(headOfHousehold !== "" && ((headOfHousehold.toLowerCase() !== "true") && (headOfHousehold.toLowerCase() !== "false"))) {
         headOfHouseholdErrorBool = true;
         setErrorsHeadOfHousehold({headOfHousehold: "Head of Household must be true or false"});
     } else {
