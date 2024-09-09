@@ -135,7 +135,7 @@ function StudentDetails(props){
 {/* form section 2---------------------------------------------------------- */}
 
                     <section id="StudentDetailsFormSection2">
-                        <h4 id="StudentDetailsFormSection2H4">Employment Information</h4>
+                        <h4 id="StudentDetailsFormSection2H4">Account Information</h4>
 
 
 
@@ -231,101 +231,7 @@ function StudentDetails(props){
 
 
 
-{/* form section 4---------------------------------------------------------- */}
 
-
-
-
-                    <section id="StudentDetailsFormSection4">
-                        <h4 id="StudentDetailsFormSection4H4">Additional Employment Information</h4>
-
-        {/* -------------------------------- SECONDARY -----------------------------*/}
-
-                        <div id='secondaryTitleContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"secondaryTitle"}</div>
-                                <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='StudentDetailsFormInput'>{student.secondaryTitle ? student.secondaryTitle : nullReplacer}</div>
-                        </div>
-
-                        <div id='secondaryStartDateContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"secondaryStartDate"}</div>
-                                <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='StudentDetailsFormInput'>{student.secondaryStartDate ? student.secondaryStartDate : nullReplacer}</div>
-                        </div>
-
-                        <div id='secondaryEndDateContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"secondaryEndDate"}</div>
-                                <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='StudentDetailsFormInput'>{student.secondaryEndDate ? student.secondaryEndDate : nullReplacer}</div>
-                        </div>
-
-                        <div id='secondaryPayRateContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"secondaryPayRate"}</div>
-                                <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='StudentDetailsFormInput'>{student.secondaryPayRate ? student.secondaryPayRate : nullReplacer}</div>
-                        </div>
-
-
-         {/* ---------------------------------- TERTIARY -----------------------------*/}
-
-                        <div id='tertiaryTitleContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"tertiaryTitle"}</div>
-                                <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='StudentDetailsFormInput'>{student.tertiaryTitle ? student.tertiaryTitle : nullReplacer}</div>
-                        </div>
-
-                        <div id='tertiaryStartDateContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"tertiaryStartDate"}</div>
-                                <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='StudentDetailsFormInput'>{student.tertiaryStartDate ? student.tertiaryStartDate : nullReplacer}</div>
-                        </div>
-
-                        <div id='tertiaryEndDateContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"tertiaryEndDate"}</div>
-                                <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='StudentDetailsFormInput'>{student.tertiaryEndDate ? student.tertiaryEndDate : nullReplacer}</div>
-                        </div>
-
-                        <div id='tertiaryPayRateContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"tertiaryPayRate"}</div>
-                                <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='StudentDetailsFormInput'>{student.tertiaryPayRate ? student.tertiaryPayRate : nullReplacer}</div>
-                        </div>
-
-
-
-
-        {/* -------------------------------- QUARTERNARY -----------------------------*/}
-
-                        <div id='quarternaryTitleContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"quarternaryTitle"}</div>
-                                <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='StudentDetailsFormInput'>{student.quarternaryTitle ? student.quarternaryTitle : nullReplacer}</div>
-                        </div>
-
-                        <div id='quarternaryStartDateContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"quarternaryStartDate"}</div>
-                                <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='StudentDetailsFormInput'>{student.quarternaryStartDate ? student.quarternaryStartDate : nullReplacer}</div>
-                        </div>
-
-                        <div id='quarternaryEndDateContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"quarternaryEndDate"}</div>
-                                <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='StudentDetailsFormInput'>{student.quarternaryEndDate ? student.quarternaryEndDate : nullReplacer}</div>
-                        </div>
-
-                        <div id='quarternaryPayRateContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"quarternaryPayRate"}</div>
-                                <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='StudentDetailsFormInput'>{student.quarternaryPayRate ? student.quarternaryPayRate : nullReplacer}</div>
-                        </div>
-
-
-
-
-                    </section>
-                    <hr className='StudentDetailsHr'></hr>
 
 
 
