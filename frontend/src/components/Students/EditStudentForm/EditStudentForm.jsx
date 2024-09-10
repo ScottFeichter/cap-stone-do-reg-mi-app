@@ -754,7 +754,7 @@ const checkBool = () => {
 
 
 <div id='headOfHouseholdContainer' className='EditStudentFormLabelInputContainer'>
-
+            <p className='EditStudentFormRequired'>{required}</p>
             <label className='EditStudentFormLabel'>
                 Head Of Household:
                 <input
