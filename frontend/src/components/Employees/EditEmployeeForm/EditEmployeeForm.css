@@ -27,16 +27,16 @@
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500px;
-    /* margin-right: 1rem; */
+    padding: 0 1rem 0 0;
     margin: 1.5rem .5rem 0rem .5rem;
     width: 14rem;
     height: 2rem;
 
 
     display: flex;
-    gap: 0rem;
+    gap: .5rem;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 
     color: var(--buttonColor);
     background-color: var(--buttonBackgroundColor);
@@ -117,31 +117,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-.EditEmployeeErrors {
-    color: red;
-    text-align: center;
-    font-weight: bold;
-    margin: -1rem 0 1.5rem 0;
-}
-
-.EditEmployeeRequiredErrors {
-    color: red;
-    text-align: center;
-    font-weight: bold;
-    margin: 1rem 0 1.5rem 0;
-}
-
-
+/* ==================== FORM========================= */
 #EditEmployeeForm{
     margin: 2rem 4rem 4rem 4rem;
     padding: 0rem 0rem 0rem 0rem;
@@ -195,6 +171,20 @@
     font-size: medium;
 }
 
+
+.EditEmployeeErrors {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin: -1rem 0 1.5rem 0;
+}
+
+.EditEmployeeRequiredErrors {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin: 1rem 0 1.5rem 0;
+}
 
 
 
