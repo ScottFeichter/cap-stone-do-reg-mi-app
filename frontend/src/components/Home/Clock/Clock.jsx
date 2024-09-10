@@ -4,7 +4,7 @@ const Clock = () => {
   const [date, setDate] = useState(new Date().toLocaleTimeString('en-US'));
 
   useEffect(() => {
-    document.title = date;
+    // document.title = date;
     const timerID = setInterval(() => tick(), 1000);
     return () => {
       clearInterval(timerID);

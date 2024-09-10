@@ -4,21 +4,125 @@
 
 #EditEmployeeDepartmentH1 {
     text-align: center;
+    font-size: 2.5rem;
+    margin: 1rem 0 0 0;
 }
 
-.EditEmployeeDepartmentErrors {
-    color: red;
-    text-align: center;
-    font-weight: bold;
-    margin: -1rem 0 1.5rem 0;
+
+
+/* ============================TRANSPORT CONTAINER======================= */
+
+
+#EditEmployeeDepartmentTransportContainer{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px pink solid; */
 }
 
-.EditEmployeeDepartmentRequiredErrors {
-    color: red;
+
+/* ==================== BACK ========================= */
+
+#EditEmployeeDepartmentBack:enabled{
+
     text-align: center;
-    font-weight: bold;
-    margin: 1rem 0 1.5rem 0;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500px;
+    padding: 0 1rem 0 0;
+    margin: 1.5rem .5rem 0rem .5rem;
+    width: 14rem;
+    height: 2rem;
+
+
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+    border-radius: 5px;
+
 }
+
+
+#EditEmployeeDepartmentBack:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#EditEmployeeDepartmentBack:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#EditEmployeeDepartmentBack:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}
+
+
+
+
+/* ==================== FORTH ======================== */
+#EditEmployeeDepartmentForth:enabled{
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500px;
+    margin-left: 1rem;
+    width: 6rem;
+    padding: .5rem 0.5rem .5rem .5rem;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+    border-radius: 5px;
+
+}
+
+
+#EditEmployeeDepartmentForth:disabled {
+    color: var(--buttonDisabledColor);
+    background-color: var(--buttonDisabledBackgroundColor);
+    border: var(--buttonDisabledBorder);
+
+}
+
+#EditEmployeeDepartmentForth:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+#EditEmployeeDepartmentForth:enabled:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}
+
+
+
+/* ==================== FORM========================= */
+
 
 
 #EditEmployeeDepartmentForm{
@@ -72,6 +176,21 @@
     padding: .5rem .5rem 0 0;
     color: red;
     font-size: medium;
+}
+
+
+.EditEmployeeDepartmentErrors {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin: -1rem 0 1.5rem 0;
+}
+
+.EditEmployeeDepartmentRequiredErrors {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin: 1rem 0 1.5rem 0;
 }
 
 

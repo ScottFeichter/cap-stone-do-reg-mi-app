@@ -149,7 +149,7 @@ const SignupForm = () => {
                             {/* <div id='passwordContainer'> */}
                                 <div className="SignUpFormErrors">{errors.password}</div>
                                     <label className='SignupFormLabel'>
-                                        password:
+                                        choose password:
                                         <input
                                         className='SignupFormInput'
                                         id="password"

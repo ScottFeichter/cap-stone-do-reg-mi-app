@@ -152,12 +152,13 @@ const checkRequired = () => {
     let lastNameBool = false;
     let phoneBool = false;
     let firstLangBool = false;
+    let headOfHouseholdBool = false;
 
 
 
     if(!firstName) {
         firstNameBool = true;
-        setErrorsFirstName({firstName: "First Name 1 is required"});
+        setErrorsFirstName({firstName: "First Name is required"});
     } else {
         firstNameBool = false;
         setErrorsFirstName({});
@@ -165,7 +166,7 @@ const checkRequired = () => {
 
     if(!lastName) {
         lastNameBool = true;
-        setErrorsLastName({lastName: "Last Name 1 is required"});
+        setErrorsLastName({lastName: "Last Name is required"});
     } else {
         lastNameBool = false;
         setErrorsLastName({});
@@ -173,7 +174,7 @@ const checkRequired = () => {
 
     if(!phone) {
         phoneBool = true;
-        setErrorsPhone({phone: "Personal Phone is required"});
+        setErrorsPhone({phone: "Phone is required"});
     } else {
         phoneBool = false;
         setErrorsPhone({});
@@ -188,13 +189,23 @@ const checkRequired = () => {
         setErrorsFirstLang({})
     }
 
+    if(!headOfHousehold) {
+        headOfHouseholdBool = true;
+        setErrorsHeadOfHousehold({headOfHousehold: "Head of Household is required"});
+
+    } else {
+        headOfHouseholdBool = false;
+        setErrorsHeadOfHousehold({})
+    }
+
 
 
     if (
         (firstNameBool) ||
-        (lastNameBool) ||
-        (phoneBool) ||
-        (firstLangBool)
+        (lastNameBool)  ||
+        (phoneBool)     ||
+        (firstLangBool) ||
+        (headOfHouseholdBool)
     ) {
         return true
     } else {
@@ -265,14 +276,13 @@ const checkInteger = () => {
 const checkBool = () => {
 
 
-    let headOfHouseholdBool = parseInt(headOfHousehold);
+
     let headOfHouseholdErrorBool = false;
 
 
-
-    if(headOfHousehold !== "" && (typeof !!headOfHouseholdBool !== "boolean")) {
+    if(headOfHousehold !== "" && ((headOfHousehold.toLowerCase() !== "true") && (headOfHousehold.toLowerCase() !== "false"))) {
         headOfHouseholdErrorBool = true;
-        setErrorsHeadOfHousehold({headOfHousehold: "Head of Household must be True or False"});
+        setErrorsHeadOfHousehold({headOfHousehold: "Head of Household must be true or false"});
     } else {
         headOfHouseholdErrorBool = false;
         setErrorsHeadOfHousehold({});
@@ -323,7 +333,7 @@ const checkBool = () => {
 
 
             if(checkBool()) {
-                setRequiredFieldsMessage({message: "Field(s) must be True or False - see errors above."});
+                setRequiredFieldsMessage({message: "Field(s) must be true or false - see errors above."});
                 // console.log("HANDLE SUBMIT STOPPED DUE TO FIELD(S) MUST BE TRUE OR FALSE")
                 return
             } else {
@@ -337,7 +347,7 @@ const checkBool = () => {
 
 
          if(	household_Id	)	newStudent	.	household_Id	=	household_Id	;
-         if(	headOfHousehold	)	newStudent	.	headOfHousehold	=	headOfHousehold	;
+         if(	headOfHousehold	)	newStudent	.	headOfHousehold	=	!!(headOfHousehold.toLowerCase())	;
          if(	level_Id	)	newStudent	.	level_Id	=	level_Id	;
          if(	firstName	)	newStudent	.	firstName	=	firstName	;
          if(	nickName	)	newStudent	.	nickName	=	nickName	;
@@ -395,7 +405,7 @@ const checkBool = () => {
                 return response
             });
 
-            console.log('HANDLE SUBMIT NEW EMPLOYEE HAS FINISHED RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+            // console.log('HANDLE SUBMIT NEW EMPLOYEE HAS FINISHED RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
         }
 
 
@@ -723,6 +733,7 @@ const checkBool = () => {
 
                             <div id='headOfHouseholdContainer' className='CreateNewStudentFormLabelInputContainer'>
 
+                                        <p className='CreateNewStudentFormRequired'>{required}</p>
                                         <label className='CreateNewStudentFormLabel'>
                                             Head Of Household:
                                             <input

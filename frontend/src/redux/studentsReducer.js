@@ -126,15 +126,15 @@ export const thunkCreateStudent = (newStudent) => async (dispatch) => {
 
 /** PUT STUDENTS */
 export const thunkEditStudent = (editedStudent) => async (dispatch) => {
-  const { studentId, updatedStudent } = editedStudent;
+  const { id } = editedStudent;
 //  console.log('UPDATED STUDENT FROM STUDENTS EDIT STUDENT', updatedStudent);
 
-  const response = await csrfFetch(`/api/students/${studentId}`, {
+  const response = await csrfFetch(`/api/students/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify(updatedStudent)
+    body: JSON.stringify(editedStudent)
   });
 
   const data = await response.json();

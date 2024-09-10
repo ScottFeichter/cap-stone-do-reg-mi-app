@@ -11,6 +11,8 @@
 
 #ProfileButtonButton:hover {
     cursor: pointer;
+    background: none;
+    /* filter: drop-shadow(0rem 0rem 2rem var(--green1)); */
 }
 
 #ProfileButtonLuUserCircle2{

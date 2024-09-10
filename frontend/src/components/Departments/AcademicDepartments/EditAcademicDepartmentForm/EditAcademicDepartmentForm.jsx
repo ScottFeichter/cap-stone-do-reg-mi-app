@@ -7,6 +7,12 @@ import {useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 // import { useEffect } from 'react';
+
+
+import { TbPlayerSkipBackFilled } from "react-icons/tb";
+// import { TbPlayerSkipForwardFilled } from "react-icons/tb";
+
+
 import * as academicDepartmentsActions from '../../../../redux/academicDepartmentsReducer.js';
 
 
@@ -141,11 +147,41 @@ const checkRequired = () => {
             // console.log('HANDLE SUBMIT NEW EMPLOYEE HAS FINISHED RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
         }
 
+
+ // =====================TRANSPORT BUTTONS HANDLERS=========================
+
+        // -----------------------------HANDLE BACK -------------------------------//
+        const handleBackClick = async (e) => {
+            e.preventDefault();
+            // console.log('HANDLE BACK');
+            navigate(`/academicDepartments/${academicDepartmentToEdit.id}`);
+        }
+
+        // -----------------------------HANDLE FORWARD -------------------------------//
+        // const handleForthClick = async (e) => {
+        //     e.preventDefault();
+        //     // console.log('HANDLE FORTH');
+        //     navigate('/createNewFacilityForm');
+        // }
+
 // return-----------------------------------
         return (
           <main id="EditAcademicDepartmentMain">
 
             <h1 id='EditAcademicDepartmentH1'>Edit Academic Department</h1>
+
+            <div id="EditAcademicDepartmentTransportContainer">
+
+            <button  id='EditAcademicDepartmentBack' onClick={handleBackClick}>
+                    <TbPlayerSkipBackFilled id={`EditAcademicDepartmentTbPlayerBack`} />Back To Details
+                </button>
+
+
+                {/* <button id='EditAcademicDepartmentFormForth' onClick={handleForthClick}>Forth
+                    <TbPlayerSkipForwardFilled id={`EditAcademicDepartmentFormTbPlayerForth`} />
+                </button> */}
+
+            </div>
 
 
                     <form id='EditAcademicDepartmentForm' onSubmit={handleSubmit}>
