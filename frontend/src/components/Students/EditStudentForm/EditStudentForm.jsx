@@ -25,7 +25,7 @@ function EditStudentForm() {
         const location = useLocation();
         const {studentToEdit} = location.state;
 
-        // console.log("studentToEdit : ", studentToEdit)
+        console.log("studentToEdit : ", studentToEdit.id)
 
         const [errors, setErrors] = useState({});
 
@@ -245,7 +245,7 @@ const checkInteger = () => {
         setErrorsLevel_Id({});
     }
 
-    console.log("yearlyIncome: ", yearlyIncome, typeof yearlyIncome);
+    // console.log("yearlyIncome: ", yearlyIncome, typeof yearlyIncome);
     if(yearlyIncome !== "" && (typeof yearlyIncomeNum !== "number" || isNaN(yearlyIncomeNum))){
         yearlyIncomeErrorBool = true;
         setErrorsYearlyIncome({yearlyIncome: "Yearly income must be an integer"});
@@ -365,7 +365,7 @@ const checkBool = () => {
 
          editedStudent.id = studentToEdit.id;
 
-        //  console.log("editedStudent 423: ", editedStudent)
+         console.log("editedStudent 423: ", editedStudent)
 
          // --------------------------MAKING THE DISPATCH---------------------//
             let studentId;
@@ -375,25 +375,25 @@ const checkBool = () => {
             await dispatch(studentsActions.thunkEditStudent(editedStudent))
             .then(response => {
                 dispatch(studentsActions.thunkGetStudentsAll())
-                // console.log("response 432: ", response, "response.payload", response.payload, "response.payload[0]", response.payload.id);
+                console.log("response 432: ", response, "response.payload", response.payload, "response.payload[0]", response.payload.id);
                 studentId = response.payload.id
                 return studentId
             }).catch(async (res) => {
                     // console.log("res 439", res);
                     const data = await res.json();
                     if (data.errors) setErrors(data.errors);
-                    // console.log('CATCH DISPATCH RAN DATA:', data, 'DATA.ERRORS: ', data.errors, 'RES: ', res);
+                    console.log('CATCH DISPATCH RAN DATA:', data, 'DATA.ERRORS: ', data.errors, 'RES: ', res);
                 }
             )
 
             await dispatch(studentsActions.thunkGetStudentById(studentId)).then(response => {
                 editedStudentDetails = response;
 
-                navigate(`/students`)
+                navigate(`/students/${studentToEdit.id}`)
                 return response
             });
 
-            // console.log('HANDLE SUBMIT NEW EMPLOYEE HAS FINISHED RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+            console.log('HANDLE SUBMIT NEW EMPLOYEE HAS FINISHED RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
         }
 
 
