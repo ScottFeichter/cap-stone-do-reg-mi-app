@@ -20,11 +20,11 @@ function HorizontalNavBar() {
 
           <HomeButton />
 
-          <ModeButton />
+          <ProfileButton />
 
           <GlobalSearch />
 
-          <ProfileButton />
+          <ModeButton />
 
           <LogoutButton />
 
