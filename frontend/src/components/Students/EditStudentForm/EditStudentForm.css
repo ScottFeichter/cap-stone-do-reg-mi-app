@@ -1,7 +1,7 @@
 #EditStudentMain {
     overflow: hidden;
     margin: 0 1rem 0 1rem;
-    padding: .5rem .5rem .5rem .5rem;
+    padding: .5rem .5rem 0rem .5rem;
     /* border: 2px blue solid; */
 
 }
@@ -9,7 +9,7 @@
 #EditStudentH1 {
     text-align: center;
     font-size: 2.5rem;
-    margin: .5rem 0
+    margin: .5rem 0 0 0;
 }
 
 
@@ -34,16 +34,16 @@
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500px;
-    /* margin-right: 1rem; */
+    padding: 0 1rem 0 0;
     margin: 1.5rem .5rem 0rem .5rem;
     width: 14rem;
     height: 2rem;
 
 
     display: flex;
-    gap: 0rem;
+    gap: .5rem;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 
     color: var(--buttonColor);
     background-color: var(--buttonBackgroundColor);
@@ -53,21 +53,21 @@
 }
 
 
-#EditStudentBack:disabled {
+#EditEmployeeBack:disabled {
     color: var(--buttonDisabledColor);
     background-color: var(--buttonDisabledBackgroundColor);
     border: var(--buttonDisabledBorder);
 
 }
 
-#EditStudentBack:enabled:hover {
+#EditEmployeeBack:enabled:hover {
     color: var(--buttonHoverColor);
     background-color: var(--buttonHoverBackgroundColor);
     border: var(--buttonHoverBorder);
     cursor: pointer;
 }
 
-#EditStudentBack:enabled:active{
+#EditEmployeeBack:enabled:active{
     color: var(--buttonActiveColor);
     background-color: var(--buttonActiveBackgroundColor);
     border: var(--buttonActiveBorder);
@@ -134,7 +134,7 @@
 
 
 
-
+/* ==================== FORM ======================== */
 
 .EditStudentErrors {
     color: red;
@@ -243,6 +243,8 @@
 }
 
 
+/* ==================== BUTTON ======================== */
+
 
 #EditStudentButton {
     margin: 2rem 0 4rem 0;
@@ -279,4 +281,14 @@
     background-color: var(--buttonActiveBackgroundColor);
     border: var(--buttonActiveBorder);
     cursor: pointer;
+}
+
+/* ==================== CUSTOM INPUT ADJUSTMENTS ======================== */
+
+#biography{
+    resize: none;
+}
+
+#notes{
+    resize: none;
 }

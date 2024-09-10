@@ -7,6 +7,12 @@ import {useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 // import { useEffect } from 'react';
+
+
+import { TbPlayerSkipBackFilled } from "react-icons/tb";
+// import { TbPlayerSkipForwardFilled } from "react-icons/tb";
+
+
 import * as employeeDepartmentsActions from '../../../../redux/employeeDepartmentsReducer.js';
 
 
@@ -141,11 +147,42 @@ const checkRequired = () => {
             // console.log('HANDLE SUBMIT NEW EMPLOYEE HAS FINISHED RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
         }
 
+
+ // =====================TRANSPORT BUTTONS HANDLERS=========================
+
+        // -----------------------------HANDLE BACK -------------------------------//
+        const handleBackClick = async (e) => {
+            e.preventDefault();
+            // console.log('HANDLE BACK');
+            navigate(`/employeeDepartments/${employeeDepartmentToEdit.id}`);
+        }
+
+        // -----------------------------HANDLE FORWARD -------------------------------//
+        // const handleForthClick = async (e) => {
+        //     e.preventDefault();
+        //     // console.log('HANDLE FORTH');
+        //     navigate('/createNewFacilityForm');
+        // }
+
+
 // return-----------------------------------
         return (
           <main id="EditEmployeeDepartmentMain">
 
             <h1 id='EditEmployeeDepartmentH1'>Edit Employee Department</h1>
+
+            <div id="EditEmployeeDepartmentTransportContainer">
+
+            <button  id='EditEmployeeDepartmentBack' onClick={handleBackClick}>
+                    <TbPlayerSkipBackFilled id={`EditEmployeeDepartmentTbPlayerBack`} />Back To Details
+                </button>
+
+
+                {/* <button id='EditEmployeeDepartmentFormForth' onClick={handleForthClick}>Forth
+                    <TbPlayerSkipForwardFilled id={`EditEmployeeDepartmentFormTbPlayerForth`} />
+                </button> */}
+
+            </div>
 
 
                     <form id='EditEmployeeDepartmentForm' onSubmit={handleSubmit}>
