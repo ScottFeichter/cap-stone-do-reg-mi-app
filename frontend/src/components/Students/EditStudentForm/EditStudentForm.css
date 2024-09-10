@@ -285,10 +285,10 @@
 
 /* ==================== CUSTOM INPUT ADJUSTMENTS ======================== */
 
-#biographyContainer{
+#biography{
     resize: none;
 }
 
-#notesContainer{
+#notes{
     resize: none;
 }

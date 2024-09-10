@@ -43,7 +43,7 @@ function EditEmployeeForm() {
         //-----must be integers
         const [errorsEmployeeDepartment_Id, setErrorsEmployeeDepartment_Id] = useState({})
         const [errorsAcademicDepartment_Id, setErrorsAcademicDepartment_Id ] = useState({})
-        const [errorsUserType_Id, setErrorsUserType_Id ] = useState({})
+        const [errorsLevel_Id, setErrorsLevel_Id ] = useState({})
         const [errorsZip, setErrorsZip ] = useState({})
         const [errorsPrimaryPayRate, setErrorsPrimaryPayRate ] = useState({})
         const [errorsSecondaryPayRate, setErrorsSecondaryPayRate ] = useState({})
@@ -110,7 +110,7 @@ function EditEmployeeForm() {
 
     const [employeeDepartment_Id,setEmployeeDepartment_Id] = useState(employeeToEdit.employeeDepartment_Id||"")
     const [academicDepartment_Id,setAcademicDepartment_Id] = useState(employeeToEdit.academicDepartment_Id||"")
-    const [level_Id,setUserType_Id] = useState(employeeToEdit.level_Id||"")
+    const [level_Id,setLevel_Id] = useState(employeeToEdit.level_Id||"")
     const [firstName,setFirstName] = useState(employeeToEdit.firstName||"")
     const [nickName,setNickName] = useState(employeeToEdit.nickName||"")
     const [middleName,setMiddleName] = useState(employeeToEdit.middleName||"")
@@ -269,10 +269,10 @@ const checkInteger = () => {
 
     if(level_Id !== "" && (typeof level_IdNum !== "number" || isNaN(level_IdNum))){
         level_IdErrorBool = true;
-        setErrorsUserType_Id({level_Id: "User Type ID must be an integer"});
+        setErrorsLevel_Id({level_Id: "Level ID must be an integer"});
     } else {
         level_IdErrorBool = false;
-        setErrorsUserType_Id({});
+        setErrorsLevel_Id({});
     }
 
 
@@ -841,21 +841,21 @@ const checkInteger = () => {
                             <div id='level_IdContainer' className='EditEmployeeFormLabelInputContainer'>
 
                                         <label className='EditEmployeeFormLabel'>
-                                            User Type ID:
+                                            Level ID:
                                             <input
                                             className='EditEmployeeFormInput'
                                             id="level_Id"
                                             name="level_Id"
                                             type="text"
-                                            placeholder='User Type ID'
+                                            placeholder='Level ID'
                                             value={level_Id}
-                                            onChange={(e) => setUserType_Id(e.target.value)}
+                                            onChange={(e) => setLevel_Id(e.target.value)}
 
                                             />
                                         </label>
 
                             </div>
-                            {errorsUserType_Id.level_Id && <p className='EditEmployeeErrors'>{errorsUserType_Id.level_Id}</p>}
+                            {errorsLevel_Id.level_Id && <p className='EditEmployeeErrors'>{errorsLevel_Id.level_Id}</p>}
 
 
 

@@ -149,7 +149,10 @@ function StudentDetails(props){
                         <div id='headOfHouseholdContainer' className='StudentDetailsFormLabelInputContainer'>
                                 <div className='StudentDetailsFormLabel'>{"headOfHousehold"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
-                                <div className='StudentDetailsFormInput'>{((student.headOfHousehold.toString() === "true")|| (student.headOfHousehold.toString() === "false")) ? student.headOfHousehold.toString() : nullReplacer}</div>
+                                <div className='StudentDetailsFormInput'>{
+                                        student.headOfHousehold === null ? nullReplacer :
+                                                ((student.headOfHousehold.toString() === "true")||
+                                                (student.headOfHousehold.toString() === "false")) ? student.headOfHousehold.toString() : nullReplacer}</div>
                         </div>
 
                         <div id='yearlyIncomeContainer' className='StudentDetailsFormLabelInputContainer'>
