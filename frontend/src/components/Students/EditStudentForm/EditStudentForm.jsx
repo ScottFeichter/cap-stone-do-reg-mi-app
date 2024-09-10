@@ -159,6 +159,7 @@ const checkRequired = () => {
     let lastNameBool = false;
     let phoneBool = false;
     let firstLangBool = false;
+    let headOfHouseholdBool = false;
 
 
 
@@ -194,6 +195,14 @@ const checkRequired = () => {
         firstLangBool = false;
         setErrorsFirstLang({})
     }
+    if(!headOfHousehold) {
+        headOfHouseholdBool = true;
+        setErrorsHeadOfHousehold({headOfHousehold: "Head of Household is required"});
+
+    } else {
+        headOfHouseholdBool = false;
+        setErrorsHeadOfHousehold({})
+    }
 
 
 
@@ -201,7 +210,9 @@ const checkRequired = () => {
         (firstNameBool) ||
         (lastNameBool) ||
         (phoneBool) ||
-        (firstLangBool)
+        (firstLangBool) ||
+        (headOfHouseholdBool)
+
     ) {
         return true
     } else {
@@ -272,14 +283,12 @@ const checkInteger = () => {
 const checkBool = () => {
 
 
-    let headOfHouseholdBool = parseInt(headOfHousehold);
     let headOfHouseholdErrorBool = false;
 
 
-
-    if(headOfHousehold !== "" && (typeof !!headOfHouseholdBool !== "boolean")) {
+    if(headOfHousehold !== "" && ((headOfHousehold.toLowerCase() !== "true") && (headOfHousehold.toLowerCase() !== "false"))) {
         headOfHouseholdErrorBool = true;
-        setErrorsHeadOfHousehold({headOfHousehold: "Head of Household must be True or False"});
+        setErrorsHeadOfHousehold({headOfHousehold: "Head of Household must be true or false"});
     } else {
         headOfHouseholdErrorBool = false;
         setErrorsHeadOfHousehold({});
