@@ -7,6 +7,13 @@ import {useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 // import { useEffect } from 'react';
+
+
+import { TbPlayerSkipBackFilled } from "react-icons/tb";
+// import { TbPlayerSkipForwardFilled } from "react-icons/tb";
+
+
+
 import * as facilitiesActions from '../../../../redux/facilitiesReducer.js';
 
 
@@ -141,11 +148,46 @@ const checkRequired = () => {
             // console.log('HANDLE SUBMIT NEW EMPLOYEE HAS FINISHED RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
         }
 
+
+
+
+
+// =====================TRANSPORT BUTTONS HANDLERS=========================
+
+        // -----------------------------HANDLE BACK -------------------------------//
+        const handleBackClick = async (e) => {
+            e.preventDefault();
+            // console.log('HANDLE BACK');
+            navigate(`/facilities/${facilityToEdit.id}`);
+        }
+
+        // -----------------------------HANDLE FORWARD -------------------------------//
+        // const handleForthClick = async (e) => {
+        //     e.preventDefault();
+        //     // console.log('HANDLE FORTH');
+        //     navigate('/createNewFacilityForm');
+        // }
+
+
 // return-----------------------------------
         return (
           <main id="EditFacilityMain">
 
             <h1 id='EditFacilityH1'>Edit Facility</h1>
+
+            <div id="EditFacilityTransportContainer">
+
+                <button  id='EditFacilityBack' onClick={handleBackClick}>
+                    <TbPlayerSkipBackFilled id={`EditFacilityTbPlayerBack`} />Back To Details
+                </button>
+
+
+                {/* <button id='EditFacilityFormForth' onClick={handleForthClick}>Forth
+                    <TbPlayerSkipForwardFilled id={`EditFacilityFormTbPlayerForth`} />
+                </button> */}
+
+            </div>
+
 
 
                     <form id='EditFacilityForm' onSubmit={handleSubmit}>
