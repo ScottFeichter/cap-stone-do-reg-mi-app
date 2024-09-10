@@ -179,6 +179,9 @@ const camelCaseToTitleCase = (word) => {
 // console.log("test firstNameID: ", camelCaseToTitleCase("firstNameID")); // passed
 // console.log("test FirstNameID: ", camelCaseToTitleCase("FirstNameID")); // passed
 
-console.log("test firstName_Id: ", camelCaseToTitleCase("firstName_Id")); 
+console.log("test firstName_Id: ", camelCaseToTitleCase("firstName_Id"));
 // console.log("test firstName-Id: ", camelCaseToTitleCase("firstName-Id"));
 // console.log("test firstName_ID: ", camelCaseToTitleCase("firstName_ID"));
+
+
+export default camelCaseToTitleCase();
