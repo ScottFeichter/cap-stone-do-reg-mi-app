@@ -157,7 +157,7 @@ const camelCaseToTitleCase = (word) => {
 
   }
 
-// =======================================================================
+// =============================CHECK RESULT FOR ENDING I D========================================
 
   if (result[result.length - 1] === "D") {
     console.log("163");
@@ -170,8 +170,16 @@ const camelCaseToTitleCase = (word) => {
     }
   }
 
+
+// =========================== RETURN ==========================================
+
   return result;
 }
+
+
+// ==========================  TESTS ===========================================
+
+
 
 // console.log("test FirstName: ", camelCaseToTitleCase("FirstName")); // passed
 // console.log("test firstName: ", camelCaseToTitleCase("firstName")); // passed
