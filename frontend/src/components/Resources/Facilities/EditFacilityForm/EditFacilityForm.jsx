@@ -206,11 +206,13 @@ const checkRequired = () => {
 
                             <div id='nameContainer' className='EditFacilityFormLabelInputContainer'>
 
-                                        <p className='EditFacilityFormRequired'>{required}</p>
-                                        <label className='EditFacilityFormLabel'>
-                                            Name:
 
-                                            <input
+
+                                        <label className='EditFacilityFormLabel' htmlFor="name">
+                                            <p className='EditFacilityFormRequired'>{required}</p>
+                                            Name: </label>
+
+                                        <input
                                             className='EditFacilityFormInput'
                                             id="name"
                                             name="name"
@@ -220,7 +222,6 @@ const checkRequired = () => {
                                             onChange={(e) => setName(e.target.value)}
                                             required
                                             />
-                                        </label>
 
                             </div>
                             {errorsName.name && <p className='EditFacilityErrors'>{errorsName.name}</p>}
@@ -230,7 +231,7 @@ const checkRequired = () => {
                             <div id='branch_IdContainer' className='EditFacilityFormLabelInputContainer'>
 
                                         <label className='EditFacilityFormLabel'>
-                                            Branch ID:
+                                            Branch ID:   </label>
                                             <input
                                             className='EditFacilityFormInput'
                                             id="branch_Id"
@@ -241,7 +242,7 @@ const checkRequired = () => {
                                             onChange={(e) => setBranch_Id(e.target.value)}
 
                                             />
-                                        </label>
+
 
                             </div>
                             {errors.branch_Id && <p className='EditFacilityErrors'>{errors.branch_Id}</p>}

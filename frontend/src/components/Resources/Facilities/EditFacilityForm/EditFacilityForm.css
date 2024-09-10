@@ -118,11 +118,11 @@
 
 
 
-/* ==================== FORM========================= */
+/* ==================== FORM ========================= */
 
 
 #EditFacilityForm{
-    margin: 2rem 4rem 4rem 4rem;
+    margin: 2rem 4rem 2rem 4rem;
     padding: 0rem 0rem 0rem 0rem;
     border: var(--border);
     border-radius: 25px;
@@ -137,20 +137,26 @@
 
 .EditFacilityFormLabelInputContainer {
     display: flex;
-    justify-content: center;
-    /* border: 2px grey solid; */
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    gap: 1rem;
+    margin: 2rem 2rem 2rem 0;
+    /* width: 160% */
+
+
+    border: 2px grey solid;
 }
 
 .EditFacilityFormLabel {
+    text-align: right;
+    text-wrap: nowrap;
     color: black;
     font-size: medium;
     font-weight: 600;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
+    width: 20rem;
 }
 
 
@@ -158,18 +164,20 @@
 .EditFacilityFormInput {
     font-size: small;
     height: 1.5rem;
-    margin-bottom: 1.5rem;
-    width: 442px;
+    margin: 0 0 0 0;
+    /* padding: 0 0rem 0 4rem; */
+    width: 60rem;
 }
 
 
 
 
 .EditFacilityFormRequired{
-    position:sticky;
+    /* position:sticky; */
+    display: inline;
 
-    margin: 1.25rem 0 0 -1rem;
-    padding: .5rem .5rem 0 0;
+    margin: 0 .5rem 0 0;
+    padding: 0;
     color: red;
     font-size: medium;
 }
