@@ -10,6 +10,8 @@ import './EmployeeDetails.css';
 
 //================COMPONENT IMPORTS=====================//
 
+import camelCaseToTitleCase from "../../_Helpers/camelCaseToTitleCase/camelCaseToTitleCase.js";
+
 
 //===============FUNCTION DECLARATION===================//
 function EmployeeDetails(props){
@@ -17,7 +19,7 @@ function EmployeeDetails(props){
     // const employee = useSelector(state => state.employees.employees[1])
     const employee = props.employee;
 
-    // const employeeObjectKeys = Object.keys(employee);
+    const employeeObjectKeys = Object.keys(employee);
     // const employeeObjectValues = Object.values(employee);
     // const employeeObjectEntries = Object.entries(employee);
 
@@ -49,6 +51,19 @@ function EmployeeDetails(props){
                     <section id="EmployeeDetailsFormSection1">
 
                         <h4 id="EmployeeDetailsFormSection1H4">Personal Information</h4>
+
+                        {employeeObjectKeys.map(key => {
+
+
+
+                        <div className='EmployeeDetailsFormLabelInputContainer'>
+                        <div className='EmployeeDetailsFormLabel'>{camelCaseToTitleCase(key)}</div>
+                        <div className='EmployeeDetailsFormInfoDivider'>{infoDivider}</div>
+                        <div className='EmployeeDetailsFormInput'>{employee.key ? employee.key : nullReplacer}</div>
+                        </div>
+
+
+                        })}
 
                         <div className='EmployeeDetailsFormLabelInputContainer'>
                                 <div className='EmployeeDetailsFormLabel'>{"ID"}</div>
