@@ -12,6 +12,8 @@
     justify-content: center;
     border: var(--border);
     border-radius: 25px;
+    z-index: 3;
+    background-color: white;
 }
 
 #SignupFormH1{

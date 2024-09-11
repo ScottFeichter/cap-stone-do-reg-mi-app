@@ -17,10 +17,30 @@
     font-size: 3.25rem;
 }
 
+#SplashImg{
+    color: white;
+}
+
 #SplashDivLoginSignupContainer{
+
     margin: 4rem auto 2rem auto;
     display: flex;
     align-items: center;
     justify-content:space-evenly;
 
+}
+
+#SplashFooter{
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    background-color: var(--green1);
+    border: var(--border);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 3rem;
+    z-index: 1;
 }
