@@ -1,42 +1,18 @@
-// P: getting js keys in camelCase to display on site in Title Case
-// 1. Check if first char is upper
-//    - if yes level 1 branch 1
-//    - if no level 1 branch 2
-
-// level 1 branch 1
-// 1. find the next upper char
-//    - if no next upper char return the full name (it's not camelCase and only one word)
-//    - if there is:
-// 2. substring from the first upper char to one index before the next upper char and save to result
-// 3. repeat process until no more next upper char
-// 4. concate result and return
-
-
-// level 1 branch 2
-// 1. find the next upper char
-//    - if no next upper char
-//        - toUpper first char and return the name (it's camelCase and only one word)
-//    - if there is:
-// 2. toUpper the first char
-// 3. substring from the first upper char to one index before the next upper char and save to result
-// 4. repeat process until no more next upper char
-// 5. concate result and return
-
-
 const camelCaseToTitleCase = (word) => {
   let result = "";
   let firstUpperIdx;
   let stopCharIdx;
-  let firstLowerCharOfWordIdx;
+  let firstLowerIdx;
   let nextUpperIdx;
-  let charZeroIdx = 0;
+
 
 
 // ===========================if first letter is upper============================================
   // check if first letter is already upper
-  if (word[charZeroIdx] === word[charZeroIdx].toUpperCase()) {
+  // console.log("word[0]: ", word[0], "word[0].toUpperCase()", word[0].toUpperCase())
+  if (word[0] === word[0].toUpperCase()) {
 
-    firstUpperIdx = charZeroIdx;
+    firstUpperIdx = 0;
 
     for(let i = 1; i < word.length; i++) {
 
@@ -46,6 +22,26 @@ const camelCaseToTitleCase = (word) => {
         result += word.slice(firstUpperIdx, stopCharIdx);
         // console.log("result line 38", result, "i line 38", i, "word[i]", word[i]);
 
+
+        if (firstUpperIdx === undefined || firstLowerIdx >= firstUpperIdx) {
+
+          let nuWord = word.slice(firstLowerIdx, stopCharIdx);
+          let nuWordToTitleCase = nuWord[0].toUpperCase() + nuWord.slice(1);
+          result += nuWordToTitleCase + " ";
+          stopCharIdx = undefined;
+
+
+        } else {
+
+          let nuWord = word.slice(firstUpperIdx, stopCharIdx);
+          let nuWordToTitleCase = nuWord[0].toUpperCase() + nuWord.slice(1);
+          result += nuWordToTitleCase + " ";
+          stopCharIdx = undefined;
+
+        }
+
+
+
         if(word[i + 1] === word[i + 1].toUpperCase()) {
           firstUpperIdx = i + 1;
           i++;
@@ -53,10 +49,10 @@ const camelCaseToTitleCase = (word) => {
           stopCharIdx = i;
           i++;
         } else {
-          firstLowerCharOfWordIdx = i;
+          firstLowerIdx = i;
           i++;
         }
-        continue
+        // continue
       }
 
       // check if next char is upper
@@ -65,6 +61,7 @@ const camelCaseToTitleCase = (word) => {
         nextUpperIdx = i;
         result += word.slice(firstUpperIdx, nextUpperIdx) + " ";
         firstUpperIdx = i;
+        nextUpperIdx = undefined;
         // console.log("result line 58: ", result, "i line 58: ", i, "word[i]: ", word[i], "firstUpperIdx: ", firstUpperIdx);
       }
 
@@ -79,7 +76,7 @@ const camelCaseToTitleCase = (word) => {
 
 // ===========================if first letter is not upper============================================
 
-    firstLowerCharOfWordIdx = 0;
+    firstLowerIdx = 0;
 
     for(let i = 1; i < word.length; i++) {
 
@@ -87,65 +84,78 @@ const camelCaseToTitleCase = (word) => {
       if (word[i] === "-" || word[i] === "_") {
         stopCharIdx = i;
 
-        if (word[i - 1] === word[i - 1].toUpperCase()) {
-          result += word.slice(firstUpperIdx, stopCharIdx);
-          // console.log("result line 90", result, "i line 90", i, "word[i]", word[i]);
+        if (firstUpperIdx === undefined || firstLowerIdx >= firstUpperIdx) {
+          result += word.slice(firstLowerIdx, stopCharIdx) + " ";
+          // console.log("result line 90", result, "i line 90", i, "word[i]", word[i],  "result: ", result);
+          stopCharIdx = undefined;
+
+
         } else {
 
-          let nuWord = word.slice(firstLowerCharOfWordIdx, stopCharIdx);
-          let nuWordToTitleCase = nuWord[0].toUpperCase() + nuWord.slice(1);
+          let nuWord = word.slice(firstUpperIdx, stopCharIdx);
+          // console.log("line 97 nuWord: ", nuWord, "nuWord[0]: ", nuWord[0],  "result: ", result, "nuword{0}.toUper: ", nuWord[0].toUpperCase());
+
+
+          let nuWordToTitleCase = nuWord[0].toUpperCase() + nuWord.slice(1) + " ";
           result += nuWordToTitleCase;
 
-          // console.log("result line 90", result, "i line 90", i, "word[i]", word[i]);
+          // console.log("result line 101", result, "i line 101", i, "word[i]", word[i], "result: ", result);
+          stopCharIdx = undefined;
+
         }
 
 
         if(word[i + 1] === word[i + 1].toUpperCase()) {
           firstUpperIdx = i + 1;
           i++;
-        } else if(word[i] === "-" || word[i] === "_") {
-          stopCharIdx = i;
-          i++;
         } else {
-          firstLowerCharOfWordIdx = i;
+          firstLowerIdx = i + 1;
           i++;
         }
         continue
+
       }
+
+
+
 
       // check if next char is upper
       if (word[i] === word[i].toUpperCase()) {
-        // console.log("line 115 i: ", i, "firstLower: ", firstLowerCharOfWordIdx, "firstUpper: ", firstUpperIdx);
+        // console.log("line 147 i: ", i, "firstLower: ", firstLowerIdx, "firstUpper: ", firstUpperIdx);
 
         nextUpperIdx = i;
 
-        if (word[i - 1] === word[i - 1].toUpperCase()) {
-          result += word.slice(firstUpperIdx, nextUpperIdx) + " ";
-          // console.log("result line 124", result, "i line 124", i, "word[i]", word[i]);
+        if (firstUpperIdx === undefined || firstLowerIdx >= firstUpperIdx) {
 
-        } else if (firstLowerCharOfWordIdx === 0) {
 
-          let nuWord = word.slice(firstLowerCharOfWordIdx, nextUpperIdx);
+          let nuWord = word.slice(firstLowerIdx, nextUpperIdx);
           let nuWordToTitleCase = nuWord[0].toUpperCase() + nuWord.slice(1);
           result += nuWordToTitleCase + " ";
-
-          firstLowerCharOfWordIdx = Infinity;
-
-          // console.log("result line 131", result, "i line 131", i, "word[i]", word[i]);
+          // console.log("result line 153", result, "i line 153", i, "word[i]", word[i]);
+          firstUpperIdx = i;
 
         } else {
 
           let nuWord = word.slice(firstUpperIdx, nextUpperIdx);
+          // console.log("162 nuWord: ", nuWord, "firstUpperIdx: ", firstUpperIdx, "nextUpperIdx: ", nextUpperIdx)
           let nuWordToTitleCase = nuWord[0].toUpperCase() + nuWord.slice(1);
           result += nuWordToTitleCase + " ";
+
+          firstLowerIdx = undefined;
+          firstUpperIdx = i;
+
+          // console.log("result line 163", result, "i line 163", i, "word[i]", word[i]);
 
         }
 
 
 
         firstUpperIdx = i;
-        // console.log("result line 119: ", result, "i line 119: ", i, "word[i]: ", word[i], "firstUpperIdx: ", firstUpperIdx);
+        // console.log("result line 176: ", result, "i line 176: ", i, "word[i]: ", word[i], "firstUpperIdx: ", firstUpperIdx);
       }
+
+
+
 
       // check if next char is the last char
       if (i === word.length - 1) {
@@ -159,22 +169,34 @@ const camelCaseToTitleCase = (word) => {
 
 // =============================CHECK RESULT FOR ENDING I D========================================
 
-  if (result[result.length - 1] === "D") {
-    console.log("163");
+// console.log("result 197: ", result);
+  if (result[result.length - 1] === "D" || result[result.length - 1] === "d") {
+    // console.log("163");
     if (result[result.length - 2] === " ") {
-      console.log("165");
-      if (result[result.length - 3] === "I") {
-        console.log("167");
-        result = result.slice(0, result.length-3) + result[result.length - 3] + result[result.length - 1]
+      // console.log("165");
+      if (result[result.length - 3] === "I" || result[result.length - 3] === "i") {
+        // console.log("167");
+        result = result.slice(0, result.length-3) + result[result.length - 3].toUpperCase() + result[result.length - 1].toUpperCase()
       }
     }
   }
+
+  if (result[result.length - 1] === "D" || result[result.length - 1] === "d") {
+    if (result[result.length - 2] === "I" || result[result.length - 2] === "i") {
+        // console.log("167");
+        result = result.slice(0, result.length-2) + result[result.length - 2].toUpperCase() + result[result.length - 1].toUpperCase();
+      }
+  }
+
 
 
 // =========================== RETURN ==========================================
 
   return result;
 }
+
+
+
 
 
 // ==========================  TESTS ===========================================
@@ -186,10 +208,9 @@ const camelCaseToTitleCase = (word) => {
 // console.log("test firstName1: ", camelCaseToTitleCase("firstName1")); // passed
 // console.log("test firstNameID: ", camelCaseToTitleCase("firstNameID")); // passed
 // console.log("test FirstNameID: ", camelCaseToTitleCase("FirstNameID")); // passed
+// console.log("test firstName_Id: ", camelCaseToTitleCase("firstName_Id")); // passed
+// console.log("test firstName-Id: ", camelCaseToTitleCase("firstName-Id")); // passed
+// console.log("test firstName_ID: ", camelCaseToTitleCase("firstName_ID")); // passed
 
-console.log("test firstName_Id: ", camelCaseToTitleCase("firstName_Id"));
-// console.log("test firstName-Id: ", camelCaseToTitleCase("firstName-Id"));
-// console.log("test firstName_ID: ", camelCaseToTitleCase("firstName_ID"));
 
-
-export default camelCaseToTitleCase();
+export default camelCaseToTitleCase;
