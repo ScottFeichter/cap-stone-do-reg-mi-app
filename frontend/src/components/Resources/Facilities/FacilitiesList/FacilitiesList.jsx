@@ -13,6 +13,15 @@ function FacilitiesList(){
     // const dispatch = useDispatch();
     // const navigate = useNavigate();
     let facilitiesList = useSelector(state => state?.facilities?.facilities);
+    let branchesList = useSelector(state => state?.branches?.branches);
+    console.log(branchesList)
+    // let branchesListNames = [];
+    // for(let branch of branchesList){
+    //   branchesListNames.push({branch.: branch.name})
+    // }
+
+
+
     // console.log("facilitiesList 16: ", facilitiesList);
 
     // const [currentPage, setCurrentPage] = useState(1);

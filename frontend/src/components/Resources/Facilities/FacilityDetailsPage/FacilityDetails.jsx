@@ -16,7 +16,7 @@ function FacilityDetails(props){
 
     const navigate = useNavigate()
 
-    // const facility = useSelector(state => state.facilities.facilities[1])
+    // const branches = useSelector(state => state.branches.branches)
     const facility = props.facility;
 
     // const facilityObjectKeys = Object.keys(facility);

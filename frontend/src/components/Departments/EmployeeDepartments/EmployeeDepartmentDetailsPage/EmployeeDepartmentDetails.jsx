@@ -61,14 +61,14 @@ function EmployeeDepartmentDetails(props){
 
 
                         <div id='nameContainer' className='EmployeeDepartmentDetailsFormLabelInputContainer'>
-                                <div className='EmployeeDepartmentDetailsFormLabel'>{"name"}</div>
+                                <div className='EmployeeDepartmentDetailsFormLabel'>{"Name"}</div>
                                 <div className='EmployeeDepartmentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='EmployeeDepartmentDetailsFormInput'>{employeeDepartment.name ? employeeDepartment.name : nullReplacer}</div>
                         </div>
 
 
                         <div id='imageURLContainer' className='EmployeeDepartmentDetailsFormLabelInputContainer'>
-                                <div className='EmployeeDepartmentDetailsFormLabel'>{"imageURL"}</div>
+                                <div className='EmployeeDepartmentDetailsFormLabel'>{"Image URL"}</div>
                                 <div className='EmployeeDepartmentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='EmployeeDepartmentDetailsFormInput'>{employeeDepartment.imageURL ? employeeDepartment.imageURL : nullReplacer}</div>
                         </div>

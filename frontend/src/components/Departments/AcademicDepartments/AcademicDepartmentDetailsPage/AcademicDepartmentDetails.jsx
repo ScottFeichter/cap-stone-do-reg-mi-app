@@ -61,7 +61,7 @@ function AcademicDepartmentDetails(props){
 
 
                         <div id='nameContainer' className='AcademicDepartmentDetailsFormLabelInputContainer'>
-                                <div className='AcademicDepartmentDetailsFormLabel'>{"name"}</div>
+                                <div className='AcademicDepartmentDetailsFormLabel'>{"Name"}</div>
                                 <div className='AcademicDepartmentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='AcademicDepartmentDetailsFormInput'>{academicDepartment.name ? academicDepartment.name : nullReplacer}</div>
                         </div>
@@ -69,7 +69,7 @@ function AcademicDepartmentDetails(props){
 
 
                         <div id='chairContainer' className='AcademicDepartmentDetailsFormLabelInputContainer'>
-                                <div className='AcademicDepartmentDetailsFormLabel'>{"chair"}</div>
+                                <div className='AcademicDepartmentDetailsFormLabel'>{"Chair"}</div>
                                 <div className='AcademicDepartmentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='AcademicDepartmentDetailsFormInput'>{academicDepartment.chair ? academicDepartment.chair : nullReplacer}</div>
                         </div>
@@ -77,7 +77,7 @@ function AcademicDepartmentDetails(props){
 
 
                         <div id='imageURLContainer' className='AcademicDepartmentDetailsFormLabelInputContainer'>
-                                <div className='AcademicDepartmentDetailsFormLabel'>{"imageURL"}</div>
+                                <div className='AcademicDepartmentDetailsFormLabel'>{"Image URL"}</div>
                                 <div className='AcademicDepartmentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='AcademicDepartmentDetailsFormInput'>{academicDepartment.imageURL ? academicDepartment.imageURL : nullReplacer}</div>
                         </div>

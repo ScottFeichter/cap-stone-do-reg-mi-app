@@ -61,34 +61,34 @@ function BranchDetails(props){
 
 
                         <div id='nameContainer' className='BranchDetailsFormLabelInputContainer'>
-                                <div className='BranchDetailsFormLabel'>{"name"}</div>
+                                <div className='BranchDetailsFormLabel'>{"Name"}</div>
                                 <div className='BranchDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='BranchDetailsFormInput'>{branch.name ? branch.name : nullReplacer}</div>
                         </div>
 
 
                         <div id='streetContainer' className='BranchDetailsFormLabelInputContainer'>
-                                <div className='BranchDetailsFormLabel'>{"street"}</div>
+                                <div className='BranchDetailsFormLabel'>{"Street"}</div>
                                 <div className='BranchDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='BranchDetailsFormInput'>{branch.street ? branch.street : nullReplacer}</div>
                         </div>
 
                         <div id='cityContainer' className='BranchDetailsFormLabelInputContainer'>
-                                <div className='BranchDetailsFormLabel'>{"city"}</div>
+                                <div className='BranchDetailsFormLabel'>{"City"}</div>
                                 <div className='BranchDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='BranchDetailsFormInput'>{branch.city ? branch.city : nullReplacer}</div>
                         </div>
 
 
                         <div id='stateContainer' className='BranchDetailsFormLabelInputContainer'>
-                                <div className='BranchDetailsFormLabel'>{"state"}</div>
+                                <div className='BranchDetailsFormLabel'>{"State"}</div>
                                 <div className='BranchDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='BranchDetailsFormInput'>{branch.state ? branch.state : nullReplacer}</div>
                         </div>
 
 
                         <div id='zipContainer' className='BranchDetailsFormLabelInputContainer'>
-                                <div className='BranchDetailsFormLabel'>{"zip"}</div>
+                                <div className='BranchDetailsFormLabel'>{"Zip"}</div>
                                 <div className='BranchDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='BranchDetailsFormInput'>{branch.zip ? branch.zip : nullReplacer}</div>
                         </div>
