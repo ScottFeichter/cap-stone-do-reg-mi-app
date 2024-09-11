@@ -57,73 +57,73 @@ function StudentDetails(props){
 
 
                         <div id='firstNameContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"firstName"}</div>
+                                <div className='StudentDetailsFormLabel'>{"First Name"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.firstName ? student.firstName : nullReplacer}</div>
                         </div>
 
                         <div id='nickNameContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"nickName"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Nick Name"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.nickName ? student.nickName : nullReplacer}</div>
                         </div>
 
                         <div id='middleNameContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"middleName"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Middle Name"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.middleName ? student.middleName : nullReplacer}</div>
                         </div>
 
                         <div id='lastNameContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"lastName"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Last Name"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.lastName ? student.lastName : nullReplacer}</div>
                         </div>
 
                         <div id='familyNameContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"familyName"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Famil Name"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.familyName ? student.familyName : nullReplacer}</div>
                         </div>
 
                         <div id='emailContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"email"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Email"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.email ? student.email : nullReplacer}</div>
                         </div>
 
                         <div id='phoneContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"phone"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Phone"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.phone ? student.phone : nullReplacer}</div>
                         </div>
 
                         <div id='streetContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"street"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Street"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.street ? student.street : nullReplacer}</div>
                         </div>
 
                         <div id='cityContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"city"}</div>
+                                <div className='StudentDetailsFormLabel'>{"City"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.city ? student.city : nullReplacer}</div>
                         </div>
 
                         <div id='stateContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"state"}</div>
+                                <div className='StudentDetailsFormLabel'>{"State"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.state ? student.state : nullReplacer}</div>
                         </div>
 
                         <div id='zipContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"zip"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Zip"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.zip ? student.zip : nullReplacer}</div>
                         </div>
 
                         <div id='dobContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"dob"}</div>
+                                <div className='StudentDetailsFormLabel'>{"DOB"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.dob ? student.dob : nullReplacer}</div>
                         </div>
@@ -141,13 +141,13 @@ function StudentDetails(props){
 
 
                         <div id='household_IdContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"household_Id"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Household ID"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.household_Id ? student.household_Id : nullReplacer}</div>
                         </div>
 
                         <div id='headOfHouseholdContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"headOfHousehold"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Head Of Household"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{
                                         student.headOfHousehold === null ? nullReplacer :
@@ -156,13 +156,13 @@ function StudentDetails(props){
                         </div>
 
                         <div id='yearlyIncomeContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"yearlyIncome"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Yearly Income"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.yearlyIncome ? student.yearlyIncome : nullReplacer}</div>
                         </div>
 
                         <div id='level_IdContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"level_Id"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Level ID"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.level_Id ? student.level_Id : nullReplacer}</div>
                         </div>
@@ -180,49 +180,49 @@ function StudentDetails(props){
 
 
                         <div id='firstLangContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"firstLang"}</div>
+                                <div className='StudentDetailsFormLabel'>{"First Language"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.firstLang ? student.firstLang : nullReplacer}</div>
                         </div>
 
                         <div id='secondLangContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"secondLang"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Second Language"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.secondLang ? student.secondLang : nullReplacer}</div>
                         </div>
 
                         <div id='thirdLangContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"thirdLang"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Third Language"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.thirdLang ? student.thirdLang : nullReplacer}</div>
                         </div>
 
                         <div id='firstInstContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"firstInst"}</div>
+                                <div className='StudentDetailsFormLabel'>{"First Instrument"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.firstInst ? student.firstInst : nullReplacer}</div>
                         </div>
 
                         <div id='secondInstContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"secondInst"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Second Instrument"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.secondInst ? student.secondInst : nullReplacer}</div>
                         </div>
 
                         <div id='thirdInstContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"thirdInst"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Third Instrument"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.thirdInst ? student.thirdInst : nullReplacer}</div>
                         </div>
 
                         <div id='biographyContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"biography"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Biography"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.biography ? student.biography : nullReplacer}</div>
                         </div>
 
                         <div id='notesContainer' className='StudentDetailsFormLabelInputContainer'>
-                                <div className='StudentDetailsFormLabel'>{"notes"}</div>
+                                <div className='StudentDetailsFormLabel'>{"Notes"}</div>
                                 <div className='StudentDetailsFormInfoDivider'>{infoDivider}</div>
                                 <div className='StudentDetailsFormInput'>{student.notes ? student.notes : nullReplacer}</div>
                         </div>
