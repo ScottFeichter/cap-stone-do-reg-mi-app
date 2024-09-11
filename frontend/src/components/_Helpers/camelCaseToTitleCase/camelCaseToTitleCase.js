@@ -78,6 +78,25 @@ const camelCaseToTitleCase = (word) => {
 
     firstLowerIdx = 0;
 
+    for(let i = 1; i < word.length; i++){
+      if(word[i] === word[i].toUpperCase){
+        break
+      } else {
+        result = word[0].toUpperCase() + word.slice(1);
+
+
+        if (result[result.length - 1] === "D" || result[result.length - 1] === "d") {
+          if (result[result.length - 2] === "I" || result[result.length - 2] === "i") {
+              // console.log("167");
+              result = result.slice(0, result.length-2) + result[result.length - 2].toUpperCase() + result[result.length - 1].toUpperCase();
+            }
+        }
+
+
+        return result
+      }
+    }
+
     for(let i = 1; i < word.length; i++) {
 
       // check if the next char is - or _

@@ -8,6 +8,8 @@ import './ProfileInformationContainer.css';
 
 //================COMPONENT IMPORTS=====================//
 
+import camelCaseToTitleCase from "../../_Helpers/camelCaseToTitleCase/camelCaseToTitleCase.js";
+
 
 //===============FUNCTION DECLARATION===================//
 function ProfileInformationContainer(props){
@@ -27,7 +29,7 @@ function ProfileInformationContainer(props){
     return (<>
 
             <div className='ProfileDetailsFormLabelInputContainer'>
-                <div className='ProfileDetailsFormLabel'>{k}</div>
+                <div className='ProfileDetailsFormLabel'>{camelCaseToTitleCase(k)}</div>
                 <div className='ProfileDetailsFormInfoDivider'>{infoDivider}</div>
                 <div className='ProfileDetailsFormInput'>{v ? v : nullReplacer}</div>
             </div>
