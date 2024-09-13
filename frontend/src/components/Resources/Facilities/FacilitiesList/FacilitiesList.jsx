@@ -13,12 +13,42 @@ function FacilitiesList(){
     // const dispatch = useDispatch();
     // const navigate = useNavigate();
     let facilitiesList = useSelector(state => state?.facilities?.facilities);
+
+
     let branchesList = useSelector(state => state?.branches?.branches);
-    console.log(branchesList)
-    // let branchesListNames = [];
+    console.log("branchesList", branchesList);
+
+    let branchesListNames = [];
+
     // for(let branch of branchesList){
-    //   branchesListNames.push({branch.: branch.name})
+    //   branchesListNames.push({branch.id: branch.name})
     // }
+
+    // branchesListNames = branches.map(branch => return {branch.id: branch.name});
+
+    // branchesListNames = branches.map(branch => {branch.id: branch.name});
+
+    // branchesListNames = branches.map(branch => {{branch.id: branch.name}});
+
+    // branchesListNames = branches.map(branch => ({branch.id: branch.name}));
+
+    // branchesListNames = branches.map(branch => ({branch.id: branch.name}));
+
+    // branchesListNames = branches.map(branch => ({{branch.id: branch.name}}));
+
+    // branchesListNames = branchesList.map(branch => {{branch.id}: {branch.name}});
+
+    // branchesListNames = branchesList.map(branch => {({branch.id}: {branch.name})});
+
+    // branchesListNames = branchesList.map(branch => {`${branch.id}`: `${branch.name}`});
+
+    // branchesListNames = branchesList.map(branch => {`${branch.id}`: branch.name});
+
+    // branchesListNames = branchesList.map(branch => {`${branch.id}: ${branch.name}`});
+
+
+    console.log("branchesListNames: ", branchesListNames);
+
 
 
 

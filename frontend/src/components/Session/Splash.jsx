@@ -1,7 +1,7 @@
 import './Splash.css';
 import LoginForm from "./LoginForm/LoginForm.jsx";
 import SignupForm from "./SignupForm/SignupForm.jsx";
-import DoRegMiStaff from "../../../../admin/images/DoRegMiStaff-1white.png";
+// import DoRegMiStaff from "../../../../admin/images/DoRegMiStaff-1white.png";
 
 
 function SplashPage() {
@@ -20,9 +20,9 @@ function SplashPage() {
                 <SignupForm></SignupForm>
             </div>
 
-            <footer id="SplashFooter" >
+            {/* <footer id="SplashFooter" >
                 <img id="SplashImg" src={DoRegMiStaff}  />
-            </footer>
+            </footer> */}
 
           </main>
 
