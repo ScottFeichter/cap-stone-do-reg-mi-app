@@ -6,9 +6,9 @@ function BranchesListItemHeader() {
     <>
       <div className="BranchesListItemHeaderContainer">
 
-        <div className="BranchesListItemHeaderItemContainerID">
+        {/* <div className="BranchesListItemHeaderItemContainerID">
           <h4 className="BranchesListItemHeaderItemH4">ID</h4>
-        </div>
+        </div> */}
 
         <div className="BranchesListItemHeaderItemContainerName">
             <h4 className="BranchesListItemHeaderItemH4">Name</h4>

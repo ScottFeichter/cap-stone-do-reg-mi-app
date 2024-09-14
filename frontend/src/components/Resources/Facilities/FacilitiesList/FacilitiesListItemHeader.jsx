@@ -6,16 +6,16 @@ function FacilitiesListItemHeader() {
     <>
       <div className="FacilitiesListItemHeaderContainer">
 
-        <div className="FacilitiesListItemHeaderItemContainerID">
+        {/* <div className="FacilitiesListItemHeaderItemContainerID">
           <h4 className="FacilitiesListItemHeaderItemH4">ID</h4>
-        </div>
+        </div> */}
 
         <div className="FacilitiesListItemHeaderItemContainerName">
             <h4 className="FacilitiesListItemHeaderItemH4">Name</h4>
         </div>
 
         <div className="FacilitiesListItemHeaderItemContainerBranchId">
-            <h4 className="FacilitiesListItemHeaderItemH4">Branch ID</h4>
+            <h4 className="FacilitiesListItemHeaderItemH4">Branch</h4>
         </div>
 
       </div>

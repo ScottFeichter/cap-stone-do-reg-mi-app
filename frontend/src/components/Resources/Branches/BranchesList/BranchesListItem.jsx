@@ -9,9 +9,9 @@ function BranchesListItem({ branch }) {
 
       <div className="BranchesListItemContainer">
 
-        <div className="BranchesListItemContainerID">
+        {/* <div className="BranchesListItemContainerID">
             <p className="BranchesListItemP"> {branch.id ? branch.id : "-"}</p>
-        </div>
+        </div> */}
 
         <div className="BranchesListItemContainerName">
           <Link

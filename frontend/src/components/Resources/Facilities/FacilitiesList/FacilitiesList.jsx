@@ -16,25 +16,29 @@ function FacilitiesList(){
 
 
     let branchesList = useSelector(state => state?.branches?.branches);
-    console.log("branchesList", branchesList);
+    // console.log("branchesList", branchesList);
 
-    let branchesListNames = [];
+    // console.log("branchesList[0]: ", branchesList[0]);
+
+    // let branchesListNames = branchesList.map(branch => {console.log(branch); branch});
+    // console.log("branchesListNames: ", branchesListNames);
+
+    // const [branchesListNamesState, setBranchesListNamesState] = useState(branchesList.map(branch => {branch}));
+    // console.log('branchesListNamesState: ', branchesListNamesState)
 
     // for(let branch of branchesList){
     //   branchesListNames.push({branch.id: branch.name})
     // }
 
-    // branchesListNames = branches.map(branch => return {branch.id: branch.name});
+    // branchesListNames = branchesList.map(branch => {branch.id: branch.name});
 
-    // branchesListNames = branches.map(branch => {branch.id: branch.name});
+    // branchesListNames = branchesList.map(branch => {{branch.id: branch.name}});
 
-    // branchesListNames = branches.map(branch => {{branch.id: branch.name}});
+    // branchesListNames = branchesList.map(branch => ({branch.id: branch.name}));
 
-    // branchesListNames = branches.map(branch => ({branch.id: branch.name}));
+    // branchesListNames = branchesList.map(branch => ({branch.id: branch.name}));
 
-    // branchesListNames = branches.map(branch => ({branch.id: branch.name}));
-
-    // branchesListNames = branches.map(branch => ({{branch.id: branch.name}}));
+    // branchesListNames = branchesList.map(branch => ({{branch.id: branch.name}}));
 
     // branchesListNames = branchesList.map(branch => {{branch.id}: {branch.name}});
 
@@ -47,9 +51,9 @@ function FacilitiesList(){
     // branchesListNames = branchesList.map(branch => {`${branch.id}: ${branch.name}`});
 
 
-    console.log("branchesListNames: ", branchesListNames);
 
 
+// ================================================================================================
 
 
     // console.log("facilitiesList 16: ", facilitiesList);
@@ -100,6 +104,7 @@ function FacilitiesList(){
           return (
             <FacilitiesListItem
               facility={facility}
+              branchesList={branchesList}
               key={facility.id}
               // totalPages={facilitiesList.length}
               // facilitiesPerPage={facilitiesPerPage}

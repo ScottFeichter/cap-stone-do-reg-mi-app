@@ -1,17 +1,19 @@
 import './FacilitiesListItem.css';
 import { Link } from "react-router-dom";
 
-function FacilitiesListItem({ facility }) {
-  // console.log("facility in facilitiesListItem: ", facility);
+function FacilitiesListItem({facility, branchesList}) {
+
+  const facilityBranch = branchesList.find(branch => branch.id === facility.branch_Id);
+
   return (
     <>
 
 
       <div className="FacilitiesListItemContainer">
 
-        <div className="FacilitiesListItemContainerID">
+        {/* <div className="FacilitiesListItemContainerID">
             <p className="FacilitiesListItemP"> {facility.id ? facility.id : "-"}</p>
-        </div>
+        </div> */}
 
         <div className="FacilitiesListItemContainerName">
           <Link
@@ -23,7 +25,7 @@ function FacilitiesListItem({ facility }) {
         </div>
 
         <div className="FacilitiesListItemContainerBranchId">
-          <p className="FacilitiesListItemP">{facility.branch_Id? facility.branch_Id: "-"}</p>
+          <p className="FacilitiesListItemP">{facilityBranch.name? facilityBranch.name: "-"}</p>
         </div>
 
       </div>

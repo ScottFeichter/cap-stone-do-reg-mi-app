@@ -47,11 +47,11 @@
     font-size: .9rem;
     width: 8rem;
    /* customized on top */
-    text-align: center;
+    /* text-align: center; */
     display: flex;
     flex-direction: column;
     margin: 0 .15rem 0 .15rem;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     overflow: hidden;
     text-wrap: nowrap;
@@ -62,11 +62,11 @@
     font-size: .8rem;
     width: 8rem;
    /* customized on top */
-    text-align: center;
+    /* text-align: center; */
     display: flex;
     flex-direction: column;
     margin: 0 .15rem 0 .15rem;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     overflow: hidden;
     text-wrap: nowrap;
