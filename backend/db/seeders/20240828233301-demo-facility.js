@@ -14,14 +14,17 @@ module.exports = {
         {
           name: 'Online',
           branch_Id: 1,
+          capacity: 99,
         },
         {
           name: 'Auditorium',
           branch_Id: 2,
+          capacity: 300,
         },
         {
           name: 'Room 1',
           branch_Id: 2,
+          capacity: 3,
         },
       ],
       { validate: true }

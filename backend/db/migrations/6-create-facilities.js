@@ -26,6 +26,11 @@ module.exports = {
           unique: false,
           type: Sequelize.INTEGER,
         },
+        capacity: {
+          allowNull: true,
+          unique: false,
+          type: Sequelize.INTEGER,
+        },
         createdAt: {
           allowNull: false,
           type: Sequelize.DATE,

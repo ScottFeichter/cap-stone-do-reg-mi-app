@@ -18,6 +18,10 @@ function FacilitiesListItemHeader() {
             <h4 className="FacilitiesListItemHeaderItemH4">Branch</h4>
         </div>
 
+        <div className="FacilitiesListItemHeaderItemContainerCapacity">
+          <h4 className="FacilitiesListItemHeaderItemH4">Capacity</h4>
+        </div>
+
       </div>
 
     </>

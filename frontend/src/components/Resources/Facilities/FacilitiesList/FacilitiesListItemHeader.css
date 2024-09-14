@@ -55,6 +55,20 @@
     /* border: green 2px solid; */
   }
 
+  .FacilitiesListItemHeaderItemContainerCapacity {
+    width: 8rem;
+  /* customized on top */
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: left;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
 
 
     /* ---------???----------- */

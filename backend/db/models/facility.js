@@ -30,6 +30,11 @@ module.exports = (sequelize, DataTypes) => {
         unique: false,
         type: DataTypes.INTEGER,
       },
+      capacity: {
+        allowNull: true,
+        unique: false,
+        type: DataTypes.INTEGER,
+      },
       createdAt: DataTypes.DATE,
       updatedAt: DataTypes.DATE,
     },

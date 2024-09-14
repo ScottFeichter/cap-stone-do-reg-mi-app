@@ -28,6 +28,10 @@ function FacilitiesListItem({facility, branchesList}) {
           <p className="FacilitiesListItemP">{facilityBranch.name? facilityBranch.name: "-"}</p>
         </div>
 
+        <div className="FacilitiesListItemContainerCapacity">
+          <p className="FacilitiesListItemP">{facility.capacity ? facility.capacity : "-"}</p>
+        </div>
+
       </div>
       {/* <div className="FacilitiesListItemBorder"></div> */}
     </>
