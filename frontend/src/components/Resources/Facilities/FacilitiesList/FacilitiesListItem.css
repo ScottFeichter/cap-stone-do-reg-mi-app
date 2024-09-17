@@ -10,7 +10,7 @@
    /* ---------ITEM GENERIC----------- */
 
   .FacilitiesListItemContainerGeneric {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 8rem;
     /* customized on top */
     text-align: center;
@@ -28,7 +28,7 @@
      /* ---Should match the header css--- */
 
 .FacilitiesListItemContainerID {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 8rem;
    /* customized on top */
     text-align: center;
@@ -59,7 +59,7 @@
   }
 
   .FacilitiesListItemContainerBranchId {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 8rem;
    /* customized on top */
     /* text-align: center; */
@@ -72,6 +72,25 @@
     text-wrap: nowrap;
     /* border: green 2px solid; */
   }
+
+  .FacilitiesListItemContainerCapacity {
+    font-size: .9rem;
+    width: 8rem;
+   /* customized on top */
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: left;
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+
+
 
 
     /* ---------???----------- */

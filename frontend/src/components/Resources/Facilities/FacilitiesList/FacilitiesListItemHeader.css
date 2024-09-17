@@ -57,7 +57,7 @@
 
   .FacilitiesListItemHeaderItemContainerCapacity {
     width: 8rem;
-  /* customized on top */
+    /* customized on top */
     /* text-align: center; */
     display: flex;
     flex-direction: column;

@@ -13,8 +13,6 @@ function FacilitiesList(){
     // const dispatch = useDispatch();
     // const navigate = useNavigate();
     let facilitiesList = useSelector(state => state?.facilities?.facilities);
-
-
     let branchesList = useSelector(state => state?.branches?.branches);
     // console.log("branchesList", branchesList);
 

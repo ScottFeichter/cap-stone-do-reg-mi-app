@@ -10,7 +10,7 @@
    /* ---------ITEM GENERIC----------- */
 
   .BranchesListItemContainerGeneric {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 8rem;
     /* customized on top */
     text-align: center;
@@ -28,7 +28,7 @@
      /* ---Should match the header css--- */
 
 .BranchesListItemContainerID {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 4rem;
    /* customized on top */
     text-align: center;
@@ -59,7 +59,7 @@
   }
 
   .BranchesListItemContainerStreet {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 8rem;
    /* customized on top */
     text-align: center;
@@ -74,7 +74,7 @@
   }
 
   .BranchesListItemContainerCity {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 8rem;
    /* customized on top */
     text-align: center;
@@ -89,7 +89,7 @@
   }
 
   .BranchesListItemContainerState {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 4rem;
    /* customized on top */
     text-align: center;
@@ -104,7 +104,7 @@
   }
 
   .BranchesListItemContainerZip {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 8rem;
    /* customized on top */
     text-align: center;
