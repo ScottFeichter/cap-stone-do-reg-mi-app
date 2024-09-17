@@ -1,6 +1,6 @@
 // //============CSS IMPORT AND BASE CLASS NAME============//
 
-// // const BASE_CLASS_NAME = "OldProfileButton";
+// // const BCIN = "OldProfileButton";
 // import './OldProfileButton.css';
 
 // //==================PROGRAM IMPORTS=====================//

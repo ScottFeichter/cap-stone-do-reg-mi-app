@@ -1,7 +1,7 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
 
 import './EmployeeDetailsPage.css';
-const BASE_CLASS_NAME = "EmployeeDetailsPage";
+const BCIN = "EmployeeDetailsPage";
 
 
 //==================OTHER IMPORTS=======================//
@@ -65,13 +65,13 @@ const handleClickEditEmployee = () => {
 
   return(
     <>
-        <h1 id={`${BASE_CLASS_NAME}H1`}>Employee Details</h1>
-        <main id={`${BASE_CLASS_NAME}Main`}>
+        <h1 id={`${BCIN}H1`}>Employee Details</h1>
+        <main id={`${BCIN}Main`}>
 
-            <nav id={`${BASE_CLASS_NAME}Nav`}>
+            <nav id={`${BCIN}Nav`}>
 
            <Link to='/editEmployeeForm' state={{employeeToEdit: employee}} >
-           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditEmployee}>Edit Employee</button>
+           <button id={`${BCIN}EditButton`} onClick={handleClickEditEmployee}>Edit Employee</button>
            </Link>
 
 
@@ -79,7 +79,7 @@ const handleClickEditEmployee = () => {
 
 
 {/*
-              <button id={`${BASE_CLASS_NAME}DeleteButton`} onClick={handleClickDeleteEmployee}>
+              <button id={`${BCIN}DeleteButton`} onClick={handleClickDeleteEmployee}>
                 Delete Employee
                 <EmployeeDeleteModalButton
                             id="deleteEmployeeModalButton"
@@ -90,7 +90,7 @@ const handleClickEditEmployee = () => {
               </button> */}
 
               <EmployeeDeleteModalButton
-                id={`${BASE_CLASS_NAME}DeleteButton`}
+                id={`${BCIN}DeleteButton`}
                 buttonText="Delete Employee"
                 modalComponent={<EmployeeDeleteModal employee={employee} />}
               />

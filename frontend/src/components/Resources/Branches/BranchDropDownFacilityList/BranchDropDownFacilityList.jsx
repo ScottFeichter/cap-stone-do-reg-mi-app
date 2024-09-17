@@ -1,7 +1,7 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
 
-const BCIN = "ZeeTemplate";
-import './ZeeTemplate.css';
+const BCIN = "BranchDropDownFacilityList";
+import './BranchDropDownFacilityList.css';
 
 //==================PROGRAM IMPORTS=====================//
 
@@ -10,7 +10,7 @@ import './ZeeTemplate.css';
 
 
 //===============FUNCTION DECLARATION===================//
-function ZeeTemplate(){
+function BranchDropDownFacilityList(){
 
 
 
@@ -28,4 +28,4 @@ function ZeeTemplate(){
 }
 
 //===================FUNCTION EXPORT====================//
-export default ZeeTemplate;
+export default BranchDropDownFacilityList;

@@ -1,5 +1,5 @@
 import './CreateNewEmployeeForm.css';
-// const BASE_CLASS_NAME = "CreateNewEmployeeForm"
+// const BCIN = "CreateNewEmployeeForm"
 
 
 import {useState } from 'react';

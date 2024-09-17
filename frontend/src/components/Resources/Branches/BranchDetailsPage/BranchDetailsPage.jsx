@@ -1,7 +1,7 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
 
 import './BranchDetailsPage.css';
-const BASE_CLASS_NAME = "BranchDetailsPage";
+const BCIN = "BranchDetailsPage";
 
 
 //==================OTHER IMPORTS=======================//
@@ -63,13 +63,13 @@ const handleClickEditBranch = () => {
 
   return(
     <>
-        <h1 id={`${BASE_CLASS_NAME}H1`}>Branch Details</h1>
-        <main id={`${BASE_CLASS_NAME}Main`}>
+        <h1 id={`${BCIN}H1`}>Branch Details</h1>
+        <main id={`${BCIN}Main`}>
 
-            <nav id={`${BASE_CLASS_NAME}Nav`}>
+            <nav id={`${BCIN}Nav`}>
 
            <Link to='/editBranchForm' state={{branchToEdit: branch}} >
-           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditBranch}>Edit Branch</button>
+           <button id={`${BCIN}EditButton`} onClick={handleClickEditBranch}>Edit Branch</button>
            </Link>
 
 
@@ -77,7 +77,7 @@ const handleClickEditBranch = () => {
 
 
 {/*
-              <button id={`${BASE_CLASS_NAME}DeleteButton`} onClick={handleClickDeleteBranch}>
+              <button id={`${BCIN}DeleteButton`} onClick={handleClickDeleteBranch}>
                 Delete Branch
                 <BranchDeleteModalButton
                             id="deleteBranchModalButton"
@@ -88,8 +88,8 @@ const handleClickEditBranch = () => {
               </button> */}
 
               <BranchDeleteModalButton
-                // contentClassName={`${BASE_CLASS_NAME}CustomModal`}
-                id={`${BASE_CLASS_NAME}DeleteButton`}
+                // contentClassName={`${BCIN}CustomModal`}
+                id={`${BCIN}DeleteButton`}
                 buttonText="Delete Branch"
                 modalComponent={<BranchDeleteModal branch={branch} />}
               />

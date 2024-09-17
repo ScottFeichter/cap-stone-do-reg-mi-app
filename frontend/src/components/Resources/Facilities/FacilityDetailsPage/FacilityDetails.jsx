@@ -1,6 +1,6 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
 
-// const BASE_CLASS_NAME = "FacilityDetails";
+// const BCIN = "FacilityDetails";
 
 import './FacilityDetails.css';
 

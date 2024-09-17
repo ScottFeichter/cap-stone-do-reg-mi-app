@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 function FacilitiesListItem({facility, branchesList}) {
 
 
-  console.log("facility: ", facility);
-  
+  // console.log("facility: ", facility);
+
   const facilityBranch = branchesList.find(branch => branch.id === facility.branch_Id);
 
   return (

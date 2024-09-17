@@ -1,5 +1,5 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
-const BASE_CLASS_NAME = "ProfileButton";
+const BCIN = "ProfileButton";
 import './ProfileButton.css';
 
 //==================PROGRAM IMPORTS=====================//
@@ -30,7 +30,7 @@ function ProfileButton(){
     return (<>
 
                 <button
-                    id={`${BASE_CLASS_NAME}Button`}
+                    id={`${BCIN}Button`}
                     onClick={viewProfile}>
                     <LuUserCircle2 id="ProfileButtonLuUserCircle2"/>
                 </button>

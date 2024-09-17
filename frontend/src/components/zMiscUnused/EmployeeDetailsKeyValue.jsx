@@ -1,7 +1,7 @@
 //============================ CSS IMPORT AND BASE CLASS NAME===================================//
 
 import './EmployeeDetailsKeyValue.css';
-const BASE_CLASS_NAME = "EmployeeDetailsKeyValue";
+const BCIN = "EmployeeDetailsKeyValue";
 
 //======================================OTHER IMPORTS===========================================//
 
@@ -14,13 +14,13 @@ function EmployeeDetailsKeyValue({k, v}){
 
 //===================================FUNCTION RETURN========================================//
     return (<>
-        <main className={`${BASE_CLASS_NAME}Main`}>
-            <section className={`${BASE_CLASS_NAME}Section`}>
-                <div className={`${BASE_CLASS_NAME}Div`}>
-                    <p className={`${BASE_CLASS_NAME}P`}>{k}</p>
+        <main className={`${BCIN}Main`}>
+            <section className={`${BCIN}Section`}>
+                <div className={`${BCIN}Div`}>
+                    <p className={`${BCIN}P`}>{k}</p>
                 </div>
-                <div className={`${BASE_CLASS_NAME}Div`}>
-                    <p className={`${BASE_CLASS_NAME}P`}>{v}</p>
+                <div className={`${BCIN}Div`}>
+                    <p className={`${BCIN}P`}>{v}</p>
                 </div>
 
 

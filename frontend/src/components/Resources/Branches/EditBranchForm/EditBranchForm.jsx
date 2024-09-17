@@ -1,5 +1,5 @@
 import './EditBranchForm.css';
-// const BASE_CLASS_NAME = "EditBranchForm"
+// const BCIN = "EditBranchForm"
 
 
 import {useState } from 'react';

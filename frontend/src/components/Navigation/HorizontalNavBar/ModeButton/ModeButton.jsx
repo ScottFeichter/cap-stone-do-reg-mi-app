@@ -1,6 +1,6 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
 
-const BASE_CLASS_NAME = "ModeButton";
+const BCIN = "ModeButton";
 import './ModeButton.css';
 
 //==================PROGRAM IMPORTS=====================//
@@ -28,7 +28,7 @@ function ModeButton(){
 //=================FUNCTION RETURN======================//
     return (<>
         <button
-            id={`${BASE_CLASS_NAME}Button`}
+            id={`${BCIN}Button`}
             onClick={toggleMode}>
             <IoInvertMode id="ModeButtonIoInvertMode"/>
         </button>

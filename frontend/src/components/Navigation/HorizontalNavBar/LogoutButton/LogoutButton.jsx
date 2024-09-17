@@ -1,5 +1,5 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
-const BASE_CLASS_NAME = "LogoutButton";
+const BCIN = "LogoutButton";
 import './LogoutButton.css';
 
 //==================PROGRAM IMPORTS=====================//
@@ -32,7 +32,7 @@ function LogoutButton(){
     return (<>
 
                 <button
-                    id={`${BASE_CLASS_NAME}Button`}
+                    id={`${BCIN}Button`}
                     onClick={logout}>
                     <FiLogOut id="LogoutButtonFiLogOut">Logout</FiLogOut>
                 </button>

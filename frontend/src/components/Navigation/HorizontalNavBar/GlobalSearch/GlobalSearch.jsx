@@ -1,6 +1,6 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
 
-const BASE_CLASS_NAME = "GlobalSearch";
+const BCIN = "GlobalSearch";
 import './GlobalSearch.css';
 
 //==================PROGRAM IMPORTS=====================//
@@ -222,13 +222,13 @@ if(displayedSuggestions);
 
 
 
-    <main id={`${BASE_CLASS_NAME}Main`}>
+    <main id={`${BCIN}Main`}>
 
-        <form id={`${BASE_CLASS_NAME}Form`} onSubmit={handleSubmit}>
-          <label id={`${BASE_CLASS_NAME}Label`}>
+        <form id={`${BCIN}Form`} onSubmit={handleSubmit}>
+          <label id={`${BCIN}Label`}>
             <TbWorldSearch onClick={handleSubmit} id="TbWorldSearch" />
             <input
-              id={`${BASE_CLASS_NAME}Input`}
+              id={`${BCIN}Input`}
               type="text"
               value={search}
               placeholder={placeHolder}
@@ -239,22 +239,22 @@ if(displayedSuggestions);
           </label>
           {/* {errors.search && <p>{errors.search}</p>} */}
 
-          <button type="submit" id={`${BASE_CLASS_NAME}Button`}>
+          <button type="submit" id={`${BCIN}Button`}>
             submit
           </button>
         </form>
 
-        <ul id={`${BASE_CLASS_NAME}SuggestionsUl`}>
+        <ul id={`${BCIN}SuggestionsUl`}>
           {searchSuggestions.length !== 0
             ? searchSuggestions.map((ele) => (
                 <li
                   key={searchSuggestions.indexOf(ele)}
-                  className={`${BASE_CLASS_NAME}SuggestionsUlLi`}
+                  className={`${BCIN}SuggestionsUlLi`}
                 >
                   <button
                     onClick={handleSearchSuggestionButton}
                     value={ele}
-                    className={`${BASE_CLASS_NAME}SuggestionsUlLiButton`}
+                    className={`${BCIN}SuggestionsUlLiButton`}
                   >
                     {ele}
                   </button>

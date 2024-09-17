@@ -1,7 +1,7 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
 
 import './EmployeeDepartmentDetailsPage.css';
-const BASE_CLASS_NAME = "EmployeeDepartmentDetailsPage";
+const BCIN = "EmployeeDepartmentDetailsPage";
 
 
 //==================OTHER IMPORTS=======================//
@@ -58,13 +58,13 @@ if(!employeeDepartment) return null;
 
   return(
     <>
-        <h1 id={`${BASE_CLASS_NAME}H1`}>Employee Department Details</h1>
-        <main id={`${BASE_CLASS_NAME}Main`}>
+        <h1 id={`${BCIN}H1`}>Employee Department Details</h1>
+        <main id={`${BCIN}Main`}>
 
-            <nav id={`${BASE_CLASS_NAME}Nav`}>
+            <nav id={`${BCIN}Nav`}>
 
            <Link to='/editEmployeeDepartmentForm' state={{employeeDepartmentToEdit: employeeDepartment}} >
-           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditEmployeeDepartment}>Edit Employee Department</button>
+           <button id={`${BCIN}EditButton`} onClick={handleClickEditEmployeeDepartment}>Edit Employee Department</button>
            </Link>
 
 
@@ -72,7 +72,7 @@ if(!employeeDepartment) return null;
 
 
 {/*
-              <button id={`${BASE_CLASS_NAME}DeleteButton`} onClick={handleClickDeleteEmployee}>
+              <button id={`${BCIN}DeleteButton`} onClick={handleClickDeleteEmployee}>
                 Delete Employee
                 <EmployeeDepartmentDeleteModalButton
                             id="deleteEmployeeModalButton"
@@ -83,7 +83,7 @@ if(!employeeDepartment) return null;
               </button> */}
 
               <EmployeeDepartmentDeleteModalButton
-                id={`${BASE_CLASS_NAME}DeleteButton`}
+                id={`${BCIN}DeleteButton`}
                 buttonText="Delete Employee Department"
                 modalComponent={<EmployeeDepartmentDeleteModal employeeDepartment={employeeDepartment} />}
               />

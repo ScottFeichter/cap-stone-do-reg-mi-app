@@ -1,7 +1,7 @@
 // //============CSS IMPORT AND BASE CLASS NAME============//
 
 // import './OldEmployeeDetailsPage.css';
-// const BASE_CLASS_NAME = "OldEmployeeDetailsPage";
+// const BCIN = "OldEmployeeDetailsPage";
 
 
 // //==================OTHER IMPORTS=======================//
@@ -141,12 +141,12 @@
 
 //   return(
 //     <>
-//         <main id={`${BASE_CLASS_NAME}Main`}>
+//         <main id={`${BCIN}Main`}>
 
-//             <nav id={`${BASE_CLASS_NAME}Nav`}>
-//               <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditEmployee}>Edit Employee</button>
-//               <h1 id={`${BASE_CLASS_NAME}H1`}>Employee Details</h1>
-//               <button id={`${BASE_CLASS_NAME}DeleteButton`} onClick={handleClickDeleteEmployee}>Delete Employee</button>
+//             <nav id={`${BCIN}Nav`}>
+//               <button id={`${BCIN}EditButton`} onClick={handleClickEditEmployee}>Edit Employee</button>
+//               <h1 id={`${BCIN}H1`}>Employee Details</h1>
+//               <button id={`${BCIN}DeleteButton`} onClick={handleClickDeleteEmployee}>Delete Employee</button>
 //             </nav>
 
 

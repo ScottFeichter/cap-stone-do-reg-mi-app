@@ -1,5 +1,5 @@
 import './CreateNewBranchForm.css';
-// const BASE_CLASS_NAME = "CreateNewBranchForm"
+// const BCIN = "CreateNewBranchForm"
 
 
 import {useState } from 'react';

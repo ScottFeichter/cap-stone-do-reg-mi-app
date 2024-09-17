@@ -1,5 +1,5 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
-const BASE_CLASS_NAME = "HomeButton";
+const BCIN = "HomeButton";
 import './HomeButton.css';
 
 //==================PROGRAM IMPORTS=====================//
@@ -21,9 +21,9 @@ function HomeButton(){
 
 //=================FUNCTION RETURN======================//
     return (<>
-        <main className={`${BASE_CLASS_NAME}Main`}>
-            <NavLink id={`${BASE_CLASS_NAME}Button`} onClick={handleHomeClick}>
-                <IoHome id={`${BASE_CLASS_NAME}IoHome`} ></IoHome>
+        <main className={`${BCIN}Main`}>
+            <NavLink id={`${BCIN}Button`} onClick={handleHomeClick}>
+                <IoHome id={`${BCIN}IoHome`} ></IoHome>
             </NavLink>
         </main>
     </>)

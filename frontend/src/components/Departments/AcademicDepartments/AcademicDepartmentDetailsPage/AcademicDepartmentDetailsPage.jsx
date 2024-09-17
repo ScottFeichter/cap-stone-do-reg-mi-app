@@ -1,7 +1,7 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
 
 import './AcademicDepartmentDetailsPage.css';
-const BASE_CLASS_NAME = "AcademicDepartmentDetailsPage";
+const BCIN = "AcademicDepartmentDetailsPage";
 
 
 //==================OTHER IMPORTS=======================//
@@ -63,13 +63,13 @@ const handleClickEditAcademicDepartment = () => {
 
   return(
     <>
-        <h1 id={`${BASE_CLASS_NAME}H1`}>Academic Department Details</h1>
-        <main id={`${BASE_CLASS_NAME}Main`}>
+        <h1 id={`${BCIN}H1`}>Academic Department Details</h1>
+        <main id={`${BCIN}Main`}>
 
-            <nav id={`${BASE_CLASS_NAME}Nav`}>
+            <nav id={`${BCIN}Nav`}>
 
            <Link to='/editAcademicDepartmentForm' state={{academicDepartmentToEdit: academicDepartment}} >
-           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditAcademicDepartment}>Edit Academic Department</button>
+           <button id={`${BCIN}EditButton`} onClick={handleClickEditAcademicDepartment}>Edit Academic Department</button>
            </Link>
 
 
@@ -77,7 +77,7 @@ const handleClickEditAcademicDepartment = () => {
 
 
 {/*
-              <button id={`${BASE_CLASS_NAME}DeleteButton`} onClick={handleClickDeleteAcademicDepartment}>
+              <button id={`${BCIN}DeleteButton`} onClick={handleClickDeleteAcademicDepartment}>
                 Delete AcademicDepartment
                 <AcademicDepartmentDeleteModalButton
                             id="deleteAcademicDepartmentModalButton"
@@ -88,7 +88,7 @@ const handleClickEditAcademicDepartment = () => {
               </button> */}
 
               <AcademicDepartmentDeleteModalButton
-                id={`${BASE_CLASS_NAME}DeleteButton`}
+                id={`${BCIN}DeleteButton`}
                 buttonText="Delete Academic Department"
                 modalComponent={<AcademicDepartmentDeleteModal academicDepartment={academicDepartment} />}
               />

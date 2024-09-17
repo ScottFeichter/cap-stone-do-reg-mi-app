@@ -1,5 +1,5 @@
 import './EditStudentForm.css';
-// const BASE_CLASS_NAME = "EditStudentForm"
+// const BCIN = "EditStudentForm"
 
 
 import {useState } from 'react';

@@ -1,6 +1,6 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
 
-// const BASE_CLASS_NAME = "ProfileInformationContainer";
+// const BCIN = "ProfileInformationContainer";
 import './ProfileInformationContainer.css';
 
 //==================PROGRAM IMPORTS=====================//

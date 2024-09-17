@@ -1,6 +1,6 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
 
-const BASE_CLASS_NAME = "OldProfileButtonDropdown";
+const BCIN = "OldProfileButtonDropdown";
 import './OldProfileButtonDropdown.css';
 
 //==================PROGRAM IMPORTS=====================//
@@ -25,12 +25,12 @@ function OldProfileButtonDropdown(){
 
 
 
-          <ul className={`${BASE_CLASS_NAME}Ul`} >
-              <li className={`${BASE_CLASS_NAME}Li`}>{sessionUser.username}</li>
-              <li className={`${BASE_CLASS_NAME}Li`}>
+          <ul className={`${BCIN}Ul`} >
+              <li className={`${BCIN}Li`}>{sessionUser.username}</li>
+              <li className={`${BCIN}Li`}>
                 <ViewOldProfileButton />
               </li>
-              <li className={`${BASE_CLASS_NAME}Li`}>
+              <li className={`${BCIN}Li`}>
                 <LogoutButton />
               </li>
             </ul>

@@ -1,11 +1,58 @@
 
 .BranchesListItemContainer {
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0;
+    padding: 0 1.5rem 0 0;
     text-wrap: nowrap;
     width: fit-content;
+    border-bottom: 1px lightgrey solid;
     /* border: blue 2px solid; */
   }
+
+/* ========================MENU BUTTON======================= */
+
+
+#BranchesListItemDropDownButton{
+  background-color: white;
+  border: none;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+
+/* icon not open */
+#BranchesListItemIoMdOutlineArrowDropDownCircle {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: var(--green1);
+  rotate: 270deg;
+  margin: 0;
+  /* border: 1px var(--green1) solid; */
+}
+
+#BranchesListItemIoMdOutlineArrowDropDownCircle:hover {
+  color: var(--green2);
+  cursor: pointer;
+}
+
+
+/* icon open */
+#BranchesListItemIoMdArrowDropdownCircle {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: var(--green1);
+}
+
+#BranchesListItemIoMdArrowDropdownCircle:hover {
+  color: var(--green2);
+  cursor: pointer;
+}
+
+
+
+/* ===========================ITEMS========================== */
 
    /* ---------ITEM GENERIC----------- */
 

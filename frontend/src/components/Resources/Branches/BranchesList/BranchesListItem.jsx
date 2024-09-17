@@ -1,13 +1,40 @@
 import './BranchesListItem.css';
 import { Link } from "react-router-dom";
+import { useState } from 'react';
+
+import BranchDropDownFacilityList from '../BranchDropDownFacilityList/BranchDropDownFacilityList';
+
+import { IoMdArrowDropdownCircle } from "react-icons/io";
+import { MdOutlineArrowDropDownCircle } from "react-icons/md";
 
 function BranchesListItem({ branch }) {
-  // console.log(branch);
+  const [clicked, setClicked] = useState(false)
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    clicked ? setClicked(false) : setClicked(true);
+
+  }
+
+
   return (
     <>
 
 
+
       <div className="BranchesListItemContainer">
+
+
+      <button id={`BranchesListItemDropDownButton`} onClick={handleClick}>
+      {clicked ?
+       <>
+        <IoMdArrowDropdownCircle id={`BranchesListItemIoMdArrowDropdownCircle`}/>
+        <BranchDropDownFacilityList />
+       </> :
+        <MdOutlineArrowDropDownCircle id={`BranchesListItemIoMdOutlineArrowDropDownCircle`}/>
+      }
+      </button>
+
 
         {/* <div className="BranchesListItemContainerID">
             <p className="BranchesListItemP"> {branch.id ? branch.id : "-"}</p>

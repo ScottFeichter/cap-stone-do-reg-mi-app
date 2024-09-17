@@ -1,7 +1,7 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
 
 import './FacilityDetailsPage.css';
-const BASE_CLASS_NAME = "FacilityDetailsPage";
+const BCIN = "FacilityDetailsPage";
 
 
 //==================OTHER IMPORTS=======================//
@@ -61,13 +61,13 @@ const handleClickEditFacility = () => {
 
   return(
     <>
-        <h1 id={`${BASE_CLASS_NAME}H1`}>Facilities Details</h1>
-        <main id={`${BASE_CLASS_NAME}Main`}>
+        <h1 id={`${BCIN}H1`}>Facilities Details</h1>
+        <main id={`${BCIN}Main`}>
 
-            <nav id={`${BASE_CLASS_NAME}Nav`}>
+            <nav id={`${BCIN}Nav`}>
 
            <Link to='/editFacilityForm' state={{facilityToEdit: facility}} >
-           <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditFacility}>Edit Facility</button>
+           <button id={`${BCIN}EditButton`} onClick={handleClickEditFacility}>Edit Facility</button>
            </Link>
 
 
@@ -75,7 +75,7 @@ const handleClickEditFacility = () => {
 
 
 {/*
-              <button id={`${BASE_CLASS_NAME}DeleteButton`} onClick={handleClickDeleteFacility}>
+              <button id={`${BCIN}DeleteButton`} onClick={handleClickDeleteFacility}>
                 Delete Facility
                 <FacilityDeleteModalButton
                             id="deleteFacilityModalButton"
@@ -86,7 +86,7 @@ const handleClickEditFacility = () => {
               </button> */}
 
               <FacilityDeleteModalButton
-                id={`${BASE_CLASS_NAME}DeleteButton`}
+                id={`${BCIN}DeleteButton`}
                 buttonText="Delete Facility"
                 modalComponent={<FacilityDeleteModal facility={facility} />}
               />

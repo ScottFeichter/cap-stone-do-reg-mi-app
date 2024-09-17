@@ -1,6 +1,6 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
 
-const BASE_CLASS_NAME = "ProfilePage";
+const BCIN = "ProfilePage";
 import './ProfilePage.css';
 
 //==================PROGRAM IMPORTS=====================//
@@ -39,13 +39,13 @@ function ProfilePage(){
 //=================FUNCTION RETURN======================//
     return (<>
         <>
-        <h1 id={`${BASE_CLASS_NAME}H1`}>Your Profile </h1>
-        <main id={`${BASE_CLASS_NAME}Main`}>
+        <h1 id={`${BCIN}H1`}>Your Profile </h1>
+        <main id={`${BCIN}Main`}>
 
-            {/* <nav id={`${BASE_CLASS_NAME}Nav`}>
-              <button id={`${BASE_CLASS_NAME}EditButton`} onClick={handleClickEditProfile}>Edit Profile</button>
+            {/* <nav id={`${BCIN}Nav`}>
+              <button id={`${BCIN}EditButton`} onClick={handleClickEditProfile}>Edit Profile</button>
 
-              <button id={`${BASE_CLASS_NAME}DeleteButton`} onClick={handleClickDeleteProfile}>Delete Profile</button>
+              <button id={`${BCIN}DeleteButton`} onClick={handleClickDeleteProfile}>Delete Profile</button>
             </nav> */}
 
 
