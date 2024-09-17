@@ -18,37 +18,10 @@ function FacilitiesList(){
     let branchesList = useSelector(state => state?.branches?.branches);
     // console.log("branchesList", branchesList);
 
-    // console.log("branchesList[0]: ", branchesList[0]);
 
-    // let branchesListNames = branchesList.map(branch => {console.log(branch); branch});
-    // console.log("branchesListNames: ", branchesListNames);
-
-    // const [branchesListNamesState, setBranchesListNamesState] = useState(branchesList.map(branch => {branch}));
-    // console.log('branchesListNamesState: ', branchesListNamesState)
-
-    // for(let branch of branchesList){
-    //   branchesListNames.push({branch.id: branch.name})
-    // }
-
-    // branchesListNames = branchesList.map(branch => {branch.id: branch.name});
-
-    // branchesListNames = branchesList.map(branch => {{branch.id: branch.name}});
-
-    // branchesListNames = branchesList.map(branch => ({branch.id: branch.name}));
-
-    // branchesListNames = branchesList.map(branch => ({branch.id: branch.name}));
-
-    // branchesListNames = branchesList.map(branch => ({{branch.id: branch.name}}));
-
-    // branchesListNames = branchesList.map(branch => {{branch.id}: {branch.name}});
-
-    // branchesListNames = branchesList.map(branch => {({branch.id}: {branch.name})});
-
-    // branchesListNames = branchesList.map(branch => {`${branch.id}`: `${branch.name}`});
-
-    // branchesListNames = branchesList.map(branch => {`${branch.id}`: branch.name});
-
-    // branchesListNames = branchesList.map(branch => {`${branch.id}: ${branch.name}`});
+    let branchesListNames = branchesList.map(branch => {
+      return {[branch.id]: branch.name}});
+    console.log("branchesListNames: ", branchesListNames);
 
 
 

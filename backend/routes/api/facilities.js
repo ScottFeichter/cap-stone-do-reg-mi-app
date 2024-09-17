@@ -46,6 +46,7 @@ router.get("/", requireAuth, async (req, res, next) => {
       "id",
       "name",
       "branch_Id",
+      "capacity",
       "createdAt",
       "updatedAt",
     ],
@@ -62,6 +63,7 @@ router.get("/:facilityId", async (req, res, next) => {
       "id",
       "name",
       "branch_Id",
+      "capacity",
       "createdAt",
       "updatedAt",
     ],
@@ -109,7 +111,7 @@ router.post("/", requireAuth, async (req, res, next) => {
 // ==================EDIT A FACILITY===============================
 
 router.put("/:facilityId", requireAuth, async (req, res, next) => {
-  const { name, branch_Id, city, state, zip } = req.body;
+  const { name, branch_Id, capacity } = req.body;
   const facilityId = req.params.facilityId;
 
   const facilityToUpdate = await Facility.findByPk(req.params.facilityId);

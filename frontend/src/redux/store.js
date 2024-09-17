@@ -49,7 +49,7 @@ if (process.env.NODE_ENV === "production") {
 
 const configureStore = (preloadedState) => {
   // console.log("inside configureStore - store.getState(): ", store.getState());
-  // console.log("CONFIGURE STORE RAN - RETURNS :", "ROOTREDUCER", rootReducer, "PRELOADED STATE: ", preloadedState, "ENHANCER: ", enhancer);
+  console.log("CONFIGURE STORE RAN - RETURNS :", "ROOTREDUCER", rootReducer, "PRELOADED STATE: ", preloadedState, "ENHANCER: ", enhancer);
   return createStore(rootReducer, preloadedState, enhancer);
 };
 
