@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux'
 import EmployeesListItem from './EmployeesListItem';
 // import EmployeeListPagination from "./EmployeeListPagination/EmployeeListPagination.jsx";
 import EmployeesListItemHeader from './EmployeesListItemHeader';
+import EmployeeListSort from './EmployeeListSort/EmployeeListSort';
 // import { thunkGetEmployeesAll } from '../../redux/employeesReducer';
 
 function EmployeesList(){
@@ -51,6 +52,7 @@ function EmployeesList(){
     <>
     <main className="EmployeeListMain">
       <EmployeesListItemHeader />
+      <EmployeeListSort />
 
       <div className="EmployeeListContainer">
         {employeesList.map((employee, id) => {

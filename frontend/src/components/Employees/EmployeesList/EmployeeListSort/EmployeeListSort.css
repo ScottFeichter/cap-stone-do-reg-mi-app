@@ -1,0 +1,301 @@
+
+.EmployeeListSortContainer {
+    display: flex;
+    margin: 0 1rem 1rem 1rem;
+    text-wrap: nowrap;
+    width: fit-content;
+    /* border: blue 2px solid; */
+  }
+
+  /* ---------ITEM GENERIC----------- */
+
+  .EmployeeListSortItemContainerGeneric {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    width: 8rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+   /* ---------ITEM SPECIFIC----------- */
+   /* ----Should match the item css---- */
+
+.EmployeeListSortItemContainerID {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    width: 3rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .EmployeeListSortItemContainerED {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    width: 2rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .EmployeeListSortItemContainerAD {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    width: 2rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .EmployeeListSortItemContainerName {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    width: 10rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .EmployeeListSortItemContainerStreet {
+    width: 8rem;
+  /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .EmployeeListSortItemContainerCity {
+    width: 8rem;
+    /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .EmployeeListSortItemContainerState {
+    width: 4rem;
+    /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .EmployeeListSortItemContainerZip {
+    width: 6rem;
+    /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .EmployeeListSortItemContainerPhone {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    width: 6rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+
+  .EmployeeListSortItemContainerEmail {
+    width: 10rem;
+  /* customized on top */
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+  .EmployeeListSortItemContainerLang {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    width: 5rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .EmployeeListSortItemContainerInst {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    width: 5rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+/* =================SORT BUTTON=============== */
+
+
+.EmployeeListSortSortButton{
+
+    display: flex;
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+
+    transition-delay: 0s;
+    transition-duration: .1s;
+    transition-timing-function: ease-in-out;
+    transition-property: border, background-color;
+
+    /* animation-name: none;
+    animation-delay: none;
+    animation-duration: .3s;
+    animation-timing-function: calc();
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: initial; */
+
+}
+
+.EmployeeListSortSortButton:hover{
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+.EmployeeListSortSortButton:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}
+
+
+
+
+/* .EmployeeListSortFaSort{
+    color: white;
+} */
+
+/* =================FILTER BUTTON=============== */
+
+
+.EmployeeListSortFilterButton{
+
+
+
+    display: flex;
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+
+    transition-delay: 0s;
+    transition-duration: .1s;
+    transition-timing-function: ease-in-out;
+    transition-property: border, background-color;
+
+    /* animation-name: none;
+    animation-delay: none;
+    animation-duration: .3s;
+    animation-timing-function: calc();
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: initial; */
+}
+
+.EmployeeListSortFilterButton:hover{
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+.EmployeeListSortFilterButton:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}
+
+
+
+
+/* .EmployeeListSortRiFilterFill{
+    color: white;
+} */
