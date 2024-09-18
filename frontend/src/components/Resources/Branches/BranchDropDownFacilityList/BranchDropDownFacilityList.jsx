@@ -8,9 +8,17 @@ import './BranchDropDownFacilityList.css';
 
 //================COMPONENT IMPORTS=====================//
 
+// import FacilitiesListItem from "../../Facilities/FacilitiesList/FacilitiesListItem";
+import BranchDropDownFacilityListItem from './BranchDropDownFacilityListItem';
+import BranchDropDownFacilityListItemHeader from './BranchDropDownFacilityListItemHeader';
+
 
 //===============FUNCTION DECLARATION===================//
-function BranchDropDownFacilityList(){
+function BranchDropDownFacilityList({facilitiesList, branchId}){
+
+// console.log("facilitiesList: ", facilitiesList, "branchId: ", branchId);
+
+
 
 
 
@@ -19,10 +27,23 @@ function BranchDropDownFacilityList(){
 //=================FUNCTION RETURN======================//
     return (<>
         <main className={`${BCIN}Main`}>
-            <div className={`${BCIN}Div`}>
-                <h1 className={`${BCIN}H1`}></h1>
-                    <p className={`${BCIN}P`}></p>
-            </div>
+
+                    <BranchDropDownFacilityListItemHeader />
+
+                    {facilitiesList.map((facility) => {
+                        // console.log("facility: ", facility);
+                        if (facility.branch_Id === branchId) {
+                        return (
+                            <BranchDropDownFacilityListItem
+                            facility={facility}
+
+                            key={facility.id}
+                            // totalPages={facilitiesList.length}
+                            // facilitiesPerPage={facilitiesPerPage}
+                            />
+                        );
+                      }
+                    })}
         </main>
     </>)
 }

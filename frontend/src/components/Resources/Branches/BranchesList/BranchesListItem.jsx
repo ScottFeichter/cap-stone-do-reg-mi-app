@@ -7,7 +7,10 @@ import BranchDropDownFacilityList from '../BranchDropDownFacilityList/BranchDrop
 import { IoMdArrowDropdownCircle } from "react-icons/io";
 import { MdOutlineArrowDropDownCircle } from "react-icons/md";
 
-function BranchesListItem({ branch }) {
+function BranchesListItem({ branch, facilitiesList }) {
+
+  // console.log("facilitiesList: ", facilitiesList);
+
   const [clicked, setClicked] = useState(false)
 
   const handleClick = (e) => {
@@ -22,23 +25,18 @@ function BranchesListItem({ branch }) {
 
 
 
+{/* ==========================container start================================= */}
       <div className="BranchesListItemContainer">
 
 
       <button id={`BranchesListItemDropDownButton`} onClick={handleClick}>
       {clicked ?
-       <>
-        <IoMdArrowDropdownCircle id={`BranchesListItemIoMdArrowDropdownCircle`}/>
-        <BranchDropDownFacilityList />
-       </> :
+        <IoMdArrowDropdownCircle id={`BranchesListItemIoMdArrowDropdownCircle`}/> :
         <MdOutlineArrowDropDownCircle id={`BranchesListItemIoMdOutlineArrowDropDownCircle`}/>
       }
       </button>
 
 
-        {/* <div className="BranchesListItemContainerID">
-            <p className="BranchesListItemP"> {branch.id ? branch.id : "-"}</p>
-        </div> */}
 
         <div className="BranchesListItemContainerName">
           <Link
@@ -66,7 +64,15 @@ function BranchesListItem({ branch }) {
         </div>
 
       </div>
-      {/* <div className="BranchesListItemBorder"></div> */}
+{/* ============================container end================================== */}
+
+
+
+
+
+
+    {clicked ? <BranchDropDownFacilityList facilitiesList={facilitiesList} branchId={branch.id} /> : <></>}
+
     </>
   );
 }

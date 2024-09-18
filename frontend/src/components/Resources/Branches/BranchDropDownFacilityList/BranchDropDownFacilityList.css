@@ -1,15 +1,8 @@
 .BranchDropDownFacilityListMain{
-    /* display: block; */
-    width: 5rem;
-    height: 5rem;
-    background-color: var(--backgroundColor);
-    border: var(--border);
+    width: 32rem;
+    background-color: darkgray;
+    margin: 0;
+    padding: .5rem 0 .5rem 0;
     resize: none;
     overflow: none;
 }
-
-.BranchDropDownFacilityListDiv{}
-
-.BranchDropDownFacilityListH1{}
-
-.BranchDropDownFacilityListP{}

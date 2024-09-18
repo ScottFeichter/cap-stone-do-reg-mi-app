@@ -13,6 +13,7 @@ function BranchesList(){
     // const dispatch = useDispatch();
     // const navigate = useNavigate();
     let branchesList = useSelector(state => state?.branches?.branches);
+    let facilitiesList = useSelector(state => state?.facilities?.facilities);
     // console.log("branchesList 16: ", branchesList);
 
     // const [currentPage, setCurrentPage] = useState(1);
@@ -59,14 +60,20 @@ function BranchesList(){
       <div className="BranchesListContainer">
         {branchesList.map((branch) => {
           return (
-            <BranchesListItem
-              branch={branch}
-              key={branch.id}
-              // totalPages={branchesList.length}
-              // branchesPerPage={branchesPerPage}
-            />
+            <>
+              <BranchesListItem
+                branch={branch}
+                facilitiesList={facilitiesList}
+                key={branch.id}
+                // totalPages={branchesList.length}
+                // branchesPerPage={branchesPerPage}
+              />
+              <hr className='BranchesListHr'></hr>
+            </>
           );
         })}
+
+
 
 
         {/* <BranchListPagination

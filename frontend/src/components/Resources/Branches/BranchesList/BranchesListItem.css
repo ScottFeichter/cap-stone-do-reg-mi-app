@@ -1,13 +1,12 @@
-
 .BranchesListItemContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
-    padding: 0 1.5rem 0 0;
+    margin: 0 1.5rem 0 0;
+    padding: 0 0 0 0;
     text-wrap: nowrap;
     width: fit-content;
-    border-bottom: 1px lightgrey solid;
+    /* border-bottom: 1px lightgrey solid; */
     /* border: blue 2px solid; */
   }
 
@@ -19,6 +18,9 @@
   border: none;
   height: 1.5rem;
   width: 1.5rem;
+  margin: 0;
+  padding: 0 0 0 1.5rem;
+  z-index: 2;
 }
 
 
@@ -29,6 +31,7 @@
   color: var(--green1);
   rotate: 270deg;
   margin: 0;
+  z-index: 3;
   /* border: 1px var(--green1) solid; */
 }
 
@@ -166,22 +169,15 @@
   }
 
 
-    /* ---------???----------- */
-    .BranchesListItemH4{
-        margin: 0;
-        text-wrap: nowrap;
-        width: fit-content;
-        /* border: 1px darkgrey solid; */
-    }
+  /* ------------------------------- */
 
-    .BranchesListItemP{
-        margin: 0;
-        text-wrap: nowrap;
-        width: fit-content;
-        /* border: 1px orange solid; */
-    }
+  .BranchesListItemP{
+      margin: 0;
+      text-wrap: nowrap;
+      width: fit-content;
+      /* border: 1px orange solid; */
+  }
 
-    .BranchesListItemBorder {
-        border: 0.5px solid var(--time-line);
-        margin-left: 90px;
-      }
+
+
+  /* ------------------------------- */

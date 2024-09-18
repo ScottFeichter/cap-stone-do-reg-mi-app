@@ -1,0 +1,139 @@
+
+.BranchDropDownFacilityListItemContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0rem 1rem 0rem 1rem;
+    text-wrap: nowrap;
+    /* width: fit-content; */
+    /* border: blue 2px solid; */
+  }
+
+   /* ---------ITEM GENERIC----------- */
+
+  .BranchDropDownFacilityListItemContainerGeneric {
+    width: 8rem;
+    /* customized on top */
+    /* text-align: center; */
+    color:rgb(255, 255, 255);
+    font-size: .75rem;
+    display: flex;
+    /* flex-direction: column; */
+    /* margin: 0 .15rem 0 .15rem; */
+    /* align-items: left; */
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+     /* ---------ITEM SPECIFIC----------- */
+     /* ---Should match the header css--- */
+
+.BranchDropDownFacilityListItemContainerID {
+    width: 8rem;
+    /* customized on top */
+    /* text-align: center; */
+    color:rgb(255, 255, 255);
+    font-size: .75rem;
+    display: flex;
+    /* flex-direction: column; */
+    /* margin: 0 .15rem 0 .15rem; */
+    /* align-items: left; */
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+  .BranchDropDownFacilityListItemContainerName {
+    width: 8rem;
+    /* customized on top */
+    /* text-align: center; */
+    color:rgb(255, 255, 255);
+    font-size: .75rem;
+    display: flex;
+    /* flex-direction: column; */
+    /* margin: 0 .15rem 0 .15rem; */
+    /* align-items: left; */
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .BranchDropDownFacilityListItemContainerBranchId {
+    width: 8rem;
+    /* customized on top */
+    /* text-align: center; */
+    color:rgb(255, 255, 255);
+    font-size: .75rem;
+    display: flex;
+    /* flex-direction: column; */
+    /* margin: 0 .15rem 0 .15rem; */
+    /* align-items: left; */
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .BranchDropDownFacilityListItemContainerCapacity {
+    width: 8rem;
+    /* customized on top */
+    /* text-align: center; */
+    color:rgb(255, 255, 255);
+    font-size: .75rem;
+    display: flex;
+    /* flex-direction: column; */
+    /* margin: 0 .15rem 0 .15rem; */
+    /* align-items: left; */
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+  .BranchDropDownFacilityListItemContainerSchedule {
+    width: 8rem;
+    /* customized on top */
+    /* text-align: center; */
+    color:rgb(255, 255, 255);
+    font-size: .75rem;
+    display: flex;
+    /* flex-direction: column; */
+    /* margin: 0 .15rem 0 .15rem; */
+    /* align-items: left; */
+    justify-content: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: green 2px solid; */
+  }
+
+
+
+
+
+
+
+    /* ---------???----------- */
+    .BranchDropDownFacilityListItemH4{
+        margin: 0;
+        text-wrap: nowrap;
+        width: fit-content;
+        /* border: 1px darkgrey solid; */
+    }
+
+    .BranchDropDownFacilityListItemP{
+        margin: 0;
+        text-wrap: nowrap;
+        width: fit-content;
+        /* border: 1px orange solid; */
+    }
+
+    .BranchDropDownFacilityListItemBorder {
+        border: 0.5px solid var(--time-line);
+        margin-left: 90px;
+      }
