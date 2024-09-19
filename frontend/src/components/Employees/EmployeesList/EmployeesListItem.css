@@ -10,7 +10,7 @@
    /* ---------ITEM GENERIC----------- */
 
   .EmployeesListItemContainerGeneric {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 8rem;
     /* customized on top */
     text-align: center;
@@ -28,8 +28,8 @@
      /* ---Should match the header css--- */
 
 .EmployeesListItemContainerID {
-    font-size: .8rem;
-    width: 3rem;
+    font-size: .9rem;
+    width: 3.75rem;
    /* customized on top */
     text-align: center;
     display: flex;
@@ -43,7 +43,7 @@
   }
 
   .EmployeesListItemContainerED {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 2rem;
    /* customized on top */
     text-align: center;
@@ -58,7 +58,7 @@
   }
 
   .EmployeesListItemContainerAD {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 2rem;
    /* customized on top */
     text-align: center;
@@ -88,7 +88,7 @@
   }
 
   .EmployeesListItemContainerStreet {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 8rem;
    /* customized on top */
     text-align: center;
@@ -103,7 +103,7 @@
   }
 
   .EmployeesListItemContainerCity {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 8rem;
    /* customized on top */
     text-align: center;
@@ -118,7 +118,7 @@
   }
 
   .EmployeesListItemContainerState {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 4rem;
    /* customized on top */
     text-align: center;
@@ -133,7 +133,7 @@
   }
 
   .EmployeesListItemContainerZip {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 6rem;
    /* customized on top */
     text-align: center;
@@ -148,7 +148,7 @@
   }
 
   .EmployeesListItemContainerPhone {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 6rem;
    /* customized on top */
     text-align: center;
@@ -165,8 +165,8 @@
 
 
   .EmployeesListItemContainerEmail {
-    font-size: .8rem;
-    width: 10rem;
+    font-size: .9rem;
+    width: 9rem;
    /* customized on top */
     text-align: center;
     display: flex;
@@ -181,7 +181,7 @@
 
 
   .EmployeesListItemContainerLang {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 5rem;
    /* customized on top */
     text-align: center;
@@ -196,7 +196,7 @@
   }
 
   .EmployeesListItemContainerInst {
-    font-size: .8rem;
+    font-size: .9rem;
     width: 5rem;
    /* customized on top */
     text-align: center;

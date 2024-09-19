@@ -10,6 +10,7 @@
   /* ---------ITEM GENERIC----------- */
 
   .EmployeesListItemHeaderItemContainerGeneric {
+    font-size: large;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -26,19 +27,21 @@
    /* ----Should match the item css---- */
 
 .EmployeesListItemHeaderItemContainerID {
+    font-size: large;
     text-align: center;
     display: flex;
     flex-direction: column;
     margin: 0 .15rem 0 .15rem;
     align-items: center;
     justify-content: center;
-    width: 3rem;
+    width: 3.75rem;
     overflow: hidden;
     text-wrap: nowrap;
     /* border: green 2px solid; */
   }
 
   .EmployeesListItemHeaderItemContainerED {
+    font-size: large;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -52,6 +55,7 @@
   }
 
   .EmployeesListItemHeaderItemContainerAD {
+    font-size: large;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -65,6 +69,7 @@
   }
 
   .EmployeesListItemHeaderItemContainerName {
+    font-size: large;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -78,8 +83,9 @@
   }
 
   .EmployeesListItemHeaderItemContainerStreet {
+    font-size: large;
     width: 8rem;
-  /* customized on top */
+    /* customized on top */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -92,6 +98,7 @@
   }
 
   .EmployeesListItemHeaderItemContainerCity {
+    font-size: large;
     width: 8rem;
     /* customized on top */
     text-align: center;
@@ -106,6 +113,7 @@
   }
 
   .EmployeesListItemHeaderItemContainerState {
+    font-size: large;
     width: 4rem;
     /* customized on top */
     text-align: center;
@@ -120,6 +128,7 @@
   }
 
   .EmployeesListItemHeaderItemContainerZip {
+    font-size: large;
     width: 6rem;
     /* customized on top */
     text-align: center;
@@ -134,6 +143,7 @@
   }
 
   .EmployeesListItemHeaderItemContainerPhone {
+    font-size: large;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -149,7 +159,8 @@
 
 
   .EmployeesListItemHeaderItemContainerEmail {
-    width: 10rem;
+    font-size: large;
+    width: 9rem;
   /* customized on top */
     text-align: center;
     display: flex;
