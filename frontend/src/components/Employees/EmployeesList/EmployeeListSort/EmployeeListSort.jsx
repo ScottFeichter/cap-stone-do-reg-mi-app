@@ -15,12 +15,13 @@ import { BsCaretDownFill } from "react-icons/bs";
 
 //================COMPONENT IMPORTS=====================//
 
-
+import EmployeesListMap from '../EmployeesListMap/EmployeesListMap';
 
 
 //===============FUNCTION DECLARATION===================//
-function EmployeeListSort() {
+function EmployeeListSort({employeesList}) {
 
+  // console.log("employeesList: ", employeesList);
 
 
 //====================SORT VARIABLES====================//
@@ -34,11 +35,70 @@ function EmployeeListSort() {
   const [sortEmailStatus, setSortEmailStatus] = useState(false);
 
  //====================SORT HANDLERS====================//
+
+
+
+// ====================START: USING USESTATE MAY PREVENT ME FROM MAKING THIS DRY===================
+// if I did not have to useState I could use regular let and key would represent whichever variable
+  // const handleSort= (e, key) => {
+  //   e.preventDefault();
+  //   console.log(`sort${key}Status TOP: `, sortIDStatus);
+
+
+  //   if (sortIDStatus) {
+  //     [`setSort${key}Status`](false);
+
+  //     employeesList.sort((employee1, employee2) => (employee1.key - employee2.key))
+
+  //     console.log(`sorted employeeList by ${key} FALSE: `, employeesList)
+
+  //   } else if (!sortIDStatus) {
+  //     setSortIDStatus(true);
+  //     employeesList.sort((employee1, employee2) => (employee2.key - employee1.key))
+
+  //     console.log(`sorted employeeList by ${key} TRUE: `, employeesList)
+  //   }
+
+
+  //   console.log(`sort${key}Status BOTTOM: `, sortIDStatus)
+  //   return console.log(`sort${key}Status RETURN: `, sortIDStatus);
+  // }
+  // =====================END: USING USESTATE MAY PREVENT ME FROM MAKING THIS DRY===================
+
+
+
   const handleSortID= (e) => {
     e.preventDefault();
-    sortIDStatus ? setSortIDStatus(false) : !sortIDStatus ? setSortIDStatus(true) : "";
-    return console.log("sortIDStatus: ", sortIDStatus);
+    console.log("sortIDStatus TOP: ", sortIDStatus);
+
+
+    if (sortIDStatus) {
+      setSortIDStatus(false);
+
+      employeesList.sort((employee1, employee2) => (employee1.id - employee2.id))
+
+      console.log("sorted employeeList by ID FALSE: ", employeesList)
+
+    } else if (!sortIDStatus) {
+      setSortIDStatus(true);
+      employeesList.sort((employee1, employee2) => (employee2.id - employee1.id))
+
+      console.log("sorted employeeList by ID TRUE: ", employeesList)
+    }
+
+
+    console.log("sortIDStatus BOTTOM: ", sortIDStatus)
+    return console.log("sortIDStatus RETURN: ", sortIDStatus);
   }
+
+
+
+
+
+
+
+
+
 
   const handleSortName= (e) => {
     e.preventDefault();
@@ -240,6 +300,8 @@ function EmployeeListSort() {
 
       </div>
 
+
+       <EmployeesListMap employeesList={employeesList} />
     </>
   );
 }

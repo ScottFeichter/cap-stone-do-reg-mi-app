@@ -1,8 +1,8 @@
 .ZeeTemplateMain{
     background-color: var(--backgroundColor);
     border: var(--border);
-    resize: both;
-    overflow: auto;
+    resize: none;
+    overflow: hidden;
 }
 
 .ZeeTemplateDiv{}

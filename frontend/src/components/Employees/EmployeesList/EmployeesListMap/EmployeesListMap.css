@@ -1,0 +1,15 @@
+.EmployeesListMapMain{
+    /* background-color: var(--backgroundColor); */
+    /* border: var(--border); */
+    /* resize: both; */
+    /* overflow: auto; */
+}
+
+.EmployeesListMapDiv{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    width: fit-content;
+    margin: 0 1rem 0 1rem;
+    /* border: red 2px solid; */
+}
