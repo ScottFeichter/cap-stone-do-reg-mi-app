@@ -1,0 +1,12 @@
+.EmployeesListFilterMain{
+    background-color: var(--backgroundColor);
+    border: var(--border);
+    resize: none;
+    overflow: hidden;
+}
+
+.EmployeesListFilterDiv{}
+
+.EmployeesListFilterH1{}
+
+.EmployeesListFilterP{}

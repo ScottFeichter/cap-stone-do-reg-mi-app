@@ -84,6 +84,10 @@ import Resources from "../components/Resources/Resources.jsx";
   import EditAcademicDepartmentForm from "../components/Departments/AcademicDepartments/EditAcademicDepartmentForm/EditAcademicDepartmentForm.jsx";
 
 
+   // -------SSLIST-------
+   import SSList from "../components/__SortScratch/SSList.jsx";
+
+
   // -----------CATCH ALL--------------
   import CatchAll from "../components/xCatchAll/CatchAll.jsx";
 
@@ -174,20 +178,21 @@ export const router = createBrowserRouter([
           element: <EditEmployeeDepartmentForm />,
         },
 
+
       // -------ACADEMIC DEPARTMENTS-------
 
-      {
-        path: "/academicDepartments/:academicDepartmentId",
-        element: <AcademicDepartmentDetailsPage />
-      },
-      {
-        path: "/createNewAcademicDepartmentForm/",
-        element: <CreateNewAcademicDepartmentForm />,
-      },
-      {
-        path: "/editAcademicDepartmentForm/",
-        element: <EditAcademicDepartmentForm />,
-      },
+        {
+          path: "/academicDepartments/:academicDepartmentId",
+          element: <AcademicDepartmentDetailsPage />
+        },
+        {
+          path: "/createNewAcademicDepartmentForm/",
+          element: <CreateNewAcademicDepartmentForm />,
+        },
+        {
+          path: "/editAcademicDepartmentForm/",
+          element: <EditAcademicDepartmentForm />,
+        },
 
 
 
@@ -240,6 +245,13 @@ export const router = createBrowserRouter([
           path: "/editEmployeeForm/",
           element: <EditEmployeeForm />,
         },
+
+
+      // -------------EMPLOYEES-------------
+      {
+        path: "/sslist",
+        element: <SSList />
+      },
 
 
       // -------------CATCH ALL---------------
