@@ -1,7 +1,7 @@
 import './EmployeesList.css';
 import { useSelector } from 'react-redux'
-import EmployeesListItemHeader from './EmployeesListItemHeader';
-import EmployeeListSort from './EmployeeListSort/EmployeeListSort';
+import EmployeesListItemHeader from './EmployeesListItemHeader/EmployeesListItemHeader.jsx';
+import EmployeesListSort from './EmployeesListSort/EmployeeListSort.jsx';
 
 
 // ========================FUNCTION DECLARATION======================== //
@@ -16,7 +16,7 @@ function EmployeesList(){
         <main className="EmployeeListMain">
 
           <EmployeesListItemHeader />
-          <EmployeeListSort employeesList={employeesList} />
+          <EmployeesListSort employeesList={employeesList} />
 
         </main>
       </>

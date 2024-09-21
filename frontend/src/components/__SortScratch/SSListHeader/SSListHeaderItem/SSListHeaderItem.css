@@ -1,0 +1,71 @@
+.SSListHeaderItemMain{
+    margin: 0 .15rem 0 .15rem;
+    padding: .15rem .15rem .15rem .15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    /* border: 2px brown solid; */
+    width: fit-content;
+    resize: none;
+    /* overflow: hidden; */
+    /* text-overflow: wrap; */
+}
+
+.SSListHeaderItemH4{
+    margin: 0 .15rem 0 .15rem;
+    text-wrap: wrap;
+    width: fit-content;
+    /* border: 2px darkgrey solid; */
+}
+
+.SSListHeaderItemButtonsDiv{
+    margin: 0 .15rem 0 .15rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    width: fit-content;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* border: blue 2px solid; */
+}
+
+
+
+
+
+
+
+
+/* .EmployeesListItemHeaderItemContainerGeneric {
+    font-size: large;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 .15rem 0 .15rem;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    border: green 2px solid;
+  } */
+
+
+  /* .EmployeesListItemHeaderItemH4{
+    margin: 0;
+    text-wrap: nowrap;
+    width: fit-content;
+    border: 1px darkgrey solid;
+} */
+
+
+  /* .EmployeesListItemHeaderContainer {
+    display: flex;
+    margin: 0 1rem 0rem 1rem;
+    text-wrap: nowrap;
+    width: fit-content;
+    border: blue 2px solid;
+  } */

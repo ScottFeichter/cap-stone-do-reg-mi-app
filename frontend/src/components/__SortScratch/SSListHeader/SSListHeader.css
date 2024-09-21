@@ -1,0 +1,9 @@
+.SSListHeaderMain{
+    /* background-color: var(--backgroundColor); */
+    /* border: var(--border); */
+    display: flex;
+    resize: none;
+    overflow: hidden;
+    width: fit-content;
+    /* border: 2px blue solid; */
+}

@@ -9,7 +9,7 @@ import './EmployeesListMap.css';
 
 //================COMPONENT IMPORTS=====================//
 
-import EmployeesListItem from '../EmployeesListItem';
+import EmployeesListItem from '../EmployeesListItem/EmployeesListItem.jsx';
 
 // import EmployeeListPagination from '../EmployeeListPagination/EmployeeListPagination.jsx';
 

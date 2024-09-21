@@ -1,0 +1,95 @@
+.SSListFilterButtonMain{
+    background-color: var(--backgroundColor);
+    /* border: var(--border); */
+    resize: none;
+    overflow: hidden;
+}
+
+
+
+/* =========SORT BUTTON OFF=========== */
+
+.SSListFilterButtonButtonOff{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--buttonBackgroundColor);
+    background-color: var(--buttonColor);
+    border: var(--buttonBorder);
+
+
+    transition-delay: 0s;
+    transition-duration: .1s;
+    transition-timing-function: ease-in-out;
+    transition-property: border, background-color;
+
+    /* animation-name: none;
+    animation-delay: none;
+    animation-duration: .3s;
+    animation-timing-function: calc();
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: initial; */
+}
+
+
+.SSListFilterButtonButtonOff:hover{
+    color: var(--buttonHoverBackgroundColor);
+    background-color: var(--buttonColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+.SSListFilterButtonButtonOff:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}
+
+
+/* =========SORT BUTTON ON=========== */
+
+.SSListFilterButtonButtonOn{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
+
+
+    transition-delay: 0s;
+    transition-duration: .1s;
+    transition-timing-function: ease-in-out;
+    transition-property: border, background-color;
+
+    /* animation-name: none;
+    animation-delay: none;
+    animation-duration: .3s;
+    animation-timing-function: calc();
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: initial; */
+}
+
+
+.SSListFilterButtonButtonOn:hover{
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+}
+
+.SSListFilterButtonButtonOn:active{
+    color: var(--buttonActiveColor);
+    background-color: var(--buttonActiveBackgroundColor);
+    border: var(--buttonActiveBorder);
+    cursor: pointer;
+}

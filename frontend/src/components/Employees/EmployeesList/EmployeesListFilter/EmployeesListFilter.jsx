@@ -10,6 +10,9 @@ import { useState } from 'react';
 import { BsCaretUpFill } from "react-icons/bs";
 import { BsCaretDownFill } from "react-icons/bs";
 
+import { MdFilterAlt } from "react-icons/md";
+import { MdFilterAltOff } from "react-icons/md";
+
 //================COMPONENT IMPORTS=====================//
 
 

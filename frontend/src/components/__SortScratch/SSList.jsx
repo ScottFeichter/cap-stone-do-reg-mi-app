@@ -11,16 +11,18 @@ import { useSelector } from 'react-redux'
 
 //================COMPONENT IMPORTS=====================//
 
-import SSListSortButton from './SSListSortButton/SSListSortButton';
 
-// import EmployeesListItemHeader from './EmployeesListItemHeader';
-// import EmployeeListSort from './EmployeeListSort/EmployeeListSort';
+import SSListHeader from './SSListHeader/SSListHeader';
 
 
 // ========================FUNCTION DECLARATION======================== //
 function EmployeesList(){
 
     let employeesList = useSelector(state => state?.employees?.employees);
+    // console.log("employeeList: ", employeesList);
+
+    let keys = Object.keys(employeesList[0]);
+    console.log("keys: ", keys);
 
 
 // ==========================FUNCTION RETURN============================ //
@@ -28,7 +30,8 @@ function EmployeesList(){
       <>
         <main className={`${BCIN}Main`}>
 
-          <SSListSortButton />
+         <SSListHeader keys={keys} />
+
 
           {/* <EmployeesListItemHeader /> */}
           {/* <EmployeeListSort employeesList={employeesList} /> */}

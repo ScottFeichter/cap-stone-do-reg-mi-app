@@ -19,7 +19,7 @@ function FacilitiesList(){
 
     let branchesListNames = branchesList.map(branch => {
       return {[branch.id]: branch.name}});
-    console.log("branchesListNames: ", branchesListNames);
+    // console.log("branchesListNames: ", branchesListNames);
 
 
 
