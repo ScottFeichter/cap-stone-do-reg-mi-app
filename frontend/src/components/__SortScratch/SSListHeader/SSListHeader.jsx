@@ -12,9 +12,9 @@ import SSListHeaderItem from './SSListHeaderItem/SSListHeaderItem.jsx';
 import camelCaseToTitleCase from '../../_Helpers/camelCaseToTitleCase/camelCaseToTitleCase.js';
 
 //===============FUNCTION DECLARATION===================//
-function SSListHeader({keys}){
+function SSListHeader({keysStatus}){
 
-console.log("SSListHeader keys: ", keys);
+
 
 
 
@@ -24,8 +24,8 @@ console.log("SSListHeader keys: ", keys);
     return (<>
         <main className={`${BCIN}Main`}>
 
-            {keys.map((k, i) => {return(
-                <SSListHeaderItem k={camelCaseToTitleCase(k)} key={i}/>
+            {keysStatus.map((obj, i) => {return(
+                <SSListHeaderItem k={camelCaseToTitleCase(Object.keys(obj)[0])} v={Object.values(obj)[0]} key={i}/>
             )})}
 
         </main>

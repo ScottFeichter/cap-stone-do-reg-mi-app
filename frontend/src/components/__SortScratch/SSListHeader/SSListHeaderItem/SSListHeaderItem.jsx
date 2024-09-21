@@ -19,7 +19,7 @@ function SSListHeaderItem({k, v}){
 
     if(k === undefined) k = 'ID';
     if(v === undefined) v = 'off';
-    console.log("SSListHeaderItem k: ", k);
+    // console.log("SSListHeaderItem k: ", k, "v: ", v);
 
     // const [kVal, setKVal] = useState(k);
     // const [vVal, setVVal] = useState(v);

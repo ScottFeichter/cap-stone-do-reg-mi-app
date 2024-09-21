@@ -13,6 +13,7 @@ import { useSelector } from 'react-redux'
 
 
 import SSListHeader from './SSListHeader/SSListHeader';
+import camelCaseToTitleCase from '../_Helpers/camelCaseToTitleCase/camelCaseToTitleCase';
 
 
 // ========================FUNCTION DECLARATION======================== //
@@ -22,7 +23,15 @@ function EmployeesList(){
     // console.log("employeeList: ", employeesList);
 
     let keys = Object.keys(employeesList[0]);
-    console.log("keys: ", keys);
+    // console.log("keys: ", keys);
+
+    let keysStatus = keys.map(k => {
+      return {[camelCaseToTitleCase(k)]: 'off'}
+    });
+
+    keysStatus[0].ID = 'asce';
+
+    console.log("keysStatus: ", keysStatus);
 
 
 // ==========================FUNCTION RETURN============================ //
@@ -30,7 +39,7 @@ function EmployeesList(){
       <>
         <main className={`${BCIN}Main`}>
 
-         <SSListHeader keys={keys} />
+         <SSListHeader keysStatus={keysStatus} />
 
 
           {/* <EmployeesListItemHeader /> */}

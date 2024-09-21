@@ -6,6 +6,7 @@ import './SSListSortButton.css';
 //==================PROGRAM IMPORTS=====================//
 
 import { useState } from 'react';
+import { useEffect } from 'react';
 import { BsCaretUpFill } from "react-icons/bs";
 import { BsCaretDownFill } from "react-icons/bs";
 
@@ -16,7 +17,7 @@ import { BsCaretDownFill } from "react-icons/bs";
 //===============FUNCTION DECLARATION===================//
 function SSListSortButton({k, v}){
     // console.log("SSListSortButton TOP");
-    // console.log("k: ", v, "v: ", v);
+    // console.log("k: ", k, "v: ", v);
 
     if(k === undefined) k = 'ID';
     if(v === undefined) v = 'off';
@@ -28,14 +29,21 @@ function SSListSortButton({k, v}){
     const [buttonClasses, setButtonClasses] = useState(`${BCIN}ButtonOff`)
 
 
-    console.log("LINE 28: ", "v: ", v, "sortStatus: ", sortStatus);
+    // console.log("LINE 28: ", "v: ", v, "k: ", k, "sortStatus: ", sortStatus);
+
+    useEffect(() => {
+
+        if (k === 'ID') setButtonClasses(`${BCIN}ButtonOn`);
+
+    }, []);
+
 
 
     const handleSortButton= (e) => {
         // console.log("handleSortButton TOP");
         // console.log("k: ", k);
         // console.log("e.currentTarget.id: ", e.currentTarget.id);
-        console.log("handleSortButton TOP: ", "v: ", v, "sortStatus: ", sortStatus);
+        console.log("handleSortButton TOP: ", "k: ", k, "v: ", v, "sortStatus: ", sortStatus);
 
         e.preventDefault();
 
@@ -72,7 +80,7 @@ function SSListSortButton({k, v}){
 
 
         // console.log("handleSortButton BOTTOM");
-        return console.log("handleSortButton RETURN: ", {v: v}, {sortStatus: sortStatus});
+        // return console.log("handleSortButton RETURN: ", {v: v}, {sortStatus: sortStatus});
 
         // {[k]: sortStatus} {[k]: v} ;
 
@@ -86,7 +94,7 @@ function SSListSortButton({k, v}){
     return (<>
         <main className={`${BCIN}Main`}>
           <button className={buttonClasses} id={k} onClick={handleSortButton}>
-            {console.log("LINE 86: ", "v: ", v, "sortStatus: ", sortStatus)}
+            {/* {console.log("LINE 86: ", "v: ", v, "sortStatus: ", sortStatus)} */}
             {sortStatus === 'desc' ? <BsCaretDownFill /> : <BsCaretUpFill />}
           </button>
         </main>
