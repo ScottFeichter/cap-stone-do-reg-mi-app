@@ -1,0 +1,18 @@
+.SSListMapMain{
+    /* background-color: var(--backgroundColor);
+    border: var(--border);
+    resize: none;
+    overflow: hidden; */
+}
+
+.SSListMapDiv{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    width: fit-content;
+    margin: 0 1rem 0 1rem;
+}
+
+.SSListMapH1{}
+
+.SSListMapP{}

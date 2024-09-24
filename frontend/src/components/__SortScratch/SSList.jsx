@@ -13,16 +13,17 @@ import { useSelector } from 'react-redux'
 
 
 import SSListHeader from './SSListHeader/SSListHeader';
+import SSListMap from './SSListMap/SSListMap';
 import camelCaseToTitleCase from '../_Helpers/camelCaseToTitleCase/camelCaseToTitleCase';
 
 
 // ========================FUNCTION DECLARATION======================== //
 function SSList(){
 
-    let employeesList = useSelector(state => state?.employees?.employees);
-    console.log("employeeList: ", employeesList);
+    let list = useSelector(state => state?.employees?.employees);
+    console.log("list: ", list);
 
-    let keys = Object.keys(employeesList[0]);
+    let keys = Object.keys(list[0]);
     console.log("keys: ", keys);
 
     let keysStatus = keys.map(k => {
@@ -38,6 +39,7 @@ function SSList(){
       <>
         <main className={`${BCIN}Main`}>
          <SSListHeader keysStatus={keysStatus} />
+         <SSListMap list={list} />
         </main>
       </>
     )
