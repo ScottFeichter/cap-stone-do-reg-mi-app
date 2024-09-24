@@ -17,7 +17,7 @@ import SSListItem from './SSListItem/SSListItem.jsx';
 //===============FUNCTION DECLARATION===================//
 function SSListMap({list}){
 
-console.log("list SSListMap: ", list);
+// console.log("list SSListMap: ", list);
 //----------------------PAGINATION----------------------//
 
     // const [currentPage, setCurrentPage] = useState(1);
