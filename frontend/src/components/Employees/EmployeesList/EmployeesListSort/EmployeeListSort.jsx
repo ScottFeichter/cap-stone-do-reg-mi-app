@@ -21,7 +21,7 @@ import EmployeesListMap from '../EmployeesListMap/EmployeesListMap';
 //===============FUNCTION DECLARATION===================//
 function EmployeeListSort({employeesList}) {
 
-  // console.log("employeesList: ", employeesList);
+  console.log("employeesList: ", employeesList);
 
 
 //====================SORT VARIABLES====================//
@@ -35,6 +35,20 @@ function EmployeeListSort({employeesList}) {
   const [sortEmailStatus, setSortEmailStatus] = useState(false);
 
   const [sorts, setSorts] = useState([{ID: false}, {Name: false}, {Street: false}, {City: false}, {State: false}, {Zip: false}, {Phone: false}, {Email: false},])
+
+
+
+// =========================COMPARE HELPER FUNCTION========================== //
+
+function compare( a, b ) {
+  if ( a < b ){
+    return -1;
+  }
+  if ( a > b ){
+    return 1;
+  }
+  return 0;
+}
 
 
 
@@ -71,6 +85,9 @@ function EmployeeListSort({employeesList}) {
 
 
 
+
+
+
   const handleSortID= (e) => {
     e.preventDefault();
     console.log("sortIDStatus TOP: ", sortIDStatus);
@@ -79,13 +96,13 @@ function EmployeeListSort({employeesList}) {
     if (sortIDStatus) {
       setSortIDStatus(false);
 
-      employeesList.sort((employee1, employee2) => (employee1.id - employee2.id))
+      employeesList.sort((employee1, employee2) => compare(employee1.id, employee2.id))
 
       console.log("sorted employeeList by ID FALSE: ", employeesList)
 
     } else if (!sortIDStatus) {
       setSortIDStatus(true);
-      employeesList.sort((employee1, employee2) => (employee2.id - employee1.id))
+      employeesList.sort((employee1, employee2) => compare(employee2.id, employee1.id))
 
       console.log("sorted employeeList by ID TRUE: ", employeesList)
     }
@@ -93,57 +110,177 @@ function EmployeeListSort({employeesList}) {
 
     console.log("sortIDStatus BOTTOM: ", sortIDStatus)
     return console.log("sortIDStatus RETURN: ", sortIDStatus);
+
+
   }
-
-
-
-
-
-
 
 
 
 
   const handleSortName= (e) => {
     e.preventDefault();
-    sortNameStatus ? setSortNameStatus(false) : !sortNameStatus ? setSortNameStatus(true) : "";
-    return console.log("sortNameStatus: ", sortNameStatus);
+    if (sortNameStatus) {
+      setSortNameStatus(false);
+
+      employeesList.sort((employee1, employee2) => compare(employee1.lastName, employee2.lastName))
+
+      console.log("sorted employeeList by name FALSE: ", employeesList)
+
+    } else if (!sortNameStatus) {
+      setSortNameStatus(true);
+      employeesList.sort((employee1, employee2) => compare(employee2.lastName, employee1.lastName))
+
+      console.log("sorted employeeList by name TRUE: ", employeesList)
+    }
+
+
+    console.log("sortNameStatus BOTTOM: ", sortNameStatus)
+    return console.log("sortNameStatus RETURN: ", sortNameStatus);
+
   }
+
+
 
   const handleSortStreet= (e) => {
     e.preventDefault();
-    sortStreetStatus ? setSortStreetStatus(false) : !sortStreetStatus ? setSortStreetStatus(true) : "";
-    return console.log("sortStreetStatus: ", sortStreetStatus);
+    if (sortStreetStatus) {
+      setSortStreetStatus(false);
+
+      employeesList.sort((employee1, employee2) => compare(employee1.street, employee2.street))
+
+      console.log("sorted employeeList by Street FALSE: ", employeesList)
+
+    } else if (!sortStreetStatus) {
+      setSortStreetStatus(true);
+      employeesList.sort((employee1, employee2) => compare(employee2.street, employee1.street))
+
+      console.log("sorted employeeList by Street TRUE: ", employeesList)
+    }
+
+
+    console.log("sortStreetStatus BOTTOM: ", sortStreetStatus)
+    return console.log("sortStreetStatus RETURN: ", sortStreetStatus);
+
   }
+
 
   const handleSortCity= (e) => {
     e.preventDefault();
-    sortCityStatus ? setSortCityStatus(false) : !sortCityStatus ? setSortCityStatus(true) : "";
-    return console.log("sortCityStatus: ", sortCityStatus);
+    if (sortCityStatus) {
+      setSortCityStatus(false);
+
+      employeesList.sort((employee1, employee2) => compare(employee1.city, employee2.city))
+
+      console.log("sorted employeeList by City FALSE: ", employeesList)
+
+    } else if (!sortCityStatus) {
+      setSortCityStatus(true);
+      employeesList.sort((employee1, employee2) => compare(employee2.city, employee1.city))
+
+      console.log("sorted employeeList by City TRUE: ", employeesList)
+    }
+
+
+    console.log("sortCityStatus BOTTOM: ", sortCityStatus)
+    return console.log("sortCityStatus RETURN: ", sortCityStatus);
+
   }
+
+
 
   const handleSortState= (e) => {
     e.preventDefault();
-    sortStateStatus ? setSortStateStatus(false) : !sortStateStatus ? setSortStateStatus(true) : "";
-    return console.log("sortStateStatus: ", sortStateStatus);
+    if (sortStateStatus) {
+      setSortStateStatus(false);
+
+      employeesList.sort((employee1, employee2) => compare(employee1.state, employee2.state))
+
+      console.log("sorted employeeList by State FALSE: ", employeesList)
+
+    } else if (!sortStateStatus) {
+      setSortStateStatus(true);
+      employeesList.sort((employee1, employee2) => compare(employee2.state, employee1.state))
+
+      console.log("sorted employeeList by State TRUE: ", employeesList)
+    }
+
+
+    console.log("sortStateStatus BOTTOM: ", sortStateStatus)
+    return console.log("sortStateStatus RETURN: ", sortStateStatus);
+
   }
+
+
 
   const handleSortZip= (e) => {
     e.preventDefault();
-    sortZipStatus ? setSortZipStatus(false) : !sortZipStatus ? setSortZipStatus(true) : "";
-    return console.log("sortZipStatus: ", sortZipStatus);
+    if (sortZipStatus) {
+      setSortZipStatus(false);
+
+      employeesList.sort((employee1, employee2) => compare(employee1.zip, employee2.zip))
+
+      console.log("sorted employeeList by Zip FALSE: ", employeesList)
+
+    } else if (!sortZipStatus) {
+      setSortZipStatus(true);
+      employeesList.sort((employee1, employee2) => compare(employee2.zip, employee1.zip))
+
+      console.log("sorted employeeList by Zip TRUE: ", employeesList)
+    }
+
+
+    console.log("sortZipStatus BOTTOM: ", sortZipStatus)
+    return console.log("sortZipStatus RETURN: ", sortZipStatus);
+
   }
+
+
+
 
   const handleSortPhone= (e) => {
     e.preventDefault();
-    sortPhoneStatus ? setSortPhoneStatus(false) : !sortPhoneStatus ? setSortPhoneStatus(true) : "";
-    return console.log("sortPhoneStatus: ", sortPhoneStatus);
+    if (sortPhoneStatus) {
+      setSortPhoneStatus(false);
+
+      employeesList.sort((employee1, employee2) => compare(employee1.phone, employee2.phone))
+
+      console.log("sorted employeeList by Phone FALSE: ", employeesList)
+
+    } else if (!sortPhoneStatus) {
+      setSortPhoneStatus(true);
+      employeesList.sort((employee1, employee2) => compare(employee2.phone, employee1.phone))
+
+      console.log("sorted employeeList by Phone TRUE: ", employeesList)
+    }
+
+
+    console.log("sortPhoneStatus BOTTOM: ", sortPhoneStatus)
+    return console.log("sortPhoneStatus RETURN: ", sortPhoneStatus);
+
   }
+
+
 
   const handleSortEmail= (e) => {
     e.preventDefault();
-    sortEmailStatus ? setSortEmailStatus(false) : !sortEmailStatus ? setSortEmailStatus(true) : "";
-    return console.log("sortEmailStatus: ", sortEmailStatus);
+    if (sortEmailStatus) {
+      setSortEmailStatus(false);
+
+      employeesList.sort((employee1, employee2) => compare(employee1.email, employee2.email))
+
+      console.log("sorted employeeList by Email FALSE: ", employeesList)
+
+    } else if (!sortEmailStatus) {
+      setSortEmailStatus(true);
+      employeesList.sort((employee1, employee2) => compare(employee2.email, employee1.email))
+
+      console.log("sorted employeeList by Email TRUE: ", employeesList)
+    }
+
+
+    console.log("sortEmailStatus BOTTOM: ", sortEmailStatus)
+    return console.log("sortEmailStatus RETURN: ", sortEmailStatus);
+
   }
 
 

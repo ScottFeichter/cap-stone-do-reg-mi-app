@@ -93,14 +93,17 @@
             <mxPoint y="-5" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="pyJr4OgLcwCwCUFXCX6H-30" value="&lt;b&gt;employeeList&lt;/b&gt; = [ {name: Fred}, {...}, {..., ...etc ]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="34" y="35" width="325" height="30" as="geometry" />
+        <mxCell id="pyJr4OgLcwCwCUFXCX6H-30" value="&lt;b&gt;employeeList&lt;/b&gt; = [ {id: 1, name: Fred, ...etc}, {...}, {...}, ...etc ]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="66" y="35" width="325" height="30" as="geometry" />
         </mxCell>
         <mxCell id="pyJr4OgLcwCwCUFXCX6H-31" value="&lt;b&gt;keys&lt;/b&gt; = [ Object.keys(employeesList[0]) ... ]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="85" y="65" width="299" height="30" as="geometry" />
         </mxCell>
         <mxCell id="pyJr4OgLcwCwCUFXCX6H-32" value="&lt;b&gt;keysStatus&lt;/b&gt; = [ {Name: &#39;asce&#39;} ...etc ]" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="56" y="95" width="248" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pyJr4OgLcwCwCUFXCX6H-33" value="keyStatus can be &#39;asce&#39;, &#39;desc&#39;, &#39;off&#39;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="53.5" y="121" width="253" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
