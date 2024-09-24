@@ -1,34 +1,29 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
 
-const BCIN = "SSListItemContainerEmail";
-import './SSListItemContainerEmail.css';
+const BCIN = "SSListItemContainerGeneric";
+import './SSListItemContainerGeneric.css';
 
 //==================PROGRAM IMPORTS=====================//
 
-import { Link } from "react-router-dom";
+
 
 //================COMPONENT IMPORTS=====================//
 
 
 //===============FUNCTION DECLARATION===================//
-function SSListItemContainerEmail({k, v}){
+function SSListItemContainerGeneric({k, v}){
 
-
-    console.log("Email: ", "k: ", k, "v", v);
+if(k) "stop yelling at me linter";
+// console.log("Generic: ", "k: ", k, "v", v);
 
 
 //=================FUNCTION RETURN======================//
     return (<>
         <main className={`${BCIN}Main`}>
-
-            {v ?
-              <Link to={`mailto:${v}`} className={`${BCIN}P`}> {v}</Link> :
-              <p className={`${BCIN}P`}>-</p>
-            }
-
+            <p className={`${BCIN}P`}> {v ? v : "-"}</p>
         </main>
     </>)
 }
 
 //===================FUNCTION EXPORT====================//
-export default SSListItemContainerEmail;
+export default SSListItemContainerGeneric;

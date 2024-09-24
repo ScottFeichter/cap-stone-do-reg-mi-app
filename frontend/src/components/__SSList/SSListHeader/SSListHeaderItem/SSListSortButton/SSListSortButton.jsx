@@ -15,11 +15,13 @@ import { BsCaretDownFill } from "react-icons/bs";
 
 
 //===============FUNCTION DECLARATION===================//
-function SSListSortButton({k, v}){
+function SSListSortButton({k, v, setKeysStatus}){
     // console.log("SSListSortButton TOP");
+    // console.log("SSListSortButton setKeysStatus: ", setKeysStatus);
     // console.log("k: ", k, "v: ", v);
+    if(setKeysStatus) "stop yelling at me linter";
 
-    if(k === undefined) k = 'ID';
+    if(k === undefined) k = 'k';
     if(v === undefined) v = 'off';
 
     // sortStatus can be off, 'asce', or 'desc'

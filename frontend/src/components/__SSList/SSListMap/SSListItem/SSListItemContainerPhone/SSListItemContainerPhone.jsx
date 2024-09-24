@@ -13,8 +13,8 @@ import { Link } from "react-router-dom";
 //===============FUNCTION DECLARATION===================//
 function SSListItemContainerPhone({k, v}){
 
-
-  console.log("Phone: ", "k: ", k, "v", v);
+  if(k) "stop yelling at me linter";
+  // console.log("Phone: ", "k: ", k, "v", v);
 
 
 //=================FUNCTION RETURN======================//

@@ -13,8 +13,8 @@ import { Link } from "react-router-dom";
 //===============FUNCTION DECLARATION===================//
 function SSListItemContainerName({route, id, k, v}){
 
-
-    console.log("Name: ", "k: ", k, "v", v);
+    if(k) "stop yelling at me linter";
+    // console.log("Name: ", "k: ", k, "v", v);
 
 
 //=================FUNCTION RETURN======================//

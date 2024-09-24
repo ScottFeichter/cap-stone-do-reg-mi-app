@@ -15,30 +15,37 @@ import { useSelector } from 'react-redux'
 import SSListHeader from './SSListHeader/SSListHeader';
 import SSListMap from './SSListMap/SSListMap';
 import camelCaseToTitleCase from '../_Helpers/camelCaseToTitleCase/camelCaseToTitleCase';
+import { useState } from 'react';
 
 
 // ========================FUNCTION DECLARATION======================== //
 function SSList(){
 
+
+
     let list = useSelector(state => state?.employees?.employees);
-    console.log("list: ", list);
+    // console.log("list: ", list);
 
     let keys = Object.keys(list[0]);
-    console.log("keys: ", keys);
+    // console.log("keys: ", keys);
 
-    let keysStatus = keys.map(k => {
+    let kS = keys.map(k => {
       return {[camelCaseToTitleCase(k)]: 'off'}
     });
 
-    keysStatus[0].ID = 'asce';
-    console.log("keysStatus: ", keysStatus);
+
+
+    kS[0].ID = 'asce';
+    const [keysStatus, setKeysStatus] = useState(kS);
+
+    console.log("keysStatus SSList: ", keysStatus);
 
 
 // ==========================FUNCTION RETURN============================ //
     return(
       <>
         <main className={`${BCIN}Main`}>
-         <SSListHeader keysStatus={keysStatus} />
+         <SSListHeader keysStatus={keysStatus} setKeysStatus={setKeysStatus} />
          <SSListMap list={list} />
         </main>
       </>
