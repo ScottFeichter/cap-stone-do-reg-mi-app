@@ -37,13 +37,7 @@ function SSList(){
     return(
       <>
         <main className={`${BCIN}Main`}>
-
          <SSListHeader keysStatus={keysStatus} />
-
-
-          {/* <EmployeesListItemHeader /> */}
-          {/* <EmployeeListSort employeesList={employeesList} /> */}
-
         </main>
       </>
     )
