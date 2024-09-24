@@ -37,10 +37,10 @@ function EmployeeListSort({employeesList}) {
   const [sorts, setSorts] = useState([{ID: false}, {Name: false}, {Street: false}, {City: false}, {State: false}, {Zip: false}, {Phone: false}, {Email: false},])
 
 
-  
+
  //====================SORT HANDLERS====================//
 
- data.sort((a, b) => a.city.localeCompare(b.city) || b.price - a.price);
+//  data.sort((a, b) => a.city.localeCompare(b.city) || b.price - a.price);
 
 // ====================START: USING USESTATE MAY PREVENT ME FROM MAKING THIS DRY===================
 // if I did not have to useState I could use regular let and key would represent whichever variable
