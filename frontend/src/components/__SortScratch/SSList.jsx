@@ -17,20 +17,19 @@ import camelCaseToTitleCase from '../_Helpers/camelCaseToTitleCase/camelCaseToTi
 
 
 // ========================FUNCTION DECLARATION======================== //
-function EmployeesList(){
+function SSList(){
 
     let employeesList = useSelector(state => state?.employees?.employees);
-    // console.log("employeeList: ", employeesList);
+    console.log("employeeList: ", employeesList);
 
     let keys = Object.keys(employeesList[0]);
-    // console.log("keys: ", keys);
+    console.log("keys: ", keys);
 
     let keysStatus = keys.map(k => {
       return {[camelCaseToTitleCase(k)]: 'off'}
     });
 
     keysStatus[0].ID = 'asce';
-
     console.log("keysStatus: ", keysStatus);
 
 
@@ -51,4 +50,4 @@ function EmployeesList(){
 }
 
 // ===========================FUNCTION EXPORT============================ //
-export default EmployeesList;
+export default SSList;
