@@ -1,5 +1,6 @@
 import { csrfFetch } from "./xCsrf";
 import camelCaseToTitleCase from "../components/_Helpers/camelCaseToTitleCase/camelCaseToTitleCase";
+// import { useSelector } from "react-redux";
 
 /** =============ACTION TYPE CONSTANTS:=======================================*/
 
@@ -12,6 +13,7 @@ const DELETE_EMPLOYEE = "employee/deleteEmployee";
 const REMOVE_EMPLOYEE_DATA_FROM_STORE = "employee/removeEmployeeDataFromStore";
 
 const GENERATE_EMPLOYEE_KEYS_STATUS  = "generate employee keys status";
+const UPDATE_EMPLOYEE_KEYS_STATUS  = "update employee keys status";
 
 /** ==============ACTION CREATORS:============================================*/
 
@@ -79,12 +81,22 @@ const removeEmployeeDataFromStore = () => {
 
 
 const generateEmployeeKeysStatus = (kS) => {
-  // console.log('EMPLOYEES ALL RAN - EMPLOYEES', employees);
+  // console.log('GENERATE_EMPLOYEE_KEYS_STATUS RAN - EMPLOYEES', employees);
   return {
     type: GENERATE_EMPLOYEE_KEYS_STATUS,
     payload: kS
   };
 };
+
+
+const updateEmployeeKeysStatus = (kS) => {
+  // console.log('UPDATE_EMPLOYEE_KEYS_STATUS RAN - EMPLOYEES', employees);
+  return {
+    type: UPDATE_EMPLOYEE_KEYS_STATUS,
+    payload: kS,
+  };
+};
+
 
 
 
@@ -205,7 +217,7 @@ export const thunkRemoveEmployeeDataFromStore = () => async (dispatch) => {
 
 
 /** ==============FRONTEND DATA ONLY =========================================*/
-
+let kS = [];
 
 /** GENERATE EMPLOYEE KEYS STATUS */
 export const thunkGenerateEmployeeKeysStatus = (list) => async (dispatch) => {
@@ -213,16 +225,43 @@ export const thunkGenerateEmployeeKeysStatus = (list) => async (dispatch) => {
   let keys = Object.keys(list[0]);
   // console.log("keys: ", keys);
 
-  let kS = keys.map(k => {
+  kS = keys.map(k => {
     return {[camelCaseToTitleCase(k)]: 'off'}
   });
- 
 
   kS[0] = {ID: 'asce'};
 
-
   // console.log('THUNK GENERATE EMPLOYEES KEY STATUS RAN DATA: ', kS);
   return dispatch(generateEmployeeKeysStatus(kS))
+};
+
+
+
+/** UPDATE EMPLOYEE KEYS STATUS */
+export const thunkUpdateEmployeeKeysStatus = (k, v) => async (dispatch) => {
+  // console.log('THUNK UPDATE EMPLOYEES KEY STATUS TOP: ', 'k: ', k, 'v: ', v);
+
+  let currIdx = kS.findIndex(ele => Object.keys(ele)[0] === k);
+  let targetIdx = kS.findIndex(ele => Object.values(ele)[0] === 'off');
+
+  // console.log(targetIdx);
+
+  if(v === 'off') {
+    kS[(currIdx)] = {[k]: v};
+    // shifting
+
+  } else if(v === 'desc') {
+    kS[(currIdx)] = {[k]: v};
+
+  } else if(v === 'asce') {
+    kS[(currIdx)] = {[k]: v};
+    if(currIdx !== 0) {
+      [kS[currIdx], kS[targetIdx]] = [kS[targetIdx], kS[currIdx]]
+    }
+  }
+
+  // console.log('THUNK UPDATE EMPLOYEES KEY STATUS RAN DATA: ', kS);
+  return dispatch(updateEmployeeKeysStatus(kS))
 };
 
 
@@ -273,7 +312,11 @@ const employeesReducer = (employeesState = initialEmployeesState, action) => {
 
 
     case GENERATE_EMPLOYEE_KEYS_STATUS:
-      // console.log("EMPLOYEEESREDUCER RAN GENERATE EMPLOYEE KEYS STATUS  CASE")
+      // console.log("EMPLOYEEESREDUCER RAN GENERATE EMPLOYEE KEYS STATUS CASE")
+      return {...employeesState, employeeKeysStatus: action.payload};
+
+    case UPDATE_EMPLOYEE_KEYS_STATUS:
+      // console.log("EMPLOYEEESREDUCER RAN UPDATE EMPLOYEE KEYS STATUS CASE")
       return {...employeesState, employeeKeysStatus: action.payload};
 
 

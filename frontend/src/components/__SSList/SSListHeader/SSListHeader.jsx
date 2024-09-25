@@ -9,16 +9,16 @@ import './SSListHeader.css';
 //================COMPONENT IMPORTS=====================//
 
 import SSListHeaderItem from './SSListHeaderItem/SSListHeaderItem.jsx';
-import camelCaseToTitleCase from '../../_Helpers/camelCaseToTitleCase/camelCaseToTitleCase.js';
+// import camelCaseToTitleCase from '../../_Helpers/camelCaseToTitleCase/camelCaseToTitleCase.js';
 
 //===============FUNCTION DECLARATION===================//
 function SSListHeader({keysStatus}){
 
-console.log("SSListHeader keysStatus: ", keysStatus, typeof keysStatus);
+// console.log("SSListHeader keysStatus: ", keysStatus, typeof keysStatus);
 
 
 
-
+if(keysStatus === undefined) return null;
 
 
 //=================FUNCTION RETURN======================//
@@ -26,7 +26,7 @@ console.log("SSListHeader keysStatus: ", keysStatus, typeof keysStatus);
         <main className={`${BCIN}Main`}>
 
             {keysStatus.map((obj, idx) => {return(
-                <SSListHeaderItem k={camelCaseToTitleCase(Object.keys(obj)[0])} v={Object.values(obj)[0]} keysStatus={keysStatus} key={idx}/>
+                <SSListHeaderItem k={Object.keys(obj)[0]} v={Object.values(obj)[0]} keysStatus={keysStatus} key={idx}/>
             )})}
 
         </main>

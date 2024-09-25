@@ -54,7 +54,7 @@ function SSListMap({list}){
 
 
 
-
+   if(list === undefined) return null;
 
 
 //=================FUNCTION RETURN======================//

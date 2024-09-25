@@ -7,8 +7,10 @@ import './SSListSortButton.css';
 
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { BsCaretUpFill } from "react-icons/bs";
 import { BsCaretDownFill } from "react-icons/bs";
+import { thunkUpdateEmployeeKeysStatus } from '../../../../../redux/employeesReducer';
 
 //================COMPONENT IMPORTS=====================//
 
@@ -16,14 +18,9 @@ import { BsCaretDownFill } from "react-icons/bs";
 
 
 //===============FUNCTION DECLARATION===================//
-function SSListSortButton({k, v, keysStatus}){
-    // console.log("SSListSortButton TOP");
-    // console.log("SSListSortButton: ", "k: ", k, "v: ", v, "keysStatus: ", keysStatus);
-    // if(setKeysStatus) "stop yelling at me linter";
-    if(keysStatus) "stop yelling at me linter";
+function SSListSortButton({k, v}){
+    const dispatch = useDispatch();
 
-    // if(k === undefined) k = 'k';
-    // if(v === undefined) v = 'off';
 
     // sortStatus can be off, 'asce', or 'desc'
     const [sortStatus, setSortStatus] = useState(v);
@@ -32,31 +29,21 @@ function SSListSortButton({k, v, keysStatus}){
     const [buttonClasses, setButtonClasses] = useState(`${BCIN}ButtonOff`)
 
 
-    // console.log("LINE 28: ", "v: ", v, "k: ", k, "sortStatus: ", sortStatus);
-
     useEffect(() => {
 
         if (k === 'ID') {
             setButtonClasses(`${BCIN}ButtonOn`);
-            setSortStatus('asce')
+            setSortStatus('asce');
         }
-        
+
     }, []);
 
 
 
     const handleSortButton= (e) => {
-        // console.log("handleSortButton TOP");
-        // console.log("k: ", k);
-        // console.log("e.currentTarget.id: ", e.currentTarget.id);
-        console.log("handleSortButton TOP: ", "k: ", k, "v: ", v, "sortStatus: ", sortStatus, "keysStatus", keysStatus);
+        // console.log("handleSortButton TOP: ", "k: ", k, "v: ", v, "sortStatus: ", sortStatus);
 
         e.preventDefault();
-
-        let currIdx = keysStatus.findIndex(ele => Object.keys(ele)[0] === k);
-        let targetIdx = keysStatus.findIndex(ele => ele[Object.keys(ele)[0]] === 'off');
-
-        console.log("currIdx: ", currIdx, "targetIdx: ", targetIdx);
 
         if (sortStatus === 'off') {
 
@@ -64,17 +51,21 @@ function SSListSortButton({k, v, keysStatus}){
             setButtonClasses(`${BCIN}ButtonOn`);
             v = 'asce';
 
-            setKeysStatus(prev => ({
-                ...prev,
-                [k]: v,
-            }));
+            dispatch(thunkUpdateEmployeeKeysStatus(k, v));
 
-            setKeysStatus([keysStatus[currIdx], keysStatus[targetIdx]] = [keysStatus[targetIdx], keysStatus[currIdx]])
+            // setKeysStatus(prev => ({
+            //     ...prev,
+            //     [k]: v,
+            // }));
+
+            // setKeysStatus([keysStatus[currIdx], keysStatus[targetIdx]] = [keysStatus[targetIdx], keysStatus[currIdx]])
 
         } else if (sortStatus === 'asce') {
             setSortStatus('desc');
             setButtonClasses(`${BCIN}ButtonOn`);
             v = 'desc';
+
+            dispatch(thunkUpdateEmployeeKeysStatus(k, v));
 
             // setKeysStatus(prev => ([
             //     ...prev,
@@ -82,11 +73,7 @@ function SSListSortButton({k, v, keysStatus}){
             //     {[k]: v}
             // ]));
 
-            setKeysStatus([...keysStatus, keysStatus[(currIdx)] = {[k]: v},]
-
-
-
-            );
+            // setKeysStatus([...keysStatus, keysStatus[(currIdx)] = {[k]: v},]);
 
             // setKeysStatus([keysStatus[currIdx], keysStatus[targetIdx]] = [keysStatus[targetIdx], keysStatus[currIdx]])
 
@@ -96,18 +83,20 @@ function SSListSortButton({k, v, keysStatus}){
             setButtonClasses(`${BCIN}ButtonOff`);
             v = 'off'
 
-            setKeysStatus(prev => ({
-                ...prev,
-                [k]: v,
-            }));
+            dispatch(thunkUpdateEmployeeKeysStatus(k, v));
 
-            setKeysStatus([keysStatus[currIdx], keysStatus[targetIdx - 1]] = [keysStatus[targetIdx - 1], keysStatus[currIdx]])
+            // setKeysStatus(prev => ({
+            //     ...prev,
+            //     [k]: v,
+            // }));
+
+            // setKeysStatus([keysStatus[currIdx], keysStatus[targetIdx - 1]] = [keysStatus[targetIdx - 1], keysStatus[currIdx]])
 
         }
 
 
 
-        console.log("handleSortButton BOTTOM: ", "k: ", k, "v: ", v, "sortStatus: ", sortStatus, "keysStatus", keysStatus);
+        // console.log("handleSortButton BOTTOM: ", "k: ", k, "v: ", v, "sortStatus: ", sortStatus, "keysStatus", keysStatus);
 
 
         // return console.log("handleSortButton RETURN: ", {v: v}, {sortStatus: sortStatus});
