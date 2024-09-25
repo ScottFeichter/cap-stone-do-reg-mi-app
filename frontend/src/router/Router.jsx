@@ -85,7 +85,7 @@ import Resources from "../components/Resources/Resources.jsx";
 
 
    // -------SSLIST-------
-   import SSList from "../components/__SortScratch/SSList.jsx";
+   import SSList from "../components/__SSList/SSList.jsx";
 
 
   // -----------CATCH ALL--------------

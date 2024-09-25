@@ -15,11 +15,11 @@ import SSListFilterButton from './SSListFilterButton/SSListFilterButton.jsx';
 
 
 //===============FUNCTION DECLARATION===================//
-function SSListHeaderItem({k, v, setKeysStatus}){
+function SSListHeaderItem({k, v, keysStatus}){
     // console.log("SSListHeaderItem setKeysStatus: ", setKeysStatus);
 
-    if(k === undefined) k = 'ID';
-    if(v === undefined) v = 'off';
+    // if(k === undefined) k = 'ID';
+    // if(v === undefined) v = 'off';
     // console.log("SSListHeaderItem k: ", k, "v: ", v);
 
 
@@ -35,7 +35,7 @@ function SSListHeaderItem({k, v, setKeysStatus}){
         <main className={`${BCIN}Main`}>
             <h4 className={`${BCIN}H4`}>{k}</h4>
             <div className={`${BCIN}ButtonsDiv`}>
-                <SSListSortButton k={k} v={v} setKeysStatus={setKeysStatus}/>
+                <SSListSortButton k={k} v={v} keysStatus={keysStatus}/>
                 <SSListFilterButton k={k} v={v} />
             </div>
         </main>

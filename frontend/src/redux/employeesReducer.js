@@ -1,4 +1,5 @@
 import { csrfFetch } from "./xCsrf";
+import camelCaseToTitleCase from "../components/_Helpers/camelCaseToTitleCase/camelCaseToTitleCase";
 
 /** =============ACTION TYPE CONSTANTS:=======================================*/
 
@@ -9,6 +10,8 @@ const CREATE_EMPLOYEE = "employee/createEmployee";
 const UPDATE_EMPLOYEE = "employee/updateEmployee";
 const DELETE_EMPLOYEE = "employee/deleteEmployee";
 const REMOVE_EMPLOYEE_DATA_FROM_STORE = "employee/removeEmployeeDataFromStore";
+
+const GENERATE_EMPLOYEE_KEYS_STATUS  = "generate employee keys status";
 
 /** ==============ACTION CREATORS:============================================*/
 
@@ -70,6 +73,24 @@ const removeEmployeeDataFromStore = () => {
 };
 
 
+
+
+
+
+
+const generateEmployeeKeysStatus = (kS) => {
+  // console.log('EMPLOYEES ALL RAN - EMPLOYEES', employees);
+  return {
+    type: GENERATE_EMPLOYEE_KEYS_STATUS,
+    payload: kS
+  };
+};
+
+
+
+
+
+
 /** ==============THUNKS:=====================================================*/
 
 /** SEARCH EMPLOYEES */
@@ -93,7 +114,7 @@ export const thunkGetEmployeesAll = () => async (dispatch) => {
   // console.log('THUNK GET EMPLOYEES ALL RAN DATA: ', employees);
 
   dispatch(employeesAll(employees))
-  return
+  return dispatch(thunkGenerateEmployeeKeysStatus(employees))
 };
 
 
@@ -175,11 +196,38 @@ export const thunkDeleteEmployee = (employee) => async (dispatch) => {
 
 
 
-
 /** REMOVE EMPLOYEE DATA FROM STORE */
 export const thunkRemoveEmployeeDataFromStore = () => async (dispatch) => {
   return dispatch(removeEmployeeDataFromStore());
 };
+
+
+
+
+/** ==============FRONTEND DATA ONLY =========================================*/
+
+
+/** GENERATE EMPLOYEE KEYS STATUS */
+export const thunkGenerateEmployeeKeysStatus = (list) => async (dispatch) => {
+
+  let keys = Object.keys(list[0]);
+  // console.log("keys: ", keys);
+
+  let kS = keys.map(k => {
+    return {[camelCaseToTitleCase(k)]: 'off'}
+  });
+ 
+
+  kS[0] = {ID: 'asce'};
+
+
+  // console.log('THUNK GENERATE EMPLOYEES KEY STATUS RAN DATA: ', kS);
+  return dispatch(generateEmployeeKeysStatus(kS))
+};
+
+
+
+
 
 
 /** ==============INITIAL STATE: =============================================*/
@@ -219,6 +267,16 @@ const employeesReducer = (employeesState = initialEmployeesState, action) => {
     case REMOVE_EMPLOYEE_DATA_FROM_STORE:
       // console.log("EMPLOYEEESREDUCER RAN REMOVE FROM STORE CASE")
       return {};
+
+
+
+
+
+    case GENERATE_EMPLOYEE_KEYS_STATUS:
+      // console.log("EMPLOYEEESREDUCER RAN GENERATE EMPLOYEE KEYS STATUS  CASE")
+      return {...employeesState, employeeKeysStatus: action.payload};
+
+
 
     default:
       // console.log('EMPLOYEESREDUCER RAN DEFAULT')
