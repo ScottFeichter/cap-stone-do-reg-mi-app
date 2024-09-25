@@ -249,7 +249,13 @@ export const thunkUpdateEmployeeKeysStatus = (k, v) => async (dispatch) => {
   if(v === 'off') {
     kS[(currIdx)] = {[k]: v};
     // shifting
-
+    if(currIdx !== 0) {
+      while (currIdx < targetIdx) {
+        [kS[currIdx], kS[currIdx + 1]] = [kS[currIdx + 1], kS[currIdx]];
+        currIdx++;
+      }
+    }
+    
   } else if(v === 'desc') {
     kS[(currIdx)] = {[k]: v};
 
