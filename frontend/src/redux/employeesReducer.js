@@ -217,7 +217,7 @@ export const thunkRemoveEmployeeDataFromStore = () => async (dispatch) => {
 
 
 /** ==============FRONTEND DATA ONLY =========================================*/
-let kS = [];
+let kS = []; // frontend global for keysStatus
 
 /** GENERATE EMPLOYEE KEYS STATUS */
 export const thunkGenerateEmployeeKeysStatus = (list) => async (dispatch) => {
@@ -255,7 +255,7 @@ export const thunkUpdateEmployeeKeysStatus = (k, v) => async (dispatch) => {
         currIdx++;
       }
     }
-    
+
   } else if(v === 'desc') {
     kS[(currIdx)] = {[k]: v};
 
