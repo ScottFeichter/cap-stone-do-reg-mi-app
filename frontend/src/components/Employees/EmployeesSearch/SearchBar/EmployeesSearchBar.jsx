@@ -37,7 +37,9 @@ function EmployeesSearchBar() {
   // cannot be state bc would be behind render and can't be used in a different useEffect
   let displayedSuggestions = [];
 
-//   const [selectedSuggestion, setSelectedSuggestion] = useState();
+  
+
+  // const [selectedSuggestion, setSelectedSuggestion] = useState();
 
   // const [employeeDetail, setEmployeeDetail] = useState();
 
