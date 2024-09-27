@@ -21,14 +21,11 @@ function GlobalSearch(){
 
     const navigate = useNavigate();
 
-    // const globalState = [window.store.getState()]
-    // console.log("globalState", globalState);
+    const globalState = [window.store.getState()]
+    console.log("globalState", globalState);
     // const dispatch = useDispatch();
 
-    // useEffect(() => {
-    //   dispatch(navStocksActions.navStocks());
-    //   console.log("FROM SEARCHBAR.JSX dispatch(navStocksActions.navStocks());")
-    // }, []);
+
 
     // =======================STATEFUL VARIABLES=======================
     // some of these may not be used after all
@@ -47,21 +44,26 @@ function GlobalSearch(){
 
     // const [errors, setErrors] = useState({});
 
+
+    
     // =======================GLOBAL VARIABLES (NOT STATEFUL)=======================
     // some of these may not be used after all
 
     let displayedSuggestions = [];
 
+
+
     // ===========================USE EFFECT FOR SEARCH===============================
 
     /**
      * This useEffect runs everytime there is a change in the variable search
-     * It captures the search value and filters it through the stocks (aka searchables)
-     * The result is the array of stock objects named suggestions
+     * It captures the search value and filters it through globalState (aka searchables)
+     * The result is the array of state objects as suggestions
      * Then it creates an array called displaySuggestions which mirrors suggestions...
-     * But it only contains a string of name, firstName, and ceo...
-     * This is so the suggestion list is readable and helpful to the user
+     * But it only contains limited information from the state object...
+     * This is so the suggestion list is readable and helpful to the user at a glance
      */
+
     useEffect(() => {
       // console.log("search ===========", search, typeof search, !!search);
       if (!!search === false) return setSearchSuggestions([]);
@@ -86,6 +88,8 @@ function GlobalSearch(){
       // console.log("displayedSuggestions ==== ", displayedSuggestions)
       // console.log("searchSuggestions: ", searchSuggestions)
     }, [search]);
+
+
 
     // ===========================HANDLE SUBMIT FOR SEARCH===============================
     /**
