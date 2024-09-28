@@ -26,7 +26,7 @@ function EmployeesSearchBar() {
 
 
   // this is the placeholder for the search bar input box
-  const [placeHolder, setPlaceHolder] = useState("Search Employees");
+  const [placeHolder, setPlaceHolder] = useState("Search");
 
   // this is the search value being captured in the input
   const [search, setSearch] = useState("");
@@ -36,6 +36,14 @@ function EmployeesSearchBar() {
 
   // cannot be state bc would be behind render and can't be used in a different useEffect
   let displayedSuggestions = [];
+
+
+
+  // const [selectedSuggestion, setSelectedSuggestion] = useState();
+
+  // const [employeeDetail, setEmployeeDetail] = useState();
+
+  // const [errors, setErrors] = useState({});
 
 
 
@@ -95,11 +103,8 @@ function EmployeesSearchBar() {
    */
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!search || search === undefined || search === "")
       return setPlaceHolder("Enter a value to search");
-
-
 
     // console.log("HANDLE SUBMIT SEARCH RAN");
     return navigate("/employeeSearchResults", {
@@ -157,9 +162,13 @@ function EmployeesSearchBar() {
    */
   const handleChange = (e) => {
     // e.preventDefault();
-    setPlaceHolder("Search Employees");
+    setPlaceHolder("Search");
     return setSearch(e.target.value);
   };
+
+
+
+
 
 
 
@@ -183,22 +192,23 @@ function EmployeesSearchBar() {
   return (
     <>
       <main id={`${BCIN}Main`}>
+        <form id={`${BCIN}Form`} onSubmit={handleSubmit}>
+          <label id={`${BCIN}Label`}>
+            <FaMagnifyingGlass onClick={handleSubmit} id="FaMagnifyingGlass" />
+            <input
+              id={`${BCIN}Input`}
+              type="text"
+              value={search}
+              placeholder={placeHolder}
+              // onFocus={handleFocus} --ended up not needing this keep just in case
+              // onChange={(e) => setSearch(e.target.value)} --this is the old version keep just in case
+              onChange={(e) => handleChange(e)}
+            />
+          </label>
 
-      <form id={`${BCIN}Form`} onSubmit={handleSubmit}>
-        {/* <button id={`${BCIN}Button`}> */}
-            <label id={`${BCIN}Label`}>
-              <input
-                id={`${BCIN}Input`}
-                type={`text`}
-                placeholder={placeHolder}
-                value={search}
-                onChange={(e) => handleChange(e)}
-              />
-            </label>
-        {/* </button> */}
-      </form>
 
 
+        </form>
 
 
         <ul id={`${BCIN}SuggestionsUl`}>

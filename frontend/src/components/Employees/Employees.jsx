@@ -35,14 +35,14 @@ function Employees() {
 
         <main id={`${BCIN}Main`}>
 
-          {/* <EmployeesSearchBar /> */}
+
 
 
             <nav id={`${BCIN}Nav`}>
-              {/* <input type=`text` id={`${BCIN}SearchBar`} placeholder=`Search Employees` ></input> */}
+              {/* <input type={`text`} id={`${BCIN}SearchBar`} placeholder={`Search Employees`} ></input> */}
+
+
               <EmployeesSearchBar />
-
-
               <button id={`${BCIN}CreateButton`} onClick={handleClick}>Create New Employee</button>
             </nav>
 

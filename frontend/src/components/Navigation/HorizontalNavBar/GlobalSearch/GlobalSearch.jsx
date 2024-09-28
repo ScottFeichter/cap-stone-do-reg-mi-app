@@ -22,7 +22,7 @@ function GlobalSearch(){
     const navigate = useNavigate();
 
     const globalState = [window.store.getState()]
-    console.log("globalState", globalState);
+    // console.log("globalState", globalState);
     // const dispatch = useDispatch();
 
 
@@ -45,7 +45,7 @@ function GlobalSearch(){
     // const [errors, setErrors] = useState({});
 
 
-    
+
     // =======================GLOBAL VARIABLES (NOT STATEFUL)=======================
     // some of these may not be used after all
 

@@ -1,65 +1,238 @@
+/* #EmployeesSearchBarMain {
+    margin: 1rem .5rem 1rem .5rem;
+    border-radius: 5px;
+    border: 2px blue solid;
+} */
+
+/*==================START FORM==================*/
 #EmployeesSearchBarForm {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    margin: 1rem .5rem 1rem .5rem;
+    /* padding: 0;
+    width: 206px;
+    height: 30px; */
+    /* border: 2px purple solid; */
+}
+/*==================END FORM==================*/
+
+
+
+/*==================START BUTTON==================*/
+#EmployeesSearchBarButton {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 27rem;
-    border: 1px lightgray solid;
-    border-radius: 2.5px;
+    width: 206px;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: none;
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+    z-index: -1;
+
 }
 
+/* #EmployeesSearchBarButton:enabled {
+    color: var(--buttonColor);
+    background-color: var(--buttonBackgroundColor);
+    border: var(--buttonBorder);
 
 
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: border, background-color;
+
+    /* animation-name: none;
+    animation-delay: none;
+    animation-duration: .3s;
+    animation-timing-function: calc();
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: initial;
+} */
+
+
+/* #EmployeesSearchBarButton:disabled {
+    color: var(--searchBarDisabledColor);
+    background-color: var(--searchBarDisabledBackgroundColor);
+    border: var(--searchBarDisabledBorder);
+
+} */
+
+/* #EmployeesSearchBarButton:enabled:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBackgroundColor);
+    border: var(--buttonHoverBorder);
+    cursor: pointer;
+} */
+
+
+
+/* #EmployeesSearchBarButton:enabled:focus{
+    color: white;
+    background-color: white;
+    border: 1px grey solid;
+    outline: 1px solid var(--green2);
+	outline-offset: -2px;
+    text-indent: .5rem;
+    cursor: text;
+} */
+
+/*==================END BUTTON==================*/
+
+
+
+/*==================START LABEL==================*/
 #EmployeesSearchBarLabel {
     display: flex;
-    align-items: left;
+    align-items: center;
     justify-content: center;
     margin: 0;
     padding: 0;
-    color: #222222;
-    font-size: .60rem;
-    /* border: 2px green solid; */
+    width: fit-content;
+    height: fit-content;
+    /* border: 2px orange solid; */
 }
+/*==================END LABEL==================*/
 
-#FaMagnifyingGlass {
-    color: grey;
+
+
+
+
+/*==================MAGNIFYING GLASS==================*/
+/* #EmployeesSearchBarFaMagnifyingGlass {
+    margin: auto 0rem auto 0.25rem;
+    color: rgb(98, 98, 98);
+} */
+
+#EmployeesSearchBarFaMagnifyingGlass {
+    color: var(--green1);
     background-color: transparent;
-    margin: 0 .5rem 0 .25rem;
-    padding: .5rem .2rem .2rem .2rem;
-    font-size: 1.75rem;
+    /* margin: auto 0 auto 0.25rem; */
+    padding: 0rem 0rem 0rem 0rem;
+    font-size: 1.25rem;
     /* border: grey 2px dotted; */
 }
 
-#FaMagnifyingGlass:hover{
+#EmployeesSearchBarFaMagnifyingGlass:hover{
+    cursor: pointer;
+    color: var(--green1);
+}
+
+#EmployeesSearchBarFaMagnifyingGlass:active{
+    cursor: pointer;
+    color: var(--green2);
+}
+
+
+
+/*==================MAGNIFYING GLASS==================*/
+
+
+
+
+
+
+
+
+/*==================START INPUT==================*/
+
+#EmployeesSearchBarInput::placeholder{
+    color: white;
+    text-align: center;
+    opacity: 1;
+}
+
+#EmployeesSearchBarInput:hover::placeholder{
+    color: black;
+    text-align: center;
+    opacity: 1;
+}
+
+#EmployeesSearchBarInput:focus::placeholder{
+    color: lightgrey;
+    text-align: center;
+    opacity: 1;
+    text-indent: -.5rem;
+}
+
+
+
+#EmployeesSearchBarInput {
+    margin: 0rem .5rem 0rem .5rem;
+    width: 200px;
+    height: 25.5px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+
+#EmployeesSearchBarInput:enabled {
+    color: var(--searchBarColor);
+    background-color: var(--searchBarBackgroundColor);
+    /* background-color: transparent; */
+    border: var(--searchBarBorder);
+
+
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: border, background-color;
+
+    /* animation-name: none;
+    animation-delay: none;
+    animation-duration: .3s;
+    animation-timing-function: calc();
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: initial; */
+
+}
+
+
+/* #EmployeesSearchBarInput:disabled {
+    color: var(--searchBarDisabledColor);
+    background-color: var(--searchBarDisabledBackgroundColor);
+    border: var(--searchBarDisabledBorder);
+
+} */
+
+#EmployeesSearchBarInput:enabled:hover {
+    color: var(--searchBarHoverColor);
+    background-color: var(--searchBarHoverBackgroundColor);
+    border: var(--searchBarHoverBorder);
     cursor: pointer;
 }
 
-#EmployeesSearchBarInput {
-    border: none;
-    font-size: small;
-    width: 22rem;
-    height: 2rem;
-    border: none;
-    margin: 0;
-    padding: 0 0 0 .5rem;
 
+
+#EmployeesSearchBarInput:enabled:focus{
+    color: black;
+    background-color: white;
+    border: 1px grey solid; /* this not doing well its doing but is being overlaid by the browser */
+    outline: 1px solid var(--green2);
+	outline-offset: -2px;
+    text-indent: .5rem;
+    cursor: text;
 }
+/*==================END INPUT==================*/
 
-#EmployeesSearchBarInput:focus {
-    outline: none;
-    /* filter: drop-shadow(0rem 1rem 0.75rem rgb(37, 15, 67)); */
-    /* width: 21rem; */
-    /* padding: 0 1rem; */
-    /* margin: 0 0 .1rem -0.5rem; */
-}
 
-#EmployeesSearchBarButton {
-    visibility: hidden;
-    margin: 0;
-    padding: 0;
-    color: #222222;
-    font-size: .5rem;
-}
 
+
+
+
+
+/* ================= START UL ================== */
 #EmployeesSearchBarSuggestionsUl{
     list-style-type: none;
     position: absolute;
@@ -100,3 +273,5 @@
     background-color: rgba(85, 26, 139, 1);
     cursor: pointer;
 }
+
+/* ================= END UL ================== */
