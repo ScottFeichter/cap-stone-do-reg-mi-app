@@ -39,35 +39,3 @@
 
 
 
-
-
-/* .EmployeesListItemHeaderItemContainerGeneric {
-    font-size: large;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 .15rem 0 .15rem;
-    align-items: center;
-    justify-content: center;
-    width: 8rem;
-    overflow: hidden;
-    text-wrap: nowrap;
-    border: green 2px solid;
-  } */
-
-
-  /* .EmployeesListItemHeaderItemH4{
-    margin: 0;
-    text-wrap: nowrap;
-    width: fit-content;
-    border: 1px darkgrey solid;
-} */
-
-
-  /* .EmployeesListItemHeaderContainer {
-    display: flex;
-    margin: 0 1rem 0rem 1rem;
-    text-wrap: nowrap;
-    width: fit-content;
-    border: blue 2px solid;
-  } */

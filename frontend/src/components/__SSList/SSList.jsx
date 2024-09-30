@@ -25,24 +25,6 @@ function SSList(){
     let list = useSelector(state => state?.employees?.employees);
     let keysStatus = useSelector(state => state?.employees?.employeeKeysStatus);
 
-    
-
-    // console.log("list: ", list);
-
-    // let keys = Object.keys(list[0]);
-    // // console.log("keys: ", keys);
-
-    // let kS = keys.map(k => {
-    //   return {[camelCaseToTitleCase(k)]: 'off'}
-    // });
-
-
-    // const [keysStatus, setKeysStatus] = useState(kS);
-
-    // console.log("keysStatus 39 SSList: ", keysStatus);
-
-    // setKeysStatus={setKeysStatus}
-
 
 // ==========================FUNCTION RETURN============================ //
     return(

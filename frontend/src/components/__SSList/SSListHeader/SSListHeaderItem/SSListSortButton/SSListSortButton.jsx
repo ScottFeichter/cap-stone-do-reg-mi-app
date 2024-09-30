@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { BsCaretUpFill } from "react-icons/bs";
 import { BsCaretDownFill } from "react-icons/bs";
+import { BsDash } from "react-icons/bs";
 import { thunkUpdateEmployeeKeysStatus } from '../../../../../redux/employeesReducer';
 
 //================COMPONENT IMPORTS=====================//
@@ -113,7 +114,8 @@ function SSListSortButton({k, v}){
         <main className={`${BCIN}Main`}>
           <button className={buttonClasses} id={k} onClick={handleSortButton}>
             {/* {console.log("LINE 86: ", "v: ", v, "sortStatus: ", sortStatus)} */}
-            {sortStatus === 'desc' ? <BsCaretDownFill /> : <BsCaretUpFill />}
+
+            {sortStatus === 'desc' ? <BsCaretDownFill /> : sortStatus === 'off' ? <BsDash /> : <BsCaretUpFill />}
           </button>
         </main>
     </>)

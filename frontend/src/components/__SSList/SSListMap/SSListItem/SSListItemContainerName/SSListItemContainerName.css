@@ -1,6 +1,6 @@
 .SSListItemContainerNameMain{
     font-size: .9rem;
-    width: 10rem;
+    width: 8rem;
    /* customized on top */
     text-align: center;
     display: flex;
@@ -12,7 +12,7 @@
     text-wrap: nowrap;
     resize: none;
     overflow: hidden;
-    /* border: green 2px solid; */
+    border: green 2px solid;
 }
 
 

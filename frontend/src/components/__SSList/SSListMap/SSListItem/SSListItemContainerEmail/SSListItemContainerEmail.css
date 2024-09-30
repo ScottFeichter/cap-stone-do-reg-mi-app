@@ -1,10 +1,11 @@
 .SSListItemContainerEmailMain{
     font-size: .9rem;
-    width: 9rem;
+    width: 8rem;
    /* customized on top */
     text-align: center;
     display: flex;
     flex-direction: column;
+    padding: .15rem .15rem .15rem .15rem;
     margin: 0 .15rem 0 .15rem;
     align-items: center;
     justify-content: center;

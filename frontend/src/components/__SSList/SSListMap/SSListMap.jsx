@@ -5,7 +5,7 @@ import './SSListMap.css';
 
 //==================PROGRAM IMPORTS=====================//
 
-// import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 //================COMPONENT IMPORTS=====================//
 
@@ -16,8 +16,11 @@ import SSListItem from './SSListItem/SSListItem.jsx';
 
 //===============FUNCTION DECLARATION===================//
 function SSListMap({list}){
-
 // console.log("list SSListMap: ", list);
+
+let keysStatus = useSelector(state => state?.employees?.employeeKeysStatus);
+
+
 //----------------------PAGINATION----------------------//
 
     // const [currentPage, setCurrentPage] = useState(1);
