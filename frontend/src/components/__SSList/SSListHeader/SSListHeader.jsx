@@ -1,10 +1,12 @@
 //============CSS IMPORT AND BASE CLASS NAME============//
 
 const BCIN = "SSListHeader";
+
 import './SSListHeader.css';
 
 //==================PROGRAM IMPORTS=====================//
 
+import { useSelector } from 'react-redux';
 
 //================COMPONENT IMPORTS=====================//
 
@@ -12,12 +14,12 @@ import SSListHeaderItem from './SSListHeaderItem/SSListHeaderItem.jsx';
 // import camelCaseToTitleCase from '../../_Helpers/camelCaseToTitleCase/camelCaseToTitleCase.js';
 
 //===============FUNCTION DECLARATION===================//
-function SSListHeader({keysStatus}){
+function SSListHeader(){
 
 // console.log("SSListHeader keysStatus: ", keysStatus, typeof keysStatus);
 
 
-
+let keysStatus = useSelector(state => state?.employees?.employeeKeysStatus);
 if(keysStatus === undefined) return null;
 
 

@@ -34,7 +34,7 @@ function EmployeeListSort({employeesList}) {
   const [sortPhoneStatus, setSortPhoneStatus] = useState(false);
   const [sortEmailStatus, setSortEmailStatus] = useState(false);
 
-  const [sorts, setSorts] = useState([{ID: false}, {Name: false}, {Street: false}, {City: false}, {State: false}, {Zip: false}, {Phone: false}, {Email: false},])
+  // const [sorts, setSorts] = useState([{ID: false}, {Name: false}, {Street: false}, {City: false}, {State: false}, {Zip: false}, {Phone: false}, {Email: false},])
 
 
 

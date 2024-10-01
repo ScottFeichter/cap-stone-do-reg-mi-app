@@ -6,7 +6,7 @@ import './SSList.css';
 //==================PROGRAM IMPORTS=====================//
 
 
-import { useSelector } from 'react-redux'
+// import { useSelector } from 'react-redux'
 
 
 //================COMPONENT IMPORTS=====================//
@@ -22,16 +22,16 @@ import SSListMap from './SSListMap/SSListMap';
 function SSList(){
 
 
-    let list = useSelector(state => state?.employees?.employees);
-    let keysStatus = useSelector(state => state?.employees?.employeeKeysStatus);
+    // let list = useSelector(state => state?.employees?.employees);
+    // let keysStatus = useSelector(state => state?.employees?.employeeKeysStatus);
 
 
 // ==========================FUNCTION RETURN============================ //
     return(
       <>
         <main className={`${BCIN}Main`}>
-         <SSListHeader keysStatus={keysStatus}  />
-         <SSListMap list={list} />
+         <SSListHeader  />
+         <SSListMap />
         </main>
       </>
     )

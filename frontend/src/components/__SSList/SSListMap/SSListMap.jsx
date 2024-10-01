@@ -6,19 +6,68 @@ import './SSListMap.css';
 //==================PROGRAM IMPORTS=====================//
 
 import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+// import { useState } from 'react';
 
 //================COMPONENT IMPORTS=====================//
 
 import SSListItem from './SSListItem/SSListItem.jsx';
 
+
 // import ListElePagination from '../ListElePagination/ListElePagination.jsx';
 
 
 //===============FUNCTION DECLARATION===================//
-function SSListMap({list}){
+function SSListMap(){
 // console.log("list SSListMap: ", list);
 
 let keysStatus = useSelector(state => state?.employees?.employeeKeysStatus);
+let list = useSelector(state => state?.employees?.employees);
+
+
+// =========================COMPARE HELPER FUNCTION========================== //
+
+function compare( a, b ) {
+  if ( a < b ){
+    return -1;
+  }
+  if ( a > b ){
+    return 1;
+  }
+  return 0;
+}
+
+
+
+// console.count("list before sort: ", list, "keysStatus before sort: ", keysStatus);
+
+// use effect does not work on the redux reducer state?
+// primitive vs non primitive dependencies
+// component vs react vs browser
+// useEffect runs AFTER the component render?
+// updating function?
+// clean up function?
+
+useEffect(() => {
+
+
+    if (keysStatus[0].ID === 'asce') {
+      console.log("line 47 ran");
+      // list.sort((a, b) => {return a.id - b.id});
+      list.sort((employee1, employee2) => compare(employee1.id, employee2.id));
+
+    } else if (keysStatus[0].ID === 'desc') {
+      console.log("line 54 ran");
+      // list.sort((a, b) => {return b.id - a.id});
+      list.sort((employee1, employee2) => compare(employee2.id, employee1.id));
+    }
+
+  console.log("keysStatus in useEffect ran: ", keysStatus);
+
+}, [keysStatus[0].ID]);
+
+
+// console.log("list after sort: ", list);
 
 
 //----------------------PAGINATION----------------------//

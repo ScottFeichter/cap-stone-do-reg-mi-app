@@ -16,10 +16,7 @@ let sortChainLink = (a, b, status) => {
 
 list.sort((a, b) => {
 
-  for (let i = 0, i < employeeList.length, i++) {
-    curr = keysStatus[0];
 
-  }
 
   sortChainLink(a.curr[k], b.curr[k], curr[v]) || sortChainLink(a.curr[k], b.curr[k], curr[v])
 
