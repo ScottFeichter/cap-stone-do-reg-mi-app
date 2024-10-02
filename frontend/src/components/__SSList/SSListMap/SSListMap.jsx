@@ -21,21 +21,21 @@ import SSListItem from './SSListItem/SSListItem.jsx';
 function SSListMap(){
 // console.log("list SSListMap: ", list);
 
-let keysStatus = useSelector(state => state?.employees?.employeeKeysStatus);
+// let keysStatus = useSelector(state => state?.employees?.employeeKeysStatus);
 let list = useSelector(state => state?.employees?.employees);
 
 
 // =========================COMPARE HELPER FUNCTION========================== //
 
-function compare( a, b ) {
-  if ( a < b ){
-    return -1;
-  }
-  if ( a > b ){
-    return 1;
-  }
-  return 0;
-}
+// function compare( a, b ) {
+//   if ( a < b ){
+//     return -1;
+//   }
+//   if ( a > b ){
+//     return 1;
+//   }
+//   return 0;
+// }
 
 
 
@@ -48,23 +48,23 @@ function compare( a, b ) {
 // updating function?
 // clean up function?
 
-useEffect(() => {
+// useEffect(() => {
 
 
-    if (keysStatus[0].ID === 'asce') {
-      console.log("line 47 ran");
-      // list.sort((a, b) => {return a.id - b.id});
-      list.sort((employee1, employee2) => compare(employee1.id, employee2.id));
+//     if (keysStatus[0].ID === 'asce') {
+//       console.log("asce");
+//       // list.sort((a, b) => {return a.id - b.id});
+//       list.sort((employee1, employee2) => compare(employee1.id, employee2.id));
 
-    } else if (keysStatus[0].ID === 'desc') {
-      console.log("line 54 ran");
-      // list.sort((a, b) => {return b.id - a.id});
-      list.sort((employee1, employee2) => compare(employee2.id, employee1.id));
-    }
+//     } else if (keysStatus[0].ID === 'desc') {
+//       console.log("desc");
+//       // list.sort((a, b) => {return b.id - a.id});
+//       list.sort((employee1, employee2) => compare(employee2.id, employee1.id));
+//     }
 
-  console.log("keysStatus in useEffect ran: ", keysStatus);
+//   console.log("keysStatus in useEffect ran - list: ", list, "keysStatus: ", keysStatus);
 
-}, [keysStatus[0].ID]);
+// }, [keysStatus[0].ID]);
 
 
 // console.log("list after sort: ", list);
@@ -107,6 +107,7 @@ useEffect(() => {
 
 
    if(list === undefined) return null;
+   if(list[0] === undefined) return null;
 
 
 //=================FUNCTION RETURN======================//

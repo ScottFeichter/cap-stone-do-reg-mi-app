@@ -77,7 +77,7 @@ const removeEmployeeDataFromStore = () => {
 
 
 
-
+/** ------------------ ACTIONS FOR FRONTEND DATA ONLY ------------------- */
 
 
 const generateEmployeeKeysStatus = (kS) => {
@@ -94,6 +94,14 @@ const updateEmployeeKeysStatus = (kS) => {
   return {
     type: UPDATE_EMPLOYEE_KEYS_STATUS,
     payload: kS,
+  };
+};
+
+const updateEmployeeList = (employees) => {
+  // console.log('EMPLOYEES ALL RAN - EMPLOYEES', employees);
+  return {
+    type: EMPLOYEES_ALL,
+    payload: employees
   };
 };
 
@@ -216,20 +224,23 @@ export const thunkRemoveEmployeeDataFromStore = () => async (dispatch) => {
 
 
 
-/** ==============FRONTEND DATA ONLY =========================================*/
+/** ------------------ THUNKS FOR FRONTEND DATA ONLY ------------------- */
 let kS = []; // frontend global for keysStatus
+let listMirror = []; // frontend global for list
 
 /** GENERATE EMPLOYEE KEYS STATUS */
 export const thunkGenerateEmployeeKeysStatus = (list) => async (dispatch) => {
+  listMirror = list;
 
   let keys = Object.keys(list[0]);
   // console.log("keys: ", keys);
 
   kS = keys.map(k => {
-    return {[camelCaseToTitleCase(k)]: 'off'}
+    // return {[camelCaseToTitleCase(k)]: 'off'}
+    return {[k]: 'off'}
   });
 
-  kS[0] = {ID: 'asce'};
+  kS[0] = {id: 'asce'};
 
   // console.log('THUNK GENERATE EMPLOYEES KEY STATUS RAN DATA: ', kS);
   return dispatch(generateEmployeeKeysStatus(kS))
@@ -266,10 +277,54 @@ export const thunkUpdateEmployeeKeysStatus = (k, v) => async (dispatch) => {
     }
   }
 
+  dispatch(thunkUpdateEmployeeList(listMirror, kS))
   // console.log('THUNK UPDATE EMPLOYEES KEY STATUS RAN DATA: ', kS);
   return dispatch(updateEmployeeKeysStatus(kS))
 };
 
+function compare( a, b ) {
+  if ( a < b ){
+    return -1;
+  }
+  if ( a > b ){
+    return 1;
+  }
+  return 0;
+}
+
+
+/** UPDATE EMPLOYEE LIST */
+export const thunkUpdateEmployeeList = (listMirror, kS) => async (dispatch) => {
+
+  // let updatedList = [];
+
+  // this puts the updatedList in the index order of kS
+  // but I don't think I want that
+
+  // for (let i = 0; i < kS.length; i++) {
+  //   updatedList.push(listMirror.find(obj => obj[0] = Object.keys(kS[i])[0]));
+  // }
+  // console.log(updatedList);
+
+
+  if (kS[0].id === 'asce') {
+    console.log("asce");
+    // listMirror.sort((a, b) => {return a.id - b.id});
+    listMirror.sort((employee1, employee2) => compare(employee1.id, employee2.id));
+
+  } else if (kS[0].id === 'desc') {
+    console.log("desc");
+    // listMirror.sort((a, b) => {return b.id - a.id});
+    listMirror.sort((employee1, employee2) => compare(employee2.id, employee1.id));
+  }
+
+console.log("kS in useEffect ran - listMirror: ", listMirror, "kS: ", kS);
+
+
+
+
+  return dispatch(updateEmployeeList(listMirror));
+}
 
 
 
