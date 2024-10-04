@@ -23,6 +23,7 @@ function SSListMap(){
 
 // let keysStatus = useSelector(state => state?.employees?.employeeKeysStatus);
 let list = useSelector(state => state?.employees?.employees);
+console.log("SSListMap list[0]: ", list[0]);
 
 
 // =========================COMPARE HELPER FUNCTION========================== //

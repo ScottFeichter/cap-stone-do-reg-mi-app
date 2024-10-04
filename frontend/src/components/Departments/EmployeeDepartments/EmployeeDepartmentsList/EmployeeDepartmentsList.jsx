@@ -48,7 +48,7 @@ function EmployeeDepartmentsList(){
     // THE MAP IS OVER CURRENT POST WHEN USING PAGINATION!!!!!!!!!!
     // employeeDepartment, id where in parens 60
 
-    console.log("employeeDepartmentsList: ", employeeDepartmentsList)
+    // console.log("employeeDepartmentsList: ", employeeDepartmentsList)
 
 
     return(

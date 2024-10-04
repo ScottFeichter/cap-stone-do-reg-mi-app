@@ -48,7 +48,7 @@ function AcademicDepartmentsList(){
     // THE MAP IS OVER CURRENT POST WHEN USING PAGINATION!!!!!!!!!!
     // academicDepartment, id where in parens 60
 
-    console.log("academicDepartmentsList: ", academicDepartmentsList)
+    // console.log("academicDepartmentsList: ", academicDepartmentsList)
 
 
     return(

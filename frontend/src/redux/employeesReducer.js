@@ -1,5 +1,5 @@
 import { csrfFetch } from "./xCsrf";
-import camelCaseToTitleCase from "../components/_Helpers/camelCaseToTitleCase/camelCaseToTitleCase";
+// import camelCaseToTitleCase from "../components/_Helpers/camelCaseToTitleCase/camelCaseToTitleCase";
 // import { useSelector } from "react-redux";
 
 /** =============ACTION TYPE CONSTANTS:=======================================*/
@@ -226,11 +226,13 @@ export const thunkRemoveEmployeeDataFromStore = () => async (dispatch) => {
 
 /** ------------------ THUNKS FOR FRONTEND DATA ONLY ------------------- */
 let kS = []; // frontend global for keysStatus
-let listMirror = []; // frontend global for list
+// let listMirror = []; // frontend global for list
 
 /** GENERATE EMPLOYEE KEYS STATUS */
 export const thunkGenerateEmployeeKeysStatus = (list) => async (dispatch) => {
-  listMirror = list;
+  // console.log(`list from thunkGenerateEmployeeKesStatus: ${list}` ); // these do not give same result
+  console.log(`list from thunkGenerateEmployeeKesStatus: `, list ); // these do not give same result
+
 
   let keys = Object.keys(list[0]);
   // console.log("keys: ", keys);
@@ -243,14 +245,17 @@ export const thunkGenerateEmployeeKeysStatus = (list) => async (dispatch) => {
   kS[0] = {id: 'asce'};
 
   // console.log('THUNK GENERATE EMPLOYEES KEY STATUS RAN DATA: ', kS);
+  dispatch(thunkUpdateEmployeeList(list, kS))
   return dispatch(generateEmployeeKeysStatus(kS))
 };
 
 
 
 /** UPDATE EMPLOYEE KEYS STATUS */
-export const thunkUpdateEmployeeKeysStatus = (k, v) => async (dispatch) => {
+export const thunkUpdateEmployeeKeysStatus = (list, k, v) => async (dispatch) => {
   // console.log('THUNK UPDATE EMPLOYEES KEY STATUS TOP: ', 'k: ', k, 'v: ', v);
+
+  console.log(`list from thunkUpdateEmployeeKesStatus: `, list );
 
   let currIdx = kS.findIndex(ele => Object.keys(ele)[0] === k);
   let targetIdx = kS.findIndex(ele => Object.values(ele)[0] === 'off');
@@ -277,7 +282,7 @@ export const thunkUpdateEmployeeKeysStatus = (k, v) => async (dispatch) => {
     }
   }
 
-  dispatch(thunkUpdateEmployeeList(listMirror, kS))
+  dispatch(thunkUpdateEmployeeList(list, kS))
   // console.log('THUNK UPDATE EMPLOYEES KEY STATUS RAN DATA: ', kS);
   return dispatch(updateEmployeeKeysStatus(kS))
 };
@@ -294,36 +299,35 @@ function compare( a, b ) {
 
 
 /** UPDATE EMPLOYEE LIST */
-export const thunkUpdateEmployeeList = (listMirror, kS) => async (dispatch) => {
+export const thunkUpdateEmployeeList = (list, kS) => async (dispatch) => {
 
-  // let updatedList = [];
+  console.log(`list from thunkUpdateEmployeeList: `, list );
 
-  // this puts the updatedList in the index order of kS
-  // but I don't think I want that
 
-  // for (let i = 0; i < kS.length; i++) {
-  //   updatedList.push(listMirror.find(obj => obj[0] = Object.keys(kS[i])[0]));
-  // }
-  // console.log(updatedList);
-
+  let sortedList;
 
   if (kS[0].id === 'asce') {
-    console.log("asce");
-    // listMirror.sort((a, b) => {return a.id - b.id});
-    listMirror.sort((employee1, employee2) => compare(employee1.id, employee2.id));
+    // console.log("asce");
+    // list.sort((a, b) => {return a.id - b.id});
+    list.sort((employee1, employee2) => compare(employee1.id, employee2.id));
 
   } else if (kS[0].id === 'desc') {
-    console.log("desc");
-    // listMirror.sort((a, b) => {return b.id - a.id});
-    listMirror.sort((employee1, employee2) => compare(employee2.id, employee1.id));
+    // console.log("desc");
+    // list.sort((a, b) => {return b.id - a.id});
+    list.sort((employee1, employee2) => compare(employee2.id, employee1.id));
+
+  } else if (kS[0].id === 'off') {
+    // console.log("off");
+    // list.sort((a, b) => {return b.id - a.id});
+    list;
   }
 
-console.log("kS in useEffect ran - listMirror: ", listMirror, "kS: ", kS);
+console.log("in reducer - list[0]: ", list[0], "ks[0]: ", kS[0]);
 
 
 
 
-  return dispatch(updateEmployeeList(listMirror));
+  return dispatch(updateEmployeeList(list));
 }
 
 

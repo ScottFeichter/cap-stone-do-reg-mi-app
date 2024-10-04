@@ -12,6 +12,7 @@ import { BsCaretUpFill } from "react-icons/bs";
 import { BsCaretDownFill } from "react-icons/bs";
 import { BsDash } from "react-icons/bs";
 import { thunkUpdateEmployeeKeysStatus } from '../../../../../redux/employeesReducer';
+import { useSelector } from 'react-redux';
 
 //================COMPONENT IMPORTS=====================//
 
@@ -21,6 +22,7 @@ import { thunkUpdateEmployeeKeysStatus } from '../../../../../redux/employeesRed
 //===============FUNCTION DECLARATION===================//
 function SSListSortButton({k, v}){
     const dispatch = useDispatch();
+    const list = useSelector(state => state?.employees?.employees);
 
 
     // sortStatus can be off, 'asce', or 'desc'
@@ -32,7 +34,7 @@ function SSListSortButton({k, v}){
 
     useEffect(() => {
 
-        if (k === 'ID') {
+        if (k === 'id') {
             setButtonClasses(`${BCIN}ButtonOn`);
             setSortStatus('asce');
         }
@@ -52,7 +54,7 @@ function SSListSortButton({k, v}){
             setButtonClasses(`${BCIN}ButtonOn`);
             v = 'asce';
 
-            dispatch(thunkUpdateEmployeeKeysStatus(k, v));
+            dispatch(thunkUpdateEmployeeKeysStatus(list, k, v));
 
             // setKeysStatus(prev => ({
             //     ...prev,
@@ -66,7 +68,7 @@ function SSListSortButton({k, v}){
             setButtonClasses(`${BCIN}ButtonOn`);
             v = 'desc';
 
-            dispatch(thunkUpdateEmployeeKeysStatus(k, v));
+            dispatch(thunkUpdateEmployeeKeysStatus(list, k, v));
 
             // setKeysStatus(prev => ([
             //     ...prev,
@@ -84,7 +86,7 @@ function SSListSortButton({k, v}){
             setButtonClasses(`${BCIN}ButtonOff`);
             v = 'off'
 
-            dispatch(thunkUpdateEmployeeKeysStatus(k, v));
+            dispatch(thunkUpdateEmployeeKeysStatus(list, k, v));
 
             // setKeysStatus(prev => ({
             //     ...prev,
