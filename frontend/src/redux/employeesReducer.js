@@ -304,30 +304,31 @@ export const thunkUpdateEmployeeList = (list, kS) => async (dispatch) => {
   console.log(`list from thunkUpdateEmployeeList: `, list );
 
 
-  let sortedList;
+  let sortedList = [];
 
   if (kS[0].id === 'asce') {
     // console.log("asce");
     // list.sort((a, b) => {return a.id - b.id});
-    list.sort((employee1, employee2) => compare(employee1.id, employee2.id));
+   sortedList = list.sort((employee1, employee2) => compare(employee1.id, employee2.id));
 
   } else if (kS[0].id === 'desc') {
     // console.log("desc");
     // list.sort((a, b) => {return b.id - a.id});
-    list.sort((employee1, employee2) => compare(employee2.id, employee1.id));
+    sortedList = list.sort((employee1, employee2) => compare(employee2.id, employee1.id));
 
   } else if (kS[0].id === 'off') {
     // console.log("off");
     // list.sort((a, b) => {return b.id - a.id});
-    list;
+    sortedList = list;
   }
 
 console.log("in reducer - list[0]: ", list[0], "ks[0]: ", kS[0]);
+console.log("in reducer - sortedList[0]: ", sortedList[0], "ks[0]: ", kS[0]);
 
 
 
 
-  return dispatch(updateEmployeeList(list));
+  return dispatch(updateEmployeeList(sortedList));
 }
 
 

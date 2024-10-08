@@ -22,10 +22,12 @@ function SSListMap(){
 // console.log("list SSListMap: ", list);
 
 // let keysStatus = useSelector(state => state?.employees?.employeeKeysStatus);
-let list = useSelector(state => state?.employees?.employees);
+const list = useSelector(state => state?.employees?.employees);
 console.log("SSListMap list[0]: ", list[0]);
 
+useEffect(() => {
 
+}, [list]);
 // =========================COMPARE HELPER FUNCTION========================== //
 
 // function compare( a, b ) {
