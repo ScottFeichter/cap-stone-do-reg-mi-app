@@ -304,22 +304,22 @@ export const thunkUpdateEmployeeList = (list, kS) => async (dispatch) => {
   console.log(`list from thunkUpdateEmployeeList: `, list );
 
 
-  let sortedList = [];
+  let sortedList = structuredClone(list);
 
   if (kS[0].id === 'asce') {
     // console.log("asce");
     // list.sort((a, b) => {return a.id - b.id});
-   sortedList = list.sort((employee1, employee2) => compare(employee1.id, employee2.id));
+   sortedList.sort((employee1, employee2) => compare(employee1.id, employee2.id));
 
   } else if (kS[0].id === 'desc') {
     // console.log("desc");
     // list.sort((a, b) => {return b.id - a.id});
-    sortedList = list.sort((employee1, employee2) => compare(employee2.id, employee1.id));
+    sortedList.sort((employee1, employee2) => compare(employee2.id, employee1.id));
 
   } else if (kS[0].id === 'off') {
     // console.log("off");
     // list.sort((a, b) => {return b.id - a.id});
-    sortedList = list;
+    // sortedList = list;
   }
 
 console.log("in reducer - list[0]: ", list[0], "ks[0]: ", kS[0]);
